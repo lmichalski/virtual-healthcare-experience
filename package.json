@@ -13,8 +13,10 @@
     "@types/react-router-dom": "^5.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-intl": "^5.20.10",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "sass": "^1.42.1",
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2"
   },
@@ -22,7 +24,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fix": "npx standard --fix src/**/*.ts*",
+    "translations:extract": "formatjs extract",
+    "translations:compile": "formatjs extract 'src/**/*.ts*' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/lang-compiled/en.json && rm temp.json",
+    "translations:build": "npm run translations:extract -- 'src/**/!(*.d){.ts,.tsx}' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@formatjs/cli": "^4.2.33",
+    "standard": "^16.0.3"
   }
 }

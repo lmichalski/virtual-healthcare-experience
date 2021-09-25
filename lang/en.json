@@ -1,0 +1,10 @@
+{
+  "Main.playGameButton": {
+    "defaultMessage": "Play Game",
+    "description": "Play game button text"
+  },
+  "Main.title": {
+    "defaultMessage": "Emergency",
+    "description": "Main page title"
+  }
+}
