@@ -1,15 +1,23 @@
+import { useContext } from "react";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
+import RootScopeContext from "../controllers/RootScopeContext";
 import "./Instructions.scss";
 
 const Instructions: React.FC<{}> = () => {
+
+  const rootScope = useContext(RootScopeContext);
+
+  const minSteps = rootScope.correctOptions.length
+
   return (
     <div className="container">
       <div className="panel info">
         <header>
           <h1>
-            <a href="#/" aria-label="Return to menu">
+            <Link to="/" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
-            </a>{" "}
+            </Link>{" "}
             How to Play
           </h1>
         </header>
@@ -33,7 +41,7 @@ const Instructions: React.FC<{}> = () => {
                 questions as possible.{" "}
               </li>
               <li>
-                The best possible result is 9. You can play this game unlimited
+                The best possible result is { minSteps }. You can play this game unlimited
                 times to improve your result.{" "}
               </li>
               <li>

@@ -29,14 +29,14 @@ const Materials: React.FC<{}> = () => {
           <div className="content">
             <h2>Documentation</h2>
             <a
-              href="/module/emergency/game/_/docs/Integrated_Patient_Record.pdf"
+              href="/docs/Integrated_Patient_Record.pdf"
               className="button"
               download
             >
               Download Template
             </a>
             <a
-              href="/module/emergency/game/_/docs/Integrated_Patient_Record_Sample.pdf"
+              href="/docs/Integrated_Patient_Record_Sample.pdf"
               className="button"
               download
             >
@@ -45,7 +45,7 @@ const Materials: React.FC<{}> = () => {
             <br />
             <h2>Self-Debrief</h2>
             <a
-              href="/module/emergency/game/_/docs/self-assessment.pdf"
+              href="/docs/self-assessment.pdf"
               className="button"
               download
             >

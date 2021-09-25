@@ -1,4 +1,5 @@
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 import "./Settings.scss";
 
 const Settings: React.FC<{}> = () => {
@@ -7,9 +8,9 @@ const Settings: React.FC<{}> = () => {
       <div className="panel settings">
         <header>
           <h1>
-            <a href="#/" aria-label="Return to menu">
+            <Link to="/" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
-            </a>{" "}
+            </Link>{" "}
             Game Options
           </h1>
         </header>

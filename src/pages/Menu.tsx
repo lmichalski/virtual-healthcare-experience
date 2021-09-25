@@ -69,22 +69,22 @@ const Menu: React.FC<{}> = () => {
                 </Link>
               </li>
               <li>
-                <a href="#/settings/">
+                <Link to="/settings/">
                   <FormattedMessage
                     id="Menu.gameOptions"
                     defaultMessage="Game Options"
                     description="Options Button"
                   />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#/instructions/">
+                <Link to="/instructions/">
                   <FormattedMessage
                     id="Menu.instructions"
                     defaultMessage="How to Play"
                     description="How to Play Button"
                   />
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#/credits/">
