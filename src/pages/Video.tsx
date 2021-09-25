@@ -2,6 +2,7 @@ import { useEffect, useContext, useCallback, useState, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import { useLocation, useHistory, Redirect } from "react-router-dom";
 import videojs from "video.js";
+import Player from '@vimeo/player';
 
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
@@ -14,6 +15,8 @@ const Video: React.FC<{}> = () => {
 
   const rootScope = useContext(RootScopeContext);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
   const [playing, setPlaying] = useState(false);
 
   const dp = rootScope.dataProvider.find(
@@ -107,6 +110,8 @@ const Video: React.FC<{}> = () => {
   }, [history, location.pathname]);
 
   useEffect(() => {
+    var iframe = iframeRef.current;
+
     if (videoRef.current && dp) {
       const api = videojs("vid-player");
 
@@ -222,6 +227,8 @@ const Video: React.FC<{}> = () => {
         }
       });
 
+
+      //@ts-ignore
       api.on("ended", function (e) {
         skipVideo();
         rootScope.saveState();
@@ -233,14 +240,28 @@ const Video: React.FC<{}> = () => {
         rootScope.logGameEvent("", "finish", "video", dp?.data, "");
       });
 
+      //@ts-ignore
       api.on("error", function (e) {
         console.log(e);
         rootScope.logGameEvent("", "error", "video", dp?.data, "");
       });
 
       api.load();
+    } else if (dp && iframe) {
+      var player = new Player(iframe);
+      console.log("Setting vimeo listenera")
+      player.on("ended", function() {
+        console.log("vimeo ended")
+        skipVideo();
+				rootScope.saveState();
+				rootScope.logGameEvent( "", "finish", "video", dp.data, "");
+      });
+
+      player.getVideoTitle().then(function (title) {
+        console.log("title:", title);
+      });
     }
-  }, [videoRef.current]);
+  }, [videoRef.current, iframeRef.current]);
 
   return (
     <div className="video">
@@ -258,7 +279,9 @@ const Video: React.FC<{}> = () => {
         {dp?.video?.vimeo_url ? (
           <div>
             <iframe
-              src={dp?.video?.vimeo_url}
+
+            ref={iframeRef}
+              src={dp.video.vimeo_url}
               frameBorder={0}
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
