@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write 'src/**/*.{ts*,js*,yml}'",
+    "format": "prettier --write src/**/*.{ts*,js*,yml}",
     "translations:extract": "formatjs extract",
     "translations:compile": "formatjs extract 'src/**/*.ts*' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/lang-compiled/en.json && rm temp.json",
     "translations:build": "npm run translations:extract -- 'src/**/!(*.d){.ts,.tsx}' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"

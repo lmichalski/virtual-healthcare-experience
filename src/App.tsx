@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 
 import Main from "./pages/Main";
+import Menu from "./pages/Menu";
 
 import "./App.scss";
 
@@ -11,7 +12,7 @@ import enMessages from "./lang-compiled/en.json";
 import frMessages from "./lang-compiled/fr.json";
 
 const App: React.FC<{}> = () => {
-  const locale = 'fr' as string;
+  const locale = "fr" as string;
   const messages = locale === "fr" ? frMessages : enMessages;
 
   return (
@@ -22,6 +23,9 @@ const App: React.FC<{}> = () => {
             <Switch>
               <Route path="/main">
                 <Main />
+              </Route>
+              <Route path="/">
+                <Menu />
               </Route>
             </Switch>
           </div>

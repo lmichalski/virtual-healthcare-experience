@@ -2,8 +2,6 @@ import { FormattedMessage } from "react-intl";
 import "./Main.scss";
 
 const Main: React.FC<{}> = () => {
-  let a = 1;
-
   return (
     <div className="container splash">
       <div className="panel">
