@@ -21,7 +21,8 @@ export function getBrowser() {
   isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
   // @ts-ignore
-  if (// @ts-ignore
+  if (
+    // @ts-ignore
     (!!window.opr && !!opr.addons) ||
     // @ts-ignore
     !!window.opera ||
@@ -41,7 +42,7 @@ export function getBrowser() {
     })(
       // @ts-ignore
       !window["safari"] ||
-      // @ts-ignore
+        // @ts-ignore
         (typeof safari !== "undefined" && safari.pushNotification)
     )
   ) {
