@@ -10,7 +10,7 @@ interface DecisionPoint {
   title?: string;
   type: string; //"video" | "string",
   data: string;
-  
+
   video: {
     vimeo_url: string;
   } | null;
