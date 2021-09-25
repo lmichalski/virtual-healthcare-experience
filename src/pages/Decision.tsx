@@ -13,7 +13,6 @@ const Decision: React.FC<{}> = () => {
 
   const message = "{{ dp.message }}";
 
-
   const dp = rootScope.dataProvider.find(
     ({ id }) => id == rootScope.sg.current
   )!;
@@ -22,14 +21,10 @@ const Decision: React.FC<{}> = () => {
 
   const [randomizedOptions] = useState(dp.options); // TODO shuffle these
 
-  
-
   const optionBoxes = useMemo(() => {
-    return randomizedOptions.map((opt2, i) => {
-
+    return randomizedOptions.map((opt) => {
       const chooseOption = function () {
-        const opt = dp.options.find(({next}) => next === i)!
-        const next = rootScope.dataProvider.find(({id}) => id === i)
+        const next = rootScope.dataProvider.find(({ id }) => id === opt.next);
 
         rootScope.sg.progress.push({
           id: rootScope.sg.current,
@@ -38,7 +33,7 @@ const Decision: React.FC<{}> = () => {
         });
         rootScope.sg.current = opt.next;
         rootScope.saveState();
-    
+
         rootScope.logGameEvent(
           "",
           "select",
@@ -46,7 +41,7 @@ const Decision: React.FC<{}> = () => {
           opt.label,
           next?.correct ? "correct" : "incorrect"
         );
-    
+
         switch (next?.type) {
           case "video":
             history.push("/video/");
@@ -59,15 +54,13 @@ const Decision: React.FC<{}> = () => {
             }
             break;
         }
-    
+
         // google analytics ???
       };
 
       return (
         <li className="option" ng-repeat="opt in randomizedOptions">
-          <button onClick={chooseOption}>
-            {opt2.label}
-          </button>
+          <button onClick={chooseOption}>{opt.label}</button>
         </li>
       );
     });

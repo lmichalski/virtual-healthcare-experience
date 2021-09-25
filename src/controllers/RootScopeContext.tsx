@@ -11,9 +11,16 @@ interface DecisionPoint {
   type: string; //"video" | "string",
   data: string;
 
-  video: {
-    vimeo_url: string;
-  } | null;
+  video:
+    | {
+        vimeo_url: string;
+        videojs_url?: string;
+      }
+    | {
+        vimeo_url?: string;
+        videojs_url: string;
+      }
+    | null;
 
   correct: boolean;
   feedback: string;
@@ -38,9 +45,9 @@ interface iGameSave {
   completed: boolean;
   videoposition: number;
   progress: {
-    id: number,
-          label: string,
-          option: number,
+    id: number;
+    label: string;
+    option: number;
   }[];
 }
 

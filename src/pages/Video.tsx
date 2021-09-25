@@ -2,7 +2,7 @@ import { useEffect, useContext, useCallback, useState, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import { useLocation, useHistory, Redirect } from "react-router-dom";
 import videojs from "video.js";
-import Player from '@vimeo/player';
+import Player from "@vimeo/player";
 
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
@@ -227,7 +227,6 @@ const Video: React.FC<{}> = () => {
         }
       });
 
-
       //@ts-ignore
       api.on("ended", function (e) {
         skipVideo();
@@ -249,12 +248,12 @@ const Video: React.FC<{}> = () => {
       api.load();
     } else if (dp && iframe) {
       var player = new Player(iframe);
-      console.log("Setting vimeo listenera")
-      player.on("ended", function() {
-        console.log("vimeo ended")
+      console.log("Setting vimeo listenera");
+      player.on("ended", function () {
+        console.log("vimeo ended");
         skipVideo();
-				rootScope.saveState();
-				rootScope.logGameEvent( "", "finish", "video", dp.data, "");
+        rootScope.saveState();
+        rootScope.logGameEvent("", "finish", "video", dp.data, "");
       });
 
       player.getVideoTitle().then(function (title) {
@@ -276,27 +275,27 @@ const Video: React.FC<{}> = () => {
         </a>
       </div>
       <div id="player" className="videoplayer functional">
-        {dp?.video?.vimeo_url ? (
-          <div>
-            <iframe
-
-            ref={iframeRef}
-              src={dp.video.vimeo_url}
-              frameBorder={0}
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="SG4_DP1_0"
-            ></iframe>
-          </div>
-        ) : (
-          <video
-            ref={videoRef}
-            id="vid-player"
-            className="video-js vjs-big-play-centered"
-          >
-            Please use a different browser
-          </video>
-        )}
+        {dp?.video &&
+          (dp.video.vimeo_url ? (
+            <div>
+              <iframe
+                ref={iframeRef}
+                src={dp.video.vimeo_url}
+                frameBorder={0}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="SG4_DP1_0"
+              ></iframe>
+            </div>
+          ) : (
+            <video
+              ref={videoRef}
+              id="vid-player"
+              className="video-js vjs-big-play-centered"
+            >
+              Please use a different browser
+            </video>
+          ))}
 
         <div id="pause">
           <FormattedMessage
