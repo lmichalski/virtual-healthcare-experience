@@ -223,6 +223,7 @@ const Video: React.FC<{}> = () => {
     }
   });
 
+  //@ts-ignore
   api.on("ended", function (e) {
     skipVideo();
     rootScope.saveState();
@@ -233,7 +234,8 @@ const Video: React.FC<{}> = () => {
       });*/
     rootScope.logGameEvent("", "finish", "video", dp?.data, "");
   });
-
+  
+//@ts-ignore
   api.on("error", function (e) {
     console.log(e);
     rootScope.logGameEvent("", "error", "video", dp?.data, "");
