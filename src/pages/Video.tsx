@@ -108,7 +108,7 @@ const Video: React.FC<{}> = () => {
   }, [history, location.pathname]);
 
   useEffect( () => {
-    if(videoRef.current){
+    if(videoRef.current && dp){
 
 
   const api = videojs("vid-player");
@@ -255,9 +255,23 @@ const Video: React.FC<{}> = () => {
         </a>
       </div>
       <div id="player" className="videoplayer functional">
-        <video ref={videoRef} id="vid-player" className="video-js vjs-big-play-centered">
-          Please use a different browser
-        </video>
+
+        {
+        dp?.video?.vimeo_url ?
+        <div>
+          <iframe
+            src={dp?.video?.vimeo_url}
+            frameBorder={0}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="SG4_DP1_0"
+          ></iframe>
+        </div>
+        : <video ref={videoRef} id="vid-player" className="video-js vjs-big-play-centered">
+        Please use a different browser
+      </video>
+        
+        }
 
         <div id="pause">
           <FormattedMessage
@@ -265,6 +279,7 @@ const Video: React.FC<{}> = () => {
             defaultMessage="pause"
             description="pause icon"
           />
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
 
         <div id="skip" onClick={skipVideo}>
