@@ -1,4 +1,13 @@
 {
-  "Main.playGameButton": "Play Game",
-  "Main.title": "Emergency"
+  "Main.title": "ER Virtual Simulation Game",
+  "Menu.credits": "Credits",
+  "Menu.exit": "Exit Game",
+  "Menu.gameOptions": "Game Options",
+  "Menu.instructions": "How to Play",
+  "Menu.newGame": "New Game",
+  "Menu.objectives": "Learning Objectives",
+  "Menu.resumeGame": "Resume Game",
+  "Objectives.title": "Learning Objectives",
+  "objectives.paragraph": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
+  "objectives.paragraph2": "The learning objectives of this simulation game are to:"
 }

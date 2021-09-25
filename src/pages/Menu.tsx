@@ -1,4 +1,5 @@
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 import "./Menu.scss";
 
 const Menu: React.FC<{}> = () => {
@@ -8,7 +9,7 @@ const Menu: React.FC<{}> = () => {
         <header>
           <FormattedMessage
             id="Main.title"
-            defaultMessage="Emergency Room Care"
+            defaultMessage="ER Virtual Simulation Game"
             description="Menu page title"
             tagName="h1"
           />
@@ -39,13 +40,13 @@ const Menu: React.FC<{}> = () => {
                 </a>
               </li>
               <li>
-                <a href="#/objectives/">
+                <Link to="/objectives/">
                   <FormattedMessage
                     id="Menu.objectives"
                     defaultMessage="Learning Objectives"
                     description="Objectives Button"
                   />
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#/settings/">
