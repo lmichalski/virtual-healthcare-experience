@@ -1,8 +1,28 @@
+import { useContext, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import RootScopeContext from "../controllers/RootScopeContext";
+import { getBrowser } from "../util";
 import "./Menu.scss";
 
 const Menu: React.FC<{}> = () => {
+  const history = useHistory();
+
+  const rootScope = useContext(RootScopeContext);
+
+  const startNewGame = useCallback(() => {
+    rootScope.sg.gamesaved = false;
+    rootScope.sg.current = 0;
+    rootScope.sg.completed = false;
+    rootScope.sg.videoposition = 0;
+    rootScope.sg.progress = [];
+
+    history.push("/intro/");
+    rootScope.saveState();
+
+    rootScope.logGameEvent("", "start", "game", getBrowser(), "");
+  }, [rootScope]);
+
   return (
     <div className="container">
       <div className="panel menu">
@@ -18,7 +38,7 @@ const Menu: React.FC<{}> = () => {
           <div className="content">
             <ul className="controls">
               <li>
-                <a href="javascript:void(0)" ng-click="startNewGame()">
+                <a href="javascript:void(0)" onClick={startNewGame}>
                   <FormattedMessage
                     id="Menu.newGame"
                     defaultMessage="New Game"
