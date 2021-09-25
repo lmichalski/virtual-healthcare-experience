@@ -9,6 +9,7 @@ import "./App.scss";
 
 import enMessages from "./lang-compiled/en.json";
 import frMessages from "./lang-compiled/fr.json";
+
 import Objectives from "./pages/Objectives";
 import Intro from "./pages/Intro";
 import Decision from "./pages/Decision";
