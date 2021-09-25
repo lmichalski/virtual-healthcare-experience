@@ -19,20 +19,19 @@ const Objectives: React.FC<{}> = () => {
         </header>
         <div className="main">
           <div className="content cf">
-            <p>
-              <FormattedMessage
-                id="objectives.paragraph"
-                defaultMessage="The game promotes the application of knowledge and skills related to the assessment of a prenatal woman."
-                description="Game objectives intro paragraph"
-              />
-            </p>
-            <p>
-              <FormattedMessage
-                id="objectives.paragraph2"
-                defaultMessage="The learning objectives of this simulation game are to: "
-                description="Game objectives second paragraph"
-              />
-            </p>
+            <FormattedMessage
+              id="objectives.paragraph"
+              defaultMessage="The game promotes the application of knowledge and skills related to the assessment of a prenatal woman."
+              description="Game objectives intro paragraph"
+              tagName="p"
+            />
+
+            <FormattedMessage
+              id="objectives.paragraph2"
+              defaultMessage="The learning objectives of this simulation game are to: "
+              description="Game objectives second paragraph"
+              tagName="p"
+            />
             <ul>
               <li>
                 Apply knowledge of physical and psychosocial prenatal nursing

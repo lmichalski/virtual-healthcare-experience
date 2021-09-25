@@ -1,0 +1,80 @@
+/********** DECISION POINT **********/
+
+.progress { 
+	position: relative; 
+	display: inline-block;
+	box-sizing: border-box; 
+	width: 300px; 
+	height: 16px; 
+	padding: 1px;
+	background-color: rgb(51, 61, 153);
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 8px;
+}
+.progress .bar { 
+	position: relative; 
+	width: 14px; 
+	height: 14px;
+	min-width: 14px;
+	background-color: #fff; 
+	border-radius: 8px;
+}
+.question {
+	position: absolute;
+	top: 5%;
+	left: 0;
+	right: 0;
+	height: 50%;
+	margin: 0 5%;
+	font-size: 1.4em;
+	text-align: center;
+	color: #000;
+}
+.question .vertical_outer {
+	vertical-align: bottom;
+}
+.question .vertical_inner {
+	vertical-align: middle;
+}
+.option_box {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5%;
+	min-height: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+}
+.option {
+	display: block;
+	width: 30%;
+	max-width: 500px;
+	height: 160px;
+	padding: .4em;
+	box-sizing: border-box;
+	font-size: 1em;
+}
+.option button {
+	display: block;
+	font: inherit;
+	text-align: inherit;
+	border: none;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 20px;
+	border-radius: 13px;
+	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.35);
+	color: #000;
+	cursor: pointer;
+	transition: all .1s linear;
+}
+.option button:hover {
+	background-color: #fff;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+	transform: scale3d(1.05, 1.05, 1.05);
+}
