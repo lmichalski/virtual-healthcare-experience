@@ -15,9 +15,15 @@ const Video: React.FC<{}> = () => {
         </a>
       </div>
       <div id="player" className="videoplayer functional">
-        <video id="vid-player" className="video-js vjs-big-play-centered">
-          Please use a different browser
-        </video>
+        <div>
+          <iframe
+            src="https://player.vimeo.com/video/614620744?h=22218688ac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameBorder={0}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="SG4_DP1_0"
+          ></iframe>
+        </div>
 
         <div id="pause">
           <FormattedMessage
@@ -25,6 +31,7 @@ const Video: React.FC<{}> = () => {
             defaultMessage="pause"
             description="pause icon"
           />
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
     </div>
