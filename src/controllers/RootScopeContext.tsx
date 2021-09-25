@@ -35,7 +35,11 @@ interface iGameSave {
   current: number;
   completed: boolean;
   videoposition: number;
-  progress: unknown[];
+  progress: {
+    id: number,
+          label: string,
+          option: number,
+  }[];
 }
 
 interface HistoryWithPush {

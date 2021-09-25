@@ -1,3 +1,7 @@
+import { useContext, useCallback } from "react";
+import { useLocation, useHistory } from "react-router";
+import RootScopeContext from "./controllers/RootScopeContext";
+
 export function generateUUID(): string {
   var r: string;
   let d = new Date().getTime();
@@ -15,13 +19,28 @@ export function generateUUID(): string {
   return r;
 }
 
+export const useGotoMenu = () => {
+  const location = useLocation();
+  const history = useHistory();
+
+  const rootScope = useContext(RootScopeContext);
+
+  const gotoMenu = useCallback(() => {
+    rootScope.resumeURL = location.pathname;
+    rootScope.logGameEvent("", "open", "menu", "", "");
+    history.push("/");
+  }, [rootScope]);
+  return gotoMenu;
+};
+
 export function getBrowser() {
   var browser, isIE;
   // @ts-ignore
   isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
   // @ts-ignore
-  if (// @ts-ignore
+  if (
+    // @ts-ignore
     (!!window.opr && !!opr.addons) ||
     // @ts-ignore
     !!window.opera ||
@@ -41,7 +60,7 @@ export function getBrowser() {
     })(
       // @ts-ignore
       !window["safari"] ||
-      // @ts-ignore
+        // @ts-ignore
         (typeof safari !== "undefined" && safari.pushNotification)
     )
   ) {

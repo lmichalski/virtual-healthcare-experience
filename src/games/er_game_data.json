@@ -5,9 +5,9 @@
       "title": "DP0",
       "type": "video",
       "data": "SG4_DP1_0",
-	  "video": {
-		  "vimeo_url": "http:// whatever"
-	  },
+      "video": {
+        "vimeo_url": "http:// whatever"
+      },
       "correct": false,
       "feedback": "",
       "message": "What is your priority assessment?",
