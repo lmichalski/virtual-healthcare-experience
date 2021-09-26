@@ -91,6 +91,7 @@ const App: React.FC<{}> = () => {
                 <Route path="/">
                   <Menu />
                 </Route>
+                <h2> Stagng! </h2>
               </Switch>
             </div>
           </div>
