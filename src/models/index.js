@@ -4,8 +4,11 @@ import { schema } from './schema';
 
 
 
-const { Game } = initSchema(schema);
+const { Game, Option, VideoSources, DecisionPoint } = initSchema(schema);
 
 export {
-  Game
+  Game,
+  Option,
+  VideoSources,
+  DecisionPoint
 };

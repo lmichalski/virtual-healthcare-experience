@@ -31,6 +31,16 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "decisionpoints": {
+                    "name": "decisionpoints",
+                    "isArray": true,
+                    "type": {
+                        "nonModel": "DecisionPoint"
+                    },
+                    "isRequired": true,
+                    "attributes": [],
+                    "isArrayNullable": false
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -75,6 +85,132 @@ export const schema = {
         }
     },
     "enums": {},
-    "nonModels": {},
-    "version": "6344fa644f291d73f1a75fe94db0d899"
+    "nonModels": {
+        "Option": {
+            "name": "Option",
+            "fields": {
+                "label": {
+                    "name": "label",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "next": {
+                    "name": "next",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                }
+            }
+        },
+        "VideoSources": {
+            "name": "VideoSources",
+            "fields": {
+                "vimeoUrl": {
+                    "name": "vimeoUrl",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "videojsUrl": {
+                    "name": "videojsUrl",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            }
+        },
+        "DecisionPoint": {
+            "name": "DecisionPoint",
+            "fields": {
+                "data": {
+                    "name": "data",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "title": {
+                    "name": "title",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "type": {
+                    "name": "type",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "video": {
+                    "name": "video",
+                    "isArray": false,
+                    "type": {
+                        "nonModel": "VideoSources"
+                    },
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "correct": {
+                    "name": "correct",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "feedback": {
+                    "name": "feedback",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "message": {
+                    "name": "message",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "options": {
+                    "name": "options",
+                    "isArray": true,
+                    "type": {
+                        "nonModel": "Option"
+                    },
+                    "isRequired": true,
+                    "attributes": [],
+                    "isArrayNullable": false
+                },
+                "next": {
+                    "name": "next",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "last": {
+                    "name": "last",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            }
+        }
+    },
+    "version": "25436b347333adb8d8651c8d576d8375"
 };

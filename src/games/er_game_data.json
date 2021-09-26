@@ -6,7 +6,7 @@
       "type": "video",
       "data": "SG4_DP1_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614620744"
+        "vimeoUrl": "https://player.vimeo.com/video/614620744"
       },
       "correct": false,
       "feedback": "",
@@ -24,15 +24,13 @@
           "label": "Airway/Circulatory/Breathing",
           "next": 2
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 1,
       "title": "DP0_1 - wrong",
       "type": "video",
       "data": "SG4_DP0_1",
-      "video": null,
       "correct": false,
       "feedback": "Consider the potential areas of injury related to the mechanism of injury. What assessment should be completed before conducting an MSK assessment on Jason's ankle?",
       "message": "What is your priority assessment?",
@@ -45,15 +43,13 @@
           "label": "Airway/Circulatory/Breathing",
           "next": 2
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 2,
       "title": "DP0_2 - wrong",
       "type": "video",
       "data": "SG4_DP0_2",
-      "video": null,
       "correct": false,
       "feedback": "Jason is talking normally which indicates a patent airway. From your general survey assessment, there are no signs of respiratory distress or any indication of cardiovascular concerns. Consider how the injury occurred and what your priority concern is at this time.",
       "message": "What is your priority assessment?",
@@ -66,8 +62,7 @@
           "label": "MSK",
           "next": 1
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 3,
@@ -75,7 +70,7 @@
       "type": "video",
       "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614626869"
+        "vimeoUrl": "https://player.vimeo.com/video/614626869"
       },
       "correct": true,
       "feedback": "",
@@ -93,8 +88,7 @@
           "label": "Pupilary Accomodation",
           "next": 5
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 4,
@@ -102,7 +96,7 @@
       "type": "video",
       "data": "SG4_DP1_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614626907"
+        "vimeoUrl": "https://player.vimeo.com/video/614626907"
       },
       "correct": false,
       "feedback": "Rationate: In 20% of the population, there can be a normal finding of a pupil size difference of up to 0.5 mm. When assessing the pupils reaction to light, the pupils may appear unequal if the technique is done too quickly as  the second pupil may be temporily constricted. Given the gravity of yielding this finding with a suspected head injury, it is best to confirm the results by re-performing the technique using proper technique.",
@@ -116,8 +110,7 @@
           "label": "Pupilary Accomodation",
           "next": 5
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 5,
@@ -125,7 +118,7 @@
       "type": "video",
       "data": "SG4_DP1_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627144"
+        "vimeoUrl": "https://player.vimeo.com/video/614627144"
       },
       "correct": false,
       "feedback": "Rationale: Jason pupils are not the same size. In this case, it is important to confirm that your findings are accurate. Accomondation is the next assessment that needs to be done after pupillary reaction to light.",
@@ -139,8 +132,7 @@
           "label": "Notify Nurse Practitioner",
           "next": 4
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 6,
@@ -148,7 +140,7 @@
       "type": "video",
       "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627238"
+        "vimeoUrl": "https://player.vimeo.com/video/614627238"
       },
       "correct": true,
       "feedback": "",
@@ -166,8 +158,7 @@
           "label": "Elevate ankle",
           "next": 9
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 7,
@@ -175,7 +166,7 @@
       "type": "video",
       "data": "SG4_DP2_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627393"
+        "vimeoUrl": "https://player.vimeo.com/video/614627393"
       },
       "correct": false,
       "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
@@ -189,8 +180,7 @@
           "label": "Elevate ankle",
           "next": 9
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 8,
@@ -198,7 +188,7 @@
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614628993"
+        "vimeoUrl": "https://player.vimeo.com/video/614628993"
       },
       "correct": false,
       "feedback": "Medication administration takes time and requires a full assessment before an order can be obtained. The assessment will inform the pain medication route. Consider what immediate action you can take to enhance comfort and reduce pain for the client.",
@@ -212,8 +202,7 @@
           "label": "Elevate ankle",
           "next": 9
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 9,
@@ -221,7 +210,7 @@
       "type": "video",
       "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629017"
+        "vimeoUrl": "https://player.vimeo.com/video/614629017"
       },
       "correct": true,
       "feedback": "",
@@ -239,8 +228,7 @@
           "label": "Peripheral Vascular",
           "next": 12
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 10,
@@ -248,7 +236,7 @@
       "type": "video",
       "data": "SG4_DP3_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629071"
+        "vimeoUrl": "https://player.vimeo.com/video/614629071"
       },
       "correct": false,
       "feedback": "At this time information about ROM is not the priority and does not help to  formulate a clinical judgement. We can expect movement to cause increased discomfort. Think about what might be causing the client to have numbness and tingling.",
@@ -262,8 +250,7 @@
           "label": "Peripheral Vascular",
           "next": 12
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 11,
@@ -271,7 +258,7 @@
       "type": "video",
       "data": "SG4_DP3_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629191"
+        "vimeoUrl": "https://player.vimeo.com/video/614629191"
       },
       "correct": false,
       "feedback": "Kinesthesia is used to assess the posterior column tract of the sensory pathways. This assessment will not provide more information about Jason's symptoms of numbness and tingling. Consider another assessment that would provide you with increased understanding of Jason's symptoms.",
@@ -285,8 +272,7 @@
           "label": "Peripheral Vascular",
           "next": 12
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 12,
@@ -294,7 +280,7 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629613"
+        "vimeoUrl": "https://player.vimeo.com/video/614629613"
       },
       "correct": true,
       "feedback": "",
@@ -312,8 +298,7 @@
           "label": "Use doppler",
           "next": 15
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 13,
@@ -321,7 +306,7 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629791"
+        "vimeoUrl": "https://player.vimeo.com/video/614629791"
       },
       "correct": false,
       "feedback": "For Jason's ankle injury the most important pulses are the ones distal to the injury site. In this case, the popliteal pulse is proximal to the site of injury. Consider, what should the nurse do since they cannot palpate the pedal pulse?",
@@ -335,8 +320,7 @@
           "label": "Use doppler",
           "next": 15
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 14,
@@ -344,7 +328,7 @@
       "type": "video",
       "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629916"
+        "vimeoUrl": "https://player.vimeo.com/video/614629916"
       },
       "correct": false,
       "feedback": "The client's feet appear pink in colour bilaterally with cap refill <3 secs which suggests that there are no significant circulatory deficits.  However an absent pulse is a significant finding that requires confirmation and potentially immediate action.  Consider what is your next assessment when you cannot palpate the right pedal pulse.",
@@ -358,8 +342,7 @@
           "label": "Use doppler",
           "next": 15
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 15,
@@ -367,7 +350,7 @@
       "type": "video",
       "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629953"
+        "vimeoUrl": "https://player.vimeo.com/video/614629953"
       },
       "correct": true,
       "feedback": "",
@@ -385,8 +368,7 @@
           "label": "Perform passive ROM",
           "next": 17
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 16,
@@ -394,7 +376,7 @@
       "type": "video",
       "data": "SG4_DP5_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630127"
+        "vimeoUrl": "https://player.vimeo.com/video/614630127"
       },
       "correct": false,
       "feedback": "Think about Jason's change in responsiveness. What is a priority assessment to be completed based on the client's behaviour?",
@@ -408,8 +390,7 @@
           "label": "Assess level of conciousness",
           "next": 18
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 17,
@@ -417,7 +398,7 @@
       "type": "video",
       "data": "SG4_DP5_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630152"
+        "vimeoUrl": "https://player.vimeo.com/video/614630152"
       },
       "correct": false,
       "feedback": "Completing a passive ROM does not address the change in Jason's level of consciousness. Consider what is a priority assessment to be completed based on the client's behaviour.",
@@ -431,8 +412,7 @@
           "label": "Assess level of conciousness",
           "next": 18
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 18,
@@ -440,7 +420,7 @@
       "type": "video",
       "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630423"
+        "vimeoUrl": "https://player.vimeo.com/video/614630423"
       },
       "correct": true,
       "feedback": "",
@@ -462,15 +442,14 @@
           "label": "13",
           "next": 21
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 19,
       "title": "DP6_2 - wrong",
       "type": "video",
       "data": "SG4_DP6_2",
-      "video": null,
+
       "correct": false,
       "feedback": "A Glasgow Coma reading of 10 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
       "message": "What is Jason's Glasgow Coma Scale score?",
@@ -487,15 +466,14 @@
           "label": "13",
           "next": 21
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 20,
       "title": "DP6_3 - wrong",
       "type": "video",
       "data": "SG4_DP6_3",
-      "video": null,
+
       "correct": false,
       "feedback": "A Glasgow Coma reading of 12 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
       "message": "What is Jason's Glasgow Coma Scale score?",
@@ -512,15 +490,14 @@
           "label": "13",
           "next": 21
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 21,
       "title": "DP6_4 - wrong",
       "type": "video",
       "data": "SG4_DP6_4",
-      "video": null,
+
       "correct": false,
       "feedback": "A Glasgow Coma reading of 13 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
       "message": "What is Jason's Glasgow Coma Scale score?",
@@ -537,8 +514,7 @@
           "label": "12",
           "next": 20
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 22,
@@ -546,7 +522,7 @@
       "type": "video",
       "data": "SG4_DP7_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630446"
+        "vimeoUrl": "https://player.vimeo.com/video/614630446"
       },
       "correct": true,
       "feedback": "",
@@ -564,15 +540,14 @@
           "label": "Nystagus",
           "next": 24
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 23,
       "title": "DP7_2 - wrong",
       "type": "SG4_DP7_2",
       "data": "pass-vid",
-      "video": null,
+
       "correct": false,
       "feedback": "The pupilary response was not brisk. Take some time to review the pupilary reaction again.",
       "message": "What is you assessment of Jason's pupils?",
@@ -585,15 +560,14 @@
           "label": "Sluggish",
           "next": 25
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 24,
       "title": "DP7_3 - wrong",
       "type": "video",
       "data": "SG4_DP7_3",
-      "video": null,
+
       "correct": false,
       "feedback": "The pupilary response is not nystagmus (uncontrolled repetitive movements of the eyes). Take some time to review the pupilary reaction.",
       "message": "What is you assessment of Jason's pupils?",
@@ -606,8 +580,7 @@
           "label": "Sluggish",
           "next": 25
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 25,
@@ -615,7 +588,7 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630449"
+        "vimeoUrl": "https://player.vimeo.com/video/614630449"
       },
       "correct": true,
       "feedback": "",
@@ -633,8 +606,7 @@
           "label": "Restrain Jason",
           "next": 27
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 26,
@@ -642,7 +614,7 @@
       "type": "video",
       "data": "SG4_DP8_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630466"
+        "vimeoUrl": "https://player.vimeo.com/video/614630466"
       },
       "correct": false,
       "feedback": "Often during a seizure the pateint clenches their teeth tightly making it difficult or impossible to insert an oral airway. Think of another way to protect Jason's airyway during a seizure.",
@@ -656,8 +628,7 @@
           "label": "Turn to lateral position",
           "next": 28
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 27,
@@ -665,7 +636,7 @@
       "type": "video",
       "data": "SG4_DP8_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeoUrl": "https://player.vimeo.com/video/614630503"
       },
       "correct": false,
       "feedback": "Restraining movement during a seizure can cause injury including bruising and broken bones. It is more appropriate to adjust the environment around so that the client cannot injure himself.",
@@ -679,21 +650,20 @@
           "label": "Turn to lateral position",
           "next": 28
         }
-      ],
-      "next": null
+      ]
     },
     {
       "id": 28,
       "type": "video",
       "data": "SG4_DP9_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630565"
+        "vimeoUrl": "https://player.vimeo.com/video/614630565"
       },
       "correct": true,
+      "last": true,
       "feedback": "",
       "message": "",
-      "options": [],
-      "next": null
+      "options": []
     }
   ]
 }

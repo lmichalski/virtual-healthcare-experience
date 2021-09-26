@@ -27,7 +27,7 @@ const Video: React.FC<{}> = () => {
 
   const skipVideo = useCallback(() => {
     let time = undefined;
-    if (dp?.video?.vimeo_url) {
+    if (dp?.video?.vimeoUrl) {
     } else if (videoRef.current) {
       var api = videojs(videoRef.current);
       api.dispose();
@@ -213,7 +213,7 @@ const Video: React.FC<{}> = () => {
   return (
     <div className="video">
       <div className="right controls">
-        <a href="" className="button menu" onClick={gotoMenu}>
+        <a className="button menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
             defaultMessage="Menu"
@@ -223,11 +223,11 @@ const Video: React.FC<{}> = () => {
       </div>
       <div id="player" className="videoplayer functional">
         {dp?.video &&
-          (dp.video.vimeo_url ? (
+          (dp.video.vimeoUrl ? (
             <div>
               <iframe
                 ref={iframeRef}
-                src={dp.video.vimeo_url}
+                src={dp.video.vimeoUrl}
                 frameBorder={0}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen

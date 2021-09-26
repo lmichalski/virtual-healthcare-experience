@@ -38,7 +38,7 @@ const Intro: React.FC<{}> = () => {
         </div>
         <footer>
           <p className="controls">
-            <a href="" className="button" onClick={skipToNext}>
+            <a className="button" onClick={skipToNext}>
               {label}
             </a>
           </p>

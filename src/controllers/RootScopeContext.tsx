@@ -2,25 +2,21 @@ import React from "react";
 
 import { generateUUID, Storage } from "../util";
 import er_game_data from "../games/er_game_data.json";
+import { DataStore } from "@aws-amplify/datastore";
+import { DecisionPoint, Game, VideoSources, Option } from "../models";
 
 const data: GameDataShape = er_game_data;
 
-interface DecisionPoint {
+
+interface iDecisionPoint {
   id: number;
   title?: string;
   type: string; //"video" | "string",
   data: string;
 
-  video:
-    | {
-        vimeo_url: string;
-        videojs_url?: string;
-      }
-    | {
-        vimeo_url?: string;
-        videojs_url: string;
-      }
-    | null;
+  video?: {
+    vimeoUrl?: string;
+  };
 
   correct: boolean;
   feedback: string;
@@ -29,11 +25,12 @@ interface DecisionPoint {
     label: string;
     next: number;
   }[];
-  next: null;
+  next?: number;
+  last?: boolean;
 }
 
 interface GameDataShape {
-  decisionpoints: DecisionPoint[];
+  decisionpoints: iDecisionPoint[];
 }
 
 interface iGameSave {
@@ -73,8 +70,8 @@ interface iRootScope {
 }
 
 export const emptyRootScope = (): iRootScope => ({
-  dataProvider: data.decisionpoints,
-  correctOptions: data.decisionpoints.filter(({ correct }) => correct),
+  dataProvider: [],
+  correctOptions: [],
   eventLog: [],
   sg: (Storage.getObject("prenatal") as iGameSave | false) || {
     uuid: generateUUID(),
@@ -109,7 +106,7 @@ export const emptyRootScope = (): iRootScope => ({
 
     this.resumeURL = "";
 
-    if (dp && this.dataProvider.indexOf(dp) === this.dataProvider.length - 1) {
+    if (dp && dp.last) {
       history.push("/summary/");
     } else if (this.sg.videoposition > 0.1) {
       history.push("/video/");

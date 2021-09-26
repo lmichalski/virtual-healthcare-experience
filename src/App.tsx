@@ -8,6 +8,7 @@ import {
   useHistory,
 } from "react-router-dom";
 import { IntlProvider } from "react-intl";
+import { API, DataStore } from "aws-amplify";
 
 import Menu from "./pages/Menu";
 
@@ -30,16 +31,44 @@ import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
+import { Game } from "./models";
+
+import Amplify, { Logger } from "aws-amplify";
+
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
+API.configure(awsconfig)
+Logger.LOG_LEVEL = 'WARN'
+DataStore.configure();
+DataStore.start()
 
 const App: React.FC<{}> = () => {
-  const locale = "en" as string;
-  const messages = locale === "fr" ? frMessages : enMessages;
+  const userLocale = "en" as string;
+  const messages = userLocale === "fr" ? frMessages : enMessages;
 
   const rootScope = useRef(emptyRootScope());
 
+  const [game, setGame] = useState<Game | null>(null);
+
+  useEffect(() => {
+    if(game) return;
+    DataStore.query(Game, (game) =>
+      game.lang("eq", userLocale).slug("eq", "er")
+    ).then((games) => {
+      const game = games[0]
+      if (!game) return;
+      console.log("Game gotten")
+      rootScope.current.dataProvider = game.decisionpoints;
+      rootScope.current.correctOptions = game.decisionpoints.filter(({ correct }) => correct)
+      setGame(game)
+    });
+  }, [userLocale, game]);
+
   return (
-    <IntlProvider messages={messages} locale={locale} defaultLocale="en">
+    <IntlProvider messages={messages} locale={userLocale} defaultLocale="en">
       <Router>
+        {!game ? <h1> Loading! </h1> : (
         <RootScopeContext.Provider value={rootScope.current}>
           <div className="fullscreen">
             <div className="view" role="application">
@@ -94,7 +123,7 @@ const App: React.FC<{}> = () => {
               </Switch>
             </div>
           </div>
-        </RootScopeContext.Provider>
+        </RootScopeContext.Provider>)}
       </Router>
     </IntlProvider>
   );
