@@ -1,4 +1,5 @@
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 import "./Objectives.scss";
 
 const Objectives: React.FC<{}> = () => {
@@ -7,9 +8,9 @@ const Objectives: React.FC<{}> = () => {
       <div className="panel info">
         <header>
           <h1>
-            <a href="#/" aria-label="Return to menu">
+            <Link to="/" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
-            </a>
+            </Link>
             <FormattedMessage
               id="Objectives.title"
               defaultMessage="Learning Objectives"

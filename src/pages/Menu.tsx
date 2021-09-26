@@ -48,9 +48,8 @@ const Menu: React.FC<{}> = () => {
               </li>
               <li>
                 <a
-                  href="javascript:void(0)"
-                  ng-class="sg.gamesaved ? 'active' : 'disabled'"
-                  ng-click="resumeGame()"
+                  className={rootScope.sg.gamesaved ? "active" : "disabled"}
+                  onClick={() => rootScope.resumeGame(history)}
                 >
                   <FormattedMessage
                     id="Menu.resumeGame"
@@ -87,22 +86,22 @@ const Menu: React.FC<{}> = () => {
                 </Link>
               </li>
               <li>
-                <a href="#/credits/">
+                <Link to="/credits/">
                   <FormattedMessage
                     id="Menu.credits"
                     defaultMessage="Credits"
                     description="Credits Button"
                   />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="../">
+                <Link to="../">
                   <FormattedMessage
                     id="Menu.exit"
                     defaultMessage="Exit Game"
                     description="Exit Game Button"
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

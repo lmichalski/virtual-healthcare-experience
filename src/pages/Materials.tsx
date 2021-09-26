@@ -44,11 +44,7 @@ const Materials: React.FC<{}> = () => {
             </a>
             <br />
             <h2>Self-Debrief</h2>
-            <a
-              href="/docs/self-assessment.pdf"
-              className="button"
-              download
-            >
+            <a href="/docs/self-assessment.pdf" className="button" download>
               Download
             </a>
           </div>

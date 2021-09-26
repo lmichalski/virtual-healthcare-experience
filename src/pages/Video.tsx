@@ -63,49 +63,52 @@ const Video: React.FC<{}> = () => {
 
   useEffect(() => {
     const handleUserKeyPress = function (e: KeyboardEvent) {
-      var api = videojs("vid-player");
-      switch (e.keyCode) {
-        case 27:
-          e.preventDefault();
-          if (location.pathname !== "/") {
-            if (api && typeof api.currentTime() != "undefined") {
-              rootScope.sg.videoposition = api.currentTime();
-              rootScope.saveState();
-            }
-            history.push("/");
-          } else {
-            history.goBack();
-          }
-          break;
-        case 32:
-          e.preventDefault();
-          if (api) {
-            if (api.paused()) {
-              api.play();
+      const video = videoRef.current;
+      if (video) {
+        var api = videojs(video);
+        switch (e.keyCode) {
+          case 27:
+            e.preventDefault();
+            if (location.pathname !== "/") {
+              if (api && typeof api.currentTime() != "undefined") {
+                rootScope.sg.videoposition = api.currentTime();
+                rootScope.saveState();
+              }
+              history.push("/");
             } else {
-              api.pause();
+              history.goBack();
             }
-          }
-          break;
-        case 33:
-          if (api) {
-            api.currentTime(api.currentTime() - 10);
-            api.play();
-          }
-          break;
-        case 34:
-          if (api) {
-            api.currentTime(api.currentTime() + 10);
-            api.play();
-          }
-          break;
-        default:
-          break;
+            break;
+          case 32:
+            e.preventDefault();
+            if (api) {
+              if (api.paused()) {
+                api.play();
+              } else {
+                api.pause();
+              }
+            }
+            break;
+          case 33:
+            if (api) {
+              api.currentTime(api.currentTime() - 10);
+              api.play();
+            }
+            break;
+          case 34:
+            if (api) {
+              api.currentTime(api.currentTime() + 10);
+              api.play();
+            }
+            break;
+          default:
+            break;
+        }
       }
-    };
-    window.addEventListener("keydown", handleUserKeyPress);
-    return () => {
-      window.removeEventListener("keydown", handleUserKeyPress);
+      window.addEventListener("keydown", handleUserKeyPress);
+      return () => {
+        window.removeEventListener("keydown", handleUserKeyPress);
+      };
     };
   }, [history, location.pathname]);
 
@@ -113,16 +116,7 @@ const Video: React.FC<{}> = () => {
     var iframe = iframeRef.current;
 
     if (videoRef.current && dp) {
-      const api = videojs("vid-player");
-
-      // var Button = videojs.getComponent('Button');
-      // var button = new Button(api, {
-      // 		clickHandler: function(event) {
-      // 			videojs.log('Clicked');
-      // 		}
-      // });
-      // var button = api.addChild('BigPlayButton');
-
+      const api = videojs(videoRef.current);
       const clip = {
         bufferLength: 0,
         sources: [
@@ -140,52 +134,16 @@ const Video: React.FC<{}> = () => {
           },
         ],
       };
-
-      // if (false) {
-
-      // 	api.pause();
-      // 	api.src (clip.sources[0].src);
-
-      // } else {
-
-      // api = flowplayer('#player', {
-      // 	key: '$916323217063219',
-      // 	clip:  clip,
-      // 	tooltip: false,
-      // 	keyboard: false,
-      // 	autoBuffering: false,
-      // 	analytics: 'UA-7906194-16',
-      // 	volume: 0.8
-
       console.log("video source", clip.sources[0].src);
 
       api.src(clip.sources[0].src);
 
       // @ts-ignore
       api.ready((api): void => {
-        // if($rootScope.sg.subtitles) {
-        // 	if(api.video.subtitles.length > 0) {
-        // 		api.loadSubtitles(0);
-        // 	} else {
-        // 		api.disableSubtitles();
-        // 	}
-        // } else {
-        // 	api.disableSubtitles();
-        // }
-
         if (rootScope.sg.videoposition > 0) {
           api.currentTime(rootScope.sg.videoposition);
         }
-        // } else {
-        // 	api.play().then((p) => { debugger }).catch((err) => { debugger });
-        // }
         api?.play();
-
-        /*gtag('event', 'video_started', {
-        'event_category': 'video',
-        'event_label': dp.data,
-        'value': dp.id
-      });*/
         rootScope.logGameEvent("", "start", "video", dp?.data, "");
       });
 
@@ -195,11 +153,6 @@ const Video: React.FC<{}> = () => {
       });
 
       api.on("pause", function (e: unknown) {
-        /*gtag('event', 'video_paused', {
-        'event_category': 'video',
-        'event_label': dp.data,
-        'value': dp.id
-      });*/
         if (api.duration() > api.currentTime() + 0.5) {
           rootScope.logGameEvent(
             "",
@@ -231,11 +184,6 @@ const Video: React.FC<{}> = () => {
       api.on("ended", function (e) {
         skipVideo();
         rootScope.saveState();
-        /*gtag('event', 'video_finished', {
-        'event_category': 'video',
-        'event_label': dp.data,
-        'value': dp.id
-      });*/
         rootScope.logGameEvent("", "finish", "video", dp?.data, "");
       });
 
@@ -264,7 +212,6 @@ const Video: React.FC<{}> = () => {
 
   return (
     <div className="video">
-      {/* <!--<div className="left controls"><a href="" className="button menu" ng-click="skipVideo();">Skip</a></div>--> */}
       <div className="right controls">
         <a href="" className="button menu" onClick={gotoMenu}>
           <FormattedMessage
@@ -304,14 +251,6 @@ const Video: React.FC<{}> = () => {
             description="pause icon"
           />
           <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
-
-        <div id="skip" onClick={skipVideo}>
-          <FormattedMessage
-            id="General.skip"
-            defaultMessage="Skip"
-            description="Skip Video button"
-          />
         </div>
       </div>
     </div>

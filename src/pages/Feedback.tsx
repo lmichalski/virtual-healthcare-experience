@@ -9,19 +9,20 @@ const Feedback: React.FC<{}> = () => {
 
   const rootScope = useContext(RootScopeContext);
 
-  const dp = rootScope.dataProvider.find(({id}) => id == rootScope.sg.current ) 
-		
-		const goNext = useCallback( () => {
-			switch(dp?.type) {
-				case 'video':
-					history.push('/decision/');
-					break;
-				case 'lo':
-					history.push('/lo/');
-					break;
-			}
-		}, ['dp.type'])
+  const dp = rootScope.dataProvider.find(
+    ({ id }) => id == rootScope.sg.current
+  );
 
+  const goNext = useCallback(() => {
+    switch (dp?.type) {
+      case "video":
+        history.push("/decision/");
+        break;
+      case "lo":
+        history.push("/lo/");
+        break;
+    }
+  }, ["dp.type"]);
 
   return (
     <div className="container">

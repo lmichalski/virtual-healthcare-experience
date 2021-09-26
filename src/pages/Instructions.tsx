@@ -5,10 +5,9 @@ import RootScopeContext from "../controllers/RootScopeContext";
 import "./Instructions.scss";
 
 const Instructions: React.FC<{}> = () => {
-
   const rootScope = useContext(RootScopeContext);
 
-  const minSteps = rootScope.correctOptions.length
+  const minSteps = rootScope.correctOptions.length;
 
   return (
     <div className="container">
@@ -41,8 +40,8 @@ const Instructions: React.FC<{}> = () => {
                 questions as possible.{" "}
               </li>
               <li>
-                The best possible result is { minSteps }. You can play this game unlimited
-                times to improve your result.{" "}
+                The best possible result is {minSteps}. You can play this game
+                unlimited times to improve your result.{" "}
               </li>
               <li>
                 Game play progresses forward only; there is no option to go back
