@@ -10,7 +10,7 @@ import {
 import { IntlProvider } from "react-intl";
 
 import Menu from "./pages/Menu";
-
+import flags from "./flags";
 import "./App.scss";
 
 import enMessages from "./lang-compiled/en.json";
