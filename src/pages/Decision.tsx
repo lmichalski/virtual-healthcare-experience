@@ -59,7 +59,7 @@ const Decision: React.FC<{}> = () => {
       };
 
       return (
-        <li className="option" ng-repeat="opt in randomizedOptions">
+        <li key={opt.label} className="option" ng-repeat="opt in randomizedOptions">
           <button onClick={chooseOption}>{opt.label}</button>
         </li>
       );

@@ -21,7 +21,7 @@
           "next": 3
         },
         {
-          "label": "Airway/Circulatory/Breathing",
+          "label": "Airway Circulatory Breathing",
           "next": 2
         }
       ]
@@ -40,7 +40,7 @@
           "next": 3
         },
         {
-          "label": "Airway/Circulatory/Breathing",
+          "label": "Airway Circulatory Breathing",
           "next": 2
         }
       ]

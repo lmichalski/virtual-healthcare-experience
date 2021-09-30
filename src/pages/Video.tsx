@@ -62,6 +62,13 @@ const Video: React.FC<{}> = () => {
   }, [dp]);
 
   useEffect(() => {
+    if (dp && !dp?.video?.vimeoUrl)
+      skipVideo()
+  }
+  ,[dp, skipVideo]
+  )
+
+  useEffect(() => {
     const handleUserKeyPress = function (e: KeyboardEvent) {
       const video = videoRef.current;
       if (video) {
@@ -227,7 +234,7 @@ const Video: React.FC<{}> = () => {
             <div>
               <iframe
                 ref={iframeRef}
-                src={dp.video.vimeoUrl}
+                src={dp.video.vimeoUrl+"?autoplay=1"}
                 frameBorder={0}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
