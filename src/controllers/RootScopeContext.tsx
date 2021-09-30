@@ -4,9 +4,9 @@ import { generateUUID, Storage } from "../util";
 import er_game_data from "../games/er_game_data.json";
 import { DataStore } from "@aws-amplify/datastore";
 import { DecisionPoint, Game, VideoSources, Option } from "../models";
+import flags from "../flags";
 
 const data: GameDataShape = er_game_data;
-
 
 interface iDecisionPoint {
   id: number;
@@ -70,8 +70,10 @@ interface iRootScope {
 }
 
 export const emptyRootScope = (): iRootScope => ({
-  dataProvider: [],
-  correctOptions: [],
+  dataProvider: flags.useDbForGameData ? [] : data.decisionpoints,
+  correctOptions: flags.useDbForGameData
+    ? []
+    : data.decisionpoints.filter(({ correct }) => correct),
   eventLog: [],
   sg: (Storage.getObject("prenatal") as iGameSave | false) || {
     uuid: generateUUID(),
