@@ -147,6 +147,9 @@ a.button.menu:focus {
 .controls li {
 	margin: 0;
 }
+.controls a {
+	cursor: pointer;
+}
 .controls a.disabled, 
 .controls a.disabled:hover {
 	color: rgb(46, 57, 71);
