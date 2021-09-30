@@ -1,0 +1,32 @@
+type Option {
+  label: String!
+  next: Int!
+}
+
+type VideoSources {
+  vimeoUrl: String
+  videojsUrl: String
+}
+
+type DecisionPoint {
+  data: String!
+  id: Int!
+  title: String
+  type: String!
+  video: VideoSources
+  correct: Boolean!
+  feedback: String!
+  message: String!
+  options: [Option!]!
+  next: Int
+  last: Boolean
+}
+
+type Game @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  lang: String
+  slug: String
+  name: String
+  decisionpoints: [DecisionPoint!]!
+}
+  
