@@ -1,6 +1,6 @@
-import { useEffect, useContext, useCallback, useState, useRef } from "react";
+import { useEffect, useContext, useCallback, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-import { useLocation, useHistory, Redirect } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import videojs from "video.js";
 import Player from "@vimeo/player";
 
@@ -17,10 +17,8 @@ const Video: React.FC<{}> = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const [playing, setPlaying] = useState(false);
-
   const dp = rootScope.dataProvider.find(
-    ({ id }) => id == rootScope.sg.current
+    ({ id }) => id === rootScope.sg.current
   );
 
   const gotoMenu = useGotoMenu();
@@ -39,7 +37,7 @@ const Video: React.FC<{}> = () => {
 
     if (
       dp &&
-      rootScope.dataProvider.indexOf(dp) == rootScope.dataProvider.length - 1
+      rootScope.dataProvider.indexOf(dp) === rootScope.dataProvider.length - 1
     ) {
       rootScope.sg.completed = true;
       history.push("/summary/");
@@ -59,14 +57,14 @@ const Video: React.FC<{}> = () => {
       rootScope.sg.current++;
     }
     rootScope.logGameEvent("", "skip", "video", dp?.data, time);
-  }, [dp]);
+  }, [dp, history, rootScope]);
 
   useEffect(() => {
     if (dp && !dp?.video?.vimeo_url) skipVideo();
   }, [dp, skipVideo]);
 
   useEffect(() => {
-    const handleUserKeyPress = function (e: KeyboardEvent) {
+    const handleUserKeyPress = (e: KeyboardEvent) => {
       const video = videoRef.current;
       if (video) {
         var api = videojs(video);
@@ -109,12 +107,12 @@ const Video: React.FC<{}> = () => {
             break;
         }
       }
-      window.addEventListener("keydown", handleUserKeyPress);
-      return () => {
-        window.removeEventListener("keydown", handleUserKeyPress);
-      };
     };
-  }, [history, location.pathname]);
+    window.addEventListener("keydown", handleUserKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleUserKeyPress);
+    };
+  }, [history, location.pathname, rootScope]);
 
   useEffect(() => {
     var iframe = iframeRef.current;
@@ -153,7 +151,6 @@ const Video: React.FC<{}> = () => {
 
       api.on("progress", function (e: unknown) {
         rootScope.sg.videoposition = api.currentTime();
-        setPlaying(true);
       });
 
       api.on("pause", function (e: unknown) {
@@ -212,18 +209,18 @@ const Video: React.FC<{}> = () => {
         console.log("title:", title);
       });
     }
-  }, [videoRef.current, iframeRef.current]);
+  }, [dp, rootScope, skipVideo]);
 
   return (
     <div className="video">
       <div className="right controls">
-        <a href="" className="button menu" onClick={gotoMenu}>
+        <button className="button menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
             defaultMessage="Menu"
             description="Go To Menu Button"
           />
-        </a>
+        </button>
       </div>
       <div id="player" className="videoplayer functional">
         {dp?.video &&
@@ -231,7 +228,7 @@ const Video: React.FC<{}> = () => {
             <div>
               <iframe
                 ref={iframeRef}
-                src={dp.video.vimeo_url+"?autoplay=1"}
+                src={dp.video.vimeo_url + "?autoplay=1"}
                 frameBorder={0}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen

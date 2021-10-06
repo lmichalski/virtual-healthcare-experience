@@ -14,7 +14,7 @@ const Transition: React.FC<{}> = () => {
 
   const playNextVideo = useCallback(() => {
     history.push("/video/");
-  }, []);
+  }, [history]);
 
   return (
     <div className="container">
@@ -27,12 +27,10 @@ const Transition: React.FC<{}> = () => {
             tagName="h1"
           />
         </header>
-        <div className="main" ng-bind-html="dp.feedback"></div>
+        <div className="main">{dp?.feedback}</div>
         <footer>
           <p className="controls">
-            <a href="javascript:void(0)" onClick={playNextVideo}>
-              Resume Game
-            </a>
+            <button onClick={playNextVideo}>Resume Game</button>
           </p>
         </footer>
       </div>

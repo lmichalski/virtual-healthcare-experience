@@ -29,7 +29,7 @@ export const useGotoMenu = () => {
     rootScope.resumeURL = location.pathname;
     rootScope.logGameEvent("", "open", "menu", "", "");
     history.push("/");
-  }, [rootScope]);
+  }, [rootScope, history, location.pathname]);
   return gotoMenu;
 };
 

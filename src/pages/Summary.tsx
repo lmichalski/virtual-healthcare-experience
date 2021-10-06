@@ -1,43 +1,50 @@
-import { useCallback, useContext, useMemo, useState } from "react";
+import { useContext, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { useHistory } from "react-router";
-import { JsxAttributeLike } from "typescript";
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
-import { PDFDownloadLink, Document, Page, Text, Link, View } from "@react-pdf/renderer";
-import { StyleSheet, Font } from '@react-pdf/renderer'
-import Transition from "./Transition";
+import {
+  PDFDownloadLink,
+  Document,
+  Page,
+  Text,
+  Link,
+  View,
+} from "@react-pdf/renderer";
+import { Font } from "@react-pdf/renderer";
 
-const Roboto = require ("../fnt/Roboto-Regular.ttf").default as string
+const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
 Font.register({
-    family: 'Roboto',
-    format: "truetype",
-    src: Roboto
-  });
+  family: "Roboto",
+  format: "truetype",
+  src: Roboto,
+});
 
 const Summary: React.FC<{}> = () => {
-  const history = useHistory();
   const rootScope = useContext(RootScopeContext);
-  var i, l;
+
   // const [progress, setProgress] = useState([])
 
   const goToMenu = useGotoMenu();
 
-  let progress: any[] = [];
+  let progress: { question: string; answer: string; correct: boolean }[] =
+    useMemo(() => {
+      progress = [];
+      var i;
+      for (i = 0; i < rootScope.sg.progress.length; i++) {
+        const dp = rootScope.sg.progress[i];
+        const current = rootScope.dataProvider.find(({ id }) => id === dp.id)!;
+        const next = rootScope.dataProvider.find(({ id }) => id === dp.option)!;
 
-  for (i = 0; i < rootScope.sg.progress.length; i++) {
-    const dp = rootScope.sg.progress[i];
-    const current = rootScope.dataProvider.find(({ id }) => id == dp.id)!;
-    const next = rootScope.dataProvider.find(({ id }) => id == dp.option)!;
-
-    progress.push({
-      question: current.message,
-      answer: dp.label,
-      correct: next.correct,
-    });
-  }
+        progress.push({
+          question: current.message,
+          answer: dp.label,
+          correct: next.correct,
+        });
+      }
+      return progress;
+    }, [rootScope.dataProvider, rootScope.sg.progress]);
 
   let message: JSX.Element;
 
@@ -52,18 +59,23 @@ const Summary: React.FC<{}> = () => {
       <>
         <Text>
           You have completed the game by answering{" "}
-          <Text style = {{fontWeight: "bold"}}> {progress.length} questions</Text>.
+          <Text style={{ fontWeight: "bold" }}>
+            {" "}
+            {progress.length} questions
+          </Text>
+          .
         </Text>
-        {progress.length == rootScope.correctOptions.length ? (
+        {progress.length === rootScope.correctOptions.length ? (
           <Text>
             You've demonstrated the best possible result! Now play it one more
             time to make sure it wasn't mere luck :)
           </Text>
         ) : (
           <Text>
-            {" "}However, if you give only correct answers it should only take 9
+            {" "}
+            However, if you give only correct answers it should only take 9
             questions to complete the scenario. See if you can improve your
-            results next time! {" "}
+            results next time!{" "}
           </Text>
         )}
         <Text>
@@ -74,9 +86,7 @@ const Summary: React.FC<{}> = () => {
         <Text>
           If not attending an organized debrief, make sure you download and
           complete the{" "}
-          <Link src="/docs/self-assessment.pdf">
-            self-debriefing questions
-          </Link>{" "}
+          <Link src="/docs/self-assessment.pdf">self-debriefing questions</Link>{" "}
           to optimise your learning experience. Scroll down to view results.
         </Text>
       </>
@@ -85,22 +95,24 @@ const Summary: React.FC<{}> = () => {
     message = (
       <Text>
         You have answered{" "}
-        <Text style = {{fontWeight: "bold"}}> {progress.length} questions</Text>. To finish
-        the game go to menu and resume the gameplay.
+        <Text style={{ fontWeight: "bold" }}> {progress.length} questions</Text>
+        . To finish the game go to menu and resume the gameplay.
       </Text>
     );
   }
 
   const pdfContent = useMemo(() => {
-    let responses = progress.map((dp,i) => (
-      <View key = {i}>
+    let responses = progress.map((dp, i) => (
+      <View key={i}>
         <View>
-          <Text style = {{fontWeight: "bold"}}>Q: </Text>
+          <Text style={{ fontWeight: "bold" }}>Q: </Text>
           <Text>{dp.question}</Text>
         </View>
         <View>
-          <Text style = {{fontWeight: "bold"}}>A: </Text>
-          <Text style = {dp.correct ? {color: "#009933"}:{color: "#cc0000"}}>
+          <Text style={{ fontWeight: "bold" }}>A: </Text>
+          <Text
+            style={dp.correct ? { color: "#009933" } : { color: "#cc0000" }}
+          >
             {dp.answer} ({dp.correct ? "Correct" : "Incorrect"})
           </Text>
         </View>
@@ -115,25 +127,41 @@ const Summary: React.FC<{}> = () => {
 							h1, h2, p, ol { font-weight: normal; margin-top: 0.3em; margin-bottom: 0.3em; padding-top: 0; padding-bottom: 0; line-height: 130%; color: #000; }`,
             }}
           /> */}
-          <View style = {{fontFamily: "Roboto", fontSize: 14, lineHeight: "130%", backgroundColor: "#ffffff", color: "#000"}}>
-            <Text style = {{fontSize: 32, paddingBottom: "0.3em", borderBottom: "2px solid #000000"}}>Emergency Game Report</Text>
-            <Text style = {{fontSize: 24}}>Summary</Text>
+          <View
+            style={{
+              fontFamily: "Roboto",
+              fontSize: 14,
+              lineHeight: "130%",
+              backgroundColor: "#ffffff",
+              color: "#000",
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 32,
+                paddingBottom: "0.3em",
+                borderBottom: "2px solid #000000",
+              }}
+            >
+              Emergency Game Report
+            </Text>
+            <Text style={{ fontSize: 24 }}>Summary</Text>
             <View>{message}</View>
-            <Text style = {{fontSize: 24}}>Your Responses</Text>
+            <Text style={{ fontSize: 24 }}>Your Responses</Text>
             <View>{responses}</View>
           </View>
         </Page>
       </Document>
     );
     return html;
-  }, []);
+  }, [message, progress]);
 
   return (
     <div className="container">
       <div className="right controls">
-        <a href="" className="button menu" onClick={goToMenu}>
+        <button className="button menu" onClick={goToMenu}>
           Menu
-        </a>
+        </button>
       </div>
       <div className="panel info">
         <header>
@@ -146,13 +174,18 @@ const Summary: React.FC<{}> = () => {
         </header>
         <div className="main summary">
           <div className="content">
-			<div>{message}</div>
-            <h2 style = {{fontSize: 24}}>Your Answers:</h2>
+            <div>{message}</div>
+            <h2 style={{ fontSize: 24 }}>Your Answers:</h2>
             <ol className="responses">
               {progress.map((dp) => (
                 <li>
                   <div>{dp.question}</div>
-                  <div className={dp.correct ? "correct" : "wrong"} style = {dp.correct ? {color: "#009933"}:{color: "#cc0000"}}>
+                  <div
+                    className={dp.correct ? "correct" : "wrong"}
+                    style={
+                      dp.correct ? { color: "#009933" } : { color: "#cc0000" }
+                    }
+                  >
                     <strong>
                       {dp.answer} ({dp.correct ? "Correct" : "Incorrect"})
                     </strong>

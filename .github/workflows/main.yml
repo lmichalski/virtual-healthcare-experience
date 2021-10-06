@@ -7,7 +7,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: npm install
-      - run: rm -rf docs/*
       - run: npm run build
       - run: find ./ -not -name build -exec rm -rf {}\;
       - run: mv -r ./build/* ./*

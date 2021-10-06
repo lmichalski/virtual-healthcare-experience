@@ -10,7 +10,7 @@ const Feedback: React.FC<{}> = () => {
   const rootScope = useContext(RootScopeContext);
 
   const dp = rootScope.dataProvider.find(
-    ({ id }) => id == rootScope.sg.current
+    ({ id }) => id === rootScope.sg.current
   );
 
   const goNext = useCallback(() => {
@@ -22,7 +22,7 @@ const Feedback: React.FC<{}> = () => {
         history.push("/lo/");
         break;
     }
-  }, ["dp.type"]);
+  }, [dp?.type, history]);
 
   return (
     <div className="container">
@@ -38,13 +38,13 @@ const Feedback: React.FC<{}> = () => {
         <div className="main">{dp?.feedback}</div>
         <footer>
           <p className="controls">
-            <a href="javascript:void(0)" className="button" onClick={goNext}>
+            <button className="button" onClick={goNext}>
               <FormattedMessage
                 id="General.resume"
                 defaultMessage="Resume Game"
                 description="resume game button"
               />
-            </a>
+            </button>
           </p>
         </footer>
       </div>

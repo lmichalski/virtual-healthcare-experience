@@ -21,7 +21,7 @@ const Menu: React.FC<{}> = () => {
     rootScope.saveState();
 
     rootScope.logGameEvent("", "start", "game", getBrowser(), "");
-  }, [rootScope]);
+  }, [rootScope, history]);
 
   return (
     <div className="container">
@@ -38,16 +38,16 @@ const Menu: React.FC<{}> = () => {
           <div className="content">
             <ul className="controls">
               <li>
-                <a href="javascript:void(0)" onClick={startNewGame}>
+                <button onClick={startNewGame}>
                   <FormattedMessage
                     id="Menu.newGame"
                     defaultMessage="New Game"
                     description="New Game Button"
                   />
-                </a>
+                </button>
               </li>
               <li>
-                <a
+                <button
                   className={rootScope.sg.gamesaved ? "active" : "disabled"}
                   onClick={() => rootScope.resumeGame(history)}
                 >
@@ -56,7 +56,7 @@ const Menu: React.FC<{}> = () => {
                     defaultMessage="Resume Game"
                     description="Resume Game Button"
                   />
-                </a>
+                </button>
               </li>
               <li>
                 <Link to="/objectives/">

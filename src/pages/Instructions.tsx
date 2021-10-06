@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import RootScopeContext from "../controllers/RootScopeContext";
 import "./Instructions.scss";

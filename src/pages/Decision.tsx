@@ -1,6 +1,6 @@
 import { useCallback, useContext, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Decision.scss";
@@ -11,10 +11,8 @@ const Decision: React.FC<{}> = () => {
   const rootScope = useContext(RootScopeContext);
   const gotoMenu = useGotoMenu();
 
-  const message = "{{ dp.message }}";
-
   const dp = rootScope.dataProvider.find(
-    ({ id }) => id == rootScope.sg.current
+    ({ id }) => id === rootScope.sg.current
   )!;
 
   rootScope.logGameEvent("", "show", "question", dp.message, "");
@@ -68,7 +66,7 @@ const Decision: React.FC<{}> = () => {
         </li>
       );
     });
-  }, []);
+  }, [history, randomizedOptions, rootScope]);
 
   const replayVideo = useCallback(() => {
     /*gtag('event', 'video_replayed', {
@@ -78,27 +76,27 @@ const Decision: React.FC<{}> = () => {
     });*/
     rootScope.logGameEvent("", "replay", "video", dp.data, dp.id);
     history.push("/video/");
-  }, []);
+  }, [dp.data, dp.id, history, rootScope]);
 
   return (
     <div className="container">
       <div className="left controls">
-        <a href="" className="button menu" onClick={replayVideo}>
+        <button className="button menu" onClick={replayVideo}>
           <FormattedMessage
             id="General.replay"
             defaultMessage="Replay"
             description="Replay Video Button"
           />
-        </a>
+        </button>
       </div>
       <div className="right controls">
-        <a href="" className="button menu" onClick={gotoMenu}>
+        <button className="button menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
             defaultMessage="Menu"
             description="Go To Menu Button"
           />
-        </a>
+        </button>
       </div>
       <div className="question" tabIndex={0}>
         <div className="vertical_outer">

@@ -1,8 +1,6 @@
 import { useCallback, useContext, useState } from "react";
-import { FormattedMessage } from "react-intl";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import RootScopeContext from "../controllers/RootScopeContext";
-import { getBrowser } from "../util";
 import "./Intro.scss";
 
 const Intro: React.FC<{}> = () => {
@@ -22,7 +20,7 @@ const Intro: React.FC<{}> = () => {
     } else {
       history.push("/video/");
     }
-  }, []);
+  }, [currentMessage, history, intro.length]);
 
   const text = intro[currentMessage];
 
@@ -38,9 +36,9 @@ const Intro: React.FC<{}> = () => {
         </div>
         <footer>
           <p className="controls">
-            <a href="" className="button" onClick={skipToNext}>
+            <button className="button" onClick={skipToNext}>
               {label}
-            </a>
+            </button>
           </p>
         </footer>
       </div>

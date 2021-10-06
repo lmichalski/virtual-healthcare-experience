@@ -1,16 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-  useHistory,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 
 import Menu from "./pages/Menu";
-import flags from "./flags";
 import "./App.scss";
 
 import enMessages from "./lang-compiled/en.json";

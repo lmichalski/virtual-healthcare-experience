@@ -1,8 +1,10 @@
-import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Settings.scss";
 
 const Settings: React.FC<{}> = () => {
+  const isFullscreen = false;
+  const subtitlesOn = false;
+
   return (
     <div className="container">
       <div className="panel settings">
@@ -32,6 +34,7 @@ const Settings: React.FC<{}> = () => {
                     htmlFor="mode_window"
                     tabIndex={0}
                     role="radio"
+                    aria-checked={!isFullscreen}
                     ng-keydown="onFullscreenKeydown($event)"
                   >
                     Window
@@ -50,6 +53,7 @@ const Settings: React.FC<{}> = () => {
                     htmlFor="mode_fullscreen"
                     tabIndex={0}
                     role="radio"
+                    aria-checked={isFullscreen}
                     ng-keydown="onFullscreenKeydown($event)"
                   >
                     Fullscreen
@@ -74,6 +78,7 @@ const Settings: React.FC<{}> = () => {
                     htmlFor="subtitles_off"
                     tabIndex={0}
                     role="radio"
+                    aria-checked={!subtitlesOn}
                     ng-keydown="onSubtitlesKeydown($event)"
                   >
                     Off
@@ -92,6 +97,7 @@ const Settings: React.FC<{}> = () => {
                     htmlFor="subtitles_en"
                     tabIndex={0}
                     role="radio"
+                    aria-checked={subtitlesOn}
                     ng-keydown="onSubtitlesKeydown($event)"
                   >
                     On
