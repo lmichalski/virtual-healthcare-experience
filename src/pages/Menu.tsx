@@ -38,7 +38,7 @@ const Menu: React.FC<{}> = () => {
           <div className="content">
             <ul className="controls">
               <li>
-                <button onClick={startNewGame}>
+                <button className="Link" onClick={startNewGame}>
                   <FormattedMessage
                     id="Menu.newGame"
                     defaultMessage="New Game"
@@ -48,7 +48,7 @@ const Menu: React.FC<{}> = () => {
               </li>
               <li>
                 <button
-                  className={rootScope.sg.gamesaved ? "active" : "disabled"}
+                  className={`Link ${rootScope.sg.gamesaved ? "active" : "disabled"}`}
                   onClick={() => rootScope.resumeGame(history)}
                 >
                   <FormattedMessage
