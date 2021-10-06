@@ -62,7 +62,7 @@ const Video: React.FC<{}> = () => {
   }, [dp]);
 
   useEffect(() => {
-    if (dp && !dp?.video?.vimeoUrl) skipVideo();
+    if (dp && !dp?.video?.vimeo_url) skipVideo();
   }, [dp, skipVideo]);
 
   useEffect(() => {
