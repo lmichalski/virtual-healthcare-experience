@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/virtual-healthcare-experience/static/css/main.62660539.chunk.css",
-    "main.js": "/virtual-healthcare-experience/static/js/main.cb746a91.chunk.js",
-    "main.js.map": "/virtual-healthcare-experience/static/js/main.cb746a91.chunk.js.map",
+    "main.css": "/virtual-healthcare-experience/static/css/main.d4954eed.chunk.css",
+    "main.js": "/virtual-healthcare-experience/static/js/main.2a0481e1.chunk.js",
+    "main.js.map": "/virtual-healthcare-experience/static/js/main.2a0481e1.chunk.js.map",
     "runtime-main.js": "/virtual-healthcare-experience/static/js/runtime-main.7f7da043.js",
     "runtime-main.js.map": "/virtual-healthcare-experience/static/js/runtime-main.7f7da043.js.map",
-    "static/js/2.3c0153c7.chunk.js": "/virtual-healthcare-experience/static/js/2.3c0153c7.chunk.js",
-    "static/js/2.3c0153c7.chunk.js.map": "/virtual-healthcare-experience/static/js/2.3c0153c7.chunk.js.map",
+    "static/js/2.fa9cbb8e.chunk.js": "/virtual-healthcare-experience/static/js/2.fa9cbb8e.chunk.js",
+    "static/js/2.fa9cbb8e.chunk.js.map": "/virtual-healthcare-experience/static/js/2.fa9cbb8e.chunk.js.map",
     "static/js/3.a83f633e.chunk.js": "/virtual-healthcare-experience/static/js/3.a83f633e.chunk.js",
     "static/js/3.a83f633e.chunk.js.map": "/virtual-healthcare-experience/static/js/3.a83f633e.chunk.js.map",
     "index.html": "/virtual-healthcare-experience/index.html",
-    "static/css/main.62660539.chunk.css.map": "/virtual-healthcare-experience/static/css/main.62660539.chunk.css.map",
-    "static/js/2.3c0153c7.chunk.js.LICENSE.txt": "/virtual-healthcare-experience/static/js/2.3c0153c7.chunk.js.LICENSE.txt",
+    "static/css/main.d4954eed.chunk.css.map": "/virtual-healthcare-experience/static/css/main.d4954eed.chunk.css.map",
+    "static/js/2.fa9cbb8e.chunk.js.LICENSE.txt": "/virtual-healthcare-experience/static/js/2.fa9cbb8e.chunk.js.LICENSE.txt",
     "static/media/Roboto-Regular.ttf": "/virtual-healthcare-experience/static/media/Roboto-Regular.a8d6ac03.ttf",
     "static/media/App.scss": "/virtual-healthcare-experience/static/media/icomoon.e12abc6f.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.7f7da043.js",
-    "static/js/2.3c0153c7.chunk.js",
-    "static/css/main.62660539.chunk.css",
-    "static/js/main.cb746a91.chunk.js"
+    "static/js/2.fa9cbb8e.chunk.js",
+    "static/css/main.d4954eed.chunk.css",
+    "static/js/main.2a0481e1.chunk.js"
   ]
 }
