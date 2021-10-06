@@ -32,7 +32,7 @@ const App: React.FC<{}> = () => {
 
   return (
     <IntlProvider messages={messages} locale={locale} defaultLocale="en">
-      <Router>
+      <Router basename="/virtual-healthcare-experience/">
         <RootScopeContext.Provider value={rootScope.current}>
           <div className="fullscreen">
             <div className="view" role="application">

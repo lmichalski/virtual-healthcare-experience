@@ -81,7 +81,7 @@ const Decision: React.FC<{}> = () => {
   return (
     <div className="container">
       <div className="left controls">
-        <button className="button menu" onClick={replayVideo}>
+        <button className="button button--menu" onClick={replayVideo}>
           <FormattedMessage
             id="General.replay"
             defaultMessage="Replay"
@@ -90,7 +90,7 @@ const Decision: React.FC<{}> = () => {
         </button>
       </div>
       <div className="right controls">
-        <button className="button menu" onClick={gotoMenu}>
+        <button className="button button--menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
             defaultMessage="Menu"

@@ -33,7 +33,7 @@
 	color: #393;
 }
 .summary .wrong {
-	color: rgb(102, 165, 238);
+	color: var(--theme-light);
 }
 .summary a {
 	text-decoration: underline;

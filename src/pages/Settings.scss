@@ -34,8 +34,8 @@
 	height: .5em;
 	margin: .2em .2em 0 0;
 	border-radius: 50%;
-	border: 1px inset rgb(62, 89, 179);
-	background-color: rgb(62, 89, 179);
+	border: 1px inset var(--theme-primary);
+	background-color: var(--theme-primary);
 }
 .settings .radio input[type="radio"]:checked + label {
 	color: #fff;

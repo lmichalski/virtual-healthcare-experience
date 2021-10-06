@@ -214,7 +214,7 @@ const Video: React.FC<{}> = () => {
   return (
     <div className="video">
       <div className="right controls">
-        <button className="button menu" onClick={gotoMenu}>
+        <button className="button button--menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
             defaultMessage="Menu"
