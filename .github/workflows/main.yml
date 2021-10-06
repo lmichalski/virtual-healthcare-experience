@@ -1,5 +1,10 @@
 name: Deploy to GItHub Pages
-on: [push]
+# on:
+#   push:
+#     branches:
+#       - main
+on: workflow_dispatch
+
 jobs:
   compile-pages:
     runs-on: ubuntu-latest
