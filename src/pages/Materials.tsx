@@ -1,7 +1,10 @@
 import { FormattedMessage } from "react-intl";
+import { useGotoMenu } from "../util";
 import "./Materials.scss";
 
 const Materials: React.FC<{}> = () => {
+  const gotoMenu = useGotoMenu();
+
   return (
     <body className="documentation-container">
       <div className="panel feedback">
@@ -15,14 +18,14 @@ const Materials: React.FC<{}> = () => {
         </header>
 
         <div className="right controls">
-          <a href="/module/emergency/game/index.html" className="button menu">
-            <FormattedMessage
-              id="General.home"
-              defaultMessage="Home"
-              description="Home button"
-            />
-          </a>
-        </div>
+        <button className="button button--menu" onClick={gotoMenu}>
+          <FormattedMessage
+            id="General.menu"
+            defaultMessage="Menu"
+            description="Go To Menu Button"
+          />
+        </button>
+      </div>
 
         <footer>
           <div className="content">

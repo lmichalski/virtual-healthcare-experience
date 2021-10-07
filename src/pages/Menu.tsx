@@ -48,7 +48,9 @@ const Menu: React.FC<{}> = () => {
               </li>
               <li>
                 <button
-                  className={`Link ${rootScope.sg.gamesaved ? "active" : "disabled"}`}
+                  className={`Link ${
+                    rootScope.sg.gamesaved ? "active" : "disabled"
+                  }`}
                   onClick={() => rootScope.resumeGame(history)}
                 >
                   <FormattedMessage
@@ -82,6 +84,15 @@ const Menu: React.FC<{}> = () => {
                     id="Menu.instructions"
                     defaultMessage="How to Play"
                     description="How to Play Button"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link to="/materials/">
+                  <FormattedMessage
+                    id="Menu.materials"
+                    defaultMessage="Self-Assessment"
+                    description="Link to self-assessment materials"
                   />
                 </Link>
               </li>

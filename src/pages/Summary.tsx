@@ -3,15 +3,10 @@ import { FormattedMessage } from "react-intl";
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
-import {
-  PDFDownloadLink,
-  Document,
-  Page,
-  Text,
-  Link,
   View,
 } from "@react-pdf/renderer";
 import { Font } from "@react-pdf/renderer";
+
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
@@ -30,7 +25,7 @@ const Summary: React.FC<{}> = () => {
 
   let progress: { question: string; answer: string; correct: boolean }[] =
     useMemo(() => {
-      progress = [];
+      let progress = [];
       var i;
       for (i = 0; i < rootScope.sg.progress.length; i++) {
         const dp = rootScope.sg.progress[i];
@@ -206,10 +201,18 @@ const Summary: React.FC<{}> = () => {
             }
           </PDFDownloadLink>
 
-          <a href="/module/_/ui/game/tpl/materials.html" className="button">
+          <Lonk to="/materials/">
+            <FormattedMessage
+              id="materials.link"
+              defaultMessage="Practice Materials"
+              description="Link to Practice Materials"
+            />
+          </Lonk>
+
+          {/* <a href="/module/_/ui/game/tpl/materials.html" className="button">
             {" "}
             Practice Documentation{" "}
-          </a>
+          </a> */}
         </footer>
       </div>
     </div>

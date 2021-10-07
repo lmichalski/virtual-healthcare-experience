@@ -103,17 +103,17 @@ function isLocalStorageAvailable() {
 
 const cookies = {
   put(key: string, value: string, maxAge: number) {
-    var cookie = `${key}=${value};path=/;max-age=${maxAge};`
-    console.log(cookie)
+    var cookie = `${key}=${value};path=/;max-age=${maxAge};`;
+    console.log(cookie);
     document.cookie = cookie;
   },
   get(cname: string): string | null {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
+    let ca = decodedCookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
-      while (c.charAt(0) === ' ') {
+      while (c.charAt(0) === " ") {
         c = c.substring(1);
       }
       if (c.indexOf(name) === 0) {
@@ -122,8 +122,8 @@ const cookies = {
     }
     return null;
   },
-  remove (key: string) {
-    this.put(key, "", -1)
+  remove(key: string) {
+    this.put(key, "", -1);
   },
 };
 

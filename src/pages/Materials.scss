@@ -1,0 +1,22 @@
+.documentation-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+    position: absolute;
+
+	.panel {
+			flex: 0;
+			height: fit-content;
+
+		* + h2 {
+			margin-top: 32px;
+		}
+
+		button.button,
+		a.button {
+			font-size: 24px;
+		}
+	}
+}
