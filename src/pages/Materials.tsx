@@ -3,8 +3,8 @@ import "./Materials.scss";
 
 const Materials: React.FC<{}> = () => {
   return (
-    <body className="documentation-container" ng-controller="mainCtrl">
-      <div className="panel feedback" role="alert">
+    <body className="documentation-container">
+      <div className="panel feedback">
         <header>
           <FormattedMessage
             id="Materials.title"
