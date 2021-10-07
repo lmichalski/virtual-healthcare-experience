@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/virtual-healthcare-experience/static/css/main.baa7af0b.chunk.css",
+    "main.css": "/virtual-healthcare-experience/static/css/main.3c52c463.chunk.css",
     "main.js": "/virtual-healthcare-experience/static/js/main.efaedc3f.chunk.js",
     "main.js.map": "/virtual-healthcare-experience/static/js/main.efaedc3f.chunk.js.map",
     "runtime-main.js": "/virtual-healthcare-experience/static/js/runtime-main.7f7da043.js",
@@ -10,7 +10,7 @@
     "static/js/3.a83f633e.chunk.js": "/virtual-healthcare-experience/static/js/3.a83f633e.chunk.js",
     "static/js/3.a83f633e.chunk.js.map": "/virtual-healthcare-experience/static/js/3.a83f633e.chunk.js.map",
     "index.html": "/virtual-healthcare-experience/index.html",
-    "static/css/main.baa7af0b.chunk.css.map": "/virtual-healthcare-experience/static/css/main.baa7af0b.chunk.css.map",
+    "static/css/main.3c52c463.chunk.css.map": "/virtual-healthcare-experience/static/css/main.3c52c463.chunk.css.map",
     "static/js/2.3c0153c7.chunk.js.LICENSE.txt": "/virtual-healthcare-experience/static/js/2.3c0153c7.chunk.js.LICENSE.txt",
     "static/media/Roboto-Regular.ttf": "/virtual-healthcare-experience/static/media/Roboto-Regular.a8d6ac03.ttf",
     "static/media/App.scss": "/virtual-healthcare-experience/static/media/icomoon.e12abc6f.eot"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.7f7da043.js",
     "static/js/2.3c0153c7.chunk.js",
-    "static/css/main.baa7af0b.chunk.css",
+    "static/css/main.3c52c463.chunk.css",
     "static/js/main.efaedc3f.chunk.js"
   ]
 }
