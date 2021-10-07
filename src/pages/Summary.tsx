@@ -3,10 +3,10 @@ import { FormattedMessage } from "react-intl";
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
-  View,
-} from "@react-pdf/renderer";
+import { PDFDownloadLink, Document, Page, Text, Link, View, } from "@react-pdf/renderer";
 import { Font } from "@react-pdf/renderer";
 
+import { Link as Lonk } from "react-router-dom";
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
