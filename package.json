@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lmichalski.github.io/virtual-healthcare-experience/",
   "dependencies": {
     "@react-pdf/renderer": "^1.6.17",
     "@testing-library/jest-dom": "^5.14.1",
@@ -29,6 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
     "format": "prettier --write src/**/*.{ts*,js*,yml}",
     "translations:extract": "formatjs extract",
     "translations:compile": "formatjs extract src/**/!(*.d){.ts,.tsx} --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile temp.json --out-file src/lang-compiled/en.json && del temp.json",
@@ -56,6 +59,7 @@
     "@formatjs/cli": "^4.2.33",
     "@types/vimeo__player": "^2.10.1",
     "eslint-config-prettier": "^8.3.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1",
     "ts-standard": "^10.0.0"
   }

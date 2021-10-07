@@ -159,7 +159,7 @@ const Summary: React.FC<{}> = () => {
   return (
     <div className="container">
       <div className="right controls">
-        <button className="button menu" onClick={goToMenu}>
+        <button className="button button--menu" onClick={goToMenu}>
           Menu
         </button>
       </div>

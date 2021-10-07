@@ -30,7 +30,7 @@ const Transition: React.FC<{}> = () => {
         <div className="main">{dp?.feedback}</div>
         <footer>
           <p className="controls">
-            <button onClick={playNextVideo}>Resume Game</button>
+            <button className="Link" onClick={playNextVideo}>Resume Game</button>
           </p>
         </footer>
       </div>
