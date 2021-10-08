@@ -1,6 +1,5 @@
-import { useContext, useMemo } from "react";
+import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
 import {
@@ -15,6 +14,7 @@ import { Font } from "@react-pdf/renderer";
 
 import { Link as Lonk } from "react-router-dom";
 import useLogGameEvent from "../hooks/useLogGameEvent";
+import { DecisionPoint } from "../controllers/RootScopeContext";
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
@@ -24,8 +24,13 @@ Font.register({
   src: Roboto,
 });
 
-const Summary: React.FC<{}> = () => {
-  const rootScope = useContext(RootScopeContext);
+interface iProps {
+  decisionPoints: DecisionPoint[]
+  gameProgress: {id: number, label: string, option: number}[]
+  completed: boolean
+}
+
+const Summary: React.FC<iProps> = ({gameProgress,decisionPoints, completed }) => {
   const logGameEvent = useLogGameEvent();
 
   // const [progress, setProgress] = useState([])
@@ -36,10 +41,10 @@ const Summary: React.FC<{}> = () => {
     useMemo(() => {
       let progress = [];
       var i;
-      for (i = 0; i < rootScope.sg.progress.length; i++) {
-        const dp = rootScope.sg.progress[i];
-        const current = rootScope.dataProvider.find(({ id }) => id === dp.id)!;
-        const next = rootScope.dataProvider.find(({ id }) => id === dp.option)!;
+      for (i = 0; i < gameProgress.length; i++) {
+        const dp = gameProgress[i];
+        const current = decisionPoints.find(({ id }) => id === dp.id)!;
+        const next = decisionPoints.find(({ id }) => id === dp.option)!;
 
         progress.push({
           question: current.message,
@@ -48,11 +53,11 @@ const Summary: React.FC<{}> = () => {
         });
       }
       return progress;
-    }, [rootScope.dataProvider, rootScope.sg.progress]);
+    }, [decisionPoints, gameProgress]);
 
   let message: JSX.Element;
 
-  if (rootScope.sg.completed) {
+  if (completed) {
     const correct_ratio = (
       progress.filter(({ correct }) => correct).length / progress.length
     ).toFixed(2);
@@ -70,7 +75,7 @@ const Summary: React.FC<{}> = () => {
           .
         </Text>
         {progress.length ===
-        rootScope.dataProvider.filter(({ correct }) => correct).length ? (
+        decisionPoints.filter(({ correct }) => correct).length ? (
           <Text>
             You've demonstrated the best possible result! Now play it one more
             time to make sure it wasn't mere luck :)

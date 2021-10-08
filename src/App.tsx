@@ -23,6 +23,7 @@ import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
 import useLogGameEvent from "./hooks/useLogGameEvent";
+import { getBrowser } from "./util";
 
 const App: React.FC<{}> = () => {
   const rootScope = useRef(emptyRootScope());
@@ -44,7 +45,40 @@ const App: React.FC<{}> = () => {
     rootScope.current.saveState();
   }, []);
 
-  const onOptionChosen = useCallback(
+  const handleStartNewGame = useCallback(() => {
+    rootScope.current.sg.gamesaved = false;
+    rootScope.current.sg.current = 0;
+    rootScope.current.sg.completed = false;
+    rootScope.current.sg.videoposition = 0;
+    rootScope.current.sg.progress = [];
+
+    history.push("/intro/");
+    rootScope.current.saveState();
+
+    logGameEvent("", "start", "game", getBrowser(), "");
+  }, [rootScope, history, logGameEvent]);
+
+  const handleResumeGame = useCallback(() => {
+    var dp = rootScope.current.dataProvider.find(
+      ({ id }) => id === rootScope.current.sg.current
+    );
+
+    if (
+      dp &&
+      rootScope.current.dataProvider.indexOf(dp) === rootScope.current.dataProvider.length - 1
+    ) {
+      history.push("/summary/");
+    } else if (rootScope.current.sg.videoposition > 0.1) {
+      history.push("/video/");
+    } else {
+      history.push("/decision/");
+    }
+
+    logGameEvent("", "resume", "game", "", "");
+    rootScope.current.sg.progress = [];
+  }, [history, logGameEvent, rootScope]);
+
+  const handleOptionChosen = useCallback(
     (nextId: number, label: string) => {
       const next = gameData.decisionpoints.find(({ id }) => id === nextId);
 
@@ -82,6 +116,35 @@ const App: React.FC<{}> = () => {
     [gameData.decisionpoints, history, logGameEvent]
   );
 
+  const handleVideoFinished = useCallback(() => {
+    const dp = currentDecisionPoint
+    rootScope.current.sg.videoposition = 0;
+    rootScope.current.saveState();
+
+    if (
+      dp &&
+      gameData.decisionpoints.indexOf(dp) === gameData.decisionpoints.length - 1
+    ) {
+      rootScope.current.sg.completed = true;
+      history.push("/summary/");
+    } else if (dp && dp.options.length > 0) {
+      if (dp && dp.feedback > "") {
+        history.push("/feedback/");
+      } else {
+        history.push("/decision/");
+      }
+    } else if (dp?.next) {
+      rootScope.current.sg.videoposition = 0;
+      history.push("/lo/");
+      rootScope.current.saveState();
+      rootScope.current.sg.current++;
+    } else {
+      history.push("/transition/");
+      rootScope.current.sg.current++;
+    }
+    rootScope.current.saveState()
+  },[currentDecisionPoint, gameData.decisionpoints, history])
+
   return (
     <RootScopeContext.Provider value={rootScope.current}>
       <div className="fullscreen">
@@ -94,7 +157,7 @@ const App: React.FC<{}> = () => {
             <Route path="/decision">
               <Decision
                 decisionPoint={currentDecisionPoint}
-                handleOptionChosen={onOptionChosen}
+                onOptionChosen={handleOptionChosen}
               />
             </Route>
 
@@ -127,7 +190,11 @@ const App: React.FC<{}> = () => {
             </Route>
 
             <Route path="/summary">
-              <Summary />
+              <Summary 
+                decisionPoints={gameData.decisionpoints}
+                gameProgress={rootScope.current.sg.progress}
+                completed={rootScope.current.sg.completed}
+              />
             </Route>
 
             <Route path="/transition">
@@ -135,11 +202,23 @@ const App: React.FC<{}> = () => {
             </Route>
 
             <Route path="/video">
-              <Video />
+              <Video 
+                decisionPoint={currentDecisionPoint} 
+                onVideoFinished={handleVideoFinished} 
+                videoposition={rootScope.current.sg.videoposition} 
+                setVideoposition={(time) => { 
+                  rootScope.current.sg.videoposition = time
+                  rootScope.current.saveState();
+                }}
+              />
             </Route>
 
             <Route path="/">
-              <Menu />
+              <Menu 
+                startNewGame={handleStartNewGame}
+                resumeGame={handleResumeGame}
+                gamesaved={rootScope.current.sg.gamesaved}
+              />
             </Route>
           </Switch>
         </div>

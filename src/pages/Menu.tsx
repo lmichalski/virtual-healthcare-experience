@@ -1,49 +1,14 @@
-import { useContext, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link, useHistory } from "react-router-dom";
-import RootScopeContext from "../controllers/RootScopeContext";
-import useLogGameEvent from "../hooks/useLogGameEvent";
-import { getBrowser } from "../util";
+import { Link } from "react-router-dom";
 import "./Menu.scss";
 
-const Menu: React.FC<{}> = () => {
-  const history = useHistory();
+interface iProps {
+  startNewGame: () => void
+  resumeGame: () => void
+  gamesaved: boolean
+}
 
-  const rootScope = useContext(RootScopeContext);
-  const logGameEvent = useLogGameEvent();
-
-  const startNewGame = useCallback(() => {
-    rootScope.sg.gamesaved = false;
-    rootScope.sg.current = 0;
-    rootScope.sg.completed = false;
-    rootScope.sg.videoposition = 0;
-    rootScope.sg.progress = [];
-
-    history.push("/intro/");
-    rootScope.saveState();
-
-    logGameEvent("", "start", "game", getBrowser(), "");
-  }, [rootScope, history, logGameEvent]);
-
-  const resumeGame = useCallback(() => {
-    var dp = rootScope.dataProvider.find(
-      ({ id }) => id === rootScope.sg.current
-    );
-
-    if (
-      dp &&
-      rootScope.dataProvider.indexOf(dp) === rootScope.dataProvider.length - 1
-    ) {
-      history.push("/summary/");
-    } else if (rootScope.sg.videoposition > 0.1) {
-      history.push("/video/");
-    } else {
-      history.push("/decision/");
-    }
-
-    logGameEvent("", "resume", "game", "", "");
-    rootScope.sg.progress = [];
-  }, [history, logGameEvent, rootScope]);
+const Menu: React.FC<iProps> = ({startNewGame, resumeGame, gamesaved}) => {
 
   return (
     <div className="container">
@@ -71,7 +36,7 @@ const Menu: React.FC<{}> = () => {
               <li>
                 <button
                   className={`Link ${
-                    rootScope.sg.gamesaved ? "active" : "disabled"
+                    gamesaved ? "active" : "disabled"
                   }`}
                   onClick={resumeGame}
                 >

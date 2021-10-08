@@ -1,65 +1,46 @@
-import { useEffect, useContext, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import { useLocation, useHistory } from "react-router-dom";
 import videojs from "video.js";
 import Player from "@vimeo/player";
 
-import RootScopeContext from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 
 import "./Video.scss";
 import useLogGameEvent from "../hooks/useLogGameEvent";
 
-const Video: React.FC<{}> = () => {
+interface iProps {
+  decisionPoint: DecisionPoint;
+  onVideoFinished: () => void
+  videoposition: number
+  setVideoposition: (t: number) => void
+}
+
+const Video: React.FC<iProps> = ({decisionPoint: dp, onVideoFinished, videoposition, setVideoposition}) => {
   const location = useLocation();
   const history = useHistory();
   const logGameEvent = useLogGameEvent();
 
-  const rootScope = useContext(RootScopeContext);
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const dp = rootScope.dataProvider.find(
-    ({ id }) => id === rootScope.sg.current
-  );
 
   const gotoMenu = useGotoMenu();
 
   const skipVideo = useCallback(() => {
     let time = undefined;
+    
     if (dp?.video?.vimeo_url) {
+    
     } else if (videoRef.current) {
       var api = videojs(videoRef.current);
       api.dispose();
       time = api?.currentTime();
     }
 
-    rootScope.sg.videoposition = 0;
-    rootScope.saveState();
-
-    if (
-      dp &&
-      rootScope.dataProvider.indexOf(dp) === rootScope.dataProvider.length - 1
-    ) {
-      rootScope.sg.completed = true;
-      history.push("/summary/");
-    } else if (dp && dp.options.length > 0) {
-      if (dp && dp.feedback > "") {
-        history.push("/feedback/");
-      } else {
-        history.push("/decision/");
-      }
-    } else if (dp?.next) {
-      rootScope.sg.videoposition = 0;
-      history.push("/lo/");
-      rootScope.saveState();
-      rootScope.sg.current++;
-    } else {
-      history.push("/transition/");
-      rootScope.sg.current++;
-    }
+    onVideoFinished()
     logGameEvent("", "skip", "video", dp?.data, time);
-  }, [dp, history, rootScope, logGameEvent]);
+  }, [dp, logGameEvent, onVideoFinished]);
 
   useEffect(() => {
     if (dp && !dp?.video?.vimeo_url) skipVideo();
@@ -75,8 +56,7 @@ const Video: React.FC<{}> = () => {
             e.preventDefault();
             if (location.pathname !== "/") {
               if (api && typeof api.currentTime() != "undefined") {
-                rootScope.sg.videoposition = api.currentTime();
-                rootScope.saveState();
+                setVideoposition(api.currentTime());
               }
               history.push("/");
             } else {
@@ -114,7 +94,7 @@ const Video: React.FC<{}> = () => {
     return () => {
       window.removeEventListener("keydown", handleUserKeyPress);
     };
-  }, [history, location.pathname, rootScope]);
+  }, [history, location.pathname, setVideoposition]);
 
   useEffect(() => {
     var iframe = iframeRef.current;
@@ -144,15 +124,15 @@ const Video: React.FC<{}> = () => {
 
       // @ts-ignore
       api.ready((api): void => {
-        if (rootScope.sg.videoposition > 0) {
-          api.currentTime(rootScope.sg.videoposition);
+        if (videoposition > 0) {
+          api.currentTime(videoposition);
         }
         api?.play();
         logGameEvent("", "start", "video", dp?.data, "");
       });
 
       api.on("progress", function (e: unknown) {
-        rootScope.sg.videoposition = api.currentTime();
+         setVideoposition(api.currentTime())
       });
 
       api.on("pause", function (e: unknown) {
@@ -180,7 +160,6 @@ const Video: React.FC<{}> = () => {
       //@ts-ignore
       api.on("ended", function (e) {
         skipVideo();
-        rootScope.saveState();
         logGameEvent("", "finish", "video", dp?.data, "");
       });
 
@@ -197,7 +176,6 @@ const Video: React.FC<{}> = () => {
       player.on("ended", function () {
         console.log("vimeo ended");
         skipVideo();
-        rootScope.saveState();
         logGameEvent("", "finish", "video", dp.data, "");
       });
 
@@ -205,7 +183,7 @@ const Video: React.FC<{}> = () => {
         console.log("title:", title);
       });
     }
-  }, [dp, rootScope, skipVideo, logGameEvent]);
+  }, [dp, skipVideo, logGameEvent,setVideoposition, videoposition]);
 
   return (
     <div className="video">

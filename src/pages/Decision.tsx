@@ -8,10 +8,10 @@ import "./Decision.scss";
 
 interface iProps {
   decisionPoint: DecisionPoint;
-  handleOptionChosen: (option: number, label: string) => void;
+  onOptionChosen: (option: number, label: string) => void;
 }
 
-const Decision: React.FC<iProps> = ({ decisionPoint, handleOptionChosen }) => {
+const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
   const history = useHistory();
 
   const logGameEvent = useLogGameEvent();
@@ -25,7 +25,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, handleOptionChosen }) => {
 
   const optionBoxes = useMemo(() => {
     return randomizedOptions.map((opt) => {
-      const chooseOption = () => handleOptionChosen(opt.next, opt.label);
+      const chooseOption = () => onOptionChosen(opt.next, opt.label);
 
       return (
         <li
@@ -37,7 +37,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, handleOptionChosen }) => {
         </li>
       );
     });
-  }, [randomizedOptions, handleOptionChosen]);
+  }, [randomizedOptions, onOptionChosen]);
 
   const replayVideo = useCallback(() => {
     /*gtag('event', 'video_replayed', {
