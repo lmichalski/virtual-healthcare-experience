@@ -1,16 +1,15 @@
-import { useCallback, useContext } from "react";
+import { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router";
-import RootScopeContext from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../controllers/RootScopeContext";
 import "./Transition.scss";
 
-const Transition: React.FC<{}> = () => {
-  const history = useHistory();
-  const rootScope = useContext(RootScopeContext);
+interface iProps {
+  decisionPoint: DecisionPoint;
+}
 
-  const dp = rootScope.dataProvider.find(
-    ({ id }) => id === rootScope.sg.current
-  );
+const Transition: React.FC<iProps> = ({decisionPoint: dp}) => {
+  const history = useHistory();
 
   const playNextVideo = useCallback(() => {
     history.push("/video/");

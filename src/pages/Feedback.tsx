@@ -1,17 +1,15 @@
-import { useContext, useCallback } from "react";
+import { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router";
-import RootScopeContext from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../controllers/RootScopeContext";
 import "./Feedback.scss";
 
-const Feedback: React.FC<{}> = () => {
+interface iProps {
+  decisionPoint: DecisionPoint;
+}
+
+const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const history = useHistory();
-
-  const rootScope = useContext(RootScopeContext);
-
-  const dp = rootScope.dataProvider.find(
-    ({ id }) => id === rootScope.sg.current
-  );
 
   const goNext = useCallback(() => {
     switch (dp?.type) {

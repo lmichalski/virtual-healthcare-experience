@@ -1,10 +1,6 @@
 import React, { useCallback, useMemo, useRef } from "react";
 
-import {
-  Switch,
-  Route,
-  useHistory,
-} from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import Menu from "./pages/Menu";
@@ -34,6 +30,7 @@ const App: React.FC<{}> = () => {
   const logGameEvent = useLogGameEvent();
   const locale = useIntl().locale;
   const gameData = useMemo(() => fetchGameData("emergency", locale), [locale]);
+  const minSteps = gameData.decisionpoints.filter(({ correct }) => correct).length
 
   const currentDecisionPoint = useMemo(() => {
     return gameData.decisionpoints.find(
@@ -41,40 +38,49 @@ const App: React.FC<{}> = () => {
     )!;
   }, [gameData.decisionpoints]);
 
-  const handleOptionChosen = useCallback((nextId: number, label: string) => {
-    const next = gameData.decisionpoints.find(({ id }) => id === nextId);
-
-    rootScope.current.sg.progress.push({
-      id: rootScope.current.sg.current,
-      label: label,
-      option: nextId,
-    });
-    rootScope.current.sg.current = nextId;
+  const initialiseSaveGame = useCallback(() => {
+    rootScope.current.sg.gamesaved = true;
+    rootScope.current.sg.videoposition = 0;
     rootScope.current.saveState();
+  }, []);
 
-    logGameEvent(
-      "",
-      "select",
-      "answer",
-      label,
-      next?.correct ? "correct" : "incorrect"
-    );
+  const onOptionChosen = useCallback(
+    (nextId: number, label: string) => {
+      const next = gameData.decisionpoints.find(({ id }) => id === nextId);
 
-    switch (next?.type) {
-      case "video":
-        history.push("/video/");
-        break;
-      case "lo":
-        if (next.feedback > "") {
-          history.push("/feedback/");
-        } else {
-          history.push("/lo/");
-        }
-        break;
-    }
+      rootScope.current.sg.progress.push({
+        id: rootScope.current.sg.current,
+        label: label,
+        option: nextId,
+      });
+      rootScope.current.sg.current = nextId;
+      rootScope.current.saveState();
 
-    // google analytics ???
-  }, [gameData.decisionpoints, history, logGameEvent]);
+      logGameEvent(
+        "",
+        "select",
+        "answer",
+        label,
+        next?.correct ? "correct" : "incorrect"
+      );
+
+      switch (next?.type) {
+        case "video":
+          history.push("/video/");
+          break;
+        case "lo":
+          if (next.feedback > "") {
+            history.push("/feedback/");
+          } else {
+            history.push("/lo/");
+          }
+          break;
+      }
+
+      // google analytics ???
+    },
+    [gameData.decisionpoints, history, logGameEvent]
+  );
 
   return (
     <RootScopeContext.Provider value={rootScope.current}>
@@ -88,20 +94,24 @@ const App: React.FC<{}> = () => {
             <Route path="/decision">
               <Decision
                 decisionPoint={currentDecisionPoint}
-                handleOptionChosen={handleOptionChosen}
+                handleOptionChosen={onOptionChosen}
               />
             </Route>
 
             <Route path="/feedback">
-              <Feedback />
+              <Feedback decisionPoint={currentDecisionPoint} />
             </Route>
 
             <Route path="/instructions">
-              <Instructions />
+              <Instructions
+                minSteps={
+                  minSteps
+                }
+              />
             </Route>
 
             <Route path="/intro">
-              <Intro />
+              <Intro handleInitialiseSaveGame={initialiseSaveGame} />
             </Route>
 
             <Route path="/materials">
@@ -121,7 +131,7 @@ const App: React.FC<{}> = () => {
             </Route>
 
             <Route path="/transition">
-              <Transition />
+              <Transition decisionPoint={currentDecisionPoint}/>
             </Route>
 
             <Route path="/video">

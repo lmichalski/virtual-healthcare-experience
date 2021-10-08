@@ -1,15 +1,11 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import RootScopeContext from "../controllers/RootScopeContext";
 import "./Instructions.scss";
 
-const Instructions: React.FC<{}> = () => {
-  const rootScope = useContext(RootScopeContext);
+interface iProps {
+  minSteps: number;
+}
 
-  const minSteps = rootScope.dataProvider.filter(
-    ({ correct }) => correct
-  ).length;
-
+const Instructions: React.FC<iProps> = ({ minSteps }) => {
   return (
     <div className="container">
       <div className="panel info">

@@ -1,12 +1,14 @@
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import RootScopeContext from "../controllers/RootScopeContext";
 import "./Intro.scss";
 
-const Intro: React.FC<{}> = () => {
-  const history = useHistory();
+interface iProps {
+  handleInitialiseSaveGame: () => void;
+}
 
-  const rootScope = useContext(RootScopeContext);
+const Intro: React.FC<iProps> = ({ handleInitialiseSaveGame }) => {
+  const history = useHistory();
+  useEffect(handleInitialiseSaveGame, [handleInitialiseSaveGame]);
   const label = "Next";
 
   const [currentMessage, setCurrentMessage] = useState(0);
@@ -23,10 +25,6 @@ const Intro: React.FC<{}> = () => {
   }, [currentMessage, history, intro.length]);
 
   const text = intro[currentMessage];
-
-  rootScope.sg.gamesaved = true;
-  rootScope.sg.videoposition = 0;
-  rootScope.saveState();
 
   return (
     <div className="container">
