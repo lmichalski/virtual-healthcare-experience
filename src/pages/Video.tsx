@@ -8,10 +8,12 @@ import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 
 import "./Video.scss";
+import useLogGameEvent from "../hooks/useLogGameEvent";
 
 const Video: React.FC<{}> = () => {
   const location = useLocation();
   const history = useHistory();
+  const logGameEvent = useLogGameEvent();
 
   const rootScope = useContext(RootScopeContext);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,8 +58,8 @@ const Video: React.FC<{}> = () => {
       history.push("/transition/");
       rootScope.sg.current++;
     }
-    rootScope.logGameEvent("", "skip", "video", dp?.data, time);
-  }, [dp, history, rootScope]);
+    logGameEvent("", "skip", "video", dp?.data, time);
+  }, [dp, history, rootScope, logGameEvent]);
 
   useEffect(() => {
     if (dp && !dp?.video?.vimeo_url) skipVideo();
@@ -146,7 +148,7 @@ const Video: React.FC<{}> = () => {
           api.currentTime(rootScope.sg.videoposition);
         }
         api?.play();
-        rootScope.logGameEvent("", "start", "video", dp?.data, "");
+        logGameEvent("", "start", "video", dp?.data, "");
       });
 
       api.on("progress", function (e: unknown) {
@@ -155,13 +157,7 @@ const Video: React.FC<{}> = () => {
 
       api.on("pause", function (e: unknown) {
         if (api.duration() > api.currentTime() + 0.5) {
-          rootScope.logGameEvent(
-            "",
-            "pause",
-            "video",
-            dp?.data,
-            api.currentTime()
-          );
+          logGameEvent("", "pause", "video", dp?.data, api.currentTime());
         }
       });
 
@@ -185,13 +181,13 @@ const Video: React.FC<{}> = () => {
       api.on("ended", function (e) {
         skipVideo();
         rootScope.saveState();
-        rootScope.logGameEvent("", "finish", "video", dp?.data, "");
+        logGameEvent("", "finish", "video", dp?.data, "");
       });
 
       //@ts-ignore
       api.on("error", function (e) {
         console.log(e);
-        rootScope.logGameEvent("", "error", "video", dp?.data, "");
+        logGameEvent("", "error", "video", dp?.data, "");
       });
 
       api.load();
@@ -202,14 +198,14 @@ const Video: React.FC<{}> = () => {
         console.log("vimeo ended");
         skipVideo();
         rootScope.saveState();
-        rootScope.logGameEvent("", "finish", "video", dp.data, "");
+        logGameEvent("", "finish", "video", dp.data, "");
       });
 
       player.getVideoTitle().then(function (title) {
         console.log("title:", title);
       });
     }
-  }, [dp, rootScope, skipVideo]);
+  }, [dp, rootScope, skipVideo, logGameEvent]);
 
   return (
     <div className="video">

@@ -1,6 +1,7 @@
 import { useContext, useCallback } from "react";
 import { useLocation, useHistory } from "react-router";
 import RootScopeContext from "./controllers/RootScopeContext";
+import useLogGameEvent from "./hooks/useLogGameEvent";
 
 export function generateUUID(): string {
   var r: string;
@@ -24,12 +25,13 @@ export const useGotoMenu = () => {
   const history = useHistory();
 
   const rootScope = useContext(RootScopeContext);
+  const logGameEvent = useLogGameEvent();
 
   const gotoMenu = useCallback(() => {
     rootScope.resumeURL = location.pathname;
-    rootScope.logGameEvent("", "open", "menu", "", "");
+    logGameEvent("", "open", "menu", "", "");
     history.push("/");
-  }, [rootScope, history, location.pathname]);
+  }, [rootScope, history, location.pathname, logGameEvent]);
   return gotoMenu;
 };
 

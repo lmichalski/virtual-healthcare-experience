@@ -2,6 +2,7 @@ import { useCallback, useContext, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router-dom";
 import RootScopeContext from "../controllers/RootScopeContext";
+import useLogGameEvent from "../hooks/useLogGameEvent";
 import { useGotoMenu } from "../util";
 import "./Decision.scss";
 
@@ -9,13 +10,14 @@ const Decision: React.FC<{}> = () => {
   const history = useHistory();
 
   const rootScope = useContext(RootScopeContext);
+  const logGameEvent = useLogGameEvent();
   const gotoMenu = useGotoMenu();
 
   const dp = rootScope.dataProvider.find(
     ({ id }) => id === rootScope.sg.current
   )!;
 
-  rootScope.logGameEvent("", "show", "question", dp.message, "");
+  logGameEvent("", "show", "question", dp.message, "");
 
   const [randomizedOptions] = useState(dp.options); // TODO shuffle these
 
@@ -32,7 +34,7 @@ const Decision: React.FC<{}> = () => {
         rootScope.sg.current = opt.next;
         rootScope.saveState();
 
-        rootScope.logGameEvent(
+        logGameEvent(
           "",
           "select",
           "answer",
@@ -66,7 +68,7 @@ const Decision: React.FC<{}> = () => {
         </li>
       );
     });
-  }, [history, randomizedOptions, rootScope]);
+  }, [history, randomizedOptions, rootScope, logGameEvent]);
 
   const replayVideo = useCallback(() => {
     /*gtag('event', 'video_replayed', {
@@ -74,9 +76,9 @@ const Decision: React.FC<{}> = () => {
       'event_label': $scope.dp.data,
       'value': $scope.dp.id
     });*/
-    rootScope.logGameEvent("", "replay", "video", dp.data, dp.id);
+    logGameEvent("", "replay", "video", dp.data, dp.id);
     history.push("/video/");
-  }, [dp.data, dp.id, history, rootScope]);
+  }, [dp.data, dp.id, history, logGameEvent]);
 
   return (
     <div className="container">

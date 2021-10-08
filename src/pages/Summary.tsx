@@ -3,10 +3,18 @@ import { FormattedMessage } from "react-intl";
 import RootScopeContext from "../controllers/RootScopeContext";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
-import { PDFDownloadLink, Document, Page, Text, Link, View, } from "@react-pdf/renderer";
+import {
+  PDFDownloadLink,
+  Document,
+  Page,
+  Text,
+  Link,
+  View,
+} from "@react-pdf/renderer";
 import { Font } from "@react-pdf/renderer";
 
 import { Link as Lonk } from "react-router-dom";
+import useLogGameEvent from "../hooks/useLogGameEvent";
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
@@ -18,6 +26,7 @@ Font.register({
 
 const Summary: React.FC<{}> = () => {
   const rootScope = useContext(RootScopeContext);
+  const logGameEvent = useLogGameEvent();
 
   // const [progress, setProgress] = useState([])
 
@@ -48,7 +57,7 @@ const Summary: React.FC<{}> = () => {
       progress.filter(({ correct }) => correct).length / progress.length
     ).toFixed(2);
 
-    rootScope.logGameEvent("", "complete", "game", "", correct_ratio);
+    logGameEvent("", "complete", "game", "", correct_ratio);
 
     message = (
       <>

@@ -2,6 +2,7 @@ import { useContext, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useHistory } from "react-router-dom";
 import RootScopeContext from "../controllers/RootScopeContext";
+import useLogGameEvent from "../hooks/useLogGameEvent";
 import { getBrowser } from "../util";
 import "./Menu.scss";
 
@@ -9,6 +10,7 @@ const Menu: React.FC<{}> = () => {
   const history = useHistory();
 
   const rootScope = useContext(RootScopeContext);
+  const logGameEvent = useLogGameEvent();
 
   const startNewGame = useCallback(() => {
     rootScope.sg.gamesaved = false;
@@ -20,8 +22,30 @@ const Menu: React.FC<{}> = () => {
     history.push("/intro/");
     rootScope.saveState();
 
-    rootScope.logGameEvent("", "start", "game", getBrowser(), "");
-  }, [rootScope, history]);
+    logGameEvent("", "start", "game", getBrowser(), "");
+  }, [rootScope, history, logGameEvent]);
+
+  const resumeGame = useCallback(() => {
+    var dp = rootScope.dataProvider.find(
+      ({ id }) => id === rootScope.sg.current
+    );
+
+    rootScope.resumeURL = "";
+
+    if (
+      dp &&
+      rootScope.dataProvider.indexOf(dp) === rootScope.dataProvider.length - 1
+    ) {
+      history.push("/summary/");
+    } else if (rootScope.sg.videoposition > 0.1) {
+      history.push("/video/");
+    } else {
+      history.push("/decision/");
+    }
+
+    logGameEvent("", "resume", "game", "", "");
+    rootScope.sg.progress = [];
+  }, [history, logGameEvent, rootScope]);
 
   return (
     <div className="container">
@@ -51,7 +75,7 @@ const Menu: React.FC<{}> = () => {
                   className={`Link ${
                     rootScope.sg.gamesaved ? "active" : "disabled"
                   }`}
-                  onClick={() => rootScope.resumeGame(history)}
+                  onClick={resumeGame}
                 >
                   <FormattedMessage
                     id="Menu.resumeGame"
