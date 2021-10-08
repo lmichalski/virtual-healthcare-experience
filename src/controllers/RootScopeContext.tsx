@@ -6,7 +6,14 @@ import { VHEStorage } from "../hooks/useStorage";
 
 const data: GameDataShape = er_game_data;
 
-interface DecisionPoint {
+export const fetchGameData = (
+  game: "emergency",
+  locale?: string
+): GameDataShape => {
+  return er_game_data;
+};
+
+export interface DecisionPoint {
   id: number;
   title?: string;
   type: string; //"video" | "string",

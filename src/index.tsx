@@ -3,10 +3,25 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { IntlProvider } from "react-intl";
+import { BrowserRouter as Router } from "react-router-dom";
+import { LoggingContextProvider } from "./hooks/useLogGameEvent";
+
+import enMessages from "./lang-compiled/en.json";
+import frMessages from "./lang-compiled/fr.json";
+
+const locale = "en" as string;
+const messages = locale === "fr" ? frMessages : enMessages;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IntlProvider messages={messages} locale={locale} defaultLocale="en">
+      <Router basename="/virtual-healthcare-experience/">
+        <LoggingContextProvider>
+          <App />
+        </LoggingContextProvider>
+      </Router>
+    </IntlProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

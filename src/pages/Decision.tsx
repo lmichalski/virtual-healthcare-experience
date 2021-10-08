@@ -1,21 +1,25 @@
-import { useCallback, useContext, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router-dom";
-import RootScopeContext from "../controllers/RootScopeContext";
+import {
+  DecisionPoint,
+} from "../controllers/RootScopeContext";
 import useLogGameEvent from "../hooks/useLogGameEvent";
 import { useGotoMenu } from "../util";
 import "./Decision.scss";
 
-const Decision: React.FC<{}> = () => {
+interface iProps {
+  decisionPoint: DecisionPoint;
+  handleOptionChosen: (option: number, label: string) => void;
+}
+
+const Decision: React.FC<iProps> = ({ decisionPoint, handleOptionChosen }) => {
   const history = useHistory();
 
-  const rootScope = useContext(RootScopeContext);
   const logGameEvent = useLogGameEvent();
   const gotoMenu = useGotoMenu();
 
-  const dp = rootScope.dataProvider.find(
-    ({ id }) => id === rootScope.sg.current
-  )!;
+  const dp = decisionPoint;
 
   logGameEvent("", "show", "question", dp.message, "");
 
@@ -23,40 +27,7 @@ const Decision: React.FC<{}> = () => {
 
   const optionBoxes = useMemo(() => {
     return randomizedOptions.map((opt) => {
-      const chooseOption = function () {
-        const next = rootScope.dataProvider.find(({ id }) => id === opt.next);
-
-        rootScope.sg.progress.push({
-          id: rootScope.sg.current,
-          label: opt.label,
-          option: opt.next,
-        });
-        rootScope.sg.current = opt.next;
-        rootScope.saveState();
-
-        logGameEvent(
-          "",
-          "select",
-          "answer",
-          opt.label,
-          next?.correct ? "correct" : "incorrect"
-        );
-
-        switch (next?.type) {
-          case "video":
-            history.push("/video/");
-            break;
-          case "lo":
-            if (next.feedback > "") {
-              history.push("/feedback/");
-            } else {
-              history.push("/lo/");
-            }
-            break;
-        }
-
-        // google analytics ???
-      };
+      const chooseOption = () => handleOptionChosen(opt.next, opt.label);
 
       return (
         <li
@@ -68,7 +39,7 @@ const Decision: React.FC<{}> = () => {
         </li>
       );
     });
-  }, [history, randomizedOptions, rootScope, logGameEvent]);
+  }, [randomizedOptions, handleOptionChosen]);
 
   const replayVideo = useCallback(() => {
     /*gtag('event', 'video_replayed', {

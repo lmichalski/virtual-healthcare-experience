@@ -79,7 +79,7 @@ export const VHEStorage = {
 };
 
 const useStorage = () => {
-    return VHEStorage
-}
+  return VHEStorage;
+};
 
-export default useStorage
+export default useStorage;

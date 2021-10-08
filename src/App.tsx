@@ -1,15 +1,18 @@
-import React, { useRef } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { IntlProvider } from "react-intl";
+import {
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
+import { useIntl } from "react-intl";
 
 import Menu from "./pages/Menu";
 import "./App.scss";
 
-import enMessages from "./lang-compiled/en.json";
-import frMessages from "./lang-compiled/fr.json";
 import RootScopeContext, {
   emptyRootScope,
+  fetchGameData,
 } from "./controllers/RootScopeContext";
 
 import Objectives from "./pages/Objectives";
@@ -23,76 +26,115 @@ import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
-import { LoggingContextProvider } from "./hooks/useLogGameEvent";
+import useLogGameEvent from "./hooks/useLogGameEvent";
 
 const App: React.FC<{}> = () => {
-  const locale = "en" as string;
-  const messages = locale === "fr" ? frMessages : enMessages;
-
   const rootScope = useRef(emptyRootScope());
+  const history = useHistory();
+  const logGameEvent = useLogGameEvent();
+  const locale = useIntl().locale;
+  const gameData = useMemo(() => fetchGameData("emergency", locale), [locale]);
+
+  const currentDecisionPoint = useMemo(() => {
+    return gameData.decisionpoints.find(
+      ({ id }) => id === rootScope.current.sg.current
+    )!;
+  }, [gameData.decisionpoints]);
+
+  const handleOptionChosen = useCallback((nextId: number, label: string) => {
+    const next = gameData.decisionpoints.find(({ id }) => id === nextId);
+
+    rootScope.current.sg.progress.push({
+      id: rootScope.current.sg.current,
+      label: label,
+      option: nextId,
+    });
+    rootScope.current.sg.current = nextId;
+    rootScope.current.saveState();
+
+    logGameEvent(
+      "",
+      "select",
+      "answer",
+      label,
+      next?.correct ? "correct" : "incorrect"
+    );
+
+    switch (next?.type) {
+      case "video":
+        history.push("/video/");
+        break;
+      case "lo":
+        if (next.feedback > "") {
+          history.push("/feedback/");
+        } else {
+          history.push("/lo/");
+        }
+        break;
+    }
+
+    // google analytics ???
+  }, [gameData.decisionpoints, history, logGameEvent]);
 
   return (
-    <IntlProvider messages={messages} locale={locale} defaultLocale="en">
-      <Router basename="/virtual-healthcare-experience/">
-        <LoggingContextProvider>
-          <RootScopeContext.Provider value={rootScope.current}>
-            <div className="fullscreen">
-              <div className="view" role="application">
-                <Switch>
-                  <Route path="/credits">
-                    <Credits />
-                  </Route>
+    <RootScopeContext.Provider value={rootScope.current}>
+      <div className="fullscreen">
+        <div className="view" role="application">
+          <Switch>
+            <Route path="/credits">
+              <Credits />
+            </Route>
 
-                  <Route path="/decision">
-                    <Decision />
-                  </Route>
+            <Route path="/decision">
+              <Decision
+                decisionPoint={currentDecisionPoint}
+                handleOptionChosen={handleOptionChosen}
+              />
+            </Route>
 
-                  <Route path="/feedback">
-                    <Feedback />
-                  </Route>
+            <Route path="/feedback">
+              <Feedback />
+            </Route>
 
-                  <Route path="/instructions">
-                    <Instructions />
-                  </Route>
+            <Route path="/instructions">
+              <Instructions />
+            </Route>
 
-                  <Route path="/intro">
-                    <Intro />
-                  </Route>
+            <Route path="/intro">
+              <Intro />
+            </Route>
 
-                  <Route path="/materials">
-                    <Materials />
-                  </Route>
+            <Route path="/materials">
+              <Materials />
+            </Route>
 
-                  <Route path="/objectives">
-                    <Objectives />
-                  </Route>
+            <Route path="/objectives">
+              <Objectives />
+            </Route>
 
-                  <Route path="/settings">
-                    <Settings />
-                  </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
 
-                  <Route path="/summary">
-                    <Summary />
-                  </Route>
+            <Route path="/summary">
+              <Summary />
+            </Route>
 
-                  <Route path="/transition">
-                    <Transition />
-                  </Route>
+            <Route path="/transition">
+              <Transition />
+            </Route>
 
-                  <Route path="/video">
-                    <Video />
-                  </Route>
+            <Route path="/video">
+              <Video />
+            </Route>
 
-                  <Route path="/">
-                    <Menu />
-                  </Route>
-                </Switch>
-              </div>
-            </div>
-          </RootScopeContext.Provider>
-        </LoggingContextProvider>
-      </Router>
-    </IntlProvider>
+            <Route path="/">
+              <Menu />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </RootScopeContext.Provider>
   );
 };
 
