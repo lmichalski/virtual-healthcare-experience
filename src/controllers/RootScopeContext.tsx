@@ -1,7 +1,8 @@
 import React from "react";
 
-import { generateUUID, Storage } from "../util";
+import { generateUUID } from "../util";
 import er_game_data from "../games/er_game_data.json";
+import { VHEStorage } from "../hooks/useStorage";
 
 const data: GameDataShape = er_game_data;
 
@@ -53,16 +54,13 @@ interface iGameSave {
 
 interface iRootScope {
   dataProvider: DecisionPoint[];
-  correctOptions: DecisionPoint[];
   sg: iGameSave;
-  resumeURL?: string;
   saveState: () => void;
 }
 
 export const emptyRootScope = (): iRootScope => ({
   dataProvider: data.decisionpoints,
-  correctOptions: data.decisionpoints.filter(({ correct }) => correct),
-  sg: (Storage.getObject("prenatal") as iGameSave | false) || {
+  sg: (VHEStorage.getObject("prenatal") as iGameSave | false) || {
     uuid: generateUUID(),
     gamesaved: false,
     subtitles: false,
@@ -72,9 +70,8 @@ export const emptyRootScope = (): iRootScope => ({
     videoposition: 0,
     progress: [],
   },
-  resumeURL: undefined,
   saveState() {
-    Storage.setObject("prenatal", this.sg);
+    VHEStorage.setObject("prenatal", this.sg);
   },
 });
 

@@ -6,7 +6,7 @@ import "./Instructions.scss";
 const Instructions: React.FC<{}> = () => {
   const rootScope = useContext(RootScopeContext);
 
-  const minSteps = rootScope.correctOptions.length;
+  const minSteps = rootScope.dataProvider.filter(({ correct }) => correct).length;
 
   return (
     <div className="container">

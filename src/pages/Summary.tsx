@@ -69,7 +69,7 @@ const Summary: React.FC<{}> = () => {
           </Text>
           .
         </Text>
-        {progress.length === rootScope.correctOptions.length ? (
+        {progress.length === rootScope.dataProvider.filter(({ correct }) => correct).length ? (
           <Text>
             You've demonstrated the best possible result! Now play it one more
             time to make sure it wasn't mere luck :)

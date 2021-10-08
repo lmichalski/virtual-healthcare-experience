@@ -30,8 +30,6 @@ const Menu: React.FC<{}> = () => {
       ({ id }) => id === rootScope.sg.current
     );
 
-    rootScope.resumeURL = "";
-
     if (
       dp &&
       rootScope.dataProvider.indexOf(dp) === rootScope.dataProvider.length - 1
