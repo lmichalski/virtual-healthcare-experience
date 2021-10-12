@@ -6,19 +6,17 @@ interface iProps {
   startNewGame: () => void;
   resumeGame: () => void;
   gamesaved: boolean;
+  strings: {
+    title: string
+  }
 }
 
-const Menu: React.FC<iProps> = ({ startNewGame, resumeGame, gamesaved }) => {
+const Menu: React.FC<iProps> = ({ startNewGame, resumeGame, gamesaved, strings }) => {
   return (
     <div className="container">
       <div className="panel menu">
         <header>
-          <FormattedMessage
-            id="Main.title"
-            defaultMessage="ER Virtual Simulation Game"
-            description="Menu page title"
-            tagName="h1"
-          />
+          <h1>{strings.title}</h1>
         </header>
         <div className="main">
           <div className="content">

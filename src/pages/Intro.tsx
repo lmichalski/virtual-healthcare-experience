@@ -2,14 +2,18 @@ import { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Intro.scss";
 
-const Intro: React.FC = () => {
+interface iProps {
+  strings: {
+    introCards: string[]
+  }
+}
+
+const Intro: React.FC<iProps> = ({strings}) => {
   const history = useHistory();
   const label = "Next";
 
   const [currentMessage, setCurrentMessage] = useState(0);
-  const intro = [
-    "You are Nicola Sporoli, a nurse caring for patients in the ambulatory care setting of the ER. Your next patient is Jason, whose chief complaint is ankle pain. The triage nurse took Jason’s vitals 10 minute ago and they were: BP138/88 P 96 (reg) R 20",
-  ];
+  const intro = strings.introCards;
 
   const skipToNext = useCallback(() => {
     if (currentMessage < intro.length - 1) {

@@ -1,17 +1,6 @@
 import { useMemo } from "react";
 import er_game_data from "../games/er_game_data.json";
 
-export const useGameData = (game: "emergency", locale?: string): GameDataShape => {
-  const data = useMemo(() =>{
-    switch(game){
-      case "emergency":
-        return locale === "fr" ? er_game_data : er_game_data 
-    }
-  }, [game, locale]);
-
-  return data;
-};
-
 export interface DecisionPoint {
   id: number;
   title?: string;
@@ -41,4 +30,24 @@ export interface DecisionPoint {
 
 interface GameDataShape {
   decisionpoints: DecisionPoint[];
+  strings: {
+    menu: {
+      title: string
+    }
+    intro: {
+      introCards: string[]
+    }
+  }
 }
+
+
+export const useGameData = (game: "emergency", locale?: string): GameDataShape => {
+  const data = useMemo(() =>{
+    switch(game){
+      case "emergency":
+        return locale === "fr" ? er_game_data : er_game_data 
+    }
+  }, [game, locale]);
+
+  return data;
+};

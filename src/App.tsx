@@ -152,7 +152,7 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/intro">
-            <Intro />
+            <Intro strings={gameData.strings.intro}/>
           </Route>
 
           <Route path="/materials">
@@ -192,6 +192,7 @@ const App: React.FC<{}> = () => {
 
           <Route path="/">
             <Menu
+              strings={gameData.strings.menu}
               startNewGame={handleStartNewGame}
               resumeGame={handleResumeGame}
               gamesaved={gameState.gamesaved}
