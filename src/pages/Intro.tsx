@@ -1,14 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Intro.scss";
 
-interface iProps {
-  handleInitialiseSaveGame: () => void;
-}
-
-const Intro: React.FC<iProps> = ({ handleInitialiseSaveGame }) => {
+const Intro: React.FC = () => {
   const history = useHistory();
-  useEffect(handleInitialiseSaveGame, [handleInitialiseSaveGame]);
   const label = "Next";
 
   const [currentMessage, setCurrentMessage] = useState(0);

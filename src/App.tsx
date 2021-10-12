@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef } from "react";
+import React, { useCallback, useMemo } from "react";
 
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useIntl } from "react-intl";
@@ -6,10 +6,7 @@ import { useIntl } from "react-intl";
 import Menu from "./pages/Menu";
 import "./App.scss";
 
-import RootScopeContext, {
-  emptyRootScope,
-  fetchGameData,
-} from "./controllers/RootScopeContext";
+import { useGameData } from "./hooks/useGameData";
 
 import Objectives from "./pages/Objectives";
 import Intro from "./pages/Intro";
@@ -24,71 +21,61 @@ import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
+import useGameState from "./hooks/useGameState";
 
 const App: React.FC<{}> = () => {
-  const rootScope = useRef(emptyRootScope());
   const history = useHistory();
   const logGameEvent = useLogGameEvent();
   const locale = useIntl().locale;
-  const gameData = useMemo(() => fetchGameData("emergency", locale), [locale]);
-  const minSteps = gameData.decisionpoints.filter(({ correct }) => correct).length
+
+  const gameData = useGameData("emergency", locale)
+  const gameState = useGameState();
+  const minSteps = gameData.decisionpoints.filter(
+    ({ correct }) => correct
+  ).length;
+
+  const lastDecisionPoint =
+    gameData.decisionpoints[gameData.decisionpoints.length - 1].id ===
+    gameState.currentStep;
 
   const currentDecisionPoint = useMemo(() => {
     return gameData.decisionpoints.find(
-      ({ id }) => id === rootScope.current.sg.current
+      ({ id }) => id === gameState.currentStep
     )!;
-  }, [gameData.decisionpoints]);
-
-  const initialiseSaveGame = useCallback(() => {
-    rootScope.current.sg.gamesaved = true;
-    rootScope.current.sg.videoposition = 0;
-    rootScope.current.saveState();
-  }, []);
+  }, [gameData.decisionpoints, gameState.currentStep]);
 
   const handleStartNewGame = useCallback(() => {
-    rootScope.current.sg.gamesaved = false;
-    rootScope.current.sg.current = 0;
-    rootScope.current.sg.completed = false;
-    rootScope.current.sg.videoposition = 0;
-    rootScope.current.sg.progress = [];
+    gameState.newGame();
 
     history.push("/intro/");
-    rootScope.current.saveState();
-
     logGameEvent("", "start", "game", getBrowser(), "");
-  }, [rootScope, history, logGameEvent]);
+  }, [history, logGameEvent, gameState]);
 
   const handleResumeGame = useCallback(() => {
-    var dp = rootScope.current.dataProvider.find(
-      ({ id }) => id === rootScope.current.sg.current
-    );
+    var dp = currentDecisionPoint;
 
-    if (
-      dp &&
-      rootScope.current.dataProvider.indexOf(dp) === rootScope.current.dataProvider.length - 1
-    ) {
+    if (dp && lastDecisionPoint) {
       history.push("/summary/");
-    } else if (rootScope.current.sg.videoposition > 0.1) {
+    } else if (gameState.videoposition > 0.1) {
       history.push("/video/");
     } else {
       history.push("/decision/");
     }
 
     logGameEvent("", "resume", "game", "", "");
-    rootScope.current.sg.progress = [];
-  }, [history, logGameEvent, rootScope]);
+  }, [
+    history,
+    logGameEvent,
+    gameState.videoposition,
+    currentDecisionPoint,
+    lastDecisionPoint,
+  ]);
 
   const handleOptionChosen = useCallback(
     (nextId: number, label: string) => {
       const next = gameData.decisionpoints.find(({ id }) => id === nextId);
 
-      rootScope.current.sg.progress.push({
-        id: rootScope.current.sg.current,
-        label: label,
-        option: nextId,
-      });
-      rootScope.current.sg.current = nextId;
-      rootScope.current.saveState();
+      gameState.selectOption(nextId, label);
 
       logGameEvent(
         "",
@@ -104,6 +91,7 @@ const App: React.FC<{}> = () => {
           break;
         case "lo":
           if (next.feedback > "") {
+            // If there's feedback, show it then advance
             history.push("/feedback/");
           } else {
             history.push("/lo/");
@@ -113,117 +101,105 @@ const App: React.FC<{}> = () => {
 
       // google analytics ???
     },
-    [gameData.decisionpoints, history, logGameEvent]
+    [gameData.decisionpoints, history, logGameEvent, gameState]
   );
 
   const handleVideoFinished = useCallback(() => {
-    const dp = currentDecisionPoint
-    rootScope.current.sg.videoposition = 0;
-    rootScope.current.saveState();
+    const dp = currentDecisionPoint;
+    gameState.setVideoposition(0);
 
-    if (
-      dp &&
-      gameData.decisionpoints.indexOf(dp) === gameData.decisionpoints.length - 1
-    ) {
-      rootScope.current.sg.completed = true;
+    if (lastDecisionPoint) {
       history.push("/summary/");
     } else if (dp && dp.options.length > 0) {
-      if (dp && dp.feedback > "") {
+      if (dp.feedback > "") {
         history.push("/feedback/");
       } else {
+        // No feedback means go directly to the decision
         history.push("/decision/");
       }
-    } else if (dp?.next) {
-      rootScope.current.sg.videoposition = 0;
-      history.push("/lo/");
-      rootScope.current.saveState();
-      rootScope.current.sg.current++;
     } else {
-      history.push("/transition/");
-      rootScope.current.sg.current++;
+      gameState.setCurrentStep(gameState.currentStep + 1);
+      if (dp?.next) {
+        // If there are no options, go to the next decision point
+        history.push("/lo/");
+      } else {
+        history.push("/transition/");
+      }
     }
-    rootScope.current.saveState()
-  },[currentDecisionPoint, gameData.decisionpoints, history])
+  }, [currentDecisionPoint, history, lastDecisionPoint, gameState]);
 
   return (
-    <RootScopeContext.Provider value={rootScope.current}>
-      <div className="fullscreen">
-        <div className="view" role="application">
-          <Switch>
-            <Route path="/credits">
-              <Credits />
-            </Route>
+    <div className="fullscreen">
+      <div className="view" role="application">
+        <Switch>
+          <Route path="/credits">
+            <Credits />
+          </Route>
 
-            <Route path="/decision">
-              <Decision
-                decisionPoint={currentDecisionPoint}
-                onOptionChosen={handleOptionChosen}
-              />
-            </Route>
+          <Route path="/decision">
+            <Decision
+              decisionPoint={currentDecisionPoint}
+              onOptionChosen={handleOptionChosen}
+            />
+          </Route>
 
-            <Route path="/feedback">
-              <Feedback decisionPoint={currentDecisionPoint} />
-            </Route>
+          <Route path="/feedback">
+            <Feedback decisionPoint={currentDecisionPoint} />
+          </Route>
 
-            <Route path="/instructions">
-              <Instructions
-                minSteps={
-                  minSteps
-                }
-              />
-            </Route>
+          <Route path="/instructions">
+            <Instructions minSteps={minSteps} />
+          </Route>
 
-            <Route path="/intro">
-              <Intro handleInitialiseSaveGame={initialiseSaveGame} />
-            </Route>
+          <Route path="/intro">
+            <Intro />
+          </Route>
 
-            <Route path="/materials">
-              <Materials />
-            </Route>
+          <Route path="/materials">
+            <Materials />
+          </Route>
 
-            <Route path="/objectives">
-              <Objectives />
-            </Route>
+          <Route path="/objectives">
+            <Objectives />
+          </Route>
 
-            <Route path="/settings">
-              <Settings />
-            </Route>
+          <Route path="/settings">
+            <Settings />
+          </Route>
 
-            <Route path="/summary">
-              <Summary 
-                decisionPoints={gameData.decisionpoints}
-                gameProgress={rootScope.current.sg.progress}
-                completed={rootScope.current.sg.completed}
-              />
-            </Route>
+          <Route path="/summary">
+            <Summary
+              decisionPoints={gameData.decisionpoints}
+              gameProgress={gameState.progress}
+              completed={lastDecisionPoint}
+            />
+          </Route>
 
-            <Route path="/transition">
-              <Transition decisionPoint={currentDecisionPoint}/>
-            </Route>
+          <Route path="/transition">
+            <Transition decisionPoint={currentDecisionPoint} />
+          </Route>
 
-            <Route path="/video">
-              <Video 
-                decisionPoint={currentDecisionPoint} 
-                onVideoFinished={handleVideoFinished} 
-                videoposition={rootScope.current.sg.videoposition} 
-                setVideoposition={(time) => { 
-                  rootScope.current.sg.videoposition = time
-                  rootScope.current.saveState();
-                }}
-              />
-            </Route>
+          <Route path="/video">
+            <Video
+              decisionPoint={currentDecisionPoint}
+              onVideoFinished={handleVideoFinished}
+              videoposition={gameState.videoposition}
+              setVideoposition={gameState.setVideoposition}
+            />
+          </Route>
 
-            <Route path="/">
-              <Menu 
-                startNewGame={handleStartNewGame}
-                resumeGame={handleResumeGame}
-                gamesaved={rootScope.current.sg.gamesaved}
-              />
-            </Route>
-          </Switch>
-        </div>
+          <Route path="/lo">Somethings going on here, I swear</Route>
+
+          <Route path="/">
+            <Menu
+              startNewGame={handleStartNewGame}
+              resumeGame={handleResumeGame}
+              gamesaved={gameState.gamesaved}
+            />
+          </Route>
+        </Switch>
       </div>
-    </RootScopeContext.Provider>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ import { Font } from "@react-pdf/renderer";
 
 import { Link as Lonk } from "react-router-dom";
 import useLogGameEvent from "../hooks/useLogGameEvent";
-import { DecisionPoint } from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../hooks/useGameData";
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
@@ -25,12 +25,16 @@ Font.register({
 });
 
 interface iProps {
-  decisionPoints: DecisionPoint[]
-  gameProgress: {id: number, label: string, option: number}[]
-  completed: boolean
+  decisionPoints: DecisionPoint[];
+  gameProgress: { id: number; label: string; option: number }[];
+  completed: boolean;
 }
 
-const Summary: React.FC<iProps> = ({gameProgress,decisionPoints, completed }) => {
+const Summary: React.FC<iProps> = ({
+  gameProgress,
+  decisionPoints,
+  completed,
+}) => {
   const logGameEvent = useLogGameEvent();
 
   // const [progress, setProgress] = useState([])

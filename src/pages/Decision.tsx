@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router-dom";
-import { DecisionPoint } from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../hooks/useGameData";
 import useLogGameEvent from "../hooks/useLogGameEvent";
 import { useGotoMenu } from "../util";
 import "./Decision.scss";

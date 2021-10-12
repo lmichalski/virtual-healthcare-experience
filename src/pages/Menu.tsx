@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import "./Menu.scss";
 
 interface iProps {
-  startNewGame: () => void
-  resumeGame: () => void
-  gamesaved: boolean
+  startNewGame: () => void;
+  resumeGame: () => void;
+  gamesaved: boolean;
 }
 
-const Menu: React.FC<iProps> = ({startNewGame, resumeGame, gamesaved}) => {
-
+const Menu: React.FC<iProps> = ({ startNewGame, resumeGame, gamesaved }) => {
   return (
     <div className="container">
       <div className="panel menu">
@@ -35,9 +34,7 @@ const Menu: React.FC<iProps> = ({startNewGame, resumeGame, gamesaved}) => {
               </li>
               <li>
                 <button
-                  className={`Link ${
-                    gamesaved ? "active" : "disabled"
-                  }`}
+                  className={`Link ${gamesaved ? "active" : "disabled"}`}
                   onClick={resumeGame}
                 >
                   <FormattedMessage

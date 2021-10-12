@@ -4,7 +4,7 @@ import { useLocation, useHistory } from "react-router-dom";
 import videojs from "video.js";
 import Player from "@vimeo/player";
 
-import { DecisionPoint } from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../hooks/useGameData";
 import { useGotoMenu } from "../util";
 
 import "./Video.scss";
@@ -12,12 +12,17 @@ import useLogGameEvent from "../hooks/useLogGameEvent";
 
 interface iProps {
   decisionPoint: DecisionPoint;
-  onVideoFinished: () => void
-  videoposition: number
-  setVideoposition: (t: number) => void
+  onVideoFinished: () => void;
+  videoposition: number;
+  setVideoposition: (t: number) => void;
 }
 
-const Video: React.FC<iProps> = ({decisionPoint: dp, onVideoFinished, videoposition, setVideoposition}) => {
+const Video: React.FC<iProps> = ({
+  decisionPoint: dp,
+  onVideoFinished,
+  videoposition,
+  setVideoposition,
+}) => {
   const location = useLocation();
   const history = useHistory();
   const logGameEvent = useLogGameEvent();
@@ -29,16 +34,15 @@ const Video: React.FC<iProps> = ({decisionPoint: dp, onVideoFinished, videoposit
 
   const skipVideo = useCallback(() => {
     let time = undefined;
-    
+
     if (dp?.video?.vimeo_url) {
-    
     } else if (videoRef.current) {
       var api = videojs(videoRef.current);
       api.dispose();
       time = api?.currentTime();
     }
 
-    onVideoFinished()
+    onVideoFinished();
     logGameEvent("", "skip", "video", dp?.data, time);
   }, [dp, logGameEvent, onVideoFinished]);
 
@@ -132,7 +136,7 @@ const Video: React.FC<iProps> = ({decisionPoint: dp, onVideoFinished, videoposit
       });
 
       api.on("progress", function (e: unknown) {
-         setVideoposition(api.currentTime())
+        setVideoposition(api.currentTime());
       });
 
       api.on("pause", function (e: unknown) {
@@ -183,7 +187,7 @@ const Video: React.FC<iProps> = ({decisionPoint: dp, onVideoFinished, videoposit
         console.log("title:", title);
       });
     }
-  }, [dp, skipVideo, logGameEvent,setVideoposition, videoposition]);
+  }, [dp, skipVideo, logGameEvent, setVideoposition, videoposition]);
 
   return (
     <div className="video">

@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory } from "react-router";
-import { DecisionPoint } from "../controllers/RootScopeContext";
+import { DecisionPoint } from "../hooks/useGameData";
 import "./Feedback.scss";
 
 interface iProps {
