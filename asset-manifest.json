@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/virtual-healthcare-experience/static/css/main.569cf6b2.chunk.css",
-    "main.js": "/virtual-healthcare-experience/static/js/main.b10e57da.chunk.js",
-    "main.js.map": "/virtual-healthcare-experience/static/js/main.b10e57da.chunk.js.map",
-    "runtime-main.js": "/virtual-healthcare-experience/static/js/runtime-main.7abc07d0.js",
-    "runtime-main.js.map": "/virtual-healthcare-experience/static/js/runtime-main.7abc07d0.js.map",
-    "static/js/2.5c16964c.chunk.js": "/virtual-healthcare-experience/static/js/2.5c16964c.chunk.js",
-    "static/js/2.5c16964c.chunk.js.map": "/virtual-healthcare-experience/static/js/2.5c16964c.chunk.js.map",
-    "static/js/3.353775f0.chunk.js": "/virtual-healthcare-experience/static/js/3.353775f0.chunk.js",
-    "static/js/3.353775f0.chunk.js.map": "/virtual-healthcare-experience/static/js/3.353775f0.chunk.js.map",
-    "index.html": "/virtual-healthcare-experience/index.html",
-    "static/css/main.569cf6b2.chunk.css.map": "/virtual-healthcare-experience/static/css/main.569cf6b2.chunk.css.map",
-    "static/js/2.5c16964c.chunk.js.LICENSE.txt": "/virtual-healthcare-experience/static/js/2.5c16964c.chunk.js.LICENSE.txt",
-    "static/media/Roboto-Regular.ttf": "/virtual-healthcare-experience/static/media/Roboto-Regular.a8d6ac03.ttf",
-    "static/media/App.scss": "/virtual-healthcare-experience/static/media/icomoon.e12abc6f.eot"
+    "main.css": "/static/css/main.48b041fd.chunk.css",
+    "main.js": "/static/js/main.b10e57da.chunk.js",
+    "main.js.map": "/static/js/main.b10e57da.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.24f3a633.js",
+    "runtime-main.js.map": "/static/js/runtime-main.24f3a633.js.map",
+    "static/js/2.aedc88f7.chunk.js": "/static/js/2.aedc88f7.chunk.js",
+    "static/js/2.aedc88f7.chunk.js.map": "/static/js/2.aedc88f7.chunk.js.map",
+    "static/js/3.353775f0.chunk.js": "/static/js/3.353775f0.chunk.js",
+    "static/js/3.353775f0.chunk.js.map": "/static/js/3.353775f0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.48b041fd.chunk.css.map": "/static/css/main.48b041fd.chunk.css.map",
+    "static/js/2.aedc88f7.chunk.js.LICENSE.txt": "/static/js/2.aedc88f7.chunk.js.LICENSE.txt",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.a8d6ac03.ttf",
+    "static/media/App.scss": "/static/media/icomoon.e12abc6f.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.7abc07d0.js",
-    "static/js/2.5c16964c.chunk.js",
-    "static/css/main.569cf6b2.chunk.css",
+    "static/js/runtime-main.24f3a633.js",
+    "static/js/2.aedc88f7.chunk.js",
+    "static/css/main.48b041fd.chunk.css",
     "static/js/main.b10e57da.chunk.js"
   ]
 }
