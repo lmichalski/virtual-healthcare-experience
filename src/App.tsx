@@ -148,7 +148,7 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/instructions">
-            <Instructions minSteps={minSteps} />
+            <Instructions minSteps={minSteps} strings={gameData.strings.instructions} />
           </Route>
 
           <Route path="/intro">
@@ -160,7 +160,9 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/objectives">
-            <Objectives />
+            <Objectives 
+              strings={gameData.strings.objectives}
+            />
           </Route>
 
           <Route path="/settings">

@@ -2,8 +2,15 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Objectives.scss";
 
-const Objectives: React.FC<{}> = () => {
-  return (
+interface iProps {
+  strings: {
+    paragraph1: string
+    paragraph2: string
+    bullet_list: string[]
+  }
+}
+
+const Objectives: React.FC<iProps> = ({strings}) => {  return (
     <div className="container">
       <div className="panel info">
         <header>
@@ -20,32 +27,10 @@ const Objectives: React.FC<{}> = () => {
         </header>
         <div className="main">
           <div className="content cf">
-            <FormattedMessage
-              id="objectives.paragraph"
-              defaultMessage="The game promotes the application of knowledge and skills related to the assessment of a prenatal woman."
-              description="Game objectives intro paragraph"
-              tagName="p"
-            />
-
-            <FormattedMessage
-              id="objectives.paragraph2"
-              defaultMessage="The learning objectives of this simulation game are to: "
-              description="Game objectives second paragraph"
-              tagName="p"
-            />
+            <p>{strings.paragraph1}</p>
+            <p>{strings.paragraph2}</p>
             <ul>
-              <li>
-                Apply knowledge of physical and psychosocial prenatal nursing
-                assessment.
-              </li>
-              <li>
-                Identify normal findings, abnormal variations and potential
-                complications during a prenatal visit.
-              </li>
-              <li>
-                Demonstrate therapeutic interventions when caring for a pregnant
-                woman.
-              </li>
+              {strings.bullet_list.map((list_item) => <li>{list_item}</li>)}
             </ul>
           </div>
         </div>

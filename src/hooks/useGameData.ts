@@ -37,6 +37,15 @@ interface GameDataShape {
     intro: {
       introCards: string[];
     };
+    objectives: {
+      paragraph1: string;
+      paragraph2: string;
+      bullet_list: string[];
+    };
+    instructions: {
+      paragraph: string;
+      bullet_list: string[];
+    };
   };
 }
 
