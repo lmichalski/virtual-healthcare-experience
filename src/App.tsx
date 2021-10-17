@@ -28,7 +28,7 @@ const App: React.FC<{}> = () => {
   const logGameEvent = useLogGameEvent();
   const locale = useIntl().locale;
 
-  const gameData = useGameData("emergency", locale)
+  const gameData = useGameData("emergency", locale);
   const gameState = useGameState();
   const minSteps = gameData.decisionpoints.filter(
     ({ correct }) => correct
@@ -152,7 +152,7 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/intro">
-            <Intro strings={gameData.strings.intro}/>
+            <Intro strings={gameData.strings.intro} />
           </Route>
 
           <Route path="/materials">

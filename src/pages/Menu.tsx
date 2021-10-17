@@ -7,11 +7,16 @@ interface iProps {
   resumeGame: () => void;
   gamesaved: boolean;
   strings: {
-    title: string
-  }
+    title: string;
+  };
 }
 
-const Menu: React.FC<iProps> = ({ startNewGame, resumeGame, gamesaved, strings }) => {
+const Menu: React.FC<iProps> = ({
+  startNewGame,
+  resumeGame,
+  gamesaved,
+  strings,
+}) => {
   return (
     <div className="container">
       <div className="panel menu">

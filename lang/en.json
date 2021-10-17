@@ -35,11 +35,11 @@
     "defaultMessage": "Learning Objectives",
     "description": "Learning Objectives title"
   },
-  "objectives.paragraph": {
+  "Objectives.paragraph": {
     "defaultMessage": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
     "description": "Game objectives intro paragraph"
   },
-  "objectives.paragraph2": {
+  "Objectives.paragraph2": {
     "defaultMessage": "The learning objectives of this simulation game are to:",
     "description": "Game objectives second paragraph"
   }

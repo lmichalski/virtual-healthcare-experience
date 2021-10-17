@@ -4,11 +4,11 @@ import "./Intro.scss";
 
 interface iProps {
   strings: {
-    introCards: string[]
-  }
+    introCards: string[];
+  };
 }
 
-const Intro: React.FC<iProps> = ({strings}) => {
+const Intro: React.FC<iProps> = ({ strings }) => {
   const history = useHistory();
   const label = "Next";
 

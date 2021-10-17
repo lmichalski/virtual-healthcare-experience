@@ -32,20 +32,22 @@ interface GameDataShape {
   decisionpoints: DecisionPoint[];
   strings: {
     menu: {
-      title: string
-    }
+      title: string;
+    };
     intro: {
-      introCards: string[]
-    }
-  }
+      introCards: string[];
+    };
+  };
 }
 
-
-export const useGameData = (game: "emergency", locale?: string): GameDataShape => {
-  const data = useMemo(() =>{
-    switch(game){
+export const useGameData = (
+  game: "emergency",
+  locale?: string
+): GameDataShape => {
+  const data = useMemo(() => {
+    switch (game) {
       case "emergency":
-        return locale === "fr" ? er_game_data : er_game_data 
+        return locale === "fr" ? er_game_data : er_game_data;
     }
   }, [game, locale]);
 
