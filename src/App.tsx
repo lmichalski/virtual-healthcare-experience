@@ -22,6 +22,8 @@ import Materials from "./pages/Materials";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
 import useGameState from "./hooks/useGameState";
+import Principles from "./pages/Principles";
+
 
 const App: React.FC<{}> = () => {
   const history = useHistory();
@@ -148,7 +150,10 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/instructions">
-            <Instructions minSteps={minSteps} strings={gameData.strings.instructions} />
+            <Instructions
+              minSteps={minSteps}
+              strings={gameData.strings.instructions}
+            />
           </Route>
 
           <Route path="/intro">
@@ -160,9 +165,11 @@ const App: React.FC<{}> = () => {
           </Route>
 
           <Route path="/objectives">
-            <Objectives 
-              strings={gameData.strings.objectives}
-            />
+            <Objectives strings={gameData.strings.objectives} />
+          </Route>
+
+          <Route path="/principles">
+            <Principles strings={gameData.strings.principles} />
           </Route>
 
           <Route path="/settings">

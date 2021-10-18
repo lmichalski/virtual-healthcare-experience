@@ -43,6 +43,10 @@ interface GameDataShape {
       paragraph2: string;
       bullet_list: string[];
     };
+    principles: {
+      paragraph: string;
+      bullet_list: string[];
+    };
     instructions: {
       paragraph: string;
       bullet_list: string[];
@@ -51,7 +55,7 @@ interface GameDataShape {
 }
 
 export const useGameData = (
-  game: "emergency"|"suicidal_patient",
+  game: "emergency" | "suicidal_patient",
   locale?: string
 ): GameDataShape => {
   const data = useMemo(() => {
