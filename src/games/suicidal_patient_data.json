@@ -54,22 +54,22 @@
       "type": "video",
       "data": "SG4_DP1_0",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://vimeo.com/635497123"
       },
       "correct": false,
       "feedback": "",
-      "message": "Test",
+      "message": "How do you start the conversation with Kelly?",
       "options": [
         {
-          "label": "MSK",
+          "label": "Assess suicide ideation",
           "next": 1
         },
         {
-          "label": "Neuro",
+          "label": "Invite Kelly to talk",
           "next": 3
         },
         {
-          "label": "Airway Circulatory Breathing",
+          "label": "Acknowledge behaviour",
           "next": 2
         }
       ],
@@ -82,15 +82,15 @@
       "data": "SG4_DP0_1",
       "video": null,
       "correct": false,
-      "feedback": "Consider the potential areas of injury related to the mechanism of injury. What assessment should be completed before conducting an MSK assessment on Jason's ankle?",
-      "message": "What is your priority assessment?",
+      "feedback": "",
+      "message": "How do you start the conversation with Kelly?",
       "options": [
         {
-          "label": "Neuro",
+          "label": "Invite Kelly to talk",
           "next": 3
         },
         {
-          "label": "Airway Circulatory Breathing",
+          "label": "Acknowledge behaviour",
           "next": 2
         }
       ],
@@ -103,15 +103,15 @@
       "data": "SG4_DP0_2",
       "video": null,
       "correct": false,
-      "feedback": "Jason is talking normally which indicates a patent airway. From your general survey assessment, there are no signs of respiratory distress or any indication of cardiovascular concerns. Consider how the injury occurred and what your priority concern is at this time.",
-      "message": "What is your priority assessment?",
+      "feedback": "",
+      "message": "How do you start the conversation with Kelly?",
       "options": [
         {
-          "label": "Neuro",
+          "label": "Invite Kelly to talk",
           "next": 3
         },
         {
-          "label": "MSK",
+          "label": "Assess suicide ideation",
           "next": 1
         }
       ],
@@ -123,22 +123,22 @@
       "type": "video",
       "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614626869"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "How do you respond to the findings of asymmetrical pupil sizes?",
+      "message": "How do you help Kelly to feel free to share what's going on?",
       "options": [
         {
-          "label": "Adjust technique",
+          "label": "Validate feelings",
           "next": 6
         },
         {
-          "label": "Notify Nurse Practitioner",
+          "label": "Provide options for services",
           "next": 4
         },
         {
-          "label": "Pupilary Accomodation",
+          "label": "Discuss reason for appointment",
           "next": 5
         }
       ],
@@ -150,18 +150,18 @@
       "type": "video",
       "data": "SG4_DP1_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614626907"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Rationale: In 20% of the population, there can be a normal finding of a pupil size difference of up to 0.5 mm. When assessing the pupils reaction to light, the pupils may appear unequal if the technique is done too quickly as  the second pupil may be temporily constricted. Given the gravity of yielding this finding with a suspected head injury, it is best to confirm the results by re-performing the technique using proper technique.",
-      "message": "How do you respond to the findings of asymmetrical pupil sizes?",
+      "feedback": "",
+      "message": "How do you help Kelly to feel free to share what's going on?",
       "options": [
         {
-          "label": "Adjust technique",
+          "label": "Validate feelings",
           "next": 6
         },
         {
-          "label": "Pupilary Accomodation",
+          "label": "Discuss reason for appointment",
           "next": 5
         }
       ],
@@ -173,18 +173,18 @@
       "type": "video",
       "data": "SG4_DP1_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627144"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Rationale: Jason pupils are not the same size. In this case, it is important to confirm that your findings are accurate. Accomondation is the next assessment that needs to be done after pupillary reaction to light.",
-      "message": "How do you respond to the findings of asymmetrical pupil sizes?",
+      "feedback": "",
+      "message": "How do you help Kelly to feel free to share what's going on?",
       "options": [
         {
-          "label": "Adjust technique",
+          "label": "Validate feelings",
           "next": 6
         },
         {
-          "label": "Notify Nurse Practitioner",
+          "label": "Provide options for services",
           "next": 4
         }
       ],
@@ -196,22 +196,22 @@
       "type": "video",
       "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627238"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "At this point in your assessment, can you provide any pain relief?",
+      "message": "How do you gather more information?",
       "options": [
         {
-          "label": "Complete ankle assessment",
+          "label": "Ask about her current disposition",
           "next": 7
         },
         {
-          "label": "Provide medication",
+          "label": "Ask Kelly about reasons for making appointment",
           "next": 8
         },
         {
-          "label": "Elevate ankle",
+          "label": "Ask open-ended question to facilitate discussion",
           "next": 9
         }
       ],
@@ -223,18 +223,18 @@
       "type": "video",
       "data": "SG4_DP2_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627393"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
-      "message": "At this point in your assessment, can you provide any pain relief?",
+      "feedback": "",
+      "message": "How do you gather more information?",
       "options": [
         {
-          "label": "Provide medication",
+          "label": "Ask Kelly about reasons for making appointment",
           "next": 8
         },
         {
-          "label": "Elevate ankle",
+          "label": "Ask open-ended question to facilitate discussion",
           "next": 9
         }
       ],
@@ -246,18 +246,18 @@
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614628993"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Medication administration takes time and requires a full assessment before an order can be obtained. The assessment will inform the pain medication route. Consider what immediate action you can take to enhance comfort and reduce pain for the client.",
-      "message": "At this point in your assessment, can you provide any pain relief?",
+      "feedback": "",
+      "message": "How do you gather more information?",
       "options": [
         {
-          "label": "Complete ankle assessment",
+          "label": "Ask about her current disposition",
           "next": 7
         },
         {
-          "label": "Elevate ankle",
+          "label": "Ask open-ended question to facilitate discussion",
           "next": 9
         }
       ],
@@ -269,22 +269,22 @@
       "type": "video",
       "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629017"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "What is your priority assessment related to Jason's symptoms?",
+      "message": "How do you address Kelly’s unhealthy behaviours?",
       "options": [
         {
-          "label": "Assess movement",
+          "label": "Discuss previous session",
           "next": 10
         },
         {
-          "label": "Assess kinaesthesia",
+          "label": "Ask reasons for behaviour",
           "next": 11
         },
         {
-          "label": "Peripheral Vascular",
+          "label": "Seek reflection on current behaviours",
           "next": 12
         }
       ],
@@ -296,18 +296,18 @@
       "type": "video",
       "data": "SG4_DP3_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629071"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "At this time information about ROM is not the priority and does not help to  formulate a clinical judgement. We can expect movement to cause increased discomfort. Think about what might be causing the client to have numbness and tingling.",
-      "message": "What is your priority assessment related to Jason's symptoms?",
+      "feedback": "",
+      "message": "How do you address Kelly’s unhealthy behaviours?",
       "options": [
         {
-          "label": "Assess kinaesthesia",
+          "label": "Ask reasons for behaviour",
           "next": 11
         },
         {
-          "label": "Peripheral Vascular",
+          "label": "Seek reflection on current behaviours",
           "next": 12
         }
       ],
@@ -322,15 +322,15 @@
         "vimeo_url": "https://player.vimeo.com/video/614629191"
       },
       "correct": false,
-      "feedback": "Kinesthesia is used to assess the posterior column tract of the sensory pathways. This assessment will not provide more information about Jason's symptoms of numbness and tingling. Consider another assessment that would provide you with increased understanding of Jason's symptoms.",
-      "message": "What is your priority assessment related to Jason's symptoms?",
+      "feedback": "",
+      "message": "How do you address Kelly’s unhealthy behaviours?",
       "options": [
         {
-          "label": "Assess movement",
+          "label": "Discuss previous session",
           "next": 10
         },
         {
-          "label": "Peripheral Vascular",
+          "label": "Seek reflection on current behaviours",
           "next": 12
         }
       ],
@@ -342,22 +342,22 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629613"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "message": "How do you proceed?",
       "options": [
         {
-          "label": "Palpate right popliteal pulse",
+          "label": "Question behaviours",
           "next": 13
         },
         {
-          "label": "Continue assessment",
+          "label": "Ask about additional stressors",
           "next": 14
         },
         {
-          "label": "Use doppler",
+          "label": "Empathize and clarify",
           "next": 15
         }
       ],
@@ -369,18 +369,18 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629791"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "For Jason's ankle injury the most important pulses are the ones distal to the injury site. In this case, the popliteal pulse is proximal to the site of injury. Consider, what should the nurse do since they cannot palpate the pedal pulse?",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "feedback": "",
+      "message": "How do you proceed?",
       "options": [
         {
-          "label": "Continue assessment",
+          "label": "Ask about additional stressors",
           "next": 14
         },
         {
-          "label": "Use doppler",
+          "label": "Empathize and clarify",
           "next": 15
         }
       ],
@@ -392,18 +392,18 @@
       "type": "video",
       "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629916"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "The client's feet appear pink in colour bilaterally with cap refill <3 secs which suggests that there are no significant circulatory deficits.  However an absent pulse is a significant finding that requires confirmation and potentially immediate action.  Consider what is your next assessment when you cannot palpate the right pedal pulse.",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "feedback": "",
+      "message": "How do you proceed?",
       "options": [
         {
-          "label": "Palpate right popliteal pulse",
+          "label": "Question behaviours",
           "next": 13
         },
         {
-          "label": "Use doppler",
+          "label": "Empathize and clarify",
           "next": 15
         }
       ],
@@ -415,22 +415,22 @@
       "type": "video",
       "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629953"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "How do you respond to Jason's change in behavour?",
+      "message": "How do you inquire about Kelly’s support system?",
       "options": [
         {
-          "label": "Assess level of conciousness",
-          "next": 18
-        },
-        {
-          "label": "Continue assessment",
+          "label": "Ask about family",
           "next": 16
         },
         {
-          "label": "Perform passive ROM",
+          "label": "Ask a general question about support",
+          "next": 18
+        },
+        {
+          "label": "Ask about friends",
           "next": 17
         }
       ],
@@ -442,18 +442,18 @@
       "type": "video",
       "data": "SG4_DP5_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630127"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Think about Jason's change in responsiveness. What is a priority assessment to be completed based on the client's behaviour?",
-      "message": "How do you respond to Jason's change in behavour?",
+      "feedback": "",
+      "message": "How do you inquire about Kelly’s support system?",
       "options": [
         {
-          "label": "Perform passive ROM",
+          "label": "Ask about friends",
           "next": 17
         },
         {
-          "label": "Assess level of conciousness",
+          "label": "Ask a general question about support",
           "next": 18
         }
       ],
@@ -465,18 +465,18 @@
       "type": "video",
       "data": "SG4_DP5_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630152"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Completing a passive ROM does not address the change in Jason's level of consciousness. Consider what is a priority assessment to be completed based on the client's behaviour.",
-      "message": "How do you respond to Jason's change in behavour?",
+      "feedback": "",
+      "message": "How do you inquire about Kelly’s support system?",
       "options": [
         {
-          "label": "Continue assessment",
+          "label": "Ask about family",
           "next": 16
         },
         {
-          "label": "Assess level of conciousness",
+          "label": "Ask a general question about support",
           "next": 18
         }
       ],
@@ -488,27 +488,23 @@
       "type": "video",
       "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630423"
+        "vimeo_url": ""
       },
       "correct": true,
       "feedback": "",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "message": "How do you find out more about Kelly’s coping mechanisms?",
       "options": [
         {
-          "label": "10",
+          "label": "Normalize stress",
           "next": 19
         },
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "12",
-          "next": 20
-        },
-        {
-          "label": "13",
+          "label": "Discuss other pressures",
           "next": 21
+        },
+        {
+          "label": "Discuss other coping skills",
+          "next": 20
         }
       ],
       "next": null
@@ -520,19 +516,15 @@
       "data": "SG4_DP6_2",
       "video": null,
       "correct": false,
-      "feedback": "A Glasgow Coma reading of 10 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "feedback": "",
+      "message": "How do you find out more about Kelly’s coping mechanisms?",
       "options": [
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "12",
+          "label": "Discuss other coping skills",
           "next": 20
         },
         {
-          "label": "13",
+          "label": "Discuss other pressures",
           "next": 21
         }
       ],
@@ -545,19 +537,15 @@
       "data": "SG4_DP6_3",
       "video": null,
       "correct": false,
-      "feedback": "A Glasgow Coma reading of 12 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "feedback": "",
+      "message": "How do you find out more about Kelly’s coping mechanisms?",
       "options": [
         {
-          "label": "10",
+          "label": "Normalize stress",
           "next": 19
         },
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "13",
+          "label": "Discuss other coping skills",
           "next": 21
         }
       ],
@@ -565,51 +553,47 @@
     },
     {
       "id": 21,
-      "title": "DP6_4 - wrong",
+      "title": "DP7_1",
       "type": "video",
-      "data": "SG4_DP6_4",
-      "video": null,
-      "correct": false,
-      "feedback": "A Glasgow Coma reading of 13 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "data": "SG4_DP7_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is your response to Kelly’s admission of having negative thoughts?",
       "options": [
         {
-          "label": "10",
-          "next": 19
-        },
-        {
-          "label": "11",
+          "label": "Explore Kelly personal habits",
           "next": 22
         },
         {
-          "label": "12",
-          "next": 20
+          "label": "Discuss selfcare",
+          "next": 23
+        },
+        {
+          "label": "Discuss negative thoughts of suicide",
+          "next": 24
         }
       ],
       "next": null
     },
     {
       "id": 22,
-      "title": "DP7_1",
-      "type": "video",
-      "data": "SG4_DP7_1",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630446"
-      },
-      "correct": true,
+      "title": "DP7_2 - wrong",
+      "type": "SG4_DP7_2",
+      "data": "pass-vid",
+      "video": null,
+      "correct": false,
       "feedback": "",
-      "message": "What is you assessment of Jason's pupils?",
+      "message": "What is your response to Kelly’s admission of having negative thoughts?",
       "options": [
         {
-          "label": "Sluggish",
-          "next": 25
-        },
-        {
-          "label": "Brisk",
+          "label": "Discuss selfcare",
           "next": 23
         },
         {
-          "label": "Nystagus",
+          "label": "Discuss negative thoughts of suicide",
           "next": 24
         }
       ],
@@ -617,68 +601,70 @@
     },
     {
       "id": 23,
-      "title": "DP7_2 - wrong",
-      "type": "SG4_DP7_2",
-      "data": "pass-vid",
+      "title": "DP7_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP7_3",
       "video": null,
       "correct": false,
-      "feedback": "The pupilary response was not brisk. Take some time to review the pupilary reaction again.",
-      "message": "What is you assessment of Jason's pupils?",
+      "feedback": "",
+      "message": "What is your response to Kelly’s admission of having negative thoughts?",
       "options": [
         {
-          "label": "Nystagus",
-          "next": 24
+          "label": "Explore Kelly personal habits",
+          "next": 22
         },
         {
-          "label": "Sluggish",
-          "next": 25
+          "label": "Discuss negative thoughts of suicide",
+          "next": 24
         }
       ],
       "next": null
     },
     {
       "id": 24,
-      "title": "DP7_3 - wrong",
+      "title": "DP8_1",
       "type": "video",
-      "data": "SG4_DP7_3",
-      "video": null,
-      "correct": false,
-      "feedback": "The pupilary response is not nystagmus (uncontrolled repetitive movements of the eyes). Take some time to review the pupilary reaction.",
-      "message": "What is you assessment of Jason's pupils?",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you respond to Kelly’s suicidal thoughts?",
       "options": [
         {
-          "label": "Reactive",
-          "next": 23
+          "label": "Assess stressors further",
+          "next": 25
         },
         {
-          "label": "Sluggish",
-          "next": 25
+          "label": "Ask about self-harm",
+          "next": 26
+        },
+        {
+          "label": "Validate feelings",
+          "next": 27
         }
       ],
       "next": null
     },
     {
       "id": 25,
-      "title": "DP8_1",
+      "title": "DP8_2 - wrong",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP8_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630449"
+        "vimeo_url": ""
       },
-      "correct": true,
+      "correct": false,
       "feedback": "",
-      "message": "How do you respond to Jason's seizure?",
+      "message": "How do you respond to Kelly’s suicidal thoughts?",
       "options": [
         {
-          "label": "Turn to lateral position",
-          "next": 28
-        },
-        {
-          "label": "Insert oropharyngeal airway",
+          "label": "Ask about self-harm",
           "next": 26
         },
         {
-          "label": "Restrain Jason",
+          "label": "Validate feelings",
           "next": 27
         }
       ],
@@ -686,52 +672,225 @@
     },
     {
       "id": 26,
-      "title": "DP8_2 - wrong",
+      "title": "DP8_3 - wrong",
       "type": "video",
-      "data": "SG4_DP8_2",
+      "data": "SG4_DP8_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630466"
+        "vimeo_url": ""
       },
       "correct": false,
-      "feedback": "Often during a seizure the pateint clenches their teeth tightly making it difficult or impossible to insert an oral airway. Think of another way to protect Jason's airyway during a seizure.",
-      "message": "How do you respond to Jason's seizure?",
+      "feedback": "",
+      "message": "How do you respond to Kelly’s suicidal thoughts?",
       "options": [
         {
-          "label": "Restrain Jason",
-          "next": 27
+          "label": "Assess stressors further",
+          "next": 25
         },
         {
-          "label": "Turn to lateral position",
-          "next": 28
+          "label": "Validate feelings",
+          "next": 27
         }
       ],
       "next": null
     },
     {
       "id": 27,
-      "title": "DP8_3 - wrong",
+      "title": "DP8_1",
       "type": "video",
-      "data": "SG4_DP8_3",
+      "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": ""
       },
-      "correct": false,
-      "feedback": "Restraining movement during a seizure can cause injury including bruising and broken bones. It is more appropriate to adjust the environment around so that the client cannot injure himself.",
-      "message": "How do you respond to Jason's seizure?",
+      "correct": true,
+      "feedback": "",
+      "message": "How do you continue to assess Kelly’s suicide plan?",
       "options": [
         {
-          "label": "Insert oropharyngeal airway",
-          "next": 26
+          "label": "Discuss impact of suicide on others",
+          "next": 28
         },
         {
-          "label": "Turn to lateral position",
-          "next": 28
+          "label": "Probe failed suicide attempt",
+          "next": 29
+        },
+        {
+          "label": "Inquire about current plan",
+          "next": 30
         }
       ],
       "next": null
     },
     {
       "id": 28,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you continue to assess Kelly’s suicide plan?",
+      "options": [
+        {
+          "label": "Probe failed suicide attempt",
+          "next": 29
+        },
+        {
+          "label": "Inquire about current plan",
+          "next": 30
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 29,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you continue to assess Kelly’s suicide plan?",
+      "options": [
+        {
+          "label": "Discuss impact of suicide on others",
+          "next": 28
+        },
+        {
+          "label": "Inquire about current plan",
+          "next": 30
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 30,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What would you rate Kelly’s risk level?",
+      "options": [
+        {
+          "label": "Low",
+          "next": 31
+        },
+        {
+          "label": "Medium",
+          "next": 32
+        },
+        {
+          "label": "High",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 31,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What would you rate Kelly’s risk level?",
+      "options": [
+        {
+          "label": "Medium",
+          "next": 32
+        },
+        {
+          "label": "High",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 32,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What would you rate Kelly’s risk level?",
+      "options": [
+        {
+          "label": "Low",
+          "next": 31
+        },
+        {
+          "label": "High",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 33,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is your first step to develop a safety plan?",
+      "options": [
+        {
+          "label": "Arrange frequent sessions",
+          "next": 34
+        },
+        {
+          "label": "Discuss Talia’s involvement",
+          "next": 35
+        },
+        {
+          "label": "Discuss immediate care",
+          "next": 36
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 34,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": ""
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is your first step to develop a safety plan?",
+      "options": [
+        {
+          "label": "Discuss Talia’s involvement",
+          "next": 35
+        },
+        {
+          "label": "Discuss immediate care",
+          "next": 36
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 45,
       "type": "video",
       "data": "SG4_DP9_0",
       "video": {
