@@ -59,7 +59,7 @@ export const useGameData = (
       case "emergency":
         return locale === "fr" ? er_game_data : er_game_data;
       case "suicidal_patient":
-        return locale === "fr" ? er_game_data : er_game_data;
+        return locale === "fr" ? suicidal_patient_data : suicidal_patient_data;
     }
   }, [game, locale]);
 
