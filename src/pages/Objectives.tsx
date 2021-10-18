@@ -4,13 +4,14 @@ import "./Objectives.scss";
 
 interface iProps {
   strings: {
-    paragraph1: string
-    paragraph2: string
-    bullet_list: string[]
-  }
+    paragraph1: string;
+    paragraph2: string;
+    bullet_list: string[];
+  };
 }
 
-const Objectives: React.FC<iProps> = ({strings}) => {  return (
+const Objectives: React.FC<iProps> = ({ strings }) => {
+  return (
     <div className="container">
       <div className="panel info">
         <header>
@@ -30,7 +31,9 @@ const Objectives: React.FC<iProps> = ({strings}) => {  return (
             <p>{strings.paragraph1}</p>
             <p>{strings.paragraph2}</p>
             <ul>
-              {strings.bullet_list.map((list_item) => <li>{list_item}</li>)}
+              {strings.bullet_list.map((list_item) => (
+                <li>{list_item}</li>
+              ))}
             </ul>
           </div>
         </div>

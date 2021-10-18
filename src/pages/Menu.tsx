@@ -57,6 +57,15 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
+                <Link to="/principles/">
+                  <FormattedMessage
+                    id="Menu.principles"
+                    defaultMessage="Essential Principles"
+                    description="Principles Button"
+                  />
+                </Link>
+              </li>
+              <li>
                 <Link to="/settings/">
                   <FormattedMessage
                     id="Menu.gameOptions"
