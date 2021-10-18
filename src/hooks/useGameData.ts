@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import er_game_data from "../games/er_game_data.json";
+import suicidal_patient_data from "../games/suicidal_patient_data.json";
 
 export interface DecisionPoint {
   id: number;
@@ -50,12 +51,14 @@ interface GameDataShape {
 }
 
 export const useGameData = (
-  game: "emergency",
+  game: "emergency"|"suicidal_patient",
   locale?: string
 ): GameDataShape => {
   const data = useMemo(() => {
     switch (game) {
       case "emergency":
+        return locale === "fr" ? er_game_data : er_game_data;
+      case "suicidal_patient":
         return locale === "fr" ? er_game_data : er_game_data;
     }
   }, [game, locale]);

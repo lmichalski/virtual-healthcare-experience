@@ -28,7 +28,7 @@ const App: React.FC<{}> = () => {
   const logGameEvent = useLogGameEvent();
   const locale = useIntl().locale;
 
-  const gameData = useGameData("emergency", locale);
+  const gameData = useGameData("suicidal_patient", locale);
   const gameState = useGameState();
   const minSteps = gameData.decisionpoints.filter(
     ({ correct }) => correct
