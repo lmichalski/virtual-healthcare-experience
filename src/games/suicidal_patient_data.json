@@ -1,35 +1,49 @@
 {
   "strings": {
     "menu": {
-      "title": "ER Virtual Simulation Game"
+      "title": "Crisis Intervention"
     },
     "intro": {
       "introCards": [
-        "You are Nicola Sporoli, a nurse caring for patients in the ambulatory care setting of the ER. Your next patient is Jason, whose chief complaint is ankle pain. The triage nurse took Jason’s vitals 10 minute ago and they were: BP138/88 P 96 (reg) R 20"
+        "This virtual gaming simulation contains sensitive information that may be triggering for some players. If at anytime you are unable to continue playing, please take a break or stop immediately. If you continue to feel triggered, please use the resources provided to obtain immediate support.",
+        "This virtual gaming simulation will play a snap shot of a scenario followed by a question. Each question will have 3 decision points (one correct response, one somewhat correct response, and one incorrect response). The somewhat correct response and incorrect response will provide feedback to explain why it was not the best response; whereas, the correct response will allow you to continue playing the game. A final report on your performance will be provided upon completion.",
+        "Kelly Flynn identifies as a 22-year-old cisgender female. Kelly relocated to Toronto, Ontario in the Fall to pursue her first year of the bachelor’s degree in environmental studies. Prior to relocating, Kelly grew up in a rural community with her parents and two younger siblings. Both her parents are second generation farmers, and regularly attend weekly mass at a local church. Kelly’s upbringing on the farm encouraged her to be a strong advocate for sustainable living and environmental protection. Kelly decided to pursue her passion in environmental studies. Initially, Kelly’s parents were disappointed but agreed to financially and emotionally support her decision.",
+        "Shortly before the commencement of the first semester, Talia was assigned to be Kelly’s roommate on campus. Kelly and Talia were instantly able to form a strong connection as they were both enrolled in the same program and had similar passions. Towards the end of the Fall semester, Talia noticed that Kelly became distant, less communicative and had difficulty getting out of bed. Talia also notes that Kelly was coming home late from parties, was frequently intoxicated and would often miss classes. During exams, Kelly was very anxious and attempted to suicide by mixing over the counter medication and alcohol. Talia suggested that Kelly attend the Drop-In Wellness Centre at school. Kelly agreed and received support from Marcus, a counsellor, at the Wellness Centre. Kelly only attended one session but reported she was feeling much better.",
+        "Due to financial restrictions, Kelly was unable to return home during the Winter holidays and stayed on-campus. Talia felt comfortable leaving Kelly alone as she had reporting she was feeling better and returned to her hometown for the holidays. When Talia returned from her holiday vacation, she noticed that Kelly looked unkept, lost a lot of weight, and their dorm was filled with alcohol bottles. Kelly reported she failed most of her classes last semester and was not doing well emotionally. Talia suggested that Kelly go to the Wellness Centre. Initially Kelly resists the idea of seeking professional help again, but after seeing the concern from Talia and some discussion Kelly agrees to make an appointment to see Marcus. Talia decided to accompany Kelly to her appointment."
       ]
     },
     "objectives": {
-      "paragraph1": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
-      "paragraph2": "The learning objectives of this simulation game are to:",
-      "bullet_list": ["Apply knowledge of physical and psychosocial prenatal nursing assessment.", 
-        "Identify normal findings, abnormal variations and potential complications during a prenatal visit.",
-        "Demonstrate therapeutic interventions when caring for a pregnant woman."
+      "paragraph1": "The game promotes the application of knowledge and skills related to crisis intervention when working with a suicidal client.",
+      "paragraph2": "By the end of this module, you will be able to:",
+      "bullet_list": [
+        "Apply best practices to assess the risk of suicide.",
+        "Select the best evidence-based techniques and skills needed to work with a suicidal client.",
+        "Evaluate the appropriate methods of action to ensure client safety."
       ]
     },
     "instructions": {
       "paragraph": "Watch the video story unfold. You will assume the role of a clinical nurse completing a client assessment.",
       "bullet_list": [
-        "Occasionally, the video will pause, and you will be asked to respond to questions.",
-        "Choose your responses carefully because your choices will affect how the story unfolds.",
-        "The goal is to get to the end of the story, answering as few questions as possible.",
-        "The best possible result is 9. You can play this game unlimited times to improve your result.",
-        "Game play progresses forward only; there is no option to go back to a previous decision point.",
-        "At the end of the game you will see a summary report of your answers. The summary can be downloaded and saved to your computer.",
-        "At the end of the game you will have an opportunity to document your assessment and interventions. Once you have completed your documentation, compare your documentation to the one provided. Please note the date/time/names will be different depending on the time you play the game. But, the content should be similar even though the wording may vary.",
-        "You can pause the game at any time by clicking on the video or pressing the spacebar.",
-        "You can turn captions on or switch to full-screen, by selecting Game Options from the menu.",
-        "The game uses high resolution videos, which require high-speed internet to upload easily.",
-        "The game takes about 20–40 minutes to complete."
+        "Watch interactions between Kelly and the mental health counsellor",
+        "Following each interaction, you will be asked to select the most appropriate response. Possible responses are classified as: ",
+        "Correct, Not the best response, and Incorrect.",
+        "You can repeat this game numerous times for practice and to improve your responses.",
+        "The game can be paused and resumed at any time by leaving the game and returning to this page.",
+        "At the end of the game you will see a summary report with links to the suggested module readings.",
+        "This game has sound. Adjust your volume accordingly.",
+        "The game makes use of high-resolution videos, which require high-speed Internet.",
+        "The game will take 30-60 minutes to complete."        
+      ]
+    },    
+    "principles": {
+      "paragraph": "This virtual gaming simulation was designed to employ the following essential principles.",
+      "bullet_list": [
+        "Therapeutic relationship/rapport",
+        "Identification of risk factors",
+        "Identification of protective factors",
+        "Conduct suicide inquiry",
+        "Determine risk level",
+        "Intervention "
       ]
     }
   },

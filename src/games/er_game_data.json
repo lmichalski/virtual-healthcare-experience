@@ -11,7 +11,8 @@
     "objectives": {
       "paragraph1": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
       "paragraph2": "The learning objectives of this simulation game are to:",
-      "bullet_list": ["Apply knowledge of physical and psychosocial prenatal nursing assessment.", 
+      "bullet_list": [
+        "Apply knowledge of physical and psychosocial prenatal nursing assessment.",
         "Identify normal findings, abnormal variations and potential complications during a prenatal visit.",
         "Demonstrate therapeutic interventions when caring for a pregnant woman."
       ]
@@ -31,6 +32,10 @@
         "The game uses high resolution videos, which require high-speed internet to upload easily.",
         "The game takes about 20–40 minutes to complete."
       ]
+    },
+    "principles": {
+      "paragraph": "",
+      "bullet_list": []
     }
   },
   "decisionpoints": [
