@@ -19,10 +19,10 @@ import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
+import Principles from "./pages/Principles";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
 import useGameState from "./hooks/useGameState";
-import Principles from "./pages/Principles";
 
 
 const App: React.FC<{}> = () => {

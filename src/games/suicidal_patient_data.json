@@ -25,8 +25,7 @@
       "paragraph": "Watch the video story unfold. You will assume the role of a clinical nurse completing a client assessment.",
       "bullet_list": [
         "Watch interactions between Kelly and the mental health counsellor",
-        "Following each interaction, you will be asked to select the most appropriate response. Possible responses are classified as: ",
-        "Correct, Not the best response, and Incorrect.",
+        "Following each interaction, you will be asked to select the most appropriate response. Possible responses are classified as: Correct, Not the best response, and Incorrect.",
         "You can repeat this game numerous times for practice and to improve your responses.",
         "The game can be paused and resumed at any time by leaving the game and returning to this page.",
         "At the end of the game you will see a summary report with links to the suggested module readings.",
@@ -54,7 +53,7 @@
       "type": "video",
       "data": "SG4_DP1_0",
       "video": {
-        "vimeo_url": "https://vimeo.com/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
       "correct": false,
       "feedback": "",
@@ -123,7 +122,8 @@
       "type": "video",
       "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -150,7 +150,8 @@
       "type": "video",
       "data": "SG4_DP1_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -173,7 +174,8 @@
       "type": "video",
       "data": "SG4_DP1_3",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -196,7 +198,8 @@
       "type": "video",
       "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -223,7 +226,8 @@
       "type": "video",
       "data": "SG4_DP2_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -246,7 +250,8 @@
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -269,7 +274,8 @@
       "type": "video",
       "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -296,7 +302,8 @@
       "type": "video",
       "data": "SG4_DP3_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -342,7 +349,8 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -369,7 +377,8 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -392,7 +401,8 @@
       "type": "video",
       "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -415,7 +425,8 @@
       "type": "video",
       "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -442,7 +453,8 @@
       "type": "video",
       "data": "SG4_DP5_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -465,7 +477,8 @@
       "type": "video",
       "data": "SG4_DP5_3",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -488,7 +501,8 @@
       "type": "video",
       "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -557,7 +571,8 @@
       "type": "video",
       "data": "SG4_DP7_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -626,7 +641,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -653,7 +669,8 @@
       "type": "video",
       "data": "SG4_DP8_2",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -676,7 +693,8 @@
       "type": "video",
       "data": "SG4_DP8_3",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": false,
       "feedback": "",
@@ -699,7 +717,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -726,7 +745,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -749,7 +769,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -772,7 +793,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -799,7 +821,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -822,7 +845,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -845,7 +869,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -872,7 +897,8 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": ""
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
@@ -890,11 +916,92 @@
       "next": null
     },
     {
-      "id": 45,
+      "id": 35,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is your first step to develop a safety plan?",
+      "options": [
+        {
+          "label": "Arrange frequent sessions",
+          "next": 34
+        },
+        {
+          "label": "Discuss immediate care",
+          "next": 36
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 36,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you encourage Kelly to go to the hospital?",
+      "options": [
+        {
+          "label": "Discuss options",
+          "next": 37
+        },
+        {
+          "label": "Discuss the need for further help",
+          "next": 38
+        },
+        {
+          "label": "Discuss the need for immediate action",
+          "next": 39
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 39,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you ensure Kelly goes to the hospital?",
+      "options": [
+        {
+          "label": "Escort Kelly to hospital",
+          "next": 41
+        },
+        {
+          "label": "Talia escorts Kelly to hospital",
+          "next": 40
+        },
+        {
+          "label": "Call 911",
+          "next": 42
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 42,
       "type": "video",
       "data": "SG4_DP9_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630565"
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+
       },
       "correct": true,
       "feedback": "",
