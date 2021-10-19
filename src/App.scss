@@ -12,9 +12,9 @@ html, body {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 32px;
 	font-weight: 400;
-	--theme-light: rgb(25, 55, 88);
-	--theme-dark: rgb(51, 75, 153);
-	--theme-primary: rgb(62, 89, 179);
+	--theme-light: rgb(34, 70, 109);
+	--theme-dark: rgb(16, 33, 51, 0.8);
+	--theme-primary: rgb(16, 33, 51, 0.8);
 	background-color: var(--theme-light);
 	color: rgb(255, 255, 255);
 	line-height: 1.1;
@@ -107,7 +107,7 @@ button.Link {
 button.button,
 a.button {
 	padding: 5px 30px;
-	background-color: var(--theme-dark);
+	background-color: var(16, 33, 51, 0.8);
 	background-color: rgba(0, 0, 0, .25);
 	color: #fff;
 	text-transform: uppercase;
@@ -153,7 +153,7 @@ a.button {
 	left: 0;
 	padding: 30px;
 	background-color: var(--theme-light);
-	color: #000;
+	color: rgb(255, 235, 90);
 }
 
 .panel { 
