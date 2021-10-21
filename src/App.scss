@@ -20,7 +20,7 @@ html, body {
 	--primary-text-highlight: #000;
 	--option-background: hsla(0,0%,100%,.35);
 	background-color: var(--theme-light);
-	color: rgb(255, 255, 255);
+	color: var(--primary-text-color);
 	line-height: 1.1;
 }
 
