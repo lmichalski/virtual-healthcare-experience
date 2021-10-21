@@ -1,4 +1,12 @@
 {
+  "colors": {
+    "--theme-light": "rgb(102, 165, 238)",
+    "--theme-dark": "rgb(51, 75, 153)",
+    "--theme-primary": " rgb(62, 89, 179)",
+    "--link-color": "#000",
+    "--primary-text-color": "#fff",
+    "--primary-text-highlight": "#000"
+  },
   "strings": {
     "menu": {
       "title": "ER Virtual Simulation Game"

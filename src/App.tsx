@@ -136,7 +136,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
   }, [currentDecisionPoint, history, lastDecisionPoint, gameState]);
 
   return (
-    <div className="fullscreen">
+    <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
       <div className="view" role="application">
         <Switch>
           <Route path={`${path}/credits`}>

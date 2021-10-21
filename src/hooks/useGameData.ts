@@ -38,6 +38,13 @@ export interface DecisionPoint {
 
 interface GameDataShape {
   decisionpoints: DecisionPoint[];
+  colors: {
+    "--theme-light": string;
+    "--theme-dark": string;
+    "--theme-primary": string;
+    "--primary-text-color": string;
+    "--link-color": string;
+  };
   strings: {
     menu: {
       title: string;

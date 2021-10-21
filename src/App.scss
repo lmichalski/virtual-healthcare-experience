@@ -15,6 +15,8 @@ html, body {
 	--theme-light: rgb(34, 70, 109);
 	--theme-dark: rgb(16, 33, 51, 0.8);
 	--theme-primary: rgb(16, 33, 51, 0.8);
+	--primary-text-color: #fff;
+	--primary-text-highlight: #000;
 	background-color: var(--theme-light);
 	color: rgb(255, 255, 255);
 	line-height: 1.1;
@@ -28,40 +30,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 1.4em;
-	color: #fff;
+	color: var(--primary-text-color);
 }
 h2 {
 	font-size: 1em;
 	font-weight: 400;
-	color: #fff;
+	color: var(--primary-text-color);
 }
 p {
 	margin: 10px 0;
 }
 a {
 	text-decoration: none;
-	color: #ffeb5a;
+	color: var(--link-color);
 
 	&:hover,
 	&:focus {
-		color: #fff;
-		text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+		color: var(--primary-text-color);;
+		text-shadow: 0 0 2px var(--primary-text-color), 0 0 4px var(--primary-text-color);;
 	}
 
 	&.active {
-		color: #fff;
+		color: var(--primary-text-color);;
 	}
 }
 
 button.Link {
 	text-decoration: none;
-    color: #000;
+    color: var(--link-color);
 	cursor: pointer;
 
 	&:hover, 
 	&:focus {
-		color: #fff;
-		text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+		color: var(--primary-text-color);
+		text-shadow: 0 0 2px var(--primary-text-color), 0 0 4px var(--primary-text-color);
 	}
 
 	&.disabled, 
@@ -73,6 +75,12 @@ button.Link {
 }
 	// Inherit away default button styling
 
+button.button {
+	color: inherit;
+	cursor: default;
+	text-shadow: none;
+}
+
 button.button,
 button.Link {
 	appearance: inherit;
@@ -82,17 +90,14 @@ button.Link {
     font-size: inherit;
     font-family: inherit;
     text-rendering: inherit;
-    color: inherit;
     letter-spacing: inherit;
     word-spacing: inherit;
     line-height: inherit;
     text-transform: inherit;
     text-indent: 0px;
-    text-shadow: none;
     display: inline;
     text-align: inherit;
     align-items: flex-start;
-    cursor: default;
     box-sizing: border-box;
     background-color: inherit;
     margin: inherit;
@@ -107,9 +112,9 @@ button.Link {
 button.button,
 a.button {
 	padding: 5px 30px;
-	background-color: var(16, 33, 51, 0.8);
+	background-color: var(--theme-dark);
 	background-color: rgba(0, 0, 0, .25);
-	color: #fff;
+	color: var(--primary-text-color);
 	text-transform: uppercase;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;

@@ -1,4 +1,12 @@
 {
+  "colors": {
+    "--theme-light": "rgb(34, 70, 109)",
+    "--theme-dark": "rgb(16, 33, 51, 0.8)",
+    "--theme-primary": "rgb(16, 33, 51, 0.8)",
+    "--link-color": "#ffeb5a",
+    "--primary-text-color": "#fff",
+    "--primary-text-highlight": "#ffeb5a"
+  },
   "strings": {
     "menu": {
       "title": "Crisis Intervention"
