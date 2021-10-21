@@ -36,7 +36,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
   const locale = useIntl().locale;
 
   const gameData = useGameData(gameId, locale);
-  const gameState = useGameState();
+  const gameState = useGameState(gameId);
   const minSteps = gameData.decisionpoints.filter(
     ({ correct }) => correct
   ).length;
@@ -174,9 +174,11 @@ const App: React.FC<iProps> = ({ gameId }) => {
             <Objectives strings={gameData.strings.objectives} />
           </Route>
 
-          {gameData.strings.principles ? <Route path={`${path}/principles`}>
-            <Principles strings={gameData.strings.principles} />
-          </Route> : null}
+          {gameData.strings.principles ? (
+            <Route path={`${path}/principles`}>
+              <Principles strings={gameData.strings.principles} />
+            </Route>
+          ) : null}
 
           <Route path={`${path}/settings`}>
             <Settings />

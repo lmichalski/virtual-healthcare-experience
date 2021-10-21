@@ -24,7 +24,7 @@ ReactDOM.render(
               {(params) => <App gameId={params.match?.params.game_id!} />}
             </Route>
             <Route>
-              <Home/>
+              <Home />
             </Route>
           </Switch>
         </LoggingContextProvider>
