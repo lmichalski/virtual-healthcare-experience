@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { DecisionPoint } from "../hooks/useGameData";
 import "./Feedback.scss";
 
@@ -10,14 +10,15 @@ interface iProps {
 
 const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const history = useHistory();
+  const { game_id } = useParams<{ game_id: string }>();
 
   const goNext = useCallback(() => {
     switch (dp?.type) {
       case "video":
-        history.push("/decision/");
+        history.push(`/games/${game_id}/decision/`);
         break;
       case "lo":
-        history.push("/lo/");
+        history.push(`/games/${game_id}/lo/`);
         break;
     }
   }, [dp?.type, history]);

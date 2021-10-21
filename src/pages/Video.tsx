@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory, useParams } from "react-router-dom";
 import videojs from "video.js";
 import Player from "@vimeo/player";
 
@@ -25,6 +25,7 @@ const Video: React.FC<iProps> = ({
 }) => {
   const location = useLocation();
   const history = useHistory();
+  const { game_id } = useParams<{ game_id: string }>();
   const logGameEvent = useLogGameEvent();
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -62,7 +63,7 @@ const Video: React.FC<iProps> = ({
               if (api && typeof api.currentTime() != "undefined") {
                 setVideoposition(api.currentTime());
               }
-              history.push("/");
+              history.push(`/games/${game_id}/`);
             } else {
               history.goBack();
             }

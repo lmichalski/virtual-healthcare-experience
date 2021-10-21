@@ -9,6 +9,9 @@ interface iProps {
   strings: {
     title: string;
   };
+  pagesToShow: {
+    objectives: boolean;
+  };
 }
 
 const Menu: React.FC<iProps> = ({
@@ -16,6 +19,7 @@ const Menu: React.FC<iProps> = ({
   resumeGame,
   gamesaved,
   strings,
+  pagesToShow: { objectives: showObjectives },
 }) => {
   return (
     <div className="container">
@@ -48,7 +52,7 @@ const Menu: React.FC<iProps> = ({
                 </button>
               </li>
               <li>
-                <Link to="/objectives/">
+                <Link to="./objectives/">
                   <FormattedMessage
                     id="Menu.objectives"
                     defaultMessage="Learning Objectives"
@@ -56,17 +60,19 @@ const Menu: React.FC<iProps> = ({
                   />
                 </Link>
               </li>
+              {showObjectives ? (
+                <li>
+                  <Link to="./principles/">
+                    <FormattedMessage
+                      id="Menu.principles"
+                      defaultMessage="Essential Principles"
+                      description="Principles Button"
+                    />
+                  </Link>
+                </li>
+              ) : null}
               <li>
-                <Link to="/principles/">
-                  <FormattedMessage
-                    id="Menu.principles"
-                    defaultMessage="Essential Principles"
-                    description="Principles Button"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link to="/settings/">
+                <Link to="./settings/">
                   <FormattedMessage
                     id="Menu.gameOptions"
                     defaultMessage="Game Options"
@@ -75,7 +81,7 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
-                <Link to="/instructions/">
+                <Link to="./instructions/">
                   <FormattedMessage
                     id="Menu.instructions"
                     defaultMessage="How to Play"
@@ -84,7 +90,7 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
-                <Link to="/materials/">
+                <Link to="./materials/">
                   <FormattedMessage
                     id="Menu.materials"
                     defaultMessage="Self-Assessment"
@@ -93,7 +99,7 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
-                <Link to="/credits/">
+                <Link to="./credits/">
                   <FormattedMessage
                     id="Menu.credits"
                     defaultMessage="Credits"

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { DecisionPoint } from "../hooks/useGameData";
 import "./Transition.scss";
 
@@ -10,9 +10,10 @@ interface iProps {
 
 const Transition: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const history = useHistory();
+  const { game_id } = useParams<{ game_id: string }>();
 
   const playNextVideo = useCallback(() => {
-    history.push("/video/");
+    history.push(`games/${game_id}/video/`);
   }, [history]);
 
   return (

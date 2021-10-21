@@ -31,9 +31,9 @@
         "At the end of the game you will see a summary report with links to the suggested module readings.",
         "This game has sound. Adjust your volume accordingly.",
         "The game makes use of high-resolution videos, which require high-speed Internet.",
-        "The game will take 30-60 minutes to complete."        
+        "The game will take 30-60 minutes to complete."
       ]
-    },    
+    },
     "principles": {
       "paragraph": "This virtual gaming simulation was designed to employ the following essential principles.",
       "bullet_list": [
@@ -123,7 +123,6 @@
       "data": "SG4_DP1_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -151,7 +150,6 @@
       "data": "SG4_DP1_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -175,7 +173,6 @@
       "data": "SG4_DP1_3",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -199,7 +196,6 @@
       "data": "SG4_DP2_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -227,7 +223,6 @@
       "data": "SG4_DP2_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -251,7 +246,6 @@
       "data": "SG4_DP2_3",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -275,7 +269,6 @@
       "data": "SG4_DP3_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -303,7 +296,6 @@
       "data": "SG4_DP3_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -350,7 +342,6 @@
       "data": "SG4_DP4_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -378,7 +369,6 @@
       "data": "SG4_DP4_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -402,7 +392,6 @@
       "data": "SG4_DP4_3",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -426,7 +415,6 @@
       "data": "SG4_DP5_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -454,7 +442,6 @@
       "data": "SG4_DP5_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -478,7 +465,6 @@
       "data": "SG4_DP5_3",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -502,7 +488,6 @@
       "data": "SG4_DP6_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -572,7 +557,6 @@
       "data": "SG4_DP7_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -642,7 +626,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -670,7 +653,6 @@
       "data": "SG4_DP8_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -694,7 +676,6 @@
       "data": "SG4_DP8_3",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": false,
       "feedback": "",
@@ -718,7 +699,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -746,7 +726,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -770,7 +749,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -794,7 +772,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -822,7 +799,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -846,7 +822,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -870,7 +845,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -898,7 +872,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -922,7 +895,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -946,7 +918,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -974,7 +945,6 @@
       "data": "SG4_DP8_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",
@@ -1001,7 +971,6 @@
       "data": "SG4_DP9_0",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
-
       },
       "correct": true,
       "feedback": "",

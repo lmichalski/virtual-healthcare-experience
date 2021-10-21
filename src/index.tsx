@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { IntlProvider } from "react-intl";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { LoggingContextProvider } from "./hooks/useLogGameEvent";
 
 import enMessages from "./lang-compiled/en.json";
@@ -16,9 +16,13 @@ const messages = locale === "fr" ? frMessages : enMessages;
 ReactDOM.render(
   <React.StrictMode>
     <IntlProvider messages={messages} locale={locale} defaultLocale="en">
-      <Router basename="/virtual-healthcare-experience/">
+      <Router basename="/">
         <LoggingContextProvider>
-          <App />
+          <Switch>
+            <Route path="/games/:game_id">
+              {(params) => <App gameId={params.match?.params.game_id!} />}
+            </Route>
+          </Switch>
         </LoggingContextProvider>
       </Router>
     </IntlProvider>
