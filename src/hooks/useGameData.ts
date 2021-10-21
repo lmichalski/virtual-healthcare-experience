@@ -57,7 +57,7 @@ interface GameDataShape {
       paragraph2: string;
       bullet_list: string[];
     };
-    principles: {
+    principles?: {
       paragraph: string;
       bullet_list: string[];
     };

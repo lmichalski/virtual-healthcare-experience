@@ -10,7 +10,7 @@ interface iProps {
     title: string;
   };
   pagesToShow: {
-    objectives: boolean;
+    principles: boolean;
   };
 }
 
@@ -19,7 +19,7 @@ const Menu: React.FC<iProps> = ({
   resumeGame,
   gamesaved,
   strings,
-  pagesToShow: { objectives: showObjectives },
+  pagesToShow: { principles: showPrinciples },
 }) => {
   const { game_id } = useParams<{ game_id: string }>();
 
@@ -62,7 +62,7 @@ const Menu: React.FC<iProps> = ({
                   />
                 </Link>
               </li>
-              {showObjectives ? (
+              {showPrinciples ? (
                 <li>
                   <Link to={`/games/${game_id}/principles/`}>
                     <FormattedMessage

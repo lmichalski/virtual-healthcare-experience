@@ -173,9 +173,9 @@ const App: React.FC<iProps> = ({ gameId }) => {
             <Objectives strings={gameData.strings.objectives} />
           </Route>
 
-          <Route path={`${path}/principles`}>
+          {gameData.strings.principles ? <Route path={`${path}/principles`}>
             <Principles strings={gameData.strings.principles} />
-          </Route>
+          </Route> : null}
 
           <Route path={`${path}/settings`}>
             <Settings />
@@ -211,7 +211,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
               resumeGame={handleResumeGame}
               gamesaved={gameState.gamesaved}
               pagesToShow={{
-                objectives: !!gameData.strings.objectives,
+                principles: !!gameData.strings.principles,
               }}
             />
           </Route>
