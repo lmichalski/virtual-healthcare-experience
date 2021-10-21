@@ -27,7 +27,7 @@ export const useGotoMenu = () => {
 
   const gotoMenu = useCallback(() => {
     logGameEvent("", "open", "menu", "", "");
-    history.push(`games/${game_id}/`);
+    history.push(`/games/${game_id}/`);
   }, [history, logGameEvent]);
   return gotoMenu;
 };

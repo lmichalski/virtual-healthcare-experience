@@ -13,7 +13,7 @@ const Transition: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const { game_id } = useParams<{ game_id: string }>();
 
   const playNextVideo = useCallback(() => {
-    history.push(`games/${game_id}/video/`);
+    history.push(`/games/${game_id}/video/`);
   }, [history]);
 
   return (

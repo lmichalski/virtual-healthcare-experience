@@ -47,7 +47,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
       'value': $scope.dp.id
     });*/
     logGameEvent("", "replay", "video", dp.data, dp.id);
-    history.push(`games/${game_id}/video`);
+    history.push(`/games/${game_id}/video`);
   }, [dp.data, dp.id, history, logGameEvent]);
 
   return (

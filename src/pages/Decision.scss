@@ -28,7 +28,7 @@
 	margin: 0 5%;
 	font-size: 1.4em;
 	text-align: center;
-	color: rgb(255, 255, 255);
+	color:  var(--primary-text-highlight);
 }
 .question .vertical_outer {
 	vertical-align: bottom;
@@ -69,14 +69,14 @@
 	padding: 20px;
 	border-radius: 13px;
 	background-color: #000;
-	background-color: rgba(16, 33, 51, 0.8);
-	color: rgb(255, 255, 255);
+	background-color: var(--option-background);
+	color: var(--primary-text-highlight);
 	cursor: pointer;
 	transition: all .1s linear;
 }
 .option button:hover {
-	background-color: rgb(255, 235, 70);
+	background-color: var(--primary-text-color);
 	box-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px #fff;
-	color: rgb(0, 0, 0);
+	color: var(--primary-text-highlight);
 	transform: scale3d(1.05, 1.05, 1.05);
 }

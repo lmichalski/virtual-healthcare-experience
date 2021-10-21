@@ -5,7 +5,8 @@
     "--theme-primary": " rgb(62, 89, 179)",
     "--link-color": "#000",
     "--primary-text-color": "#fff",
-    "--primary-text-highlight": "#000"
+    "--primary-text-highlight": "#000",
+    "--option-background": "hsla(0,0%,100%,.35)"
   },
   "strings": {
     "menu": {
@@ -40,10 +41,6 @@
         "The game uses high resolution videos, which require high-speed internet to upload easily.",
         "The game takes about 20–40 minutes to complete."
       ]
-    },
-    "principles": {
-      "paragraph": "",
-      "bullet_list": []
     }
   },
   "decisionpoints": [
