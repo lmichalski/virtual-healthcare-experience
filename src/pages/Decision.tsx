@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { DecisionPoint } from "../hooks/useGameData";
 import useLogGameEvent from "../hooks/useLogGameEvent";
 import { useGotoMenu } from "../util";
@@ -13,7 +13,8 @@ interface iProps {
 
 const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
   const history = useHistory();
-
+  const { game_id } = useParams<{game_id: string}>();
+  
   const logGameEvent = useLogGameEvent();
   const gotoMenu = useGotoMenu();
 
@@ -46,7 +47,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
       'value': $scope.dp.id
     });*/
     logGameEvent("", "replay", "video", dp.data, dp.id);
-    history.push("/video/");
+    history.push(`games/${game_id}/video`);
   }, [dp.data, dp.id, history, logGameEvent]);
 
   return (

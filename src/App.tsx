@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, useRouteMatch } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import Menu from "./pages/Menu";
@@ -23,12 +23,18 @@ import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
 import useGameState from "./hooks/useGameState";
 
-const App: React.FC<{}> = () => {
+interface iProps {
+  gameId: string;
+}
+
+const App: React.FC<iProps> = ({ gameId }) => {
   const history = useHistory();
+  let { path, url } = useRouteMatch();
+
   const logGameEvent = useLogGameEvent();
   const locale = useIntl().locale;
 
-  const gameData = useGameData("suicidal_patient", locale);
+  const gameData = useGameData(gameId, locale);
   const gameState = useGameState();
   const minSteps = gameData.decisionpoints.filter(
     ({ correct }) => correct
@@ -47,7 +53,7 @@ const App: React.FC<{}> = () => {
   const handleStartNewGame = useCallback(() => {
     gameState.newGame();
 
-    history.push("/intro/");
+    history.push(`${url}/intro/`);
     logGameEvent("", "start", "game", getBrowser(), "");
   }, [history, logGameEvent, gameState]);
 
@@ -55,11 +61,11 @@ const App: React.FC<{}> = () => {
     var dp = currentDecisionPoint;
 
     if (dp && lastDecisionPoint) {
-      history.push("/summary/");
+      history.push(`${url}/summary/`);
     } else if (gameState.videoposition > 0.1) {
-      history.push("/video/");
+      history.push(`${url}/video/`);
     } else {
-      history.push("/decision/");
+      history.push(`${url}/decision/`);
     }
 
     logGameEvent("", "resume", "game", "", "");
@@ -87,14 +93,14 @@ const App: React.FC<{}> = () => {
 
       switch (next?.type) {
         case "video":
-          history.push("/video/");
+          history.push(`${url}/video/`);
           break;
         case "lo":
           if (next.feedback > "") {
             // If there's feedback, show it then advance
-            history.push("/feedback/");
+            history.push(`${url}/feedback/`);
           } else {
-            history.push("/lo/");
+            history.push(`${url}/lo/`);
           }
           break;
       }
@@ -109,21 +115,21 @@ const App: React.FC<{}> = () => {
     gameState.setVideoposition(0);
 
     if (lastDecisionPoint) {
-      history.push("/summary/");
+      history.push(`${url}/summary/`);
     } else if (dp && dp.options.length > 0) {
       if (dp.feedback > "") {
-        history.push("/feedback/");
+        history.push(`${url}/feedback/`);
       } else {
         // No feedback means go directly to the decision
-        history.push("/decision/");
+        history.push(`${url}/decision/`);
       }
     } else {
       gameState.setCurrentStep(gameState.currentStep + 1);
       if (dp?.next) {
         // If there are no options, go to the next decision point
-        history.push("/lo/");
+        history.push(`${url}/lo/`);
       } else {
-        history.push("/transition/");
+        history.push(`${url}/transition/`);
       }
     }
   }, [currentDecisionPoint, history, lastDecisionPoint, gameState]);
@@ -132,44 +138,45 @@ const App: React.FC<{}> = () => {
     <div className="fullscreen">
       <div className="view" role="application">
         <Switch>
-          <Route path="/credits">
+          <Route path={`${path}/credits`}>
             <Credits />
           </Route>
 
-          <Route path="/decision">
+          <Route path={`${path}/decision`}>
             <Decision
               decisionPoint={currentDecisionPoint}
               onOptionChosen={handleOptionChosen}
             />
           </Route>
 
-          <Route path="/feedback">
+          <Route path={`${path}/feedback`}>
             <Feedback decisionPoint={currentDecisionPoint} />
           </Route>
 
-          <Route path="/instructions">
-            <Instructions minSteps={minSteps} strings={gameData.strings.instructions} />
-          </Route>
-
-          <Route path="/intro">
-            <Intro strings={gameData.strings.intro} />
-          </Route>
-
-          <Route path="/materials">
-            <Materials />
-          </Route>
-
-          <Route path="/objectives">
-            <Objectives 
-              strings={gameData.strings.objectives}
+          <Route path={`${path}/instructions`}>
+            <Instructions
+              minSteps={minSteps}
+              strings={gameData.strings.instructions}
             />
           </Route>
 
-          <Route path="/settings">
+          <Route path={`${path}/intro`}>
+            <Intro strings={gameData.strings.intro} />
+          </Route>
+
+          <Route path={`${path}/materials`}>
+            <Materials />
+          </Route>
+
+          <Route path={`${path}/objectives`}>
+            <Objectives strings={gameData.strings.objectives} />
+          </Route>
+
+          <Route path={`${path}/settings`}>
             <Settings />
           </Route>
 
-          <Route path="/summary">
+          <Route path={`${path}/summary`}>
             <Summary
               decisionPoints={gameData.decisionpoints}
               gameProgress={gameState.progress}
@@ -177,11 +184,11 @@ const App: React.FC<{}> = () => {
             />
           </Route>
 
-          <Route path="/transition">
+          <Route path={`${path}/transition`}>
             <Transition decisionPoint={currentDecisionPoint} />
           </Route>
 
-          <Route path="/video">
+          <Route path={`${path}/video`}>
             <Video
               decisionPoint={currentDecisionPoint}
               onVideoFinished={handleVideoFinished}
@@ -190,9 +197,9 @@ const App: React.FC<{}> = () => {
             />
           </Route>
 
-          <Route path="/lo">Somethings going on here, I swear</Route>
+          <Route path={`${path}/lo`}>Somethings going on here, I swear</Route>
 
-          <Route path="/">
+          <Route path={`${path}/`}>
             <Menu
               strings={gameData.strings.menu}
               startNewGame={handleStartNewGame}

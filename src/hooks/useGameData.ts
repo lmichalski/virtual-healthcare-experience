@@ -1,6 +1,13 @@
 import { useMemo } from "react";
-import er_game_data from "../games/er_game_data.json";
-import suicidal_patient_data from "../games/suicidal_patient_data.json";
+
+const games: Record<string, Record<string, GameDataShape>> = {
+    emergency: {
+      en: require("../games/er_game_data.json"),
+    },
+    crisis_intervention: {
+      en: require("../games/suicidal_patient_data.json"),
+    },
+};
 
 export interface DecisionPoint {
   id: number;
@@ -51,17 +58,17 @@ interface GameDataShape {
 }
 
 export const useGameData = (
-  game: "emergency"|"suicidal_patient",
-  locale?: string
+  game: string,
+  locale: string
 ): GameDataShape => {
-  const data = useMemo(() => {
-    switch (game) {
-      case "emergency":
-        return locale === "fr" ? er_game_data : er_game_data;
-      case "suicidal_patient":
-        return locale === "fr" ? suicidal_patient_data : suicidal_patient_data;
-    }
-  }, [game, locale]);
-
+  const data = useMemo(
+    () =>
+      games[game]?.[locale] ||
+      games[game]?.["en"],
+    [game, locale]
+  );
+  if (!data) {
+    throw new Error("That game could not be found");
+  }
   return data;
 };

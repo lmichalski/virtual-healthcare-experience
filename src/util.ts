@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { useHistory } from "react-router";
+import { useParams } from "react-router-dom";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 
 export function generateUUID(): string {
@@ -22,10 +23,11 @@ export function generateUUID(): string {
 export const useGotoMenu = () => {
   const history = useHistory();
   const logGameEvent = useLogGameEvent();
+  const { game_id } = useParams<{game_id: string}>();
 
   const gotoMenu = useCallback(() => {
     logGameEvent("", "open", "menu", "", "");
-    history.push("/");
+    history.push(`games/${game_id}/`);
   }, [history, logGameEvent]);
   return gotoMenu;
 };
