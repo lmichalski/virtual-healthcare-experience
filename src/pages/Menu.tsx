@@ -92,6 +92,15 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
+                <Link to={`/games/${game_id}/chart/`}>
+                  <FormattedMessage
+                    id="Menu.chart"
+                    defaultMessage="Client Chart"
+                    description="Client chart button"
+                  />
+                </Link>
+              </li>
+              <li>
                 <Link to={`/games/${game_id}/materials/`}>
                   <FormattedMessage
                     id="Menu.materials"

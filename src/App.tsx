@@ -20,6 +20,7 @@ import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
 import Principles from "./pages/Principles";
+import Chart from "./pages/Chart"
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
 import useGameState from "./hooks/useGameState";
@@ -172,6 +173,10 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
           <Route path={`${path}/objectives`}>
             <Objectives strings={gameData.strings.objectives} />
+          </Route>
+
+          <Route path={`${path}/chart`}>
+            <Chart image={""} />
           </Route>
 
           {gameData.strings.principles ? (

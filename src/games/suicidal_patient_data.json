@@ -53,6 +53,9 @@
         "Determine risk level",
         "Intervention "
       ]
+    },
+    "chart": {
+      "image": "chart_image.png"
     }
   },
   "decisionpoints": [
