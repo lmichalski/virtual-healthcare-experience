@@ -22,7 +22,7 @@ const Intro: React.FC<iProps> = ({ strings }) => {
     } else {
       history.push(`/games/${game_id}/video/`);
     }
-  }, [currentMessage, history, intro.length]);
+  }, [currentMessage, history, intro.length, game_id]);
 
   const text = intro[currentMessage];
 

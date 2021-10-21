@@ -14,7 +14,7 @@ const Transition: React.FC<iProps> = ({ decisionPoint: dp }) => {
 
   const playNextVideo = useCallback(() => {
     history.push(`/games/${game_id}/video/`);
-  }, [history]);
+  }, [history, game_id]);
 
   return (
     <div className="container">

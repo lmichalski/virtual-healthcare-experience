@@ -56,7 +56,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
     history.push(`${url}/intro/`);
     logGameEvent("", "start", "game", getBrowser(), "");
-  }, [history, logGameEvent, gameState]);
+  }, [history, logGameEvent, gameState, url]);
 
   const handleResumeGame = useCallback(() => {
     var dp = currentDecisionPoint;
@@ -76,6 +76,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
     gameState.videoposition,
     currentDecisionPoint,
     lastDecisionPoint,
+    url,
   ]);
 
   const handleOptionChosen = useCallback(
@@ -108,7 +109,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
       // google analytics ???
     },
-    [gameData.decisionpoints, history, logGameEvent, gameState]
+    [gameData.decisionpoints, history, logGameEvent, gameState, url]
   );
 
   const handleVideoFinished = useCallback(() => {
@@ -133,7 +134,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
         history.push(`${url}/transition/`);
       }
     }
-  }, [currentDecisionPoint, history, lastDecisionPoint, gameState]);
+  }, [currentDecisionPoint, history, lastDecisionPoint, gameState, url]);
 
   return (
     <div className="fullscreen" style={gameData.colors as React.CSSProperties}>

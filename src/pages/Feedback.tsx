@@ -21,7 +21,7 @@ const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
         history.push(`/games/${game_id}/lo/`);
         break;
     }
-  }, [dp?.type, history]);
+  }, [dp?.type, history, game_id]);
 
   return (
     <div className="container">

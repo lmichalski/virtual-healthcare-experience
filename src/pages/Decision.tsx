@@ -48,7 +48,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
     });*/
     logGameEvent("", "replay", "video", dp.data, dp.id);
     history.push(`/games/${game_id}/video`);
-  }, [dp.data, dp.id, history, logGameEvent]);
+  }, [dp.data, dp.id, history, logGameEvent, game_id]);
 
   return (
     <div className="container">
