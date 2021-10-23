@@ -174,11 +174,6 @@ const Summary: React.FC<iProps> = ({
 
   return (
     <div className="container">
-      <div className="right controls">
-        <button className="button button--menu" onClick={goToMenu}>
-          Menu
-        </button>
-      </div>
       <div className="panel info">
         <header>
           <FormattedMessage

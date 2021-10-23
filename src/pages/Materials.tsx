@@ -16,17 +16,6 @@ const Materials: React.FC<{}> = () => {
             tagName="h1"
           />
         </header>
-
-        <div className="right controls">
-          <button className="button button--menu" onClick={gotoMenu}>
-            <FormattedMessage
-              id="General.menu"
-              defaultMessage="Menu"
-              description="Go To Menu Button"
-            />
-          </button>
-        </div>
-
         <footer>
           <div className="content">
             <h2>Documentation</h2>

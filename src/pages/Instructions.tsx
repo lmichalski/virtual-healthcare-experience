@@ -14,12 +14,7 @@ const Instructions: React.FC<iProps> = ({ minSteps, strings }) => {
     <div className="container">
       <div className="panel info">
         <header>
-          <h1>
-            <Link to="/" aria-label="Return to menu">
-              <span className="icon-arrow-left"></span>
-            </Link>{" "}
-            How to Play
-          </h1>
+          <h1>How to Play</h1>
         </header>
         <div className="main">
           <div className="content cf">

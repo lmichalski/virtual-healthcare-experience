@@ -26,9 +26,6 @@ const Menu: React.FC<iProps> = ({
   return (
     <div className="container">
       <div className="panel menu">
-        <header>
-          <h1>{strings.title}</h1>
-        </header>
         <div className="main">
           <div className="content">
             <ul className="controls">

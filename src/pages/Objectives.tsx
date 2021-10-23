@@ -16,9 +16,6 @@ const Objectives: React.FC<iProps> = ({ strings }) => {
       <div className="panel info">
         <header>
           <h1>
-            <Link to="/" aria-label="Return to menu">
-              <span className="icon-arrow-left"></span>
-            </Link>
             <FormattedMessage
               id="Objectives.title"
               defaultMessage="Learning Objectives"

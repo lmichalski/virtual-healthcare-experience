@@ -9,12 +9,7 @@ const Settings: React.FC<{}> = () => {
     <div className="container">
       <div className="panel settings">
         <header>
-          <h1>
-            <Link to="/" aria-label="Return to menu">
-              <span className="icon-arrow-left"></span>
-            </Link>{" "}
-            Game Options
-          </h1>
+          <h1>Game Options</h1>
         </header>
         <div className="main">
           <div className="content">

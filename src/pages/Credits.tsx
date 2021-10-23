@@ -8,9 +8,6 @@ const Credits: React.FC<{}> = () => {
       <div className="panel credits">
         <header>
           <h1>
-            <Link to="/" aria-label="Return to menu">
-              <span className="icon-arrow-left"></span>
-            </Link>
             <FormattedMessage
               id="Credits.title"
               defaultMessage="Credits"

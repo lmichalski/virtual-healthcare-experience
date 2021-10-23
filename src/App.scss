@@ -153,11 +153,11 @@ a.button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	// position:;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
+	// left: 0;
 	padding: 30px;
 	background-color: var(--theme-light);
 	color: var(--link-color);;
@@ -235,6 +235,41 @@ a.button {
 	}
 }
 
+
+.nav-header {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	
+	button {
+		margin-left: 32px;
+	}
+
+	h1 {
+		margin: auto;
+	}
+}
+
+.body {
+	display: flex;
+	flex-direction: row;
+
+	.nav-menu {
+		height: 100%;
+		width: 400px;
+		transition: width 0.2s;
+
+		&--collapsed {
+			width: 0;
+		}
+	}
+
+	.view {
+		flex-basis: 0;
+		flex-grow: 1;
+		width: 0;
+	}
+}
 
 /********** MISC PANELS **********/
 .info {

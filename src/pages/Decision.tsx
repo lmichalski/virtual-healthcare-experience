@@ -61,15 +61,6 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
           />
         </button>
       </div>
-      <div className="right controls">
-        <button className="button button--menu" onClick={gotoMenu}>
-          <FormattedMessage
-            id="General.menu"
-            defaultMessage="Menu"
-            description="Go To Menu Button"
-          />
-        </button>
-      </div>
       <div className="question" tabIndex={0}>
         <div className="vertical_outer">
           <div className="vertical_inner">{dp?.message}</div>

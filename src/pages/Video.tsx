@@ -192,15 +192,6 @@ const Video: React.FC<iProps> = ({
 
   return (
     <div className="video">
-      <div className="right controls">
-        <button className="button button--menu" onClick={gotoMenu}>
-          <FormattedMessage
-            id="General.menu"
-            defaultMessage="Menu"
-            description="Go To Menu Button"
-          />
-        </button>
-      </div>
       <div id="player" className="videoplayer functional">
         {dp?.video &&
           (dp.video.vimeo_url ? (
