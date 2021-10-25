@@ -7,13 +7,13 @@ const Credits: React.FC<{}> = () => {
     <div className="container">
       <div className="panel credits">
         <header>
-          <h1>
+          <h2>
             <FormattedMessage
               id="Credits.title"
               defaultMessage="Credits"
               description="credits title"
             />
-          </h1>
+          </h2>
         </header>
         <div className="main">
           <div className="content cf">

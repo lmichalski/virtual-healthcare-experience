@@ -13,7 +13,7 @@ const Home: React.FC<iProps> = () => {
             id="Home.title"
             defaultMessage="Virtual Healthcare Experence"
             description="Title for homepage"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <div className="main">

@@ -31,7 +31,7 @@ const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
             id="Feedback.title"
             defaultMessage="Feedback"
             description="feedback title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <div className="main">{dp?.feedback}</div>

@@ -11,15 +11,17 @@ const Chart: React.FC<iProps> = ({ image }) => {
   const gotoMenu = useGotoMenu();
 
   return (
-    <div>
-      <header>
-        <h1>Client Chart</h1>
-      </header>
-      <div>
-        <img
-          src="/images/chart_image.png"
-          alt="Client's Chart with some background information for this visit"
-        ></img>
+    <div className="container">
+      <div className="panel info">
+        <header>
+          <h2>Client Chart</h2>
+        </header>
+        <div>
+          <img
+            src="/images/chart_image.png"
+            alt="Client's Chart with some background information for this visit"
+          ></img>
+        </div>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const Transition: React.FC<iProps> = ({ decisionPoint: dp }) => {
             id="Transition.title"
             defaultMessage="Game Paused"
             description="game paused transition title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <div className="main">{dp?.feedback}</div>

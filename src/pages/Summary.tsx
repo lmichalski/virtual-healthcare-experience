@@ -180,7 +180,7 @@ const Summary: React.FC<iProps> = ({
             id="Summary.title"
             defaultMessage="Congratulations!"
             description="Summary title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <div className="main summary">

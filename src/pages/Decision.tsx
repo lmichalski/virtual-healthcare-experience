@@ -52,15 +52,6 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
 
   return (
     <div className="container">
-      <div className="left controls">
-        <button className="button button--menu" onClick={replayVideo}>
-          <FormattedMessage
-            id="General.replay"
-            defaultMessage="Replay"
-            description="Replay Video Button"
-          />
-        </button>
-      </div>
       <div className="question" tabIndex={0}>
         <div className="vertical_outer">
           <div className="vertical_inner">{dp?.message}</div>

@@ -28,8 +28,8 @@ const Menu: React.FC<iProps> = ({
       <div className="panel menu">
         <div className="main">
           <div className="content">
-            <ul className="controls">
-              <li>
+            <ul className="game-buttons">
+            <li>
                 <button className="Link" onClick={startNewGame}>
                   <FormattedMessage
                     id="Menu.newGame"
@@ -38,6 +38,9 @@ const Menu: React.FC<iProps> = ({
                   />
                 </button>
               </li>
+
+              <div className="divider"></div>
+              
               <li>
                 <button
                   className={`Link ${gamesaved ? "active" : "disabled"}`}
@@ -50,6 +53,8 @@ const Menu: React.FC<iProps> = ({
                   />
                 </button>
               </li>
+            </ul>
+            <ul className="controls">
               <li>
                 <Link to={`/games/${game_id}/objectives/`}>
                   <FormattedMessage

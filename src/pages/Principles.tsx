@@ -14,13 +14,13 @@ const Principles: React.FC<iProps> = ({ strings }) => {
     <div className="container">
       <div className="panel info">
         <header>
-          <h1>
+          <h2>
             <FormattedMessage
               id="Principles.title"
               defaultMessage="Essential Principles"
               description="Principles title"
             />
-          </h1>
+          </h2>
         </header>
         <div className="main">
           <div className="content cf">

@@ -15,13 +15,13 @@ const Objectives: React.FC<iProps> = ({ strings }) => {
     <div className="container">
       <div className="panel info">
         <header>
-          <h1>
+          <h2>
             <FormattedMessage
               id="Objectives.title"
               defaultMessage="Learning Objectives"
               description="Learning Objectives title"
             />
-          </h1>
+          </h2>
         </header>
         <div className="main">
           <div className="content cf">

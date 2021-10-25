@@ -9,7 +9,7 @@ const Settings: React.FC<{}> = () => {
     <div className="container">
       <div className="panel settings">
         <header>
-          <h1>Game Options</h1>
+          <h2>Game Options</h2>
         </header>
         <div className="main">
           <div className="content">

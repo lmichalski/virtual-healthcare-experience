@@ -13,7 +13,7 @@ const Materials: React.FC<{}> = () => {
             id="Materials.title"
             defaultMessage="Materials"
             description="Materials title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <footer>

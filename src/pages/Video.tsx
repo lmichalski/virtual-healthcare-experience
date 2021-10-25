@@ -195,16 +195,15 @@ const Video: React.FC<iProps> = ({
       <div id="player" className="videoplayer functional">
         {dp?.video &&
           (dp.video.vimeo_url ? (
-            <div>
               <iframe
                 ref={iframeRef}
+                // style={{height: (iframeRef.current?.scrollWidth ?? 600) * 9/16}}
                 src={dp.video.vimeo_url + "?autoplay=1"}
                 frameBorder={0}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 title="SG4_DP1_0"
               ></iframe>
-            </div>
           ) : (
             <video
               ref={videoRef}
@@ -214,15 +213,6 @@ const Video: React.FC<iProps> = ({
               Please use a different browser
             </video>
           ))}
-
-        <div id="pause">
-          <FormattedMessage
-            id="General.pause"
-            defaultMessage="pause"
-            description="pause icon"
-          />
-          <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
       </div>
     </div>
   );

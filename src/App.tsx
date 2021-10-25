@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from "react";
 
-import { Switch, Route, useHistory, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useHistory, useRouteMatch, Redirect } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import Menu from "./pages/Menu";
@@ -145,7 +145,9 @@ const App: React.FC<iProps> = ({ gameId }) => {
   return (
     <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
       <header className="nav-header">
-        <button onClick={handleMenuToggleButtonClick}>=</button>
+        <button className="icon-menu" onClick={handleMenuToggleButtonClick}>
+          <i className="icomoon icon-menu-2"></i>
+        </button>
         <h1>{gameData.strings.menu.title}</h1>
       </header>
 
@@ -234,18 +236,11 @@ const App: React.FC<iProps> = ({ gameId }) => {
             </Route>
 
             <Route path={`${path}/lo`}>Somethings going on here, I swear</Route>
-
-            <Route path={`${path}/`}>
-              <Menu
-                strings={gameData.strings.menu}
-                startNewGame={handleStartNewGame}
-                resumeGame={handleResumeGame}
-                gamesaved={gameState.gamesaved}
-                pagesToShow={{
-                  principles: !!gameData.strings.principles,
-                }}
-              />
+            
+            <Route path="/">
+              <Redirect to={`${url}/chart`}/>
             </Route>
+
           </Switch>
         </div>
       </div>
