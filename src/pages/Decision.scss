@@ -29,6 +29,7 @@
 	font-size: 1.4em;
 	text-align: center;
 	color:  var(--primary-text-highlight);
+	padding: 72px;
 }
 .question .vertical_outer {
 	vertical-align: bottom;
@@ -75,8 +76,8 @@
 	transition: all .1s linear;
 }
 .option button:hover {
+	color: black;
 	background-color: var(--primary-text-color);
 	box-shadow: 0 0 10px var(--option-background), 0 0 20px var(--option-background);
-	color: var(--primary-text-highlight);
 	transform: scale3d(1.05, 1.05, 1.05);
 }

@@ -63,9 +63,9 @@
       "id": 0,
       "title": "DP0",
       "type": "video",
-      "data": "SG4_DP1_0",
+      "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638786250"
       },
       "correct": false,
       "feedback": "",
@@ -88,10 +88,12 @@
     },
     {
       "id": 1,
-      "title": "DP0_1 - wrong",
+      "title": "DP1_2 - wrong",
       "type": "video",
       "data": "SG4_DP0_1",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638787017"
+      },
       "correct": false,
       "feedback": "",
       "message": "How do you start the conversation with Kelly?",
@@ -109,10 +111,12 @@
     },
     {
       "id": 2,
-      "title": "DP0_2 - wrong",
+      "title": "DP1_3 - wrong",
       "type": "video",
-      "data": "SG4_DP0_2",
-      "video": null,
+      "data": "SG4_DP1_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638787265"
+      },
       "correct": false,
       "feedback": "",
       "message": "How do you start the conversation with Kelly?",
@@ -130,11 +134,11 @@
     },
     {
       "id": 3,
-      "title": "DP1_1",
+      "title": "DP2_1",
       "type": "video",
-      "data": "SG4_DP1_1",
+      "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638787456"
       },
       "correct": true,
       "feedback": "",
@@ -157,9 +161,9 @@
     },
     {
       "id": 4,
-      "title": "DP1_2 - wrong",
+      "title": "DP2_2 - wrong",
       "type": "video",
-      "data": "SG4_DP1_2",
+      "data": "SG4_DP2_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
@@ -180,11 +184,11 @@
     },
     {
       "id": 5,
-      "title": "DP1_3 - wrong",
+      "title": "DP2_3 - wrong",
       "type": "video",
-      "data": "SG4_DP1_3",
+      "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638787934"
       },
       "correct": false,
       "feedback": "",
@@ -203,11 +207,11 @@
     },
     {
       "id": 6,
-      "title": "DP2_1",
+      "title": "DP3_1",
       "type": "video",
-      "data": "SG4_DP2_1",
+      "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638789427"
       },
       "correct": true,
       "feedback": "",
@@ -230,11 +234,11 @@
     },
     {
       "id": 7,
-      "title": "DP2_2 - wrong",
+      "title": "DP3_2 - wrong",
       "type": "video",
-      "data": "SG4_DP2_2",
+      "data": "SG4_DP3_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638790260"
       },
       "correct": false,
       "feedback": "",
@@ -253,11 +257,11 @@
     },
     {
       "id": 8,
-      "title": "DP2_3 - wrong",
+      "title": "DP3_3 - wrong",
       "type": "video",
-      "data": "SG4_DP2_3",
+      "data": "SG4_DP3_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638790544"
       },
       "correct": false,
       "feedback": "",
@@ -276,11 +280,11 @@
     },
     {
       "id": 9,
-      "title": "DP3_1",
+      "title": "DP4_1",
       "type": "video",
-      "data": "SG4_DP3_1",
+      "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638798953"
       },
       "correct": true,
       "feedback": "",
@@ -303,11 +307,11 @@
     },
     {
       "id": 10,
-      "title": "DP3_2 - wrong",
+      "title": "DP4_2 - wrong",
       "type": "video",
-      "data": "SG4_DP3_2",
+      "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638799204"
       },
       "correct": false,
       "feedback": "",
@@ -326,11 +330,11 @@
     },
     {
       "id": 11,
-      "title": "DP3_3 - wrong",
+      "title": "DP4_3 - wrong",
       "type": "video",
-      "data": "SG4_DP3_3",
+      "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638799355"
       },
       "correct": false,
       "feedback": "",
@@ -349,11 +353,11 @@
     },
     {
       "id": 12,
-      "title": "DP4_1",
+      "title": "DP5_1",
       "type": "video",
-      "data": "SG4_DP4_1",
+      "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638805599"
       },
       "correct": true,
       "feedback": "",
@@ -376,11 +380,11 @@
     },
     {
       "id": 13,
-      "title": "DP4_2 - wrong",
+      "title": "DP5_2 - wrong",
       "type": "video",
-      "data": "SG4_DP4_2",
+      "data": "SG4_DP5_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638805787"
       },
       "correct": false,
       "feedback": "",
@@ -399,11 +403,11 @@
     },
     {
       "id": 14,
-      "title": "DP4_3 - wrong",
+      "title": "DP5_3 - wrong",
       "type": "video",
-      "data": "SG4_DP4_3",
+      "data": "SG4_DP5_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638805863"
       },
       "correct": false,
       "feedback": "",
@@ -422,11 +426,11 @@
     },
     {
       "id": 15,
-      "title": "DP5_1",
+      "title": "DP6_1",
       "type": "video",
-      "data": "SG4_DP5_1",
+      "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638807487"
       },
       "correct": true,
       "feedback": "",
@@ -449,11 +453,11 @@
     },
     {
       "id": 16,
-      "title": "DP5_2 - wrong",
+      "title": "DP6_2 - wrong",
       "type": "video",
-      "data": "SG4_DP5_2",
+      "data": "SG4_DP6_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638807836"
       },
       "correct": false,
       "feedback": "",
@@ -472,11 +476,11 @@
     },
     {
       "id": 17,
-      "title": "DP5_3 - wrong",
+      "title": "DP6_3 - wrong",
       "type": "video",
-      "data": "SG4_DP5_3",
+      "data": "SG4_DP6_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638807927"
       },
       "correct": false,
       "feedback": "",
@@ -495,11 +499,11 @@
     },
     {
       "id": 18,
-      "title": "DP6_1",
+      "title": "DP7_1",
       "type": "video",
-      "data": "SG4_DP6_1",
+      "data": "SG4_DP7_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638809605"
       },
       "correct": true,
       "feedback": "",
@@ -522,10 +526,12 @@
     },
     {
       "id": 19,
-      "title": "DP6_2 - wrong",
+      "title": "DP7_2 - wrong",
       "type": "video",
-      "data": "SG4_DP6_2",
-      "video": null,
+      "data": "SG4_DP7_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638809936"
+      },
       "correct": false,
       "feedback": "",
       "message": "How do you find out more about Kelly’s coping mechanisms?",
@@ -543,10 +549,12 @@
     },
     {
       "id": 20,
-      "title": "DP6_3 - wrong",
+      "title": "DP7_3 - wrong",
       "type": "video",
-      "data": "SG4_DP6_3",
-      "video": null,
+      "data": "SG4_DP7_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638810050"
+      },
       "correct": false,
       "feedback": "",
       "message": "How do you find out more about Kelly’s coping mechanisms?",
@@ -564,11 +572,11 @@
     },
     {
       "id": 21,
-      "title": "DP7_1",
+      "title": "DP8_1",
       "type": "video",
-      "data": "SG4_DP7_1",
+      "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638813395"
       },
       "correct": true,
       "feedback": "",
@@ -591,10 +599,12 @@
     },
     {
       "id": 22,
-      "title": "DP7_2 - wrong",
-      "type": "SG4_DP7_2",
+      "title": "DP8_2 - wrong",
+      "type": "SG4_DP8_2",
       "data": "pass-vid",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638813605"
+      },
       "correct": false,
       "feedback": "",
       "message": "What is your response to Kelly’s admission of having negative thoughts?",
@@ -612,10 +622,12 @@
     },
     {
       "id": 23,
-      "title": "DP7_3 - wrong",
+      "title": "DP8_3 - wrong",
       "type": "video",
-      "data": "SG4_DP7_3",
-      "video": null,
+      "data": "SG4_DP8_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638813749"
+      },
       "correct": false,
       "feedback": "",
       "message": "What is your response to Kelly’s admission of having negative thoughts?",
@@ -633,11 +645,11 @@
     },
     {
       "id": 24,
-      "title": "DP8_1",
+      "title": "DP9_1",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP9_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638815887"
       },
       "correct": true,
       "feedback": "",
@@ -660,11 +672,11 @@
     },
     {
       "id": 25,
-      "title": "DP8_2 - wrong",
+      "title": "DP9_2 - wrong",
       "type": "video",
-      "data": "SG4_DP8_2",
+      "data": "SG4_DP9_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638816147"
       },
       "correct": false,
       "feedback": "",
@@ -683,11 +695,11 @@
     },
     {
       "id": 26,
-      "title": "DP8_3 - wrong",
+      "title": "DP9_3 - wrong",
       "type": "video",
-      "data": "SG4_DP8_3",
+      "data": "SG4_DP9_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638816237"
       },
       "correct": false,
       "feedback": "",
@@ -706,11 +718,11 @@
     },
     {
       "id": 27,
-      "title": "DP8_1",
+      "title": "DP10_1",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP10_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638816368"
       },
       "correct": true,
       "feedback": "",
@@ -733,11 +745,11 @@
     },
     {
       "id": 28,
-      "title": "DP8_1",
+      "title": "DP10_2",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP10_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638816717"
       },
       "correct": true,
       "feedback": "",
@@ -756,11 +768,11 @@
     },
     {
       "id": 29,
-      "title": "DP8_1",
+      "title": "DP10_3",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP10_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638816781"
       },
       "correct": true,
       "feedback": "",
@@ -779,11 +791,11 @@
     },
     {
       "id": 30,
-      "title": "DP8_1",
+      "title": "DP11_1",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP11_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638821139"
       },
       "correct": true,
       "feedback": "",
@@ -806,12 +818,10 @@
     },
     {
       "id": 31,
-      "title": "DP8_1",
+      "title": "DP11_2",
       "type": "video",
-      "data": "SG4_DP8_1",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
-      },
+      "data": "SG4_DP11_2",
+      "video": null,
       "correct": true,
       "feedback": "",
       "message": "What would you rate Kelly’s risk level?",
@@ -829,12 +839,10 @@
     },
     {
       "id": 32,
-      "title": "DP8_1",
+      "title": "DP11_3",
       "type": "video",
-      "data": "SG4_DP8_1",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
-      },
+      "data": "SG4_DP11_3",
+      "video": null,
       "correct": true,
       "feedback": "",
       "message": "What would you rate Kelly’s risk level?",
@@ -852,11 +860,11 @@
     },
     {
       "id": 33,
-      "title": "DP8_1",
+      "title": "DP12_1",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP10_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638821322"
       },
       "correct": true,
       "feedback": "",
@@ -879,11 +887,11 @@
     },
     {
       "id": 34,
-      "title": "DP8_1",
+      "title": "DP12_2",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP12_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638821521"
       },
       "correct": true,
       "feedback": "",
@@ -902,11 +910,11 @@
     },
     {
       "id": 35,
-      "title": "DP8_1",
+      "title": "DP12_3",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP12_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638821699"
       },
       "correct": true,
       "feedback": "",
@@ -925,11 +933,11 @@
     },
     {
       "id": 36,
-      "title": "DP8_1",
+      "title": "DP13_1",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP13_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638822909"
       },
       "correct": true,
       "feedback": "",
@@ -951,12 +959,62 @@
       "next": null
     },
     {
-      "id": 39,
-      "title": "DP8_1",
+      "id": 37,
+      "title": "DP13_2",
       "type": "video",
-      "data": "SG4_DP8_1",
+      "data": "SG4_DP13_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/638823096"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "How do you encourage Kelly to go to the hospital?",
+      "options": [
+        {
+          "label": "Discuss the need for further help",
+          "next": 38
+        },
+        {
+          "label": "Discuss the need for immediate action",
+          "next": 39
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 39,
+      "title": "DP13_3",
+      "type": "video",
+      "data": "SG4_DP13_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638823260"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "How do you encourage Kelly to go to the hospital?",
+      "options": [
+        {
+          "label": "Discuss options",
+          "next": 37
+        },
+        {
+          "label": "Discuss the need for further help",
+          "next": 38
+        },
+        {
+          "label": "Discuss the need for immediate action",
+          "next": 39
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 39,
+      "title": "DP14_1",
+      "type": "video",
+      "data": "SG4_DP14_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638824546"
       },
       "correct": true,
       "feedback": "",
@@ -978,12 +1036,56 @@
       "next": null
     },
     {
+      "id": 40,
+      "title": "DP14_2",
+      "type": "video",
+      "data": "SG4_DP14_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638824752"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "How do you ensure Kelly goes to the hospital?",
+      "options": [
+        {
+          "label": "Escort Kelly to hospital",
+          "next": 41
+        },
+        {
+          "label": "Call 911",
+          "next": 42
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 40,
+      "title": "DP14_3",
+      "type": "video",
+      "data": "SG4_DP14_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/638824898"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "How do you ensure Kelly goes to the hospital?",
+      "options": [
+        {
+          "label": "Escort Kelly to hospital",
+          "next": 41
+        },
+        {
+          "label": "Call 911",
+          "next": 42
+        }
+      ],
+      "next": null
+    },
+    {
       "id": 42,
       "type": "video",
-      "data": "SG4_DP9_0",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
-      },
+      "data": "SG4_DP15_1",
+      "video": null,
       "correct": true,
       "feedback": "",
       "message": "",
