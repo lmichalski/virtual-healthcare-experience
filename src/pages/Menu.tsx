@@ -76,15 +76,6 @@ const Menu: React.FC<iProps> = ({
                 </li>
               ) : null}
               <li>
-                <Link to={`/games/${game_id}/settings/`}>
-                  <FormattedMessage
-                    id="Menu.gameOptions"
-                    defaultMessage="Game Options"
-                    description="Options Button"
-                  />
-                </Link>
-              </li>
-              <li>
                 <Link to={`/games/${game_id}/instructions/`}>
                   <FormattedMessage
                     id="Menu.instructions"
@@ -108,6 +99,15 @@ const Menu: React.FC<iProps> = ({
                     id="Menu.materials"
                     defaultMessage="Self-Assessment"
                     description="Link to self-assessment materials"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link to={`/games/${game_id}/settings/`}>
+                  <FormattedMessage
+                    id="Menu.settings"
+                    defaultMessage="Settings"
+                    description="Settings Button"
                   />
                 </Link>
               </li>
