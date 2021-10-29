@@ -1,12 +1,12 @@
 import { useMemo } from "react";
 
 const games: Record<string, Record<string, GameDataShape>> = {
-    emergency: {
-      en: require("../games/er_game_data.json"),
-    },
-    crisis_intervention: {
-      en: require("../games/suicidal_patient_data.json"),
-    },
+  emergency: {
+    en: require("../games/er_game_data.json"),
+  },
+  crisis_intervention: {
+    en: require("../games/suicidal_patient_data.json"),
+  },
 };
 
 export interface DecisionPoint {
@@ -38,6 +38,13 @@ export interface DecisionPoint {
 
 interface GameDataShape {
   decisionpoints: DecisionPoint[];
+  colors: {
+    "--theme-light": string;
+    "--theme-dark": string;
+    "--theme-primary": string;
+    "--primary-text-color": string;
+    "--link-color": string;
+  };
   strings: {
     menu: {
       title: string;
@@ -50,6 +57,13 @@ interface GameDataShape {
       paragraph2: string;
       bullet_list: string[];
     };
+    chart: {
+      image: string;
+    };
+    principles?: {
+      paragraph: string;
+      bullet_list: string[];
+    };
     instructions: {
       paragraph: string;
       bullet_list: string[];
@@ -57,14 +71,9 @@ interface GameDataShape {
   };
 }
 
-export const useGameData = (
-  game: string,
-  locale: string
-): GameDataShape => {
+export const useGameData = (game: string, locale: string): GameDataShape => {
   const data = useMemo(
-    () =>
-      games[game]?.[locale] ||
-      games[game]?.["en"],
+    () => games[game]?.[locale] || games[game]?.["en"],
     [game, locale]
   );
   if (!data) {

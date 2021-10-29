@@ -16,8 +16,7 @@ interface iGameSave {
   }[];
 }
 
-const useGameState = () => {
-  const storageKey = "emergency";
+const useGameState = (storageKey: string) => {
   const [loaded] = useState(
     VHEStorage.getObject(storageKey) as iGameSave | null
   );

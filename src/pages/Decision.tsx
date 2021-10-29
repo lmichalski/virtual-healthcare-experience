@@ -13,8 +13,8 @@ interface iProps {
 
 const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
-  
+  const { game_id } = useParams<{ game_id: string }>();
+
   const logGameEvent = useLogGameEvent();
   const gotoMenu = useGotoMenu();
 
@@ -47,29 +47,11 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
       'value': $scope.dp.id
     });*/
     logGameEvent("", "replay", "video", dp.data, dp.id);
-    history.push(`games/${game_id}/video`);
-  }, [dp.data, dp.id, history, logGameEvent]);
+    history.push(`/games/${game_id}/video`);
+  }, [dp.data, dp.id, history, logGameEvent, game_id]);
 
   return (
     <div className="container">
-      <div className="left controls">
-        <button className="button button--menu" onClick={replayVideo}>
-          <FormattedMessage
-            id="General.replay"
-            defaultMessage="Replay"
-            description="Replay Video Button"
-          />
-        </button>
-      </div>
-      <div className="right controls">
-        <button className="button button--menu" onClick={gotoMenu}>
-          <FormattedMessage
-            id="General.menu"
-            defaultMessage="Menu"
-            description="Go To Menu Button"
-          />
-        </button>
-      </div>
       <div className="question" tabIndex={0}>
         <div className="vertical_outer">
           <div className="vertical_inner">{dp?.message}</div>

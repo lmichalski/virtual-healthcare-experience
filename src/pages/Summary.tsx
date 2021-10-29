@@ -100,7 +100,9 @@ const Summary: React.FC<iProps> = ({
         <Text>
           If not attending an organized debrief, make sure you download and
           complete the{" "}
-          <Link src="/docs/self-assessment.pdf">self-debriefing questions</Link>{" "}
+          <Link src={`${window.location.origin}/docs/self-assessment.pdf`}>
+            self-debriefing questions
+          </Link>{" "}
           to optimise your learning experience. Scroll down to view results.
         </Text>
       </>
@@ -172,18 +174,13 @@ const Summary: React.FC<iProps> = ({
 
   return (
     <div className="container">
-      <div className="right controls">
-        <button className="button button--menu" onClick={goToMenu}>
-          Menu
-        </button>
-      </div>
       <div className="panel info">
         <header>
           <FormattedMessage
             id="Summary.title"
             defaultMessage="Congratulations!"
             description="Summary title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
         <div className="main summary">

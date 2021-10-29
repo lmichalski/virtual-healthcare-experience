@@ -25,7 +25,7 @@ const Video: React.FC<iProps> = ({
 }) => {
   const location = useLocation();
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
   const logGameEvent = useLogGameEvent();
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -99,7 +99,7 @@ const Video: React.FC<iProps> = ({
     return () => {
       window.removeEventListener("keydown", handleUserKeyPress);
     };
-  }, [history, location.pathname, setVideoposition]);
+  }, [history, location.pathname, setVideoposition, game_id]);
 
   useEffect(() => {
     var iframe = iframeRef.current;
@@ -192,28 +192,18 @@ const Video: React.FC<iProps> = ({
 
   return (
     <div className="video">
-      <div className="right controls">
-        <button className="button button--menu" onClick={gotoMenu}>
-          <FormattedMessage
-            id="General.menu"
-            defaultMessage="Menu"
-            description="Go To Menu Button"
-          />
-        </button>
-      </div>
       <div id="player" className="videoplayer functional">
         {dp?.video &&
           (dp.video.vimeo_url ? (
-            <div>
               <iframe
                 ref={iframeRef}
+                // style={{height: (iframeRef.current?.scrollWidth ?? 600) * 9/16}}
                 src={dp.video.vimeo_url + "?autoplay=1"}
                 frameBorder={0}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 title="SG4_DP1_0"
               ></iframe>
-            </div>
           ) : (
             <video
               ref={videoRef}
@@ -223,15 +213,6 @@ const Video: React.FC<iProps> = ({
               Please use a different browser
             </video>
           ))}
-
-        <div id="pause">
-          <FormattedMessage
-            id="General.pause"
-            defaultMessage="pause"
-            description="pause icon"
-          />
-          <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
       </div>
     </div>
   );

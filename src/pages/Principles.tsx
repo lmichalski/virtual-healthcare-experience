@@ -1,20 +1,26 @@
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import "./Instructions.scss";
+import "./Principles.scss";
 
 interface iProps {
-  minSteps: number;
   strings: {
     paragraph: string;
     bullet_list: string[];
   };
 }
 
-const Instructions: React.FC<iProps> = ({ minSteps, strings }) => {
+const Principles: React.FC<iProps> = ({ strings }) => {
   return (
     <div className="container">
       <div className="panel info">
         <header>
-          <h2>How to Play</h2>
+          <h2>
+            <FormattedMessage
+              id="Principles.title"
+              defaultMessage="Essential Principles"
+              description="Principles title"
+            />
+          </h2>
         </header>
         <div className="main">
           <div className="content cf">
@@ -31,4 +37,4 @@ const Instructions: React.FC<iProps> = ({ minSteps, strings }) => {
   );
 };
 
-export default Instructions;
+export default Principles;

@@ -13,20 +13,9 @@ const Materials: React.FC<{}> = () => {
             id="Materials.title"
             defaultMessage="Materials"
             description="Materials title"
-            tagName="h1"
+            tagName="h2"
           />
         </header>
-
-        <div className="right controls">
-          <button className="button button--menu" onClick={gotoMenu}>
-            <FormattedMessage
-              id="General.menu"
-              defaultMessage="Menu"
-              description="Go To Menu Button"
-            />
-          </button>
-        </div>
-
         <footer>
           <div className="content">
             <h2>Documentation</h2>

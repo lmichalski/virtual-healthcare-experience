@@ -9,6 +9,7 @@ import { LoggingContextProvider } from "./hooks/useLogGameEvent";
 
 import enMessages from "./lang-compiled/en.json";
 import frMessages from "./lang-compiled/fr.json";
+import Home from "./pages/Home";
 
 const locale = "en" as string;
 const messages = locale === "fr" ? frMessages : enMessages;
@@ -20,11 +21,10 @@ ReactDOM.render(
         <LoggingContextProvider>
           <Switch>
             <Route path="/games/:game_id">
-              {(params) => (
-                <App
-                  gameId={params.match?.params.game_id!}
-                />
-              )}
+              {(params) => <App gameId={params.match?.params.game_id!} />}
+            </Route>
+            <Route>
+              <Home />
             </Route>
           </Switch>
         </LoggingContextProvider>

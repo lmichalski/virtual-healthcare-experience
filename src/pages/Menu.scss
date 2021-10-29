@@ -1,6 +1,72 @@
 /********** MENU **********/
 
+.container .panel .main {
 
-.menu {
-	width: 13em;
+	font-size: 20px;
+	text-transform: uppercase;
+
+	.divider{
+		width:5px;
+		height: 16px;
+	}
+
+	.controls li {
+		padding: 5px 0 19px 0px;
+		line-height: 120%;
+
+		a{
+			background: none;
+			border: none;
+			padding: 0;
+			font-family: arial, sans-serif;
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover{
+				color: rgb(255, 255, 255);
+				text-shadow: 0 0 10px black, 0 0 20px black;
+				color: var(--primary-text-highlight);
+				transform: scale3d(1.05, 1.05, 1.05);
+			}
+		}
+	}
+
+	.game-buttons{
+		padding: 8px;
+		box-sizing: border-box;
+		border-radius: 8px;
+
+		button {
+			font-size: 24px;
+			text-transform: uppercase;
+			padding-left: 12px;
+			padding-right: 12px;
+			padding: 12px;
+			width: 100%;
+			background-color: rgb(100, 149, 237);
+
+			border-color: rgb(100, 149, 237);
+			border-width: 4px;
+			border-style: solid;
+			
+			box-sizing: border-box;
+			cursor: pointer;
+			border-radius: 12%/50%;
+
+			// &.disabled, 
+			// &.disabled:hover {
+			// 	color: rgb(46, 57, 71);
+			// 	cursor: default;
+			// 	text-shadow: none;
+			// 	box-shadow: none;
+			// 	background-color: gray;
+			// }
+
+			&:hover {
+				color: rgb(18, 39, 77);
+				background-color: rgb(205, 220, 243);
+			}
+		}
+	}
 }
