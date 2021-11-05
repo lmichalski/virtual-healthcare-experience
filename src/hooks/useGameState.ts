@@ -39,7 +39,7 @@ const useGameState = (storageKey: string) => {
       videoposition,
       progress,
     });
-  }, [uuid, gamesaved, currentStep, videoposition, progress]);
+  }, [uuid, gamesaved, currentStep, videoposition, progress, storageKey]);
 
   const gameState = useMemo(
     () => ({
