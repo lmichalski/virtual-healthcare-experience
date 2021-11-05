@@ -55,7 +55,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
     history.push(`${url}/intro/`);
     logGameEvent("", "start", "game", getBrowser(), "");
-  }, [history, logGameEvent, gameState]);
+  }, [url, history, logGameEvent, gameState]);
 
   const handleResumeGame = useCallback(() => {
     var dp = currentDecisionPoint;
@@ -69,7 +69,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
     }
 
     logGameEvent("", "resume", "game", "", "");
-  }, [
+  }, [url,
     history,
     logGameEvent,
     gameState.videoposition,
@@ -107,7 +107,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
       // google analytics ???
     },
-    [gameData.decisionpoints, history, logGameEvent, gameState]
+    [url, gameData.decisionpoints, history, logGameEvent, gameState]
   );
 
   const handleVideoFinished = useCallback(() => {
@@ -132,7 +132,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
         history.push(`${url}/transition/`);
       }
     }
-  }, [currentDecisionPoint, history, lastDecisionPoint, gameState]);
+  }, [url, currentDecisionPoint, history, lastDecisionPoint, gameState]);
 
   return (
     <div className="fullscreen">
