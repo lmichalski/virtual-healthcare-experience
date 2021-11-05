@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 const locale = "en" as string;
 const messages = locale === "fr" ? frMessages : enMessages;
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <IntlProvider messages={messages} locale={locale} defaultLocale="en">

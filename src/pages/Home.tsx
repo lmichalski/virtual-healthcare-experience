@@ -38,7 +38,7 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="./games/fr/post_partum">
+                <Link to="./games/post_partum">
                   <FormattedMessage
                     id="Home.postPartum_fr"
                     defaultMessage="Post Partum FR"

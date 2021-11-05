@@ -7,7 +7,7 @@ const games: Record<string, Record<string, GameDataShape>> = {
   crisis_intervention: {
     en: require("../games/suicidal_patient_data.json"),
   },
-  post_partum_fr: {
+  post_partum: {
     fr: require("../games/post_partum_fr.json"),
   },
 };
@@ -73,7 +73,7 @@ interface GameDataShape {
 
 export const useGameData = (game: string, locale: string): GameDataShape => {
   const data = useMemo(
-    () => games[game]?.[locale] || games[game]?.["en"],
+    () => games[game]?.[locale] || games[game]?.["en"] || games[game]?.["fr"],
     [game, locale]
   );
   if (!data) {
