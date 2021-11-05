@@ -70,7 +70,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
     }
 
     logGameEvent("", "resume", "game", "", "");
-  }, [url,
+  }, [
     history,
     logGameEvent,
     gameState.videoposition,

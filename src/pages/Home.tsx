@@ -37,6 +37,15 @@ const Home: React.FC<iProps> = () => {
                   />
                 </Link>
               </li>
+              <li>
+                <Link to="./games/fr/post_partum">
+                  <FormattedMessage
+                    id="Home.postPartum_fr"
+                    defaultMessage="Post Partum FR"
+                    description="Post Partum Francais game name"
+                  />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -7,6 +7,9 @@ const games: Record<string, Record<string, GameDataShape>> = {
   crisis_intervention: {
     en: require("../games/suicidal_patient_data.json"),
   },
+  post_partum_fr: {
+    fr: require("../games/post_partum_fr.json"),
+  },
 };
 
 export interface DecisionPoint {
