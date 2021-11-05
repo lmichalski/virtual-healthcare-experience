@@ -10,7 +10,7 @@ interface iProps {
 
 const Intro: React.FC<iProps> = ({ strings }) => {
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
   const label = "Next";
 
   const [currentMessage, setCurrentMessage] = useState(0);
@@ -22,7 +22,7 @@ const Intro: React.FC<iProps> = ({ strings }) => {
     } else {
       history.push(`/games/${game_id}/video/`);
     }
-  }, [currentMessage, history, intro.length]);
+  }, [currentMessage, history, intro.length, game_id]);
 
   const text = intro[currentMessage];
 

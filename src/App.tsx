@@ -19,6 +19,7 @@ import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
 import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
+import Principles from "./pages/Principles";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser } from "./util";
 import useGameState from "./hooks/useGameState";
@@ -35,7 +36,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
   const locale = useIntl().locale;
 
   const gameData = useGameData(gameId, locale);
-  const gameState = useGameState();
+  const gameState = useGameState(gameId);
   const minSteps = gameData.decisionpoints.filter(
     ({ correct }) => correct
   ).length;
@@ -75,6 +76,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
     gameState.videoposition,
     currentDecisionPoint,
     lastDecisionPoint,
+    url,
   ]);
 
   const handleOptionChosen = useCallback(
@@ -132,10 +134,10 @@ const App: React.FC<iProps> = ({ gameId }) => {
         history.push(`${url}/transition/`);
       }
     }
-  }, [url, currentDecisionPoint, history, lastDecisionPoint, gameState]);
+  }, [currentDecisionPoint, history, lastDecisionPoint, gameState, url]);
 
   return (
-    <div className="fullscreen">
+    <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
       <div className="view" role="application">
         <Switch>
           <Route path={`${path}/credits`}>
@@ -172,6 +174,12 @@ const App: React.FC<iProps> = ({ gameId }) => {
             <Objectives strings={gameData.strings.objectives} />
           </Route>
 
+          {gameData.strings.principles ? (
+            <Route path={`${path}/principles`}>
+              <Principles strings={gameData.strings.principles} />
+            </Route>
+          ) : null}
+
           <Route path={`${path}/settings`}>
             <Settings />
           </Route>
@@ -205,6 +213,9 @@ const App: React.FC<iProps> = ({ gameId }) => {
               startNewGame={handleStartNewGame}
               resumeGame={handleResumeGame}
               gamesaved={gameState.gamesaved}
+              pagesToShow={{
+                principles: !!gameData.strings.principles,
+              }}
             />
           </Route>
         </Switch>

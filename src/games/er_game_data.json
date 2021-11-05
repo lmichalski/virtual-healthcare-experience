@@ -1,4 +1,13 @@
 {
+  "colors": {
+    "--theme-light": "rgb(102, 165, 238)",
+    "--theme-dark": "rgb(51, 75, 153)",
+    "--theme-primary": " rgb(62, 89, 179)",
+    "--link-color": "#000",
+    "--primary-text-color": "#fff",
+    "--primary-text-highlight": "#000",
+    "--option-background": "hsla(0,0%,100%,.35)"
+  },
   "strings": {
     "menu": {
       "title": "ER Virtual Simulation Game"
@@ -11,7 +20,8 @@
     "objectives": {
       "paragraph1": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
       "paragraph2": "The learning objectives of this simulation game are to:",
-      "bullet_list": ["Apply knowledge of physical and psychosocial prenatal nursing assessment.", 
+      "bullet_list": [
+        "Apply knowledge of physical and psychosocial prenatal nursing assessment.",
         "Identify normal findings, abnormal variations and potential complications during a prenatal visit.",
         "Demonstrate therapeutic interventions when caring for a pregnant woman."
       ]

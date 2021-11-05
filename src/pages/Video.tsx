@@ -25,7 +25,7 @@ const Video: React.FC<iProps> = ({
 }) => {
   const location = useLocation();
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
   const logGameEvent = useLogGameEvent();
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -99,7 +99,7 @@ const Video: React.FC<iProps> = ({
     return () => {
       window.removeEventListener("keydown", handleUserKeyPress);
     };
-  }, [history, location.pathname, setVideoposition]);
+  }, [history, location.pathname, setVideoposition, game_id]);
 
   useEffect(() => {
     var iframe = iframeRef.current;

@@ -100,7 +100,9 @@ const Summary: React.FC<iProps> = ({
         <Text>
           If not attending an organized debrief, make sure you download and
           complete the{" "}
-          <Link src="/docs/self-assessment.pdf">self-debriefing questions</Link>{" "}
+          <Link src={`${window.location.origin}/docs/self-assessment.pdf`}>
+            self-debriefing questions
+          </Link>{" "}
           to optimise your learning experience. Scroll down to view results.
         </Text>
       </>

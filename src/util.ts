@@ -23,12 +23,12 @@ export function generateUUID(): string {
 export const useGotoMenu = () => {
   const history = useHistory();
   const logGameEvent = useLogGameEvent();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
 
   const gotoMenu = useCallback(() => {
     logGameEvent("", "open", "menu", "", "");
-    history.push(`games/${game_id}/`);
-  }, [history, logGameEvent]);
+    history.push(`/games/${game_id}/`);
+  }, [history, logGameEvent, game_id]);
   return gotoMenu;
 };
 

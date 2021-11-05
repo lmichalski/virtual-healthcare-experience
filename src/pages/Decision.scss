@@ -28,7 +28,7 @@
 	margin: 0 5%;
 	font-size: 1.4em;
 	text-align: center;
-	color: #000;
+	color:  var(--primary-text-highlight);
 }
 .question .vertical_outer {
 	vertical-align: bottom;
@@ -69,13 +69,14 @@
 	padding: 20px;
 	border-radius: 13px;
 	background-color: #000;
-	background-color: rgba(255, 255, 255, 0.35);
-	color: #000;
+	background-color: var(--option-background);
+	color: var(--primary-text-highlight);
 	cursor: pointer;
 	transition: all .1s linear;
 }
 .option button:hover {
-	background-color: #fff;
-	box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+	background-color: var(--primary-text-color);
+	box-shadow: 0 0 10px var(--option-background), 0 0 20px var(--option-background);
+	color: var(--primary-text-highlight);
 	transform: scale3d(1.05, 1.05, 1.05);
 }

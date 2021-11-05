@@ -10,11 +10,11 @@ interface iProps {
 
 const Transition: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
 
   const playNextVideo = useCallback(() => {
-    history.push(`games/${game_id}/video/`);
-  }, [history]);
+    history.push(`/games/${game_id}/video/`);
+  }, [history, game_id]);
 
   return (
     <div className="container">

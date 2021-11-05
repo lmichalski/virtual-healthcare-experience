@@ -10,7 +10,7 @@ interface iProps {
 
 const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
   const history = useHistory();
-  const { game_id } = useParams<{game_id: string}>();
+  const { game_id } = useParams<{ game_id: string }>();
 
   const goNext = useCallback(() => {
     switch (dp?.type) {
@@ -21,7 +21,7 @@ const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
         history.push(`/games/${game_id}/lo/`);
         break;
     }
-  }, [dp?.type, history]);
+  }, [dp?.type, history, game_id]);
 
   return (
     <div className="container">

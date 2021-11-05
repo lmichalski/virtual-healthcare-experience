@@ -16,8 +16,7 @@ interface iGameSave {
   }[];
 }
 
-const useGameState = () => {
-  const storageKey = "emergency";
+const useGameState = (storageKey: string) => {
   const [loaded] = useState(
     VHEStorage.getObject(storageKey) as iGameSave | null
   );
@@ -40,7 +39,7 @@ const useGameState = () => {
       videoposition,
       progress,
     });
-  }, [uuid, gamesaved, currentStep, videoposition, progress]);
+  }, [uuid, gamesaved, currentStep, videoposition, progress, storageKey]);
 
   const gameState = useMemo(
     () => ({
