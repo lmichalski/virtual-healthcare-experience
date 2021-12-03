@@ -1,7 +1,51 @@
 {
-  "Main.title": {
-    "defaultMessage": "Emergency Room Care",
-    "description": "Menu page title"
+  "Credits.title": {
+    "defaultMessage": "Credits",
+    "description": "credits title"
+  },
+  "Feedback.title": {
+    "defaultMessage": "Feedback",
+    "description": "feedback title"
+  },
+  "General.menu": {
+    "defaultMessage": "Menu",
+    "description": "Go To Menu Button"
+  },
+  "General.pause": {
+    "defaultMessage": "pause",
+    "description": "pause icon"
+  },
+  "General.replay": {
+    "defaultMessage": "Replay",
+    "description": "Replay Video Button"
+  },
+  "General.resume": {
+    "defaultMessage": "Resume Game",
+    "description": "resume game button"
+  },
+  "Home.emergency": {
+    "defaultMessage": "Emergency Room",
+    "description": "Name for emergency game"
+  },
+  "Home.labor_delivery_fr": {
+    "defaultMessage": "Labor and Delivery FR",
+    "description": "Labor and Delivery Francais game name"
+  },
+  "Home.postPartum_fr": {
+    "defaultMessage": "Post Partum FR",
+    "description": "Post Partum Francais game name"
+  },
+  "Home.teen_pregnancy_fr": {
+    "defaultMessage": "Teen Pregnancy FR",
+    "description": "Teen Pregnancy Francais game name"
+  },
+  "Home.title": {
+    "defaultMessage": "Virtual Healthcare Experence",
+    "description": "Title for homepage"
+  },
+  "Materials.title": {
+    "defaultMessage": "Materials",
+    "description": "Materials title"
   },
   "Menu.credits": {
     "defaultMessage": "Credits",
@@ -19,6 +63,10 @@
     "defaultMessage": "How to Play",
     "description": "How to Play Button"
   },
+  "Menu.materials": {
+    "defaultMessage": "Self-Assessment",
+    "description": "Link to self-assessment materials"
+  },
   "Menu.newGame": {
     "defaultMessage": "New Game",
     "description": "New Game Button"
@@ -26,6 +74,10 @@
   "Menu.objectives": {
     "defaultMessage": "Learning Objectives",
     "description": "Objectives Button"
+  },
+  "Menu.principles": {
+    "defaultMessage": "Essential Principles",
+    "description": "Principles Button"
   },
   "Menu.resumeGame": {
     "defaultMessage": "Resume Game",
@@ -35,12 +87,20 @@
     "defaultMessage": "Learning Objectives",
     "description": "Learning Objectives title"
   },
-  "Objectives.paragraph": {
-    "defaultMessage": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
-    "description": "Game objectives intro paragraph"
+  "Principles.title": {
+    "defaultMessage": "Essential Principles",
+    "description": "Principles title"
   },
-  "Objectives.paragraph2": {
-    "defaultMessage": "The learning objectives of this simulation game are to:",
-    "description": "Game objectives second paragraph"
+  "Summary.title": {
+    "defaultMessage": "Congratulations!",
+    "description": "Summary title"
+  },
+  "Transition.title": {
+    "defaultMessage": "Game Paused",
+    "description": "game paused transition title"
+  },
+  "materials.link": {
+    "defaultMessage": "Practice Materials",
+    "description": "Link to Practice Materials"
   }
 }

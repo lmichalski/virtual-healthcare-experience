@@ -1,698 +1,697 @@
 {
-    "colors": {
-      "--theme-light": "#9A9DBC",
-      "--theme-dark": "#5B3CB2",
-      "--theme-primary": "#585498",
-      "--link-color": "#000",
-      "--primary-text-color": "#fff",
-      "--primary-text-highlight": "#000",
-      "--option-background": "hsla(0,0%,100%,.35)"
+  "colors": {
+    "--theme-light": "#BA9B8E",
+    "--theme-dark": "#814B38",
+    "--theme-primary": "#6F313C",
+    "--link-color": "#000",
+    "--primary-text-color": "#fff",
+    "--primary-text-highlight": "#000",
+    "--option-background": "hsla(0,0%,100%,.35)"
+  },
+  "strings": {
+    "menu": {
+      "title": "Soins Infirmiers Post-Partum"
     },
-    "strings": {
-      "menu": {
-        "title": "Soins Infirmiers Post-Partum"
-      },
-      "intro": {
-        "introCards": [
-            "B.B. est une femme de 28 ans, G1 T1 P0 A0 L1, accouchement normal spontané, par voie vaginale sans épidurale. Rupture spontanée des membranes, bonne réaction à l’ocytocine administrée, accouchement d’une fille née à terme à 1 h 03, 8lbs. 12 oz (3969 g), APGAR de 8 et 10. Allaitement commencé, peau à peau. Déchirure du périnée au premier degré réparée. Œdème périnéal et petites hémorroïdes notées. 200 ml d’urine couleur ambre claire passés à 4 h. PA : 98/60; FC : 98, R : 16, T : 37,1 (buccale), lochies modérées avec petits caillots, douleur 3/10. Soluté Normal IV 1000cc @ 75 cc/h.",
-            "Sérologie prénatale :",
-            "HIV: négatif",
-            "Hépatite B : négatif",
-            "Type sanguin : AB+",
-            "SGB : négatif",
-            "Rubéole : négatif",
-            "Varicelle : immunisée",
-            "L’accouchement a eu lieu il y a 6 heures. C’est votre première évaluation."
-                    ]
-      },
-      "objectives": {
-        "paragraph1": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
-        "paragraph2": "The learning objectives of this simulation game are to:",
-        "bullet_list": [
-          "Apply knowledge of physical and psychosocial prenatal nursing assessment.",
-          "Identify normal findings, abnormal variations and potential complications during a prenatal visit.",
-          "Demonstrate therapeutic interventions when caring for a pregnant woman."
-        ]
-      },
-      "instructions": {
-        "paragraph": "Watch the video story unfold. You will assume the role of a clinical nurse completing a client assessment.",
-        "bullet_list": [
-          "Occasionally, the video will pause, and you will be asked to respond to questions.",
-          "Choose your responses carefully because your choices will affect how the story unfolds.",
-          "The goal is to get to the end of the story, answering as few questions as possible.",
-          "The best possible result is 9. You can play this game unlimited times to improve your result.",
-          "Game play progresses forward only; there is no option to go back to a previous decision point.",
-          "At the end of the game you will see a summary report of your answers. The summary can be downloaded and saved to your computer.",
-          "At the end of the game you will have an opportunity to document your assessment and interventions. Once you have completed your documentation, compare your documentation to the one provided. Please note the date/time/names will be different depending on the time you play the game. But, the content should be similar even though the wording may vary.",
-          "You can pause the game at any time by clicking on the video or pressing the spacebar.",
-          "You can turn captions on or switch to full-screen, by selecting Game Options from the menu.",
-          "The game uses high resolution videos, which require high-speed internet to upload easily.",
-          "The game takes about 20–40 minutes to complete."
-        ]
-      }
+    "intro": {
+      "introCards": [
+        "B.B. est une femme de 28 ans, G1 T1 P0 A0 L1, accouchement normal spontané, par voie vaginale sans épidurale. Rupture spontanée des membranes, bonne réaction à l’ocytocine administrée, accouchement d’une fille née à terme à 1 h 03, 8lbs. 12 oz (3969 g), APGAR de 8 et 10. Allaitement commencé, peau à peau. Déchirure du périnée au premier degré réparée. Œdème périnéal et petites hémorroïdes notées. 200 ml d’urine couleur ambre claire passés à 4 h. PA : 98/60; FC : 98, R : 16, T : 37,1 (buccale), lochies modérées avec petits caillots, douleur 3/10. Soluté Normal IV 1000cc @ 75 cc/h.",
+        "Sérologie prénatale :",
+        "HIV: négatif",
+        "Hépatite B : négatif",
+        "Type sanguin : AB+",
+        "SGB : négatif",
+        "Rubéole : négatif",
+        "Varicelle : immunisée",
+        "L’accouchement a eu lieu il y a 6 heures. C’est votre première évaluation."
+      ]
     },
-    "decisionpoints": [
-      {
-        "id": 0,
-        "title": "DP0",
-        "type": "video",
-        "data": "SG4_DP1_0",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/635497123"
+    "objectives": {
+      "paragraph1": "The game promotes the application of knowledge and skills related to the assessment of a prenatal woman.",
+      "paragraph2": "The learning objectives of this simulation game are to:",
+      "bullet_list": [
+        "Apply knowledge of physical and psychosocial prenatal nursing assessment.",
+        "Identify normal findings, abnormal variations and potential complications during a prenatal visit.",
+        "Demonstrate therapeutic interventions when caring for a pregnant woman."
+      ]
+    },
+    "instructions": {
+      "paragraph": "Watch the video story unfold. You will assume the role of a clinical nurse completing a client assessment.",
+      "bullet_list": [
+        "Occasionally, the video will pause, and you will be asked to respond to questions.",
+        "Choose your responses carefully because your choices will affect how the story unfolds.",
+        "The goal is to get to the end of the story, answering as few questions as possible.",
+        "The best possible result is 9. You can play this game unlimited times to improve your result.",
+        "Game play progresses forward only; there is no option to go back to a previous decision point.",
+        "At the end of the game you will see a summary report of your answers. The summary can be downloaded and saved to your computer.",
+        "At the end of the game you will have an opportunity to document your assessment and interventions. Once you have completed your documentation, compare your documentation to the one provided. Please note the date/time/names will be different depending on the time you play the game. But, the content should be similar even though the wording may vary.",
+        "You can pause the game at any time by clicking on the video or pressing the spacebar.",
+        "You can turn captions on or switch to full-screen, by selecting Game Options from the menu.",
+        "The game uses high resolution videos, which require high-speed internet to upload easily.",
+        "The game takes about 20–40 minutes to complete."
+      ]
+    }
+  },
+  "decisionpoints": [
+    {
+      "id": 0,
+      "title": "DP0",
+      "type": "video",
+      "data": "SG4_DP1_0",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "Comment répondre ?",
+      "options": [
+        {
+          "label": "Répondre directement aux inquiétudes du mari",
+          "next": 1
         },
-        "correct": false,
-        "feedback": "",
-        "message": "Comment répondre ?",
-        "options": [
-          {
-            "label": "Répondre directement aux inquiétudes du mari",
-            "next": 1
-          },
-          {
-            "label": " Se présenter à la famille",
-            "next": 2
-          }
-        ],
-        "next": null
+        {
+          "label": " Se présenter à la famille",
+          "next": 2
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 1,
+      "title": "DP0_1 - wrong",
+      "type": "video",
+      "data": "SG4_DP0_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
-      {
-        "id": 1,
-        "title": "DP0_1 - wrong",
-        "type": "video",
-        "data": "SG4_DP0_1",
-        "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
-          },
-        "correct": false,
-        "feedback": "Consider the impact of responding defensively on the nurse-client therapeutic relationship. Reflect on the client's feelings being new parents. How should you respond to build rapport and trust in the nurse client therapeutic relationship?",
-        "message": "Comment répondre ?",
-        "options": [
-            {
-                "label": "Répondre directement aux inquiétudes du mari",
-                "next": 1
-              },
-              {
-                "label": " Se présenter à la famille",
-                "next": 2
-              }
-            ],
-        "next": null
-      },
-      {
-        "id": 2,
-        "title": "DP1_1",
-        "type": "video",
-        "data": "SG4_DP1_1",
-        "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
-          },
-        "correct": true,
-        "feedback": "",
-        "message": "Comment procéder avec l’évaluation ?",
-        "options": [
-          {
-            "label": "Continuer l’évaluation",
-            "next": 3
-          },
-          {
-            "label": "Obtenir la permission de la cliente",
-            "next": 4
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 3,
-        "title": "DP1_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP1_2",
-        "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
-          },
-        "correct": false,
-        "feedback": "Quels effets pourraient découler de ne pas s’informer auprès de la cliente de ses préférences en ce qui a trait aux soins ni de les inclure le cas échéant ? Réfléchissez à l’importance de respecter les choix de la cliente et de promouvoir l’autonomie.",
-        "message": "Comment procéder avec l’évaluation ?",
-        "options": [
-            {
-                "label": "Continuer l’évaluation",
-                "next": 3
-              },
-              {
-                "label": "Obtenir la permission de la cliente",
-                "next": 4
-              }
-        ],
-        "next": null
-      },
-      {
-        "id": 4,
-        "title": "DP2_1",
-        "type": "video",
-        "data": "SG4_DP2_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/635497123"
+      "correct": false,
+      "feedback": "Consider the impact of responding defensively on the nurse-client therapeutic relationship. Reflect on the client's feelings being new parents. How should you respond to build rapport and trust in the nurse client therapeutic relationship?",
+      "message": "Comment répondre ?",
+      "options": [
+        {
+          "label": "Répondre directement aux inquiétudes du mari",
+          "next": 1
         },
-        "correct": true,
-        "feedback": "",
-        "message": "Quelle réponse respecterait le choix de la cliente ?",
-        "options": [
-          {
-            "label": "Encourager Cameron à rester",
-            "next": 5
-          },
-          {
-            "label": "Demander à la cliente si elle veut que son mari demeure ",
-            "next": 6
-          }
-        ],
-        "next": null
+        {
+          "label": " Se présenter à la famille",
+          "next": 2
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 2,
+      "title": "DP1_1",
+      "type": "video",
+      "data": "SG4_DP1_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
-      {
-        "id": 7,
-        "title": "DP2_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP2_2",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614627393"
+      "correct": true,
+      "feedback": "",
+      "message": "Comment procéder avec l’évaluation ?",
+      "options": [
+        {
+          "label": "Continuer l’évaluation",
+          "next": 3
         },
-        "correct": false,
-        "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
-        "message": "At this point in your assessment, can you provide any pain relief?",
-        "options": [
-          {
-            "label": "Provide medication",
-            "next": 8
-          },
-          {
-            "label": "Elevate ankle",
-            "next": 9
-          }
-        ],
-        "next": null
+        {
+          "label": "Obtenir la permission de la cliente",
+          "next": 4
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 3,
+      "title": "DP1_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP1_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
-      {
-        "id": 8,
-        "title": "DP2_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP2_3",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614628993"
+      "correct": false,
+      "feedback": "Quels effets pourraient découler de ne pas s’informer auprès de la cliente de ses préférences en ce qui a trait aux soins ni de les inclure le cas échéant ? Réfléchissez à l’importance de respecter les choix de la cliente et de promouvoir l’autonomie.",
+      "message": "Comment procéder avec l’évaluation ?",
+      "options": [
+        {
+          "label": "Continuer l’évaluation",
+          "next": 3
         },
-        "correct": false,
-        "feedback": "Medication administration takes time and requires a full assessment before an order can be obtained. The assessment will inform the pain medication route. Consider what immediate action you can take to enhance comfort and reduce pain for the client.",
-        "message": "At this point in your assessment, can you provide any pain relief?",
-        "options": [
-          {
-            "label": "Complete ankle assessment",
-            "next": 7
-          },
-          {
-            "label": "Elevate ankle",
-            "next": 9
-          }
-        ],
-        "next": null
+        {
+          "label": "Obtenir la permission de la cliente",
+          "next": 4
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 4,
+      "title": "DP2_1",
+      "type": "video",
+      "data": "SG4_DP2_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/635497123"
       },
-      {
-        "id": 9,
-        "title": "DP3_1",
-        "type": "video",
-        "data": "SG4_DP3_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629017"
+      "correct": true,
+      "feedback": "",
+      "message": "Quelle réponse respecterait le choix de la cliente ?",
+      "options": [
+        {
+          "label": "Encourager Cameron à rester",
+          "next": 5
         },
-        "correct": true,
-        "feedback": "",
-        "message": "What is your priority assessment related to Jason's symptoms?",
-        "options": [
-          {
-            "label": "Assess movement",
-            "next": 10
-          },
-          {
-            "label": "Assess kinaesthesia",
-            "next": 11
-          },
-          {
-            "label": "Peripheral Vascular",
-            "next": 12
-          }
-        ],
-        "next": null
+        {
+          "label": "Demander à la cliente si elle veut que son mari demeure ",
+          "next": 6
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 7,
+      "title": "DP2_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP2_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614627393"
       },
-      {
-        "id": 10,
-        "title": "DP3_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP3_2",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629071"
+      "correct": false,
+      "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
+      "message": "At this point in your assessment, can you provide any pain relief?",
+      "options": [
+        {
+          "label": "Provide medication",
+          "next": 8
         },
-        "correct": false,
-        "feedback": "At this time information about ROM is not the priority and does not help to  formulate a clinical judgement. We can expect movement to cause increased discomfort. Think about what might be causing the client to have numbness and tingling.",
-        "message": "What is your priority assessment related to Jason's symptoms?",
-        "options": [
-          {
-            "label": "Assess kinaesthesia",
-            "next": 11
-          },
-          {
-            "label": "Peripheral Vascular",
-            "next": 12
-          }
-        ],
-        "next": null
+        {
+          "label": "Elevate ankle",
+          "next": 9
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 8,
+      "title": "DP2_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP2_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614628993"
       },
-      {
-        "id": 11,
-        "title": "DP3_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP3_3",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629191"
+      "correct": false,
+      "feedback": "Medication administration takes time and requires a full assessment before an order can be obtained. The assessment will inform the pain medication route. Consider what immediate action you can take to enhance comfort and reduce pain for the client.",
+      "message": "At this point in your assessment, can you provide any pain relief?",
+      "options": [
+        {
+          "label": "Complete ankle assessment",
+          "next": 7
         },
-        "correct": false,
-        "feedback": "Kinesthesia is used to assess the posterior column tract of the sensory pathways. This assessment will not provide more information about Jason's symptoms of numbness and tingling. Consider another assessment that would provide you with increased understanding of Jason's symptoms.",
-        "message": "What is your priority assessment related to Jason's symptoms?",
-        "options": [
-          {
-            "label": "Assess movement",
-            "next": 10
-          },
-          {
-            "label": "Peripheral Vascular",
-            "next": 12
-          }
-        ],
-        "next": null
+        {
+          "label": "Elevate ankle",
+          "next": 9
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 9,
+      "title": "DP3_1",
+      "type": "video",
+      "data": "SG4_DP3_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629017"
       },
-      {
-        "id": 12,
-        "title": "DP4_1",
-        "type": "video",
-        "data": "SG4_DP4_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629613"
+      "correct": true,
+      "feedback": "",
+      "message": "What is your priority assessment related to Jason's symptoms?",
+      "options": [
+        {
+          "label": "Assess movement",
+          "next": 10
         },
-        "correct": true,
-        "feedback": "",
-        "message": "What do you do when you cannot feel Jason's pedal pulse?",
-        "options": [
-          {
-            "label": "Palpate right popliteal pulse",
-            "next": 13
-          },
-          {
-            "label": "Continue assessment",
-            "next": 14
-          },
-          {
-            "label": "Use doppler",
-            "next": 15
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 13,
-        "title": "DP4_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP4_2",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629791"
+        {
+          "label": "Assess kinaesthesia",
+          "next": 11
         },
-        "correct": false,
-        "feedback": "For Jason's ankle injury the most important pulses are the ones distal to the injury site. In this case, the popliteal pulse is proximal to the site of injury. Consider, what should the nurse do since they cannot palpate the pedal pulse?",
-        "message": "What do you do when you cannot feel Jason's pedal pulse?",
-        "options": [
-          {
-            "label": "Continue assessment",
-            "next": 14
-          },
-          {
-            "label": "Use doppler",
-            "next": 15
-          }
-        ],
-        "next": null
+        {
+          "label": "Peripheral Vascular",
+          "next": 12
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 10,
+      "title": "DP3_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP3_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629071"
       },
-      {
-        "id": 14,
-        "title": "DP4_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP4_3",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629916"
+      "correct": false,
+      "feedback": "At this time information about ROM is not the priority and does not help to  formulate a clinical judgement. We can expect movement to cause increased discomfort. Think about what might be causing the client to have numbness and tingling.",
+      "message": "What is your priority assessment related to Jason's symptoms?",
+      "options": [
+        {
+          "label": "Assess kinaesthesia",
+          "next": 11
         },
-        "correct": false,
-        "feedback": "The client's feet appear pink in colour bilaterally with cap refill <3 secs which suggests that there are no significant circulatory deficits.  However an absent pulse is a significant finding that requires confirmation and potentially immediate action.  Consider what is your next assessment when you cannot palpate the right pedal pulse.",
-        "message": "What do you do when you cannot feel Jason's pedal pulse?",
-        "options": [
-          {
-            "label": "Palpate right popliteal pulse",
-            "next": 13
-          },
-          {
-            "label": "Use doppler",
-            "next": 15
-          }
-        ],
-        "next": null
+        {
+          "label": "Peripheral Vascular",
+          "next": 12
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 11,
+      "title": "DP3_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP3_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629191"
       },
-      {
-        "id": 15,
-        "title": "DP5_1",
-        "type": "video",
-        "data": "SG4_DP5_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629953"
+      "correct": false,
+      "feedback": "Kinesthesia is used to assess the posterior column tract of the sensory pathways. This assessment will not provide more information about Jason's symptoms of numbness and tingling. Consider another assessment that would provide you with increased understanding of Jason's symptoms.",
+      "message": "What is your priority assessment related to Jason's symptoms?",
+      "options": [
+        {
+          "label": "Assess movement",
+          "next": 10
         },
-        "correct": true,
-        "feedback": "",
-        "message": "How do you respond to Jason's change in behavour?",
-        "options": [
-          {
-            "label": "Assess level of conciousness",
-            "next": 18
-          },
-          {
-            "label": "Continue assessment",
-            "next": 16
-          },
-          {
-            "label": "Perform passive ROM",
-            "next": 17
-          }
-        ],
-        "next": null
+        {
+          "label": "Peripheral Vascular",
+          "next": 12
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 12,
+      "title": "DP4_1",
+      "type": "video",
+      "data": "SG4_DP4_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629613"
       },
-      {
-        "id": 16,
-        "title": "DP5_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP5_2",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630127"
+      "correct": true,
+      "feedback": "",
+      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "options": [
+        {
+          "label": "Palpate right popliteal pulse",
+          "next": 13
         },
-        "correct": false,
-        "feedback": "Think about Jason's change in responsiveness. What is a priority assessment to be completed based on the client's behaviour?",
-        "message": "How do you respond to Jason's change in behavour?",
-        "options": [
-          {
-            "label": "Perform passive ROM",
-            "next": 17
-          },
-          {
-            "label": "Assess level of conciousness",
-            "next": 18
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 17,
-        "title": "DP5_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP5_3",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630152"
+        {
+          "label": "Continue assessment",
+          "next": 14
         },
-        "correct": false,
-        "feedback": "Completing a passive ROM does not address the change in Jason's level of consciousness. Consider what is a priority assessment to be completed based on the client's behaviour.",
-        "message": "How do you respond to Jason's change in behavour?",
-        "options": [
-          {
-            "label": "Continue assessment",
-            "next": 16
-          },
-          {
-            "label": "Assess level of conciousness",
-            "next": 18
-          }
-        ],
-        "next": null
+        {
+          "label": "Use doppler",
+          "next": 15
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 13,
+      "title": "DP4_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP4_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629791"
       },
-      {
-        "id": 18,
-        "title": "DP6_1",
-        "type": "video",
-        "data": "SG4_DP6_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630423"
+      "correct": false,
+      "feedback": "For Jason's ankle injury the most important pulses are the ones distal to the injury site. In this case, the popliteal pulse is proximal to the site of injury. Consider, what should the nurse do since they cannot palpate the pedal pulse?",
+      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "options": [
+        {
+          "label": "Continue assessment",
+          "next": 14
         },
-        "correct": true,
-        "feedback": "",
-        "message": "What is Jason's Glasgow Coma Scale score?",
-        "options": [
-          {
-            "label": "10",
-            "next": 19
-          },
-          {
-            "label": "11",
-            "next": 22
-          },
-          {
-            "label": "12",
-            "next": 20
-          },
-          {
-            "label": "13",
-            "next": 21
-          }
-        ],
-        "next": null
+        {
+          "label": "Use doppler",
+          "next": 15
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 14,
+      "title": "DP4_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP4_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629916"
       },
-      {
-        "id": 19,
-        "title": "DP6_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP6_2",
-        "video": null,
-        "correct": false,
-        "feedback": "A Glasgow Coma reading of 10 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-        "message": "What is Jason's Glasgow Coma Scale score?",
-        "options": [
-          {
-            "label": "11",
-            "next": 22
-          },
-          {
-            "label": "12",
-            "next": 20
-          },
-          {
-            "label": "13",
-            "next": 21
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 20,
-        "title": "DP6_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP6_3",
-        "video": null,
-        "correct": false,
-        "feedback": "A Glasgow Coma reading of 12 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-        "message": "What is Jason's Glasgow Coma Scale score?",
-        "options": [
-          {
-            "label": "10",
-            "next": 19
-          },
-          {
-            "label": "11",
-            "next": 22
-          },
-          {
-            "label": "13",
-            "next": 21
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 21,
-        "title": "DP6_4 - wrong",
-        "type": "video",
-        "data": "SG4_DP6_4",
-        "video": null,
-        "correct": false,
-        "feedback": "A Glasgow Coma reading of 13 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-        "message": "What is Jason's Glasgow Coma Scale score?",
-        "options": [
-          {
-            "label": "10",
-            "next": 19
-          },
-          {
-            "label": "11",
-            "next": 22
-          },
-          {
-            "label": "12",
-            "next": 20
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 22,
-        "title": "DP7_1",
-        "type": "video",
-        "data": "SG4_DP7_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630446"
+      "correct": false,
+      "feedback": "The client's feet appear pink in colour bilaterally with cap refill <3 secs which suggests that there are no significant circulatory deficits.  However an absent pulse is a significant finding that requires confirmation and potentially immediate action.  Consider what is your next assessment when you cannot palpate the right pedal pulse.",
+      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "options": [
+        {
+          "label": "Palpate right popliteal pulse",
+          "next": 13
         },
-        "correct": true,
-        "feedback": "",
-        "message": "What is you assessment of Jason's pupils?",
-        "options": [
-          {
-            "label": "Sluggish",
-            "next": 25
-          },
-          {
-            "label": "Brisk",
-            "next": 23
-          },
-          {
-            "label": "Nystagus",
-            "next": 24
-          }
-        ],
-        "next": null
+        {
+          "label": "Use doppler",
+          "next": 15
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 15,
+      "title": "DP5_1",
+      "type": "video",
+      "data": "SG4_DP5_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614629953"
       },
-      {
-        "id": 23,
-        "title": "DP7_2 - wrong",
-        "type": "SG4_DP7_2",
-        "data": "pass-vid",
-        "video": null,
-        "correct": false,
-        "feedback": "The pupilary response was not brisk. Take some time to review the pupilary reaction again.",
-        "message": "What is you assessment of Jason's pupils?",
-        "options": [
-          {
-            "label": "Nystagus",
-            "next": 24
-          },
-          {
-            "label": "Sluggish",
-            "next": 25
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 24,
-        "title": "DP7_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP7_3",
-        "video": null,
-        "correct": false,
-        "feedback": "The pupilary response is not nystagmus (uncontrolled repetitive movements of the eyes). Take some time to review the pupilary reaction.",
-        "message": "What is you assessment of Jason's pupils?",
-        "options": [
-          {
-            "label": "Reactive",
-            "next": 23
-          },
-          {
-            "label": "Sluggish",
-            "next": 25
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 25,
-        "title": "DP8_1",
-        "type": "video",
-        "data": "SG4_DP8_1",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630449"
+      "correct": true,
+      "feedback": "",
+      "message": "How do you respond to Jason's change in behavour?",
+      "options": [
+        {
+          "label": "Assess level of conciousness",
+          "next": 18
         },
-        "correct": true,
-        "feedback": "",
-        "message": "How do you respond to Jason's seizure?",
-        "options": [
-          {
-            "label": "Turn to lateral position",
-            "next": 28
-          },
-          {
-            "label": "Insert oropharyngeal airway",
-            "next": 26
-          },
-          {
-            "label": "Restrain Jason",
-            "next": 27
-          }
-        ],
-        "next": null
-      },
-      {
-        "id": 26,
-        "title": "DP8_2 - wrong",
-        "type": "video",
-        "data": "SG4_DP8_2",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630466"
+        {
+          "label": "Continue assessment",
+          "next": 16
         },
-        "correct": false,
-        "feedback": "Often during a seizure the pateint clenches their teeth tightly making it difficult or impossible to insert an oral airway. Think of another way to protect Jason's airyway during a seizure.",
-        "message": "How do you respond to Jason's seizure?",
-        "options": [
-          {
-            "label": "Restrain Jason",
-            "next": 27
-          },
-          {
-            "label": "Turn to lateral position",
-            "next": 28
-          }
-        ],
-        "next": null
+        {
+          "label": "Perform passive ROM",
+          "next": 17
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 16,
+      "title": "DP5_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP5_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630127"
       },
-      {
-        "id": 27,
-        "title": "DP8_3 - wrong",
-        "type": "video",
-        "data": "SG4_DP8_3",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630503"
+      "correct": false,
+      "feedback": "Think about Jason's change in responsiveness. What is a priority assessment to be completed based on the client's behaviour?",
+      "message": "How do you respond to Jason's change in behavour?",
+      "options": [
+        {
+          "label": "Perform passive ROM",
+          "next": 17
         },
-        "correct": false,
-        "feedback": "Restraining movement during a seizure can cause injury including bruising and broken bones. It is more appropriate to adjust the environment around so that the client cannot injure himself.",
-        "message": "How do you respond to Jason's seizure?",
-        "options": [
-          {
-            "label": "Insert oropharyngeal airway",
-            "next": 26
-          },
-          {
-            "label": "Turn to lateral position",
-            "next": 28
-          }
-        ],
-        "next": null
+        {
+          "label": "Assess level of conciousness",
+          "next": 18
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 17,
+      "title": "DP5_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP5_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630152"
       },
-      {
-        "id": 28,
-        "type": "video",
-        "data": "SG4_DP9_0",
-        "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630565"
+      "correct": false,
+      "feedback": "Completing a passive ROM does not address the change in Jason's level of consciousness. Consider what is a priority assessment to be completed based on the client's behaviour.",
+      "message": "How do you respond to Jason's change in behavour?",
+      "options": [
+        {
+          "label": "Continue assessment",
+          "next": 16
         },
-        "correct": true,
-        "feedback": "",
-        "message": "",
-        "options": [],
-        "next": null
-      }
-    ]
-  }
-  
+        {
+          "label": "Assess level of conciousness",
+          "next": 18
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 18,
+      "title": "DP6_1",
+      "type": "video",
+      "data": "SG4_DP6_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630423"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is Jason's Glasgow Coma Scale score?",
+      "options": [
+        {
+          "label": "10",
+          "next": 19
+        },
+        {
+          "label": "11",
+          "next": 22
+        },
+        {
+          "label": "12",
+          "next": 20
+        },
+        {
+          "label": "13",
+          "next": 21
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 19,
+      "title": "DP6_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP6_2",
+      "video": null,
+      "correct": false,
+      "feedback": "A Glasgow Coma reading of 10 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
+      "message": "What is Jason's Glasgow Coma Scale score?",
+      "options": [
+        {
+          "label": "11",
+          "next": 22
+        },
+        {
+          "label": "12",
+          "next": 20
+        },
+        {
+          "label": "13",
+          "next": 21
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 20,
+      "title": "DP6_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP6_3",
+      "video": null,
+      "correct": false,
+      "feedback": "A Glasgow Coma reading of 12 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
+      "message": "What is Jason's Glasgow Coma Scale score?",
+      "options": [
+        {
+          "label": "10",
+          "next": 19
+        },
+        {
+          "label": "11",
+          "next": 22
+        },
+        {
+          "label": "13",
+          "next": 21
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 21,
+      "title": "DP6_4 - wrong",
+      "type": "video",
+      "data": "SG4_DP6_4",
+      "video": null,
+      "correct": false,
+      "feedback": "A Glasgow Coma reading of 13 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
+      "message": "What is Jason's Glasgow Coma Scale score?",
+      "options": [
+        {
+          "label": "10",
+          "next": 19
+        },
+        {
+          "label": "11",
+          "next": 22
+        },
+        {
+          "label": "12",
+          "next": 20
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 22,
+      "title": "DP7_1",
+      "type": "video",
+      "data": "SG4_DP7_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630446"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "What is you assessment of Jason's pupils?",
+      "options": [
+        {
+          "label": "Sluggish",
+          "next": 25
+        },
+        {
+          "label": "Brisk",
+          "next": 23
+        },
+        {
+          "label": "Nystagus",
+          "next": 24
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 23,
+      "title": "DP7_2 - wrong",
+      "type": "SG4_DP7_2",
+      "data": "pass-vid",
+      "video": null,
+      "correct": false,
+      "feedback": "The pupilary response was not brisk. Take some time to review the pupilary reaction again.",
+      "message": "What is you assessment of Jason's pupils?",
+      "options": [
+        {
+          "label": "Nystagus",
+          "next": 24
+        },
+        {
+          "label": "Sluggish",
+          "next": 25
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 24,
+      "title": "DP7_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP7_3",
+      "video": null,
+      "correct": false,
+      "feedback": "The pupilary response is not nystagmus (uncontrolled repetitive movements of the eyes). Take some time to review the pupilary reaction.",
+      "message": "What is you assessment of Jason's pupils?",
+      "options": [
+        {
+          "label": "Reactive",
+          "next": 23
+        },
+        {
+          "label": "Sluggish",
+          "next": 25
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 25,
+      "title": "DP8_1",
+      "type": "video",
+      "data": "SG4_DP8_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630449"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "How do you respond to Jason's seizure?",
+      "options": [
+        {
+          "label": "Turn to lateral position",
+          "next": 28
+        },
+        {
+          "label": "Insert oropharyngeal airway",
+          "next": 26
+        },
+        {
+          "label": "Restrain Jason",
+          "next": 27
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 26,
+      "title": "DP8_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP8_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630466"
+      },
+      "correct": false,
+      "feedback": "Often during a seizure the pateint clenches their teeth tightly making it difficult or impossible to insert an oral airway. Think of another way to protect Jason's airyway during a seizure.",
+      "message": "How do you respond to Jason's seizure?",
+      "options": [
+        {
+          "label": "Restrain Jason",
+          "next": 27
+        },
+        {
+          "label": "Turn to lateral position",
+          "next": 28
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 27,
+      "title": "DP8_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP8_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630503"
+      },
+      "correct": false,
+      "feedback": "Restraining movement during a seizure can cause injury including bruising and broken bones. It is more appropriate to adjust the environment around so that the client cannot injure himself.",
+      "message": "How do you respond to Jason's seizure?",
+      "options": [
+        {
+          "label": "Insert oropharyngeal airway",
+          "next": 26
+        },
+        {
+          "label": "Turn to lateral position",
+          "next": 28
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 28,
+      "type": "video",
+      "data": "SG4_DP9_0",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630565"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "",
+      "options": [],
+      "next": null
+    }
+  ]
+}

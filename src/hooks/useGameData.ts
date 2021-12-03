@@ -10,6 +10,12 @@ const games: Record<string, Record<string, GameDataShape>> = {
   post_partum: {
     fr: require("../games/post_partum_fr.json"),
   },
+  labor_delivery: {
+    fr: require("../games/labor_delivery_fr.json"),
+  },
+  teen_pregnancy: {
+    fr: require("../games/teen_pregnancy_fr.json"),
+  },
 };
 
 export interface DecisionPoint {

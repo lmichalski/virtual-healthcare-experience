@@ -29,20 +29,29 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="./games/crisis_intervention">
-                  <FormattedMessage
-                    id="Home.crisisIntervention"
-                    defaultMessage="Crisis Intervention"
-                    description="Crisis intervention game name"
-                  />
-                </Link>
-              </li>
-              <li>
                 <Link to="./games/post_partum">
                   <FormattedMessage
                     id="Home.postPartum_fr"
                     defaultMessage="Post Partum FR"
                     description="Post Partum Francais game name"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link to="./games/labor_delivery">
+                  <FormattedMessage
+                    id="Home.labor_delivery_fr"
+                    defaultMessage="Labor and Delivery FR"
+                    description="Labor and Delivery Francais game name"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link to="./games/teen_pregnancy">
+                  <FormattedMessage
+                    id="Home.teen_pregnancy_fr"
+                    defaultMessage="Teen Pregnancy FR"
+                    description="Teen Pregnancy Francais game name"
                   />
                 </Link>
               </li>
