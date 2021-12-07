@@ -290,18 +290,18 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "message": "Que devriez-vous faire après le massage du fond utérin ?",
       "options": [
         {
-          "label": "Palpate right popliteal pulse",
+          "label": "Offrir des médicaments contre la douleur",
           "next": 13
         },
         {
-          "label": "Continue assessment",
+          "label": "Examiner l’intraveineuse",
           "next": 14
         },
         {
-          "label": "Use doppler",
+          "label": "Vérifier s’il y a des saignements",
           "next": 15
         }
       ],
@@ -316,15 +316,15 @@
         "vimeo_url": "https://player.vimeo.com/video/614629791"
       },
       "correct": false,
-      "feedback": "For Jason's ankle injury the most important pulses are the ones distal to the injury site. In this case, the popliteal pulse is proximal to the site of injury. Consider, what should the nurse do since they cannot palpate the pedal pulse?",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "feedback": "Tenez compte de la réaction de l’utérus après le massage et les liens avec les signes vitaux. Est-il approprié d’offrir des médicaments contre la douleur à ce moment ?",
+      "message": "Que devriez-vous faire après le massage du fond utérin ?",
       "options": [
         {
-          "label": "Continue assessment",
+          "label": "Examiner l’intraveineuse",
           "next": 14
         },
         {
-          "label": "Use doppler",
+          "label": "Vérifier s’il y a des saignements",
           "next": 15
         }
       ],
@@ -339,15 +339,15 @@
         "vimeo_url": "https://player.vimeo.com/video/614629916"
       },
       "correct": false,
-      "feedback": "The client's feet appear pink in colour bilaterally with cap refill <3 secs which suggests that there are no significant circulatory deficits.  However an absent pulse is a significant finding that requires confirmation and potentially immediate action.  Consider what is your next assessment when you cannot palpate the right pedal pulse.",
-      "message": "What do you do when you cannot feel Jason's pedal pulse?",
+      "feedback": "Tenez compte de la réaction de l’utérus après le massage et les liens avec les signes vitaux.",
+      "message": "Que devriez-vous faire après le massage du fond utérin ?",
       "options": [
         {
-          "label": "Palpate right popliteal pulse",
-          "next": 13
+          "label": "Examiner l’intraveineuse",
+          "next": 14
         },
         {
-          "label": "Use doppler",
+          "label": "Vérifier s’il y a des saignements",
           "next": 15
         }
       ],
@@ -363,18 +363,18 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "How do you respond to Jason's change in behavour?",
+      "message": "Quelles autres interventions devriez-vous présenter à la cliente ?",
       "options": [
         {
-          "label": "Assess level of conciousness",
+          "label": "Offrir une vessie à glace",
           "next": 18
         },
         {
-          "label": "Continue assessment",
+          "label": "L’encourager à faire des exercices Kegel",
           "next": 16
         },
         {
-          "label": "Perform passive ROM",
+          "label": "Offrir un bain de siège chaud",
           "next": 17
         }
       ],
@@ -389,16 +389,16 @@
         "vimeo_url": "https://player.vimeo.com/video/614630127"
       },
       "correct": false,
-      "feedback": "Think about Jason's change in responsiveness. What is a priority assessment to be completed based on the client's behaviour?",
-      "message": "How do you respond to Jason's change in behavour?",
+      "feedback": "Tenez compte de l’intervention prioritaire en lien avec l’œdème du périnée et la douleur due aux hémorroïdes.",
+      "message": "Quelles autres interventions devriez-vous présenter à la cliente ?",
       "options": [
         {
-          "label": "Perform passive ROM",
-          "next": 17
+          "label": "Offrir une vessie à glace",
+          "next": 18
         },
         {
-          "label": "Assess level of conciousness",
-          "next": 18
+          "label": "Offrir un bain de siège chaud",
+          "next": 17
         }
       ],
       "next": null
@@ -412,16 +412,16 @@
         "vimeo_url": "https://player.vimeo.com/video/614630152"
       },
       "correct": false,
-      "feedback": "Completing a passive ROM does not address the change in Jason's level of consciousness. Consider what is a priority assessment to be completed based on the client's behaviour.",
-      "message": "How do you respond to Jason's change in behavour?",
+      "feedback": "Tenez compte des effets d’un liquide chaud sur le processus d’inflammation et sur la vasodilatation. ",
+      "message": "Quelles autres interventions devriez-vous présenter à la cliente ?",
       "options": [
         {
-          "label": "Continue assessment",
-          "next": 16
+          "label": "Offrir une vessie à glace",
+          "next": 18
         },
         {
-          "label": "Assess level of conciousness",
-          "next": 18
+          "label": "L’encourager à faire des exercices Kegel",
+          "next": 16
         }
       ],
       "next": null
@@ -436,22 +436,18 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "message": "Que répondez-vous quant aux mesures supplémentaires pour la cliente ?",
       "options": [
         {
-          "label": "10",
+          "label": "Continuer uniquement d’utiliser la vessie à glace",
           "next": 19
         },
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "12",
+          "label": "Proposer un coussin en forme de beigne",
           "next": 20
         },
         {
-          "label": "13",
+          "label": "Discuter des techniques de nettoyage du périnée",
           "next": 21
         }
       ],
@@ -464,19 +460,15 @@
       "data": "SG4_DP6_2",
       "video": null,
       "correct": false,
-      "feedback": "A Glasgow Coma reading of 10 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "feedback": "Quelles autres interventions pourraient être utiles pour l’inflammation du périnée et ses soins ? Il est nécessaire de reconnaître que la cliente est prête à prendre ses soins en mains et qu’il est important de l’éduquer à ce sujet.",
+      "message": "Que répondez-vous quant aux mesures supplémentaires pour la cliente ?",
       "options": [
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "12",
+          "label": "Proposer un coussin en forme de beigne",
           "next": 20
         },
         {
-          "label": "13",
+          "label": "Discuter des techniques de nettoyage du périnée",
           "next": 21
         }
       ],
@@ -489,19 +481,15 @@
       "data": "SG4_DP6_3",
       "video": null,
       "correct": false,
-      "feedback": "A Glasgow Coma reading of 12 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
+      "feedback": "Repassez les interventions possibles et les facteurs de risques associés à l’utilisation de coussins en forme de beigne pour les soins du périnée post-partum.",
+      "message": "Que répondez-vous quant aux mesures supplémentaires pour la cliente ?",
       "options": [
         {
-          "label": "10",
+          "label": "Continuer uniquement d’utiliser la vessie à glace",
           "next": 19
         },
         {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "13",
+          "label": "Discuter des techniques de nettoyage du périnée",
           "next": 21
         }
       ],
@@ -509,31 +497,6 @@
     },
     {
       "id": 21,
-      "title": "DP6_4 - wrong",
-      "type": "video",
-      "data": "SG4_DP6_4",
-      "video": null,
-      "correct": false,
-      "feedback": "A Glasgow Coma reading of 13 is not correct. Review the assessment again to determine Jason's Glascow Coma Scale.",
-      "message": "What is Jason's Glasgow Coma Scale score?",
-      "options": [
-        {
-          "label": "10",
-          "next": 19
-        },
-        {
-          "label": "11",
-          "next": 22
-        },
-        {
-          "label": "12",
-          "next": 20
-        }
-      ],
-      "next": null
-    },
-    {
-      "id": 22,
       "title": "DP7_1",
       "type": "video",
       "data": "SG4_DP7_1",
@@ -542,67 +505,67 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "What is you assessment of Jason's pupils?",
+      "message": "Quels sont les signes et les symptômes d’une infection ?",
       "options": [
         {
-          "label": "Sluggish",
-          "next": 25
-        },
-        {
-          "label": "Brisk",
-          "next": 23
-        },
-        {
-          "label": "Nystagus",
+          "label": "Augmentation de la douleur et fièvre",
           "next": 24
+        },
+        {
+          "label": "Saignements accrus et diaphorèse",
+          "next": 22
+        },
+        {
+          "label": "Augmentation de l’œdème et démangeaisons",
+          "next": 23
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 22,
+      "title": "DP7_2 - wrong",
+      "type": "SG4_DP7_2",
+      "data": "pass-vid",
+      "video": null,
+      "correct": false,
+      "feedback": "Rappelez-vous le premier jour. Une augmentation des saignements peut indiquer une hémorragie due à des produits retenus (p. ex. le placenta) ou à des déchirures de l’appareil génital inférieur. ",
+      "message": "Quels sont les signes et les symptômes d’une infection ?",
+      "options": [
+        {
+          "label": "Augmentation de la douleur et fièvre",
+          "next": 24
+        },
+        {
+          "label": "Augmentation de l’œdème et démangeaisons",
+          "next": 23
         }
       ],
       "next": null
     },
     {
       "id": 23,
-      "title": "DP7_2 - wrong",
-      "type": "SG4_DP7_2",
-      "data": "pass-vid",
+      "title": "DP7_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP7_3",
       "video": null,
       "correct": false,
-      "feedback": "The pupilary response was not brisk. Take some time to review the pupilary reaction again.",
-      "message": "What is you assessment of Jason's pupils?",
+      "feedback": "L’œdème et les démangeaisons peuvent indiquer une autre complication, mais n’indiquent pas nécessairement une infection. Revoyez les signes et les symptômes d’une infection.",
+      "message": "Quels sont les signes et les symptômes d’une infection ?",
       "options": [
         {
-          "label": "Nystagus",
+          "label": "Augmentation de la douleur et fièvre",
           "next": 24
         },
         {
-          "label": "Sluggish",
-          "next": 25
+          "label": "Saignements accrus et diaphorèse",
+          "next": 22
         }
       ],
       "next": null
     },
     {
       "id": 24,
-      "title": "DP7_3 - wrong",
-      "type": "video",
-      "data": "SG4_DP7_3",
-      "video": null,
-      "correct": false,
-      "feedback": "The pupilary response is not nystagmus (uncontrolled repetitive movements of the eyes). Take some time to review the pupilary reaction.",
-      "message": "What is you assessment of Jason's pupils?",
-      "options": [
-        {
-          "label": "Reactive",
-          "next": 23
-        },
-        {
-          "label": "Sluggish",
-          "next": 25
-        }
-      ],
-      "next": null
-    },
-    {
-      "id": 25,
       "title": "DP8_1",
       "type": "video",
       "data": "SG4_DP8_1",
@@ -611,25 +574,25 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "How do you respond to Jason's seizure?",
+      "message": "En apprenant que la dernière fois que Hannah a été nourrie c’était il y a 6 heures, que feriez-vous ?",
       "options": [
         {
-          "label": "Turn to lateral position",
-          "next": 28
+          "label": "Demander la permission de réveiller le bébé.",
+          "next": 25
         },
         {
-          "label": "Insert oropharyngeal airway",
+          "label": "Laisser le bébé dormir",
           "next": 26
         },
         {
-          "label": "Restrain Jason",
+          "label": "Réveiller le bébé",
           "next": 27
         }
       ],
       "next": null
     },
     {
-      "id": 26,
+      "id": 25,
       "title": "DP8_2 - wrong",
       "type": "video",
       "data": "SG4_DP8_2",
@@ -637,22 +600,22 @@
         "vimeo_url": "https://player.vimeo.com/video/614630466"
       },
       "correct": false,
-      "feedback": "Often during a seizure the pateint clenches their teeth tightly making it difficult or impossible to insert an oral airway. Think of another way to protect Jason's airyway during a seizure.",
-      "message": "How do you respond to Jason's seizure?",
+      "feedback": "Tenez compte de la fréquence d’allaitement chez les nouveau-nés et rappelez-vous les signes de faim qu’un nouveau-né pourrait donner. Réfléchissez au rôle que joue l’infirmière dans l’éducation d’une nouvelle mère en lien avec l’importance d’un l’allaitement efficace. ",
+      "message": "En apprenant que la dernière fois que Hannah a été nourrie c’était il y a 6 heures, que feriez-vous ?",
       "options": [
         {
-          "label": "Restrain Jason",
-          "next": 27
+          "label": "Laisser le bébé dormir",
+          "next": 26
         },
         {
-          "label": "Turn to lateral position",
-          "next": 28
+          "label": "Réveiller le bébé",
+          "next": 27
         }
       ],
       "next": null
     },
     {
-      "id": 27,
+      "id": 26,
       "title": "DP8_3 - wrong",
       "type": "video",
       "data": "SG4_DP8_3",
@@ -660,24 +623,170 @@
         "vimeo_url": "https://player.vimeo.com/video/614630503"
       },
       "correct": false,
-      "feedback": "Restraining movement during a seizure can cause injury including bruising and broken bones. It is more appropriate to adjust the environment around so that the client cannot injure himself.",
-      "message": "How do you respond to Jason's seizure?",
+      "feedback": "Tenez compte de la fréquence d’allaitement chez les nouveau-nés et rappelez-vous les signes de faim qu’un nouveau-né pourrait donner. Révisez la fréquence d’allaitement d’un nouveau-né et l’importance d’une nutrition adéquate.",
+      "message": "En apprenant que la dernière fois que Hannah a été nourrie c’était il y a 6 heures, que feriez-vous ?",
       "options": [
         {
-          "label": "Insert oropharyngeal airway",
-          "next": 26
+          "label": "Demander la permission de réveiller le bébé.",
+          "next": 25
         },
         {
-          "label": "Turn to lateral position",
+          "label": "Réveiller le bébé",
+          "next": 27
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 27,
+      "title": "DP9_1",
+      "type": "video",
+      "data": "SG4_DP9_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630449"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "Comment expliquer si le nourrisson prend assez de lait ?",
+      "options": [
+        {
+          "label": "La durée de chaque boire",
           "next": 28
+        },
+        {
+          "label": "Allaiter toutes les quatre heures",
+          "next": 29
+        },
+        {
+          "label": "Compter le nombre de couches mouillées",
+          "next": 30
         }
       ],
       "next": null
     },
     {
       "id": 28,
+      "title": "DP9_2 - wrong",
       "type": "video",
-      "data": "SG4_DP9_0",
+      "data": "SG4_DP9_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630503"
+      },
+      "correct": false,
+      "feedback": "Révisez la charte d’allaitement. Tenez compte du nombre de fois qu’un nourrisson de deux jours doit allaiter et le nombre de couches mouillées et sales auxquelles il faut s’attendre.",
+      "message": "Comment expliquer si le nourrisson prend assez de lait ?",
+      "options": [
+        {
+          "label": "Allaiter toutes les quatre heures",
+          "next": 29
+        },
+        {
+          "label": "Compter le nombre de couches mouillées",
+          "next": 30
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 29,
+      "title": "DP9_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP9_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630503"
+      },
+      "correct": false,
+      "feedback": "Révisez la charte d’allaitement. Pour les deux premières semaines suivant la naissance, le bébé devrait allaiter au moins 8 fois par jour. Le bébé doit téter avec vigueur, mais lentement et doit avaler souvent.",
+      "message": "Comment expliquer si le nourrisson prend assez de lait ?",
+      "options": [
+        {
+          "label": "La durée de chaque boire",
+          "next": 28
+        },
+        {
+          "label": "Compter le nombre de couches mouillées",
+          "next": 30
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 30,
+      "title": "DP10_1",
+      "type": "video",
+      "data": "SG4_DP10_1",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630449"
+      },
+      "correct": true,
+      "feedback": "",
+      "message": "Dans quelle position doit-on placer un nouveau-né pour dormir ?",
+      "options": [
+        {
+          "label": "Sur le ventre",
+          "next": 31
+        },
+        {
+          "label": "N’importe quelle position",
+          "next": 32
+        },
+        {
+          "label": "Sur le dos",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 31,
+      "title": "DP10_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP10_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630503"
+      },
+      "correct": false,
+      "feedback": "Passer en revue le syndrome de mort subite du nourrisson (SMSN) et les pratiques de sommeil sûres pour endormir un nouveau-né.",
+      "message": "Dans quelle position doit-on placer un nouveau-né pour dormir ?",
+      "options": [
+        {
+          "label": "N’importe quelle position",
+          "next": 32
+        },
+        {
+          "label": "Sur le dos",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 32,
+      "title": "DP10_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP10_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/614630503"
+      },
+      "correct": false,
+      "feedback": "Passer en revue les pratiques de sommeil sûres pour endormir un nouveau-né et les liens avec le syndrome de mort subite du nourrisson (SMSN). Toutes les positions de sommeil ne sont pas sûres pour les nouveau-nés. ",
+      "message": "Dans quelle position doit-on placer un nouveau-né pour dormir ?",
+      "options": [
+        {
+          "label": "Sur le ventre",
+          "next": 31
+        },
+        {
+          "label": "Sur le dos",
+          "next": 33
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 32,
+      "type": "video",
+      "data": "SG4_DP11_0",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/614630565"
       },
