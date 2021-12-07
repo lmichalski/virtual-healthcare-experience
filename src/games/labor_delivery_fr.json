@@ -14,7 +14,7 @@
     },
     "intro": {
       "introCards": [
-        "You are Nicola Sporoli, a nurse caring for patients in the ambulatory care setting of the ER. Your next patient is Jason, whose chief complaint is ankle pain. The triage nurse took Jason’s vitals 10 minute ago and they were: BP138/88 P 96 (reg) R 20"
+        "Vous assumez le rôle d’un infirmier travaillant dans l’unité de travail et d’accouchement. Rachel Spencer vient tout juste d’arriver et vous est confiée. Vous devez procéder à son évaluation. On vous dit qu’elle est seule, mais que son mari, Patrick, est en route. Son dossier prénatal indique un résultat négatif pour la présence de streptocoque B et elle ne présente aucun antécédent médical qui pourrait affecter son travail ou l’accouchement."
       ]
     },
     "objectives": {
@@ -50,7 +50,7 @@
       "type": "video",
       "data": "SG4_DP1_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584609"
       },
       "correct": false,
       "feedback": "",
@@ -77,7 +77,7 @@
       "type": "video",
       "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584761"
       },
             "correct": false,
       "feedback": "Pour l’instant, il n’y a pas assez d’information pour déterminer si Rachel a commencé son travail actif. Pouvez-vous trouver une réponse plus appropriée qui ne présente pas de fausses attentes?",
@@ -100,7 +100,7 @@
       "type": "video",
       "data": "SG4_DP1_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584784"
       },
             "correct": false,
       "feedback": "Pour l’instant, il n’y a pas assez d’information pour déterminer si Rachel est en faux travail. Pouvez-vous trouver une réponse plus appropriée qui ne découragera pas Rachel?",
@@ -123,7 +123,7 @@
       "type": "video",
       "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584831"
       },
       "correct": true,
       "feedback": "",
@@ -150,7 +150,7 @@
       "type": "video",
       "data": "SG4_DP1_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584927"
       },
       "correct": false,
       "feedback": "Ce n’est pas le meilleur endroit pour prendre la fréquence cardiaque fœtale. Les manœuvres de Léopold sont utilisées entre autres pour déterminer le meilleur endroit pour entendre la fréquence cardiaque fœtale. Tenez compte des renseignements fournis pour déterminer le meilleur endroit pour prendre la fréquence cardiaque.",
@@ -173,7 +173,7 @@
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652584988"
       },
       "correct": false,
       "feedback": "Ce n’est pas le meilleur endroit pour prendre la fréquence cardiaque fœtale. Les manœuvres de Léopold sont utilisées entre autres pour déterminer le meilleur endroit pour entendre la fréquence cardiaque fœtale. Tenez compte des renseignements fournis pour déterminer le meilleur endroit pour prendre la fréquence cardiaque.",
@@ -196,7 +196,7 @@
       "type": "video",
       "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585071"
       },
       "correct": true,
       "feedback": "",
@@ -223,7 +223,7 @@
       "type": "video",
       "data": "SG4_DP3_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585298"
       },
       "correct": false,
       "feedback": "Il existe de nombreuses variables qui font que la pression artérielle de Rachel peut être élevée, incluant avoir pris la pression pendant une contraction. Il faut donc la reprendre afin d’assurer que la pression ne demeure pas élevée. Dans une situation comme celle-ci, tenez compte de toutes les variables qui peuvent agir sur les signes vitaux et qui peuvent faire monter la pression artérielle. ",
@@ -269,7 +269,7 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585367"
       },
       "correct": true,
       "feedback": "",
@@ -296,7 +296,7 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585394"
       },
       "correct": false,
       "feedback": "Cette réponse constitue une intervention qui a comme but de réduire l’anxiété, mais Rachel n’a pas encore complètement été évaluée. Tenez compte des mesures prioritaires selon les données sur la patiente que vous possédez présentement.",
@@ -319,7 +319,7 @@
       "type": "video",
       "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585417"
       },
       "correct": false,
       "feedback": "Il faut faire preuve de communication thérapeutique dans une situation comme celle-ci. Demander à Rachel de se calmer n’est pas une façon efficace de traiter son anxiété.",
@@ -342,7 +342,7 @@
       "type": "video",
       "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585426"
       },
       "correct": true,
       "feedback": "",
@@ -369,7 +369,7 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585550"
       },
       "correct": false,
       "feedback": "Il est important de se livrer à une évaluation complète avant d’offrir des médicaments à Rachel pour contrôler sa douleur. N’oubliez pas de compléter l’évaluation avant d’offrir des médicaments qui pourraient être contrindiqués.",
@@ -392,7 +392,7 @@
       "type": "video",
       "data": "SG4_DP5_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585563"
       },
       "correct": false,
       "feedback": "Marcher peut faire partie des stratégies qui permettent de soulager la douleur, mais ça pourrait également être contrindiqué pour Rachel. N’oubliez pas de compléter l’évaluation avant de proposer des interventions.",
@@ -415,7 +415,7 @@
       "type": "video",
       "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585575"
       },
       "correct": true,
       "feedback": "",
@@ -442,7 +442,7 @@
       "type": "video",
       "data": "SG4_DP6_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630127"
+        "vimeo_url": "https://player.vimeo.com/video/652585782"
       },
       "correct": false,
       "feedback": "Bien qu’il soit vrai que la membrane se rompt souvent pendant une contraction, il faut quand même mener une évaluation fœtale précise. De plus, il n’est pas approprié d’offrir un réconfort sans avoir complété une évaluation. ",
@@ -465,7 +465,7 @@
       "type": "video",
       "data": "SG4_DP6_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630152"
+        "vimeo_url": "https://player.vimeo.com/video/652585803"
       },
       "correct": false,
       "feedback": "Un examen vaginal n’est pas la première chose à faire après la rupture des membranes. Revoyez quelles évaluations vous devriez prioriser à ce moment.",
@@ -488,7 +488,7 @@
         "type": "video",
         "data": "SG4_DP7_1",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629953"
+          "vimeo_url": "https://player.vimeo.com/video/652585833"
         },
         "correct": true,
         "feedback": "",
@@ -511,9 +511,9 @@
       },
       {
         "id": 19,
-        "title": "DP6_2 - wrong",
+        "title": "DP7_2 - wrong",
         "type": "video",
-        "data": "SG4_DP6_2",
+        "data": "SG4_DP7_2",
         "video": {
           "vimeo_url": "https://player.vimeo.com/video/614630127"
         },
@@ -534,9 +534,9 @@
       },
       {
         "id": 20,
-        "title": "DP6_3 - wrong",
+        "title": "DP7_3 - wrong",
         "type": "video",
-        "data": "SG4_DP6_3",
+        "data": "SG4_DP7_3",
         "video": {
           "vimeo_url": "https://player.vimeo.com/video/614630152"
         },

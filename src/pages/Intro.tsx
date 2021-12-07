@@ -30,7 +30,7 @@ const Intro: React.FC<iProps> = ({ strings }) => {
     <div className="container">
       <div className="panel intro">
         <div className="main">
-          <div className="content">{text}</div>
+          <div className="intro-content">{text}</div>
         </div>
         <footer>
           <p className="controls">

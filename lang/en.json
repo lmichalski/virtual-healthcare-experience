@@ -35,9 +35,9 @@
     "defaultMessage": "Post Partum FR",
     "description": "Post Partum Francais game name"
   },
-  "Home.teen_pregnancy_fr": {
-    "defaultMessage": "Teen Pregnancy FR",
-    "description": "Teen Pregnancy Francais game name"
+  "Home.prenatal_fr": {
+    "defaultMessage": "Prenatal FR",
+    "description": "Prenatal Francais game name"
   },
   "Home.title": {
     "defaultMessage": "Virtual Healthcare Experence",
