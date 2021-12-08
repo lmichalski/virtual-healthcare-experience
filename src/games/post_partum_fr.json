@@ -1,8 +1,8 @@
 {
   "colors": {
-    "--theme-light": "#BA9B8E",
-    "--theme-dark": "#814B38",
-    "--theme-primary": "#6F313C",
+    "--theme-light": "#F7BEC0",
+    "--theme-dark": "#E7625F",
+    "--theme-primary": "#C85250",
     "--link-color": "#000",
     "--primary-text-color": "#fff",
     "--primary-text-highlight": "#000",
@@ -52,7 +52,7 @@
       "type": "video",
       "data": "SG4_DP1_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/654619565"
       },
       "correct": false,
       "feedback": "",
@@ -73,9 +73,9 @@
       "id": 1,
       "title": "DP0_1 - wrong",
       "type": "video",
-      "data": "SG4_DP0_1",
+      "data": "SG4_DP1_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/654619570"
       },
       "correct": false,
       "feedback": "Consider the impact of responding defensively on the nurse-client therapeutic relationship. Reflect on the client's feelings being new parents. How should you respond to build rapport and trust in the nurse client therapeutic relationship?",
@@ -96,9 +96,9 @@
       "id": 2,
       "title": "DP1_1",
       "type": "video",
-      "data": "SG4_DP1_1",
+      "data": "SG4_DP2_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/654619584"
       },
       "correct": true,
       "feedback": "",
@@ -117,11 +117,11 @@
     },
     {
       "id": 3,
-      "title": "DP1_2 - wrong",
+      "title": "DP2_2 - wrong",
       "type": "video",
-      "data": "SG4_DP1_2",
+      "data": "SG4_DP2_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/654619601"
       },
       "correct": false,
       "feedback": "Quels effets pourraient découler de ne pas s’informer auprès de la cliente de ses préférences en ce qui a trait aux soins ni de les inclure le cas échéant ? Réfléchissez à l’importance de respecter les choix de la cliente et de promouvoir l’autonomie.",
@@ -140,11 +140,11 @@
     },
     {
       "id": 4,
-      "title": "DP2_1",
+      "title": "DP3_1",
       "type": "video",
-      "data": "SG4_DP2_1",
+      "data": "SG4_DP3_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/654619622"
       },
       "correct": true,
       "feedback": "",
@@ -163,11 +163,11 @@
     },
     {
       "id": 7,
-      "title": "DP2_2 - wrong",
+      "title": "DP3_2 - wrong",
       "type": "video",
       "data": "SG4_DP2_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614627393"
+        "vimeo_url": "https://player.vimeo.com/video/654619670"
       },
       "correct": false,
       "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
@@ -186,7 +186,7 @@
     },
     {
       "id": 8,
-      "title": "DP2_3 - wrong",
+      "title": "DP3_3 - wrong",
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
@@ -286,7 +286,7 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629613"
+        "vimeo_url": "https://player.vimeo.com/video/654619772"
       },
       "correct": true,
       "feedback": "",
@@ -313,7 +313,7 @@
       "type": "video",
       "data": "SG4_DP4_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629791"
+        "vimeo_url": "https://player.vimeo.com/video/654619802"
       },
       "correct": false,
       "feedback": "Tenez compte de la réaction de l’utérus après le massage et les liens avec les signes vitaux. Est-il approprié d’offrir des médicaments contre la douleur à ce moment ?",
@@ -336,7 +336,7 @@
       "type": "video",
       "data": "SG4_DP4_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629916"
+        "vimeo_url": "https://player.vimeo.com/video/654619816"
       },
       "correct": false,
       "feedback": "Tenez compte de la réaction de l’utérus après le massage et les liens avec les signes vitaux.",
@@ -359,7 +359,7 @@
       "type": "video",
       "data": "SG4_DP5_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629953"
+        "vimeo_url": "https://player.vimeo.com/video/654619828"
       },
       "correct": true,
       "feedback": "",
@@ -432,7 +432,7 @@
       "type": "video",
       "data": "SG4_DP6_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630423"
+        "vimeo_url": "https://player.vimeo.com/video/654619950"
       },
       "correct": true,
       "feedback": "",
@@ -458,7 +458,9 @@
       "title": "DP6_2 - wrong",
       "type": "video",
       "data": "SG4_DP6_2",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654619981"
+      },
       "correct": false,
       "feedback": "Quelles autres interventions pourraient être utiles pour l’inflammation du périnée et ses soins ? Il est nécessaire de reconnaître que la cliente est prête à prendre ses soins en mains et qu’il est important de l’éduquer à ce sujet.",
       "message": "Que répondez-vous quant aux mesures supplémentaires pour la cliente ?",
@@ -479,7 +481,9 @@
       "title": "DP6_3 - wrong",
       "type": "video",
       "data": "SG4_DP6_3",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654619994"
+      },
       "correct": false,
       "feedback": "Repassez les interventions possibles et les facteurs de risques associés à l’utilisation de coussins en forme de beigne pour les soins du périnée post-partum.",
       "message": "Que répondez-vous quant aux mesures supplémentaires pour la cliente ?",
@@ -501,7 +505,7 @@
       "type": "video",
       "data": "SG4_DP7_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630446"
+        "vimeo_url": "https://player.vimeo.com/video/654620087"
       },
       "correct": true,
       "feedback": "",
@@ -527,7 +531,9 @@
       "title": "DP7_2 - wrong",
       "type": "SG4_DP7_2",
       "data": "pass-vid",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654620107"
+      },
       "correct": false,
       "feedback": "Rappelez-vous le premier jour. Une augmentation des saignements peut indiquer une hémorragie due à des produits retenus (p. ex. le placenta) ou à des déchirures de l’appareil génital inférieur. ",
       "message": "Quels sont les signes et les symptômes d’une infection ?",
@@ -548,7 +554,9 @@
       "title": "DP7_3 - wrong",
       "type": "video",
       "data": "SG4_DP7_3",
-      "video": null,
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654620147"
+      },
       "correct": false,
       "feedback": "L’œdème et les démangeaisons peuvent indiquer une autre complication, mais n’indiquent pas nécessairement une infection. Revoyez les signes et les symptômes d’une infection.",
       "message": "Quels sont les signes et les symptômes d’une infection ?",
@@ -570,7 +578,7 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630449"
+        "vimeo_url": "https://player.vimeo.com/video/654620198"
       },
       "correct": true,
       "feedback": "",
@@ -597,7 +605,7 @@
       "type": "video",
       "data": "SG4_DP8_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630466"
+        "vimeo_url": "https://player.vimeo.com/video/654620225"
       },
       "correct": false,
       "feedback": "Tenez compte de la fréquence d’allaitement chez les nouveau-nés et rappelez-vous les signes de faim qu’un nouveau-né pourrait donner. Réfléchissez au rôle que joue l’infirmière dans l’éducation d’une nouvelle mère en lien avec l’importance d’un l’allaitement efficace. ",
@@ -620,7 +628,7 @@
       "type": "video",
       "data": "SG4_DP8_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": "https://player.vimeo.com/video/654620238"
       },
       "correct": false,
       "feedback": "Tenez compte de la fréquence d’allaitement chez les nouveau-nés et rappelez-vous les signes de faim qu’un nouveau-né pourrait donner. Révisez la fréquence d’allaitement d’un nouveau-né et l’importance d’une nutrition adéquate.",
@@ -643,7 +651,7 @@
       "type": "video",
       "data": "SG4_DP9_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630449"
+        "vimeo_url": "https://player.vimeo.com/video/654620251"
       },
       "correct": true,
       "feedback": "",
@@ -670,7 +678,7 @@
       "type": "video",
       "data": "SG4_DP9_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": "https://player.vimeo.com/video/654620286"
       },
       "correct": false,
       "feedback": "Révisez la charte d’allaitement. Tenez compte du nombre de fois qu’un nourrisson de deux jours doit allaiter et le nombre de couches mouillées et sales auxquelles il faut s’attendre.",
@@ -693,7 +701,7 @@
       "type": "video",
       "data": "SG4_DP9_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": "https://player.vimeo.com/video/654620292"
       },
       "correct": false,
       "feedback": "Révisez la charte d’allaitement. Pour les deux premières semaines suivant la naissance, le bébé devrait allaiter au moins 8 fois par jour. Le bébé doit téter avec vigueur, mais lentement et doit avaler souvent.",
@@ -716,7 +724,7 @@
       "type": "video",
       "data": "SG4_DP10_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630449"
+        "vimeo_url": "https://player.vimeo.com/video/654620327"
       },
       "correct": true,
       "feedback": "",
@@ -743,7 +751,7 @@
       "type": "video",
       "data": "SG4_DP10_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": "https://player.vimeo.com/video/654620363"
       },
       "correct": false,
       "feedback": "Passer en revue le syndrome de mort subite du nourrisson (SMSN) et les pratiques de sommeil sûres pour endormir un nouveau-né.",
@@ -766,7 +774,7 @@
       "type": "video",
       "data": "SG4_DP10_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630503"
+        "vimeo_url": "https://player.vimeo.com/video/654620383"
       },
       "correct": false,
       "feedback": "Passer en revue les pratiques de sommeil sûres pour endormir un nouveau-né et les liens avec le syndrome de mort subite du nourrisson (SMSN). Toutes les positions de sommeil ne sont pas sûres pour les nouveau-nés. ",
@@ -788,7 +796,7 @@
       "type": "video",
       "data": "SG4_DP11_0",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630565"
+        "vimeo_url": "https://player.vimeo.com/video/654620389"
       },
       "correct": true,
       "feedback": "",

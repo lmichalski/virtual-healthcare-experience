@@ -49,6 +49,9 @@
           "id": 0,
           "type": "video",
           "data": "SG4_DP1_0",
+          "video": {
+            "vimeo_url": "https://player.vimeo.com/video/652587646"
+          },
           "correct": false,
           "feedback": "",
           "message": "Comment devez-vous procéder avec l’entretien ?",
@@ -73,7 +76,7 @@
           "type": "video",
           "data": "SG4_DP1_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652587670"
           },
           "correct": false,
           "feedback": "Lorsque vous avez félicité Maddie pour sa grossesse, vous avez présumé que cela la rendait heureuse. Essayez de trouver une autre approche qui permettrait à Maddie d’exprimer d’elle-même comment elle se sent par rapport à sa grossesse. ",
@@ -93,9 +96,9 @@
         {
           "id": 2,
           "type": "video",
-          "data": "SG4_DP1_1",
+          "data": "SG4_DP1_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676181"
           },
           "correct": false,
           "feedback": "Des questions commençant avec «pourquoi» peuvent suggérer un reproche et faire en sorte que la patiente adopte une attitude défensive. Maddie a pris rendez-vous pour une raison précise : elle demande des soins prénataux.",
@@ -117,7 +120,7 @@
           "type": "video",
           "data": "SG4_DP2_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652587734"
           },
           "correct": true,
           "feedback": "",
@@ -144,7 +147,7 @@
           "type": "video",
           "data": "SG4_DP2_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676339"
           },
           "correct": false,
           "feedback": "Cette question sur le mari de Maddie laisse entrevoir de l’hétérosexisme et suppose que toute grossesse arrive dans un contexte de mariage. Essayez de trouver une autre façon de poser des questions sur les gens présents dans la vie de Maddie.",
@@ -166,7 +169,7 @@
           "type": "video",
           "data": "SG4_DP2_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676318"
           },
           "correct": false,
           "feedback": "Cette question est très limitative et assume l’existence d’un ou d’une partenaire, ou encore qu’il est nécessaire d’être en couple pour avoir un bébé. Essayez de trouver une autre façon de poser des questions sur les gens dans sa vie",
@@ -188,7 +191,7 @@
           "type": "video",
           "data": "SG4_DP3_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676361"
           },
           "correct": true,
           "feedback": "",
@@ -214,7 +217,7 @@
           "type": "video",
           "data": "SG4_DP3_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676527"
           },
           "correct": false,
           "feedback": "La règle de Naegele consiste à ajouter 7 jours à la date du premier jour des dernières menstruations et à y soustraire 3 mois. Il y a donc eu erreur de calcul, et la date prévue d’accouchement n’est pas le 26 octobre. Quelles autres étapes doivent être observées lors du calcul avec la règle de Naegele pour assurer la précision du calcul de la date prévue d’accouchement de Maddie ? ",
@@ -236,7 +239,7 @@
           "type": "video",
           "data": "SG4_DP3_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676480"
           },
           "correct": false,
           "feedback": "La règle de Naegele présume un cycle menstruel de 28 jours. Comment pouvez-vous assurer que la règle de Naegele est utilisée à bon escient dans le cas de Maddie ? ",
@@ -258,7 +261,7 @@
           "type": "video",
           "data": "SG4_DP4_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676569"
           },
           "correct": true,
           "feedback": "",
@@ -284,7 +287,7 @@
           "type": "video",
           "data": "SG4_DP4_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676765"
           },
           "correct": false,
           "feedback": "",
@@ -306,7 +309,7 @@
           "type": "video",
           "data": "SG4_DP4_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676834"
           },
           "correct": false,
           "feedback": "Réfléchissez aux changements physiologiques qui peuvent survenir lors d’une grossesse.",
@@ -328,7 +331,7 @@
           "type": "video",
           "data": "SG4_DP4_2A",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676798"
           },
           "correct": false,
           "feedback": "Il est approprié de s’informer sur les étourdissements si le changement de pression artérielle vous cause des inquiétudes. Mais, il faut également se rappeler que pendant la grossesse, les changements hormonaux ont une incidence sur le système circulatoire. Rappelez-vous les changements qui surviennent aux signes vitaux chez les femmes enceintes.",
@@ -346,7 +349,7 @@
           "type": "video",
           "data": "SG4_DP5_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654676862"
           },
           "correct": true,
           "feedback": "",
@@ -372,7 +375,7 @@
           "type": "video",
           "data": "SG4_DP5_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677004"
           },
           "correct": false,
           "feedback": "Il peut y avoir des écarts dans les évaluations de la hauteur utérine. Dans le cas de Maddie, aucune autre donnée ne permet une comparaison. Il est donc impossible de déterminer si la hauteur utérine s’est accrue depuis les dernières semaines. Essayez de trouver une autre façon de répondre à la mesure de la hauteur utérine. ",
@@ -394,7 +397,7 @@
           "type": "video",
           "data": "SG4_DP5_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652588498"
           },
           "correct": false,
           "feedback": "À 20 semaines, la hauteur utérine ne dépasse généralement pas l’ombilic. Tenez compte de la hauteur utérine prévue à 20 semaines en lien avec les indices physiques, comme l’ombilic. ",
@@ -416,7 +419,7 @@
           "type": "video",
           "data": "SG4_DP6_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652588536"
           },
           "correct": true,
           "feedback": "",
@@ -442,7 +445,7 @@
           "type": "video",
           "data": "SG4_DP6_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652588598"
           },
           "correct": false,
           "feedback": "Des changements cutanés ne sont pas considérés comme anormaux. En fait, à cause des changements physiologiques qui surviennent lors d’une grossesse, il peut se développer plusieurs changements cutanés.",
@@ -464,7 +467,7 @@
           "type": "video",
           "data": "SG4_DP6_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/652588641"
           },
           "correct": false,
           "feedback": "Le signe de Cullen est un œdème superficiel accompagné d’une ecchymose autour de l’ombilic. Les changements cutanés observés ici n’indiquent pas le signe de Cullen.",
@@ -486,7 +489,7 @@
           "type": "video",
           "data": "SG4_DP7_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653046978"
           },
           "correct": true,
           "feedback": "",
@@ -512,7 +515,7 @@
           "type": "video",
           "data": "SG4_DP7_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047116"
           },
           "correct": false,
           "feedback": "Il est justifié de vérifier la fréquence à nouveau si vous n’êtes pas certaine de vos résultats.",
@@ -534,7 +537,7 @@
           "type": "video",
           "data": "SG4_DP7_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047198"
           },
           "correct": false,
           "feedback": "Lorsqu’on prend un signe vital comme la fréquence cardiaque fœtale, il faut s’assurer d’avoir la bonne technique et confirmer que ce que l’on entend est bel et bien le rythme cardiaque du bébé. ",
@@ -552,7 +555,7 @@
           "type": "video",
           "data": "SG4_DP8_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047262"
           },
           "correct": true,
           "feedback": "",
@@ -630,7 +633,7 @@
           "type": "video",
           "data": "SG4_DP9_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047354"
           },
           "correct": true,
           "feedback": "",
@@ -656,7 +659,7 @@
           "type": "video",
           "data": "SG4_DP9_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047472"
           },
           "correct": false,
           "feedback": "Révisez les façons de diminuer l’irritation gastrique due à la prise de vitamines prénatales.",
@@ -678,7 +681,7 @@
           "type": "video",
           "data": "SG4_DP9_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/653047517"
           },
           "correct": false,
           "feedback": "Maddie dit qu’elle prend ses vitamines le matin, l’estomac vide, mais elle souffre d’irritation gastrique. Il existe d’autres façons de réduire l’irritation gastrique due à la prise de vitamines prénatales.",
@@ -700,7 +703,7 @@
           "type": "video",
           "data": "SG4_DP10_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677290"
           },
           "correct": true,
           "feedback": "",
@@ -730,7 +733,7 @@
           "type": "video",
           "data": "SG4_DP10_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677421"
           },
           "correct": false,
           "feedback": "Vu l’IMC de Maddie, cette recommandation de prise de poids n’est pas suffisante pour elle.",
@@ -756,7 +759,7 @@
           "type": "video",
           "data": "SG4_DP10_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677447"
           },
           "correct": false,
           "feedback": "Vu l’IMC de Maddie, cette recommandation de prise de poids n’est pas suffisante pour elle.",
@@ -782,7 +785,7 @@
           "type": "video",
           "data": "SG4_DP10_4",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677462"
           },
           "correct": false,
           "feedback": "Vu l’IMC de Maddie, cette recommandation de prise de poids est trop élevée pour elle.",
@@ -808,7 +811,7 @@
           "type": "video",
           "data": "SG4_DP11_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677487"
           },
           "correct": true,
           "feedback": "",
@@ -834,7 +837,7 @@
           "type": "video",
           "data": "SG4_DP11_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677572"
           },
           "correct": false,
           "feedback": "Les protéines n’indiquent pas une infection urinaire. La bandelette pourrait plutôt indiquer la présence de globules blancs, de nitrates et de sang, indications potentielles d’infection urinaire.",
@@ -856,7 +859,7 @@
           "type": "video",
           "data": "SG4_DP11_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677601"
           },
           "correct": false,
           "feedback": "Les protéines en soi n’indiquent pas une ITS. La bandelette pourrait plutôt indiquer la présence de globules blancs qui pourrait indiquer une ITS.",
@@ -878,7 +881,7 @@
           "type": "video",
           "data": "SG4_DP12_1",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677629"
           },
           "correct": true,
           "feedback": "",
@@ -904,7 +907,7 @@
           "type": "video",
           "data": "SG4_DP12_2",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677821"
           },
           "correct": false,
           "feedback": "L’activité physique pendant la grossesse procure de nombreux bénéfices. Il faudrait encourager Maddie à être active et à participer à une activité qui lui plait, mais qui ne présente pas de risque ni pour elle ni pour son bébé.",
@@ -926,7 +929,7 @@
           "type": "video",
           "data": "SG4_DP12_3",
           "video": {
-            "vimeo_url": "https://player.vimeo.com/video/635497123"
+            "vimeo_url": "https://player.vimeo.com/video/654677853"
           },
           "correct": false,
           "feedback": "There are numerous benefits from physical activity during pregnancy. Maddy should be encouraged to be active with an activity that she enjoys but one that is not harmful to her or the fetus. ",
@@ -947,7 +950,9 @@
           "id": 43,
           "type": "video",
           "data": "SG4_DP13_1",
-          "video": "none",
+          "video": {
+            "vimeo_url": "https://player.vimeo.com/video/654677882"
+          },
           "correct": true,
           "feedback": "",
           "message": "",

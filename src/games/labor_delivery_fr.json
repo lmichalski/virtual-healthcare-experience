@@ -1,8 +1,8 @@
 {
   "colors": {
-    "--theme-light": "#d7c5ec",
-    "--theme-dark": "#70659c",
-    "--theme-primary": "#896196",
+    "--theme-light": "#F7BEC0",
+    "--theme-dark": "#E7625F",
+    "--theme-primary": "#C85250",
     "--link-color": "#000",
     "--primary-text-color": "#fff",
     "--primary-text-highlight": "#000",
@@ -515,7 +515,7 @@
         "type": "video",
         "data": "SG4_DP7_2",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630127"
+          "vimeo_url": "https://player.vimeo.com/video/652585934"
         },
         "correct": false,
         "feedback": "Il n’est pas approprié de commencer un examen cervical au début d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
@@ -538,7 +538,7 @@
         "type": "video",
         "data": "SG4_DP7_3",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630152"
+          "vimeo_url": "https://player.vimeo.com/video/652585963"
         },
         "correct": false,
         "feedback": "Il n’est pas approprié de commencer un examen cervical au milieu d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
@@ -557,11 +557,11 @@
       },
       {
         "id": 18,
-        "title": "DP7_1",
+        "title": "DP8_1",
         "type": "video",
-        "data": "SG4_DP7_1",
+        "data": "SG4_DP8_1",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629953"
+          "vimeo_url": "https://player.vimeo.com/video/652585987"
         },
         "correct": true,
         "feedback": "",
@@ -584,11 +584,11 @@
       },
       {
         "id": 19,
-        "title": "DP6_2 - wrong",
+        "title": "DP8_2 - wrong",
         "type": "video",
-        "data": "SG4_DP6_2",
+        "data": "SG4_DP8_2",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630127"
+          "vimeo_url": "https://player.vimeo.com/video/652586257"
         },
         "correct": false,
         "feedback": "Il n’est pas approprié de commencer un examen cervical au début d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
@@ -607,11 +607,11 @@
       },
       {
         "id": 20,
-        "title": "DP6_3 - wrong",
+        "title": "DP8_3 - wrong",
         "type": "video",
-        "data": "SG4_DP6_3",
+        "data": "SG4_DP8_3",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614630152"
+          "vimeo_url": "https://player.vimeo.com/video/652586277"
         },
         "correct": false,
         "feedback": "Il n’est pas approprié de commencer un examen cervical au milieu d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
@@ -628,12 +628,377 @@
         ],
         "next": null
       },
+      {
+        "id": 21,
+        "title": "DP9_1",
+        "type": "video",
+        "data": "SG4_DP9_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586302"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "Que pouvez-vous suggérer à Patrick ?",
+        "options": [
+          {
+            "label": "Installer un cousin chauffant",
+            "next": 22
+          },
+          {
+            "label": "Appliquer une pression accrue",
+            "next": 23
+          },
+          {
+            "label": "Arrêter de la toucher",
+            "next": 24
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 22,
+        "title": "DP9_2 - wrong",
+        "type": "video",
+        "data": "SG4_DP9_2",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586375"
+        },
+        "correct": false,
+        "feedback": "Un cousin chauffant ne soulagera pas Rachel. Réfléchissez à ce qui pourrait la rendre si sensible et à ce qui pourrait la soulager.",
+        "message": "Que pouvez-vous suggérer à Patrick ?",
+        "options": [
+          {
+            "label": "Appliquer une pression accrue",
+            "next": 23
+          },
+          {
+            "label": "Arrêter de la toucher",
+            "next": 24
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 23,
+        "title": "DP9_3 - wrong",
+        "type": "video",
+        "data": "SG4_DP9_3",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586384"
+        },
+        "correct": false,
+        "feedback": "Appliquer plus de pression au dos de Rachel ne la soulagera pas. Réfléchissez à ce qui pourrait la rendre si sensible au toucher et à ce qui pourrait la soulager.",
+        "message": "Que pouvez-vous suggérer à Patrick ?",
+        "options": [
+          {
+            "label": "Installer un cousin chauffant",
+            "next": 22
+          },
+          {
+            "label": "Arrêter de la toucher",
+            "next": 24
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 24,
+        "title": "DP10_1",
+        "type": "video",
+        "data": "SG4_DP10_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586419"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "Quand est-ce que le bébé sera placé « peau à peau » ?",
+        "options": [
+          {
+            "label": "Après l’évaluation APGAR",
+            "next": 25
+          },
+          {
+            "label": "Après avoir coupé le cordon ombilical",
+            "next": 26
+          },
+          {
+            "label": "Après la naissance",
+            "next": 27
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 25,
+        "title": "DP10_2 - wrong",
+        "type": "video",
+        "data": "SG4_DP10_2",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586503"
+        },
+        "correct": false,
+        "feedback": "On n’a pas besoin d’attendre que l’évaluation APGAR soit faite pour commencer le peau à peau.",
+        "message": "Quand est-ce que le bébé sera placé « peau à peau » ?",
+        "options": [
+          {
+            "label": "Après avoir coupé le cordon ombilical",
+            "next": 26
+          },
+          {
+            "label": "Après la naissance",
+            "next": 27
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 26,
+        "title": "DP10_3 - wrong",
+        "type": "video",
+        "data": "SG4_DP10_3",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586529"
+        },
+        "correct": false,
+        "feedback": "On n’a pas besoin d’attendre que le cordon soit coupé et que le bébé ait été évalué pour commencer le peau à peau. Quand peut-on placer le bébé peau à peau ?",
+        "message": "Quand est-ce que le bébé sera placé « peau à peau » ?",
+        "options": [
+          {
+            "label": "Après l’évaluation APGAR",
+            "next": 25
+          },
+          {
+            "label": "Après la naissance",
+            "next": 27
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 27,
+        "title": "DP11_1",
+        "type": "video",
+        "data": "SG4_DP11_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614629953"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "Quel type de moniteur devrait porter Rachel ?",
+        "options": [
+          {
+            "label": "Un moniteur fœtal externe",
+            "next": 28
+          },
+          {
+            "label": "Un moniteur fœtal interne",
+            "next": 29
+          },
+          {
+            "label": "Ausculter de façon intermittente",
+            "next": 30
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 28,
+        "title": "DP11_2 - wrong",
+        "type": "video",
+        "data": "SG4_DP11_2",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614630127"
+        },
+        "correct": false,
+        "feedback": "On ne place pas un moniteur fœtal externe sur toutes les femmes en travail actif. En fait, l’utilisation d’un moniteur fœtal pendant le travail et l’accouchement est régie par des règles et des politiques précises. Est-ce que Rachel requiert vraiment un moniteur fœtal à ce stade ?",
+        "message": "Quel type de moniteur devrait porter Rachel ?",
+        "options": [
+          {
+            "label": "Un moniteur fœtal interne",
+            "next": 29
+          },
+          {
+            "label": "Ausculter de façon intermittente",
+            "next": 30
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 29,
+        "title": "DP11_3 - wrong",
+        "type": "video",
+        "data": "SG4_DP11_3",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614630152"
+        },
+        "correct": false,
+        "feedback": "Un moniteur fœtal interne est invasif et n’est utilisé que dans des conditions particulières. Est-ce que Rachel a besoin d’un moniteur fœtal interne maintenant ?",
+        "message": "Quel type de moniteur devrait porter Rachel ?",
+        "options": [
+          {
+            "label": "Un moniteur fœtal externe",
+            "next": 28
+          },
+          {
+            "label": "Ausculter de façon intermittente",
+            "next": 30
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 30,
+        "title": "DP12_1",
+        "type": "video",
+        "data": "SG4_DP12_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586786"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "Que suggéreriez-vous pendant la prochaine contraction ?",
+        "options": [
+          {
+            "label": "La technique de geignement expiratoire",
+            "next": 31
+          },
+          {
+            "label": "La technique des gémissements",
+            "next": 32
+          },
+          {
+            "label": "La respiration haletante",
+            "next": 33
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 31,
+        "title": "DP12_2 - wrong",
+        "type": "video",
+        "data": "SG4_DP12_2",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586941"
+        },
+        "correct": false,
+        "feedback": "Grogner et s’abandonner à la pesanteur pelvienne entraînera la manœuvre Valsalva ce qui pourrait avoir des effets négatifs. Comment décourager le désir de pousser de Rachel ?",
+        "message": "Que suggéreriez-vous pendant la prochaine contraction ?",
+        "options": [
+          {
+            "label": "La technique des gémissements",
+            "next": 32
+          },
+          {
+            "label": "La respiration haletante",
+            "next": 33
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 32,
+        "title": "DP12_3 - wrong",
+        "type": "video",
+        "data": "SG4_DP12_3",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652587019"
+        },
+        "correct": false,
+        "feedback": "De longs gémissements ou bourdonnements ne vont pas faire diminuer l’envie de pousser. Quelles autres techniques pourraient faire diminuer l’envie de pousser pour Rachel ?",
+        "message": "Que suggéreriez-vous pendant la prochaine contraction ?",
+        "options": [
+          {
+            "label": "La technique de geignement expiratoire",
+            "next": 31
+          },
+          {
+            "label": "La respiration haletante",
+            "next": 33
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 33,
+        "title": "DP13_1",
+        "type": "video",
+        "data": "SG4_DP13_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614629953"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "Quelle mesure devez-vous prendre immédiatement ?",
+        "options": [
+          {
+            "label": "Offrir la bassine",
+            "next": 34
+          },
+          {
+            "label": "Aider à se diriger vers les toilettes",
+            "next": 35
+          },
+          {
+            "label": "Vérifier la dilatation",
+            "next": 36
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 34,
+        "title": "DP13_2 - wrong",
+        "type": "video",
+        "data": "SG4_DP13_2",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614630127"
+        },
+        "correct": false,
+        "feedback": "Il est possible que Rachel doive aller à la selle, mais avant d’offrir une bassine, quelle autre raison peut expliquer l’envie de Rachel ?",
+        "message": "Quelle mesure devez-vous prendre immédiatement ?",
+        "options": [
+          {
+            "label": "Aider à se diriger vers les toilettes",
+            "next": 35
+          },
+          {
+            "label": "Vérifier la dilatation",
+            "next": 36
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 35,
+        "title": "DP13_3 - wrong",
+        "type": "video",
+        "data": "SG4_DP13_3",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/614630152"
+        },
+        "correct": false,
+        "feedback": "Il pourrait s’avérer potentiellement dangereux de faire lever Rachel pour qu’elle se rende aux toilettes. Avant d’offrir cette solution, quelle autre raison peut expliquer l’envie de Rachel ?",
+        "message": "Quelle mesure devez-vous prendre immédiatement ?",
+        "options": [
+          {
+            "label": "Offrir la bassine",
+            "next": 34
+          },
+          {
+            "label": "Vérifier la dilatation",
+            "next": 36
+          }
+        ],
+        "next": null
+      },
     {
-      "id": 21,
+      "id": 36,
       "type": "video",
-      "data": "SG4_DP9_0",
+      "data": "SG4_DP14_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630565"
+        "vimeo_url": "https://player.vimeo.com/video/652587355"
       },
       "correct": true,
       "feedback": "",
@@ -643,3 +1008,6 @@
     }
   ]
 }
+
+
+
