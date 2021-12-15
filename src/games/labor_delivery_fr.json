@@ -723,7 +723,7 @@
           },
           {
             "label": "Après la naissance",
-            "next": 27
+            "next": 50
           }
         ],
         "next": null
@@ -746,7 +746,7 @@
           },
           {
             "label": "Après la naissance",
-            "next": 27
+            "next": 50
           }
         ],
         "next": null
@@ -769,6 +769,25 @@
           },
           {
             "label": "Après la naissance",
+            "next": 50
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 50,
+        "title": "DP11_1_A",
+        "type": "video",
+        "data": "SG4_DP10_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652586580"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "[20 minutes plus tard]",
+        "options": [
+          {
+            "label": "Continuellement ",
             "next": 27
           }
         ],
@@ -776,11 +795,11 @@
       },
       {
         "id": 27,
-        "title": "DP11_1",
+        "title": "DP11_1_B",
         "type": "video",
         "data": "SG4_DP11_1",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629953"
+          "vimeo_url": "https://player.vimeo.com/video/652586652"
         },
         "correct": true,
         "feedback": "",
@@ -869,7 +888,7 @@
           },
           {
             "label": "La respiration haletante",
-            "next": 33
+            "next": 51
           }
         ],
         "next": null
@@ -892,7 +911,7 @@
           },
           {
             "label": "La respiration haletante",
-            "next": 33
+            "next": 51
           }
         ],
         "next": null
@@ -915,6 +934,25 @@
           },
           {
             "label": "La respiration haletante",
+            "next": 51
+          }
+        ],
+        "next": null
+      },
+      {
+        "id": 51,
+        "title": "DP13_1_A",
+        "type": "video",
+        "data": "SG4_DP10_1",
+        "video": {
+          "vimeo_url": "https://player.vimeo.com/video/652587090"
+        },
+        "correct": true,
+        "feedback": "",
+        "message": "[15 minutes plus tard]",
+        "options": [
+          {
+            "label": "Continuellement ",
             "next": 33
           }
         ],
@@ -922,11 +960,11 @@
       },
       {
         "id": 33,
-        "title": "DP13_1",
+        "title": "DP13_1_B",
         "type": "video",
         "data": "SG4_DP13_1",
         "video": {
-          "vimeo_url": "https://player.vimeo.com/video/614629953"
+          "vimeo_url": "https://player.vimeo.com/video/652587250"
         },
         "correct": true,
         "feedback": "",
