@@ -11,10 +11,6 @@
     "defaultMessage": "Menu",
     "description": "Go To Menu Button"
   },
-  "General.pause": {
-    "defaultMessage": "pause",
-    "description": "pause icon"
-  },
   "General.replay": {
     "defaultMessage": "Replay",
     "description": "Replay Video Button"
@@ -36,8 +32,8 @@
     "description": "Post Partum Francais game name"
   },
   "Home.prenatal_fr": {
-    "defaultMessage": "Prenatal FR",
-    "description": "Prenatal Francais game name"
+    "defaultMessage": "Prenatal Care FR",
+    "description": "Prenatal Care Francais game name"
   },
   "Home.title": {
     "defaultMessage": "Virtual Healthcare Experence",
@@ -62,10 +58,6 @@
   "Menu.instructions": {
     "defaultMessage": "How to Play",
     "description": "How to Play Button"
-  },
-  "Menu.materials": {
-    "defaultMessage": "Self-Assessment",
-    "description": "Link to self-assessment materials"
   },
   "Menu.newGame": {
     "defaultMessage": "New Game",

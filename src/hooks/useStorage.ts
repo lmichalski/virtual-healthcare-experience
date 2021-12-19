@@ -15,9 +15,9 @@ function isLocalStorageAvailable() {
   }
 }
 
-const cookies = {
-  put(key: string, value: string, maxAge: number) {
-    var cookie = `${key}=${value};path=/;max-age=${maxAge};`;
+export const cookies = {
+  put(key: string, value: string, maxCookieAge: number = maxAge) {
+    var cookie = `${key}=${value};path=/;max-age=${maxCookieAge};`;
     console.log(cookie);
     document.cookie = cookie;
   },

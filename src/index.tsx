@@ -10,8 +10,10 @@ import { LoggingContextProvider } from "./hooks/useLogGameEvent";
 import enMessages from "./lang-compiled/en.json";
 import frMessages from "./lang-compiled/fr.json";
 import Home from "./pages/Home";
+import { cookies } from "./hooks/useStorage";
 
-const locale = "en" as string;
+const savedLocale = cookies.get("locale")
+const locale = (savedLocale === "fr" || navigator.languages[0].startsWith("fr")) ? "fr" : "en";
 const messages = locale === "fr" ? frMessages : enMessages;
 
 ReactDOM.render(

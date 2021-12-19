@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
+import { cookies } from "../hooks/useStorage";
 import "./Settings.scss";
 
 interface iProps {
@@ -61,6 +63,16 @@ const Settings: React.FC<iProps> = ({
     return () =>
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
   }, []);
+
+  const locale = useIntl().locale;
+  const handleSetEnglish = useCallback(() => {
+    cookies.put("locale", "en")
+    document.location.reload()
+  }, [cookies])
+  const handleSetFrench = useCallback(() => {
+    cookies.put("locale", "fr")
+    document.location.reload()
+  }, [cookies])
 
   return (
     <div className="container">
@@ -141,6 +153,43 @@ const Settings: React.FC<iProps> = ({
                 </div>
               </div>
             </div>
+
+
+            <div className="cf">
+              <h2>Language:</h2>
+              <div className="radio">
+                <div>
+                  <input
+                    type="radio"
+                    name="english"
+                    id="lang_en"
+                    value="english"
+                    checked={locale.startsWith("en")}
+                    onChange={handleSetEnglish}
+                  />
+                  <label
+                    htmlFor="lang_en"
+                    aria-checked={locale.startsWith("en")}
+                  >
+                    English
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="french"
+                    id="lang_fr"
+                    value="on"
+                    checked={locale.startsWith("fr")}
+                    onChange={handleSetFrench}
+                  />
+                  <label htmlFor="lang_fr" aria-checked={locale.startsWith("fr")}>
+                    French
+                  </label>
+                </div>
+              </div>
+            </div>
+
             {/* <!--<br>
 				<div className="cf">
 					<h2>Video Quality:</h2>

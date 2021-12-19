@@ -1,0 +1,107 @@
+{
+    "Credits.title": {
+      "defaultMessage": "Credits",
+      "description": "credits title"
+    },
+    "Feedback.title": {
+      "defaultMessage": "Feedback",
+      "description": "feedback title"
+    },
+    "General.menu": {
+      "defaultMessage": "Menu",
+      "description": "Go To Menu Button"
+    },
+    "General.pause": {
+      "defaultMessage": "pause",
+      "description": "pause icon"
+    },
+    "General.replay": {
+      "defaultMessage": "Replay",
+      "description": "Replay Video Button"
+    },
+    "General.resume": {
+      "defaultMessage": "Continuer le jeu",
+      "description": "resume game button"
+    },
+    "Home.emergency": {
+      "defaultMessage": "Emergency Room",
+      "description": "Name for emergency game"
+    },
+    "Home.labor_delivery_fr": {
+      "defaultMessage": "Labor and Delivery FR",
+      "description": "Labor and Delivery Francais game name"
+    },
+    "Home.postPartum_fr": {
+      "defaultMessage": "Post Partum FR",
+      "description": "Post Partum Francais game name"
+    },
+    "Home.prenatal_fr": {
+      "defaultMessage": "Prenatal FR",
+      "description": "Prenatal Francais game name"
+    },
+    "Home.title": {
+      "defaultMessage": "Virtual Healthcare Experence",
+      "description": "Title for homepage"
+    },
+    "Materials.title": {
+      "defaultMessage": "Materials",
+      "description": "Materials title"
+    },
+    "Menu.credits": {
+      "defaultMessage": "Credits",
+      "description": "Credits Button"
+    },
+    "Menu.exit": {
+      "defaultMessage": "Exit Game",
+      "description": "Exit Game Button"
+    },
+    "Menu.gameOptions": {
+      "defaultMessage": "Game Options",
+      "description": "Options Button"
+    },
+    "Menu.instructions": {
+      "defaultMessage": "How to Play",
+      "description": "How to Play Button"
+    },
+    "Menu.materials": {
+      "defaultMessage": "Self-Assessment",
+      "description": "Link to self-assessment materials"
+    },
+    "Menu.newGame": {
+      "defaultMessage": "Jouer",
+      "description": "New Game Button"
+    },
+    "Menu.objectives": {
+      "defaultMessage": "Learning Objectives",
+      "description": "Objectives Button"
+    },
+    "Menu.principles": {
+      "defaultMessage": "Essential Principles",
+      "description": "Principles Button"
+    },
+    "Menu.resumeGame": {
+      "defaultMessage": "Resume Game",
+      "description": "Resume Game Button"
+    },
+    "Objectives.title": {
+      "defaultMessage": "Learning Objectives",
+      "description": "Learning Objectives title"
+    },
+    "Principles.title": {
+      "defaultMessage": "Essential Principles",
+      "description": "Principles title"
+    },
+    "Summary.title": {
+      "defaultMessage": "Congratulations!",
+      "description": "Summary title"
+    },
+    "Transition.title": {
+      "defaultMessage": "Game Paused",
+      "description": "game paused transition title"
+    },
+    "materials.link": {
+      "defaultMessage": "Practice Materials",
+      "description": "Link to Practice Materials"
+    }
+  }
+  
