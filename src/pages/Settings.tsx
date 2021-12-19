@@ -1,15 +1,71 @@
-import { Link } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Settings.scss";
 
-const Settings: React.FC<{}> = () => {
-  const isFullscreen = false;
-  const subtitlesOn = false;
+interface iProps {
+  subtitlesEnabled: boolean;
+  onSubtitlesToggled: (enabled: boolean) => void;
+}
+
+const Settings: React.FC<iProps> = ({
+  subtitlesEnabled,
+  onSubtitlesToggled,
+}) => {
+  const [isFullscreen, setIsFullscreen] = useState<boolean>(
+    !!document.fullscreenElement
+  );
+
+  const handleSubtitlesChange = useCallback(
+    (evt: React.ChangeEvent<HTMLInputElement>) => {
+      onSubtitlesToggled(evt.target.value === "on");
+    },
+    [onSubtitlesToggled]
+  );
+
+  const handleFullscreenChange = useCallback(
+    (evt: React.ChangeEvent<HTMLInputElement>) => {
+      if (!document.fullscreenElement && evt.target.value === "on") {
+        document.documentElement
+          .requestFullscreen()
+          .then(() => setIsFullscreen(true))
+          .catch((err) => {
+            alert(
+              `Error attempting to enable full-screen mode: ${err.message} (${err.name})`
+            );
+          });
+      } else if (document.fullscreenElement && evt.target.value === "off") {
+        if (document.exitFullscreen) {
+          document.exitFullscreen().then(() => setIsFullscreen(false));
+        }
+      }
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      // document.fullscreenElement will point to the element that
+      // is in fullscreen mode if there is one. If there isn't one,
+      // the value of the property is null.
+      setIsFullscreen(!!document.fullscreenElement);
+      if (document.fullscreenElement) {
+        console.log(
+          `Element: ${document.fullscreenElement.id} entered full-screen mode.`
+        );
+      } else {
+        console.log("Leaving full-screen mode.");
+      }
+    };
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () =>
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
 
   return (
     <div className="container">
       <div className="panel settings">
         <header>
-          <h1>
+        <h1>
             <Link to="/" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
             </Link>{" "}
@@ -18,7 +74,7 @@ const Settings: React.FC<{}> = () => {
         </header>
         <div className="main">
           <div className="content">
-            <div className="cf">
+          <div className="cf">
               <h2>Display:</h2>
               <div className="radio">
                 <div>
@@ -26,17 +82,11 @@ const Settings: React.FC<{}> = () => {
                     type="radio"
                     name="display_mode"
                     id="mode_window"
-                    ng-model="sg.fullscreen"
-                    ng-value="false"
-                    ng-change="toggleFullScreen()"
+                    value="off"
+                    checked={!isFullscreen}
+                    onChange={handleFullscreenChange}
                   />
-                  <label
-                    htmlFor="mode_window"
-                    tabIndex={0}
-                    role="radio"
-                    aria-checked={!isFullscreen}
-                    ng-keydown="onFullscreenKeydown($event)"
-                  >
+                  <label htmlFor="mode_window" aria-checked={!isFullscreen}>
                     Window
                   </label>
                 </div>
@@ -45,17 +95,11 @@ const Settings: React.FC<{}> = () => {
                     type="radio"
                     name="display_mode"
                     id="mode_fullscreen"
-                    ng-model="sg.fullscreen"
-                    ng-value="true"
-                    ng-change="toggleFullScreen()"
+                    value="on"
+                    checked={isFullscreen}
+                    onChange={handleFullscreenChange}
                   />
-                  <label
-                    htmlFor="mode_fullscreen"
-                    tabIndex={0}
-                    role="radio"
-                    aria-checked={isFullscreen}
-                    ng-keydown="onFullscreenKeydown($event)"
-                  >
+                  <label htmlFor="mode_fullscreen" aria-checked={isFullscreen}>
                     Fullscreen
                   </label>
                 </div>
@@ -70,16 +114,13 @@ const Settings: React.FC<{}> = () => {
                     type="radio"
                     name="subtitles"
                     id="subtitles_off"
-                    ng-model="sg.subtitles"
-                    ng-value="false"
-                    ng-change="saveState()"
+                    value="off"
+                    checked={!subtitlesEnabled}
+                    onChange={handleSubtitlesChange}
                   />
                   <label
                     htmlFor="subtitles_off"
-                    tabIndex={0}
-                    role="radio"
-                    aria-checked={!subtitlesOn}
-                    ng-keydown="onSubtitlesKeydown($event)"
+                    aria-checked={!subtitlesEnabled}
                   >
                     Off
                   </label>
@@ -89,17 +130,11 @@ const Settings: React.FC<{}> = () => {
                     type="radio"
                     name="subtitles"
                     id="subtitles_en"
-                    ng-model="sg.subtitles"
-                    ng-value="true"
-                    ng-change="saveState()"
+                    value="on"
+                    checked={subtitlesEnabled}
+                    onChange={handleSubtitlesChange}
                   />
-                  <label
-                    htmlFor="subtitles_en"
-                    tabIndex={0}
-                    role="radio"
-                    aria-checked={subtitlesOn}
-                    ng-keydown="onSubtitlesKeydown($event)"
-                  >
+                  <label htmlFor="subtitles_en" aria-checked={subtitlesEnabled}>
                     On
                   </label>
                 </div>
