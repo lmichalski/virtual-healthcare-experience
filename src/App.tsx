@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import { Switch, Route, useHistory, useRouteMatch } from "react-router-dom";
 import { useIntl } from "react-intl";
@@ -41,14 +41,18 @@ const App: React.FC<iProps> = ({ gameId }) => {
     ({ correct }) => correct
   ).length;
 
+  const [subtitlesEnabled, setSubtitlesEnabled] = useState<boolean>(true);
+
   const lastDecisionPoint =
     gameData.decisionpoints[gameData.decisionpoints.length - 1].id ===
     gameState.currentStep;
 
   const currentDecisionPoint = useMemo(() => {
-    return gameData.decisionpoints.find(
+    const currentDP = gameData.decisionpoints.find(
       ({ id }) => id === gameState.currentStep
     )!;
+    if (!currentDP) console.error(`couldnt find dp for step${gameState.currentStep}`)
+    return currentDP;
   }, [gameData.decisionpoints, gameState.currentStep]);
 
   const handleStartNewGame = useCallback(() => {
@@ -137,10 +141,12 @@ const App: React.FC<iProps> = ({ gameId }) => {
   }, [currentDecisionPoint, history, lastDecisionPoint, gameState, url]);
 
   useEffect(() => {
-    Object.entries(gameData.colors).map(([key, value]: [string, string]) => {
-      document.body.style.setProperty(key,value);
-    });
-  },[]);
+    Object.entries(gameData.colors).forEach(
+      ([key, value]: [string, string]) => {
+        document.body.style.setProperty(key, value);
+      }
+    );
+  }, [gameData.colors]);
 
   return (
     <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
@@ -187,7 +193,10 @@ const App: React.FC<iProps> = ({ gameId }) => {
           ) : null}
 
           <Route path={`${path}/settings`}>
-            <Settings />
+            <Settings
+              subtitlesEnabled={subtitlesEnabled}
+              onSubtitlesToggled={setSubtitlesEnabled}
+            />
           </Route>
 
           <Route path={`${path}/summary`}>
@@ -203,13 +212,15 @@ const App: React.FC<iProps> = ({ gameId }) => {
           </Route>
 
           <Route path={`${path}/video`}>
-            <Video
-              decisionPoint={currentDecisionPoint}
-              onVideoFinished={handleVideoFinished}
-              videoposition={gameState.videoposition}
-              setVideoposition={gameState.setVideoposition}
-            />
-          </Route>
+                <Video
+                  decisionPoint={currentDecisionPoint}
+                  onVideoFinished={handleVideoFinished}
+                  videoposition={gameState.videoposition}
+                  setVideoposition={gameState.setVideoposition}
+                  subtitlesEnabled={subtitlesEnabled}
+                  onSubtitlesToggled={setSubtitlesEnabled}
+                />
+              </Route>
 
           <Route path={`${path}/lo`}>Somethings going on here, I swear</Route>
 

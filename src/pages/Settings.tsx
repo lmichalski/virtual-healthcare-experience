@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Settings.scss";
 
 interface iProps {
@@ -65,8 +66,8 @@ const Settings: React.FC<iProps> = ({
     <div className="container">
       <div className="panel settings">
         <header>
-        <h1>
-            <Link to="/" aria-label="Return to menu">
+          <h1>
+            <Link to="../" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
             </Link>{" "}
             Game Options
@@ -74,7 +75,7 @@ const Settings: React.FC<iProps> = ({
         </header>
         <div className="main">
           <div className="content">
-          <div className="cf">
+            <div className="cf">
               <h2>Display:</h2>
               <div className="radio">
                 <div>

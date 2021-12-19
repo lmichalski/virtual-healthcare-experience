@@ -1,20 +1,22 @@
 import { useEffect, useCallback, useRef } from "react";
-import { FormattedMessage } from "react-intl";
-import { useLocation, useHistory, useParams } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import videojs from "video.js";
 import Player from "@vimeo/player";
 
 import { DecisionPoint } from "../hooks/useGameData";
-import { useGotoMenu } from "../util";
 
 import "./Video.scss";
 import useLogGameEvent from "../hooks/useLogGameEvent";
+import { FormattedMessage } from "react-intl";
+import { useGotoMenu } from "../util";
 
 interface iProps {
   decisionPoint: DecisionPoint;
   onVideoFinished: () => void;
   videoposition: number;
   setVideoposition: (t: number) => void;
+  subtitlesEnabled: boolean;
+  onSubtitlesToggled: (enabled: boolean) => void;
 }
 
 const Video: React.FC<iProps> = ({
@@ -22,15 +24,15 @@ const Video: React.FC<iProps> = ({
   onVideoFinished,
   videoposition,
   setVideoposition,
+  subtitlesEnabled,
+  onSubtitlesToggled,
 }) => {
   const location = useLocation();
   const history = useHistory();
-  const { game_id } = useParams<{ game_id: string }>();
   const logGameEvent = useLogGameEvent();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-
   const gotoMenu = useGotoMenu();
 
   const skipVideo = useCallback(() => {
@@ -63,7 +65,7 @@ const Video: React.FC<iProps> = ({
               if (api && typeof api.currentTime() != "undefined") {
                 setVideoposition(api.currentTime());
               }
-              history.push(`/games/${game_id}/`);
+              history.push(`/`);
             } else {
               history.goBack();
             }
@@ -99,11 +101,9 @@ const Video: React.FC<iProps> = ({
     return () => {
       window.removeEventListener("keydown", handleUserKeyPress);
     };
-  }, [history, location.pathname, setVideoposition, game_id]);
+  }, [history, location.pathname, setVideoposition]);
 
   useEffect(() => {
-    var iframe = iframeRef.current;
-
     if (videoRef.current && dp) {
       const api = videojs(videoRef.current);
       const clip = {
@@ -175,24 +175,65 @@ const Video: React.FC<iProps> = ({
       });
 
       api.load();
-    } else if (dp && iframe) {
-      var player = new Player(iframe);
-      console.log("Setting vimeo listenera");
-      player.on("ended", function () {
+    }
+  }, [dp, skipVideo, logGameEvent, setVideoposition, videoposition]);
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      console.log("Setting vimeo listeners");
+
+      const player = new Player(iframeRef.current);
+      player.on("loaded", () => {
+        player.setCurrentTime(videoposition);
+      });
+      return () => player.off("loaded");
+    }
+    // Disable exhaustive deps so this hook only gets called on initial render
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      console.log("Setting vimeo listeners");
+
+      const player = new Player(iframeRef.current);
+      player.on("timeupdate", (data: { seconds: number }) => {
+        console.log(`Progress ${data.seconds}`);
+        setVideoposition(data.seconds);
+      });
+
+      player.on("ended", () => {
         console.log("vimeo ended");
         skipVideo();
         logGameEvent("", "finish", "video", dp.data, "");
       });
 
-      player.getVideoTitle().then(function (title) {
-        console.log("title:", title);
+      player.on("texttrackchange", (data: { language: string | null }) => {
+        onSubtitlesToggled(!!data.language);
       });
+
+      return () => {
+        player.off("timeupdate");
+        player.off("ended");
+        player.off("texttrackchange");
+      };
     }
-  }, [dp, skipVideo, logGameEvent, setVideoposition, videoposition]);
+  }, [setVideoposition, dp.data, logGameEvent, skipVideo, onSubtitlesToggled]);
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      const player = new Player(iframeRef.current);
+      if (subtitlesEnabled) {
+        player.enableTextTrack("en");
+      } else {
+        player.disableTextTrack();
+      }
+    }
+  }, [subtitlesEnabled]);
 
   return (
     <div className="video">
-      <div className="right controls">
+            <div className="right controls">
         <button className="button button--menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
@@ -204,16 +245,15 @@ const Video: React.FC<iProps> = ({
       <div id="player" className="videoplayer functional">
         {dp?.video &&
           (dp.video.vimeo_url ? (
-            <div>
-              <iframe
-                ref={iframeRef}
-                src={dp.video.vimeo_url + "?autoplay=1"}
-                frameBorder={0}
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="SG4_DP1_0"
-              ></iframe>
-            </div>
+            <iframe
+              ref={iframeRef}
+              // style={{height: (iframeRef.current?.scrollWidth ?? 600) * 9/16}}
+              src={dp.video.vimeo_url + `?autoplay=1`}
+              frameBorder={0}
+              allow="autoplay; texttrack; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="SG4_DP1_0"
+            ></iframe>
           ) : (
             <video
               ref={videoRef}
@@ -223,15 +263,6 @@ const Video: React.FC<iProps> = ({
               Please use a different browser
             </video>
           ))}
-
-        <div id="pause">
-          <FormattedMessage
-            id="General.pause"
-            defaultMessage="pause"
-            description="pause icon"
-          />
-          <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
       </div>
     </div>
   );
