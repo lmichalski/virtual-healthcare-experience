@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 
 import { Switch, Route, useHistory, useRouteMatch } from "react-router-dom";
 import { useIntl } from "react-intl";
@@ -135,6 +135,12 @@ const App: React.FC<iProps> = ({ gameId }) => {
       }
     }
   }, [currentDecisionPoint, history, lastDecisionPoint, gameState, url]);
+
+  useEffect(() => {
+    Object.entries(gameData.colors).map(([key, value]: [string, string]) => {
+      document.body.style.setProperty(key,value);
+    });
+  },[]);
 
   return (
     <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
