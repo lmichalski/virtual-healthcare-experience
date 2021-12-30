@@ -68,11 +68,11 @@ const Settings: React.FC<iProps> = ({
   const handleSetEnglish = useCallback(() => {
     cookies.put("locale", "en")
     document.location.reload()
-  }, [cookies])
+  }, [])
   const handleSetFrench = useCallback(() => {
     cookies.put("locale", "fr")
     document.location.reload()
-  }, [cookies])
+  }, [])
 
   return (
     <div className="container">
