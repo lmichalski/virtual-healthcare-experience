@@ -94,5 +94,25 @@
   "materials.link": {
     "defaultMessage": "Practice Materials",
     "description": "Link to Practice Materials"
-  }
+  },
+    "options.display":{
+      "defaultMessage": "Display",
+      "description": "display option"
+  },
+    "options.full_screen":{
+      "defaultMessage": "Full Screen",
+      "description": "full screen button"
+  },
+    "options.subtitles":{
+      "defaultMessage": "Subtitles",
+      "description": "subtitles button"
+    },
+    "options.subtitles_on":{
+      "defaultMessage": "On",
+      "description": "subtitles on"
+    },
+    "options.subtitles_off":{
+      "defaultMessage": "Off",
+      "description": "subtitles off"
+    }
 }

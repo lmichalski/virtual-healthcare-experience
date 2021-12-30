@@ -66,13 +66,13 @@ const Settings: React.FC<iProps> = ({
 
   const locale = useIntl().locale;
   const handleSetEnglish = useCallback(() => {
-    cookies.put("locale", "en")
-    document.location.reload()
-  }, [])
+    cookies.put("locale", "en");
+    document.location.reload();
+  }, []);
   const handleSetFrench = useCallback(() => {
-    cookies.put("locale", "fr")
-    document.location.reload()
-  }, [])
+    cookies.put("locale", "fr");
+    document.location.reload();
+  }, []);
 
   return (
     <div className="container">
@@ -154,7 +154,6 @@ const Settings: React.FC<iProps> = ({
               </div>
             </div>
 
-
             <div className="cf">
               <h2>Language:</h2>
               <div className="radio">
@@ -183,7 +182,10 @@ const Settings: React.FC<iProps> = ({
                     checked={locale.startsWith("fr")}
                     onChange={handleSetFrench}
                   />
-                  <label htmlFor="lang_fr" aria-checked={locale.startsWith("fr")}>
+                  <label
+                    htmlFor="lang_fr"
+                    aria-checked={locale.startsWith("fr")}
+                  >
                     French
                   </label>
                 </div>

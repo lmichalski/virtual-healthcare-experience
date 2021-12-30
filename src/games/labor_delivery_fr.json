@@ -242,11 +242,11 @@
     },
     {
       "id": 8,
-      "title": "DP2_3 - wrong",
+      "title": "DP3_3 - wrong",
       "type": "video",
-      "data": "SG4_DP2_3",
+      "data": "SG4_DP3_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/635497123"
+        "vimeo_url": "https://player.vimeo.com/video/652585311"
       },
       "correct": false,
       "feedback": "Une pression élevée et des chevilles enflées peuvent indiquer une prééclampsie. Mais d’autres facteurs peuvent également agir sur la pression artérielle. Tenez compte des autres variables qui peuvent agir sur les signes vitaux et faire monter la pression artérielle. ",
@@ -561,22 +561,22 @@
       "type": "video",
       "data": "SG4_DP8_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/652585987"
+        "vimeo_url": "https://player.vimeo.com/video/652585833"
       },
       "correct": true,
       "feedback": "",
-      "message": "Quand devez-vous procéder à un examen du col de l’utérus ?",
+      "message": "Pourquoi avoir placé Rachel dans cette position ?",
       "options": [
         {
-          "label": "Après la contraction",
+          "label": "Pour prévenir l’hypotension artérielle",
           "next": 21
         },
         {
-          "label": "Immédiatement",
+          "label": "Pour encourager les contractions utérines",
           "next": 19
         },
         {
-          "label": "Lorsque la douleur commence à s’estomper",
+          "label": "Pour soulager la pression sur la vessie",
           "next": 20
         }
       ],
@@ -595,11 +595,11 @@
       "message": "Quand devez-vous procéder à un examen du col de l’utérus ?",
       "options": [
         {
-          "label": "Après la contraction",
+          "label": "Pour prévenir l’hypotension artérielle",
           "next": 21
         },
         {
-          "label": "Lorsque la douleur commence à s’estomper",
+          "label": "Pour soulager la pression sur la vessie",
           "next": 20
         }
       ],
@@ -618,11 +618,11 @@
       "message": "Quand devez-vous procéder à un examen du col de l’utérus ?",
       "options": [
         {
-          "label": "Après la contraction",
+          "label": "Pour prévenir l’hypotension artérielle",
           "next": 21
         },
         {
-          "label": "Immédiatement",
+          "label": "Pour encourager les contractions utérines",
           "next": 19
         }
       ],
@@ -734,7 +734,7 @@
       "type": "video",
       "data": "SG4_DP10_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/652586503"
+        "vimeo_url": "https://player.vimeo.com/video/652586529"
       },
       "correct": false,
       "feedback": "On n’a pas besoin d’attendre que l’évaluation APGAR soit faite pour commencer le peau à peau.",
@@ -757,7 +757,7 @@
       "type": "video",
       "data": "SG4_DP10_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/652586529"
+        "vimeo_url": "https://player.vimeo.com/video/652586503"
       },
       "correct": false,
       "feedback": "On n’a pas besoin d’attendre que le cordon soit coupé et que le bébé ait été évalué pour commencer le peau à peau. Quand peut-on placer le bébé peau à peau ?",
@@ -826,7 +826,7 @@
       "type": "video",
       "data": "SG4_DP11_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630127"
+        "vimeo_url": "https://player.vimeo.com/video/652586739"
       },
       "correct": false,
       "feedback": "On ne place pas un moniteur fœtal externe sur toutes les femmes en travail actif. En fait, l’utilisation d’un moniteur fœtal pendant le travail et l’accouchement est régie par des règles et des politiques précises. Est-ce que Rachel requiert vraiment un moniteur fœtal à ce stade ?",
@@ -849,7 +849,7 @@
       "type": "video",
       "data": "SG4_DP11_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630152"
+        "vimeo_url": "https://player.vimeo.com/video/652586763"
       },
       "correct": false,
       "feedback": "Un moniteur fœtal interne est invasif et n’est utilisé que dans des conditions particulières. Est-ce que Rachel a besoin d’un moniteur fœtal interne maintenant ?",
@@ -991,7 +991,7 @@
       "type": "video",
       "data": "SG4_DP13_2",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630127"
+        "vimeo_url": "https://player.vimeo.com/video/652587323"
       },
       "correct": false,
       "feedback": "Il est possible que Rachel doive aller à la selle, mais avant d’offrir une bassine, quelle autre raison peut expliquer l’envie de Rachel ?",
@@ -1014,7 +1014,7 @@
       "type": "video",
       "data": "SG4_DP13_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614630152"
+        "vimeo_url": "https://player.vimeo.com/video/652587321"
       },
       "correct": false,
       "feedback": "Il pourrait s’avérer potentiellement dangereux de faire lever Rachel pour qu’elle se rende aux toilettes. Avant d’offrir cette solution, quelle autre raison peut expliquer l’envie de Rachel ?",

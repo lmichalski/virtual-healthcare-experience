@@ -1,6 +1,6 @@
 {
     "Credits.title": {
-      "defaultMessage": "Credits",
+      "defaultMessage": "Crédits",
       "description": "credits title"
     },
     "Feedback.title": {
@@ -20,7 +20,7 @@
       "description": "Replay Video Button"
     },
     "General.resume": {
-      "defaultMessage": "Continuer le jeu",
+      "defaultMessage": "Continuer le Jeu",
       "description": "resume game button"
     },
     "Home.emergency": {
@@ -48,7 +48,7 @@
       "description": "Materials title"
     },
     "Menu.credits": {
-      "defaultMessage": "Credits",
+      "defaultMessage": "Crédits",
       "description": "Credits Button"
     },
     "Menu.exit": {
@@ -56,7 +56,7 @@
       "description": "Exit Game Button"
     },
     "Menu.gameOptions": {
-      "defaultMessage": "Game Options",
+      "defaultMessage": "Options",
       "description": "Options Button"
     },
     "Menu.instructions": {
@@ -72,7 +72,7 @@
       "description": "New Game Button"
     },
     "Menu.objectives": {
-      "defaultMessage": "Learning Objectives",
+      "defaultMessage": " Objectifs d’apprentissage",
       "description": "Objectives Button"
     },
     "Menu.principles": {
@@ -102,6 +102,26 @@
     "materials.link": {
       "defaultMessage": "Practice Materials",
       "description": "Link to Practice Materials"
+    },
+    "options.display":{
+      "defaultMessage": "Affichage",
+      "description": "display option"
+  },
+    "options.full_screen":{
+      "defaultMessage": "Plein écran",
+      "description": "full screen button"
+  },
+    "options.subtitles":{
+      "defaultMessage": "Sous-titres",
+      "description": "subtitles button"
+    },
+    "options.subtitles_on":{
+      "defaultMessage": "activés",
+      "description": "subtitles on"
+    },
+    "options.subtitles_off":{
+      "defaultMessage": "désactivés",
+      "description": "subtitles off"
     }
   }
   

@@ -51,7 +51,8 @@ const App: React.FC<iProps> = ({ gameId }) => {
     const currentDP = gameData.decisionpoints.find(
       ({ id }) => id === gameState.currentStep
     )!;
-    if (!currentDP) console.error(`couldnt find dp for step${gameState.currentStep}`)
+    if (!currentDP)
+      console.error(`couldnt find dp for step${gameState.currentStep}`);
     return currentDP;
   }, [gameData.decisionpoints, gameState.currentStep]);
 
@@ -212,15 +213,15 @@ const App: React.FC<iProps> = ({ gameId }) => {
           </Route>
 
           <Route path={`${path}/video`}>
-                <Video
-                  decisionPoint={currentDecisionPoint}
-                  onVideoFinished={handleVideoFinished}
-                  videoposition={gameState.videoposition}
-                  setVideoposition={gameState.setVideoposition}
-                  subtitlesEnabled={subtitlesEnabled}
-                  onSubtitlesToggled={setSubtitlesEnabled}
-                />
-              </Route>
+            <Video
+              decisionPoint={currentDecisionPoint}
+              onVideoFinished={handleVideoFinished}
+              videoposition={gameState.videoposition}
+              setVideoposition={gameState.setVideoposition}
+              subtitlesEnabled={subtitlesEnabled}
+              onSubtitlesToggled={setSubtitlesEnabled}
+            />
+          </Route>
 
           <Route path={`${path}/lo`}>Somethings going on here, I swear</Route>
 

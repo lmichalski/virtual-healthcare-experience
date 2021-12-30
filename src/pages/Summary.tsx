@@ -87,7 +87,12 @@ const Summary: React.FC<iProps> = ({
         ) : (
           <Text>
             {" "}
-            However, if you give only correct answers it should only take 9
+            However, if you give only correct answers it should only take
+            <Text style={{ fontWeight: "bold" }}>
+              {" "}
+              {decisionPoints.filter(({ correct }) => correct).length - 1}
+            </Text>
+            {" "}
             questions to complete the scenario. See if you can improve your
             results next time!{" "}
           </Text>

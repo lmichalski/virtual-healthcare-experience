@@ -233,7 +233,7 @@ const Video: React.FC<iProps> = ({
 
   return (
     <div className="video">
-            <div className="right controls">
+      <div className="right controls">
         <button className="button button--menu" onClick={gotoMenu}>
           <FormattedMessage
             id="General.menu"
