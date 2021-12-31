@@ -23,7 +23,7 @@ const Credits: React.FC<iProps> = ({
       <div className="panel credits">
         <header>
           <h1>
-            <Link to="/" aria-label="Return to menu">
+            <Link to="../" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
             </Link>
             <FormattedMessage
@@ -51,41 +51,6 @@ const Credits: React.FC<iProps> = ({
             {end_paragraphs.map((end_paragraph) => (
               <p>{end_paragraph}</p>
             ))}
-            <h2>Content Providers</h2>
-            <ul>
-              <li>Margaret Verkuyl NP:PHC, MN</li>
-              <li>Dr. Jennifer Lapum, RN, PhD</li>
-              <li>Dr. Oona St-Amant RN, PhD </li>
-              <li>Behi Nikaiin RN MScN</li>
-              <li>Michelle Hughes RN, MEd</li>
-              <li>Dr. Paula Mastrilli RN, PhD</li>
-              <li>Dr. Daria Romaniuk RN, PhD</li>
-              <li>Lorraine Betts RN, MN</li>
-            </ul>
-            <h2>Cast</h2>
-            <ul>
-              <li>Karen Lee</li>
-              <li>Sarah Winstanley</li>
-            </ul>
-
-            <h2>Project Coordination</h2>
-            <ul>
-              <li>Lars Svekis</li>
-              <li>Sushila Parikh</li>
-            </ul>
-            <h2>Game Design & Development</h2>
-            <ul>
-              <li>Igor Karasyov</li>
-              <li>Lucas Michalski</li>
-            </ul>
-            <h2>Video Production</h2>
-            <ul>
-              <li>Daniil Novikov</li>
-              <li>Ilya Emilianov</li>
-              <li>Arseniy Semin</li>
-              <li>Cassandra Ferworn</li>
-              <li>Kelvin Kong</li>
-            </ul>
           </div>
         </div>
       </div>

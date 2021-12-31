@@ -41,8 +41,8 @@ const Home: React.FC<iProps> = () => {
                 <Link to="./games/labor_delivery">
                   <FormattedMessage
                     id="Home.labor_delivery_fr"
-                    defaultMessage="Labor and Delivery FR"
-                    description="Labor and Delivery Francais game name"
+                    defaultMessage="Labour and Delivery FR"
+                    description="Labour and Delivery Francais game name"
                   />
                 </Link>
               </li>

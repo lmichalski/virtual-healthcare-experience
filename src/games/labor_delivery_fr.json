@@ -152,11 +152,11 @@
       "options": [
         {
           "label": "Le quadrant inférieur gauche",
-          "next": 6
+          "next": 4
         },
         {
           "label": "Le quadrant inférieur droit",
-          "next": 4
+          "next": 6
         },
         {
           "label": "Le quadrant supérieur gauche",
@@ -178,7 +178,7 @@
       "message": "Dans quelle région de l’abdomen devriez-vous vérifier la fréquence cardiaque fœtale?",
       "options": [
         {
-          "label": "Le quadrant inférieur gauche",
+          "label": "Le quadrant inférieur droit",
           "next": 6
         },
         {
@@ -201,11 +201,11 @@
       "message": "Dans quelle région de l’abdomen devriez-vous vérifier la fréquence cardiaque fœtale?",
       "options": [
         {
-          "label": "Le quadrant inférieur gauche",
+          "label": "Le quadrant inférieur droit",
           "next": 6
         },
         {
-          "label": "Le quadrant inférieur droit",
+          "label": "Le quadrant inférieur gauche",
           "next": 4
         }
       ],
