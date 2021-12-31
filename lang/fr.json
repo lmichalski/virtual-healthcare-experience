@@ -103,23 +103,23 @@
       "defaultMessage": "Practice Materials",
       "description": "Link to Practice Materials"
     },
-    "options.display":{
+    "Options.display":{
       "defaultMessage": "Affichage",
       "description": "display option"
   },
-    "options.full_screen":{
+    "Options.full_screen":{
       "defaultMessage": "Plein écran",
       "description": "full screen button"
   },
-    "options.subtitles":{
+    "Options.subtitles":{
       "defaultMessage": "Sous-titres",
       "description": "subtitles button"
     },
-    "options.subtitles_on":{
+    "Options.subtitles_on":{
       "defaultMessage": "activés",
       "description": "subtitles on"
     },
-    "options.subtitles_off":{
+    "Options.subtitles_off":{
       "defaultMessage": "désactivés",
       "description": "subtitles off"
     }

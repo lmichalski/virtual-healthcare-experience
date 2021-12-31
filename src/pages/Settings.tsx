@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import { cookies } from "../hooks/useStorage";
 import "./Settings.scss";
@@ -88,7 +88,13 @@ const Settings: React.FC<iProps> = ({
         <div className="main">
           <div className="content">
             <div className="cf">
-              <h2>Display:</h2>
+              <h2>
+                <FormattedMessage
+                  id="Options.display"
+                  defaultMessage="Display"
+                  description="Display Header"
+                />
+              </h2>
               <div className="radio">
                 <div>
                   <input

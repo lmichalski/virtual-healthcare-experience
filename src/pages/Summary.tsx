@@ -91,8 +91,7 @@ const Summary: React.FC<iProps> = ({
             <Text style={{ fontWeight: "bold" }}>
               {" "}
               {decisionPoints.filter(({ correct }) => correct).length - 1}
-            </Text>
-            {" "}
+            </Text>{" "}
             questions to complete the scenario. See if you can improve your
             results next time!{" "}
           </Text>
