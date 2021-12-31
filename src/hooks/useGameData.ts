@@ -4,9 +4,6 @@ const games: Record<string, Record<string, GameDataShape>> = {
   emergency: {
     en: require("../games/er_game_data.json"),
   },
-  crisis_intervention: {
-    en: require("../games/suicidal_patient_data.json"),
-  },
   post_partum: {
     fr: require("../games/post_partum_fr.json"),
   },
@@ -74,6 +71,14 @@ interface GameDataShape {
       paragraph: string;
       bullet_list: string[];
     };
+    credits: {
+      paragraphs: string[];
+      credits_sections: {
+        header: string;
+        items: string[];
+      }[];
+      end_paragraphs: string[];
+    };
   };
 }
 
@@ -82,6 +87,7 @@ export const useGameData = (game: string, locale: string): GameDataShape => {
     () => games[game]?.[locale] || games[game]?.["en"] || games[game]?.["fr"],
     [game, locale]
   );
+  console.log(data);
   if (!data) {
     throw new Error("That game could not be found");
   }

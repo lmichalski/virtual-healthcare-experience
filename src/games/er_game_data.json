@@ -41,6 +41,24 @@
         "The game uses high resolution videos, which require high-speed internet to upload easily.",
         "The game takes about 20–40 minutes to complete."
       ]
+    },
+    "credits": {
+      "paragraphs": [
+        "Le portail Expériences virtuelles en soins de la santé est le résultat d’une collaboration entre professeurs de l’Université Ryerson, du Collège Centennial et du Collège George Brown. "
+      ],
+      "credits_sections": [
+        {
+          "header": "Content Providers",
+          "items": [
+            "Margaret Verkuyl, IP-SSP, M. Sc. N.",
+            "Jennifer Lapum, IA, Ph. D.",
+            "Oona St-Amant, IA, Ph. D.",
+            "Behi Nikaiin. IA, M. Sc. N."
+          ]
+        },
+        { "header": "", "items": [] }
+      ],
+      "end_paragraphs": []
     }
   },
   "decisionpoints": [

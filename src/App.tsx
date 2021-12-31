@@ -154,7 +154,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
       <div className="view" role="application">
         <Switch>
           <Route path={`${path}/credits`}>
-            <Credits />
+            <Credits strings={gameData.strings.credits} />
           </Route>
 
           <Route path={`${path}/decision`}>

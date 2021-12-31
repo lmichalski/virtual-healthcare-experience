@@ -97,7 +97,7 @@
   },
     "Options.display":{
       "defaultMessage": "Display",
-      "description": "display option"
+      "description": "Display heading"
   },
     "Options.full_screen":{
       "defaultMessage": "Full Screen",
@@ -109,10 +109,10 @@
     },
     "Options.subtitles_on":{
       "defaultMessage": "On",
-      "description": "subtitles on"
+      "description": "subtitles on button"
     },
     "Options.subtitles_off":{
       "defaultMessage": "Off",
-      "description": "subtitles off"
+      "description": "subtitles off button"
     }
 }

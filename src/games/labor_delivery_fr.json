@@ -41,6 +41,27 @@
         "Le jeu fait usage de vidéos haute résolution et  d’Internet à haut débit pour télécharger facilement.",
         "Le jeu prend de 30 à 60 minutes."
       ]
+    },
+    "credits": {
+      "paragraphs": [
+        "Le portail Expériences virtuelles en soins de la santé est le résultat d’une collaboration entre professeurs de l’Université Ryerson, du Collège Centennial et du Collège George Brown. "
+      ],
+      "credits_sections": [
+        {
+          "header": "",
+          "items": [
+            "Margaret Verkuyl, IP-SSP, M. Sc. N.",
+            "Jennifer Lapum, IA, Ph. D.",
+            "Oona St-Amant, IA, Ph. D.",
+            "Behi Nikaiin. IA, M. Sc. N."
+          ]
+        },
+        { "header": "", "items": [] }
+      ],
+      "end_paragraphs": [
+        "Cette ressource a reçu un généreux appui financier du ministère de l’Enseignement supérieur et de la Formation professionnelle.",
+        "L’équipe du Digital Education Strategies de la G. Raymond Chang School of Continuing Education à l’Université Ryerson a appuyé la conception et le développement des ressources en fournissant des solutions technologiques innovatrices, de la production multimédia et du testage pour l’utilisation. "
+      ]
     }
   },
   "decisionpoints": [

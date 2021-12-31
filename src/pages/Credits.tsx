@@ -2,7 +2,22 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Credits.scss";
 
-const Credits: React.FC<{}> = () => {
+interface iProps {
+  strings: {
+    paragraphs: string[];
+    credits_sections: {
+      header: string;
+      items: string[];
+    }[];
+    end_paragraphs: string[];
+  };
+}
+
+const Credits: React.FC<iProps> = ({
+  strings: { paragraphs, credits_sections, end_paragraphs },
+}) => {
+  console.log("CREDITOS");
+  console.log(credits_sections);
   return (
     <div className="container">
       <div className="panel credits">
@@ -20,6 +35,22 @@ const Credits: React.FC<{}> = () => {
         </header>
         <div className="main">
           <div className="content cf">
+            {paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {credits_sections.map(({ header, items }) => (
+              <>
+                <h2>{header}</h2>
+                <ul>
+                  {items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ))}
+            {end_paragraphs.map((end_paragraph) => (
+              <p>{end_paragraph}</p>
+            ))}
             <h2>Content Providers</h2>
             <ul>
               <li>Margaret Verkuyl NP:PHC, MN</li>

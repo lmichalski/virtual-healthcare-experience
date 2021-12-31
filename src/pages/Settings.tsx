@@ -119,14 +119,24 @@ const Settings: React.FC<iProps> = ({
                     onChange={handleFullscreenChange}
                   />
                   <label htmlFor="mode_fullscreen" aria-checked={isFullscreen}>
-                    Fullscreen
+                    <FormattedMessage
+                      id="Options.full_screen"
+                      defaultMessage="Full Screen"
+                      description="full screen button"
+                    />
                   </label>
                 </div>
               </div>
             </div>
             <br />
             <div className="cf">
-              <h2>Subtitles:</h2>
+              <h2>
+              <FormattedMessage
+                  id="Options.subtitles"
+                  defaultMessage="Subtitles"
+                  description="subtitles button"
+                />
+              </h2>
               <div className="radio">
                 <div>
                   <input
@@ -141,7 +151,11 @@ const Settings: React.FC<iProps> = ({
                     htmlFor="subtitles_off"
                     aria-checked={!subtitlesEnabled}
                   >
-                    Off
+                    <FormattedMessage
+                      id="Options.subtitles_off"
+                      defaultMessage="Off"
+                      description="subtitles off button"
+                    />
                   </label>
                 </div>
                 <div>
@@ -154,7 +168,11 @@ const Settings: React.FC<iProps> = ({
                     onChange={handleSubtitlesChange}
                   />
                   <label htmlFor="subtitles_en" aria-checked={subtitlesEnabled}>
-                    On
+                  <FormattedMessage
+                      id="Options.subtitles_on"
+                      defaultMessage="On"
+                      description="subtitles on button"
+                    />
                   </label>
                 </div>
               </div>
