@@ -82,7 +82,7 @@ const Settings: React.FC<iProps> = ({
             <Link to="../" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
             </Link>{" "}
-            Game Options
+            Options
           </h1>
         </header>
         <div className="main">
