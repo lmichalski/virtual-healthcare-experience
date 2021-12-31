@@ -106,11 +106,11 @@
       "options": [
         {
           "label": "Traiter la situation comme un cas de faux travail",
-          "next": 3
+          "next": 2
         },
         {
           "label": "Procéder à une évaluation plus en profondeur",
-          "next": 2
+          "next": 3
         }
       ],
       "next": null
@@ -132,7 +132,7 @@
           "next": 1
         },
         {
-          "label": "Traiter la situation comme un cas de faux travail",
+          "label": "Procéder à une évaluation plus en profondeur",
           "next": 3
         }
       ],
