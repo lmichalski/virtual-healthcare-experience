@@ -90,7 +90,7 @@ const Summary: React.FC<iProps> = ({
             However, if you give only correct answers it should only take
             <Text style={{ fontWeight: "bold" }}>
               {" "}
-              {decisionPoints.filter(({ correct }) => correct).length - 1}
+              {decisionPoints.filter(({ correct }) => correct).length - 2}
             </Text>{" "}
             questions to complete the scenario. See if you can improve your
             results next time!{" "}
@@ -226,7 +226,7 @@ const Summary: React.FC<iProps> = ({
             }
           </PDFDownloadLink>
 
-          <Lonk to="/materials/">
+          <Lonk to="../materials/">
             <FormattedMessage
               id="materials.link"
               defaultMessage="Practice Materials"

@@ -33,7 +33,7 @@
         "Occasionnellement, la vidéo s’arrête et l’on vous demandera de répondre à des questions.",
         "Choisissez vos réponses avec soin, car vos choix vont influencer le déroulement de l’histoire.",
         "L’objectif de ce jeu de simulation est d’arriver à la fin de l’histoire en ayant répondu au moins de questions possible.",
-        "Le meilleur résultat possible est un score de 12. Vous pouvez jouer à nouveau, autant de fois que vous le voulez, afin d’améliorer vos résultats.",
+        "Le meilleur résultat possible est un score de 13-14. Vous pouvez jouer à nouveau, autant de fois que vous le voulez, afin d’améliorer vos résultats.",
         "Le jeu progresse vers l’avant seulement; il n’est pas possible de revenir à un point de décision précédent.",
         "À la fin du jeu, vous verrez un résumé de vos réponses. Le résumé peut être téléchargé et enregistré sur votre ordinateur.",
         "Vous pouvez mettre le jeu en pause à tout moment en cliquant sur la vidéo ou en appuyant sur la barre d’espace.",
@@ -228,12 +228,12 @@
           "next": 7
         },
         {
-          "label": "Appeler l’obstétricienne",
-          "next": 8
+          "label": "Reprendre la PA dans 15 minutes.",
+          "next": 9
         },
         {
           "label": "Évaluer la possibilité d’œdème.",
-          "next": 9
+          "next": 101
         }
       ],
       "next": null
@@ -251,34 +251,53 @@
       "message": "Comment devriez-vous réagir à la haute pression de Rachel?",
       "options": [
         {
-          "label": "Appeler l’obstétricienne",
-          "next": 8
+          "label": "Reprendre la PA dans 15 minutes.",
+          "next": 9
         },
         {
           "label": "Évaluer la possibilité d’œdème.",
+          "next": 101
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 101,
+      "title": "DP3_3_1 - wrong",
+      "type": "video",
+      "data": "SG4_DP3_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/652585298"
+      },
+      "correct": false,
+      "feedback": "",
+      "message": "Quelle est votre prochaine action après avoir évalué l'œdème de la cheville ?",
+      "options": [
+        {
+          "label": "Appeler l’obstétricienne",
+          "next": 102
+        },
+        {
+          "label": "Reprendre la PA dans 15 minutes.",
           "next": 9
         }
       ],
       "next": null
     },
     {
-      "id": 8,
-      "title": "DP3_3 - wrong",
+      "id": 102,
+      "title": "DP3_3_1 - wrong",
       "type": "video",
-      "data": "SG4_DP3_3",
+      "data": "SG4_DP3_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/652585311"
       },
       "correct": false,
       "feedback": "Une pression élevée et des chevilles enflées peuvent indiquer une prééclampsie. Mais d’autres facteurs peuvent également agir sur la pression artérielle. Tenez compte des autres variables qui peuvent agir sur les signes vitaux et faire monter la pression artérielle. ",
-      "message": "Comment devriez-vous réagir à la haute pression de Rachel?",
+      "message": "Quelle est votre prochaine action après avoir évalué l'œdème de la cheville ?",
       "options": [
         {
-          "label": "Résultat normal pendant le travail",
-          "next": 7
-        },
-        {
-          "label": "Évaluer la possibilité d’œdème.",
+          "label": "Reprendre la PA dans 15 minutes.",
           "next": 9
         }
       ],
@@ -577,7 +596,7 @@
       "next": null
     },
     {
-      "id": 18,
+      "id": 21,
       "title": "DP8_1",
       "type": "video",
       "data": "SG4_DP8_1",
@@ -590,21 +609,21 @@
       "options": [
         {
           "label": "Pour prévenir l’hypotension artérielle",
-          "next": 21
+          "next": 24
         },
         {
           "label": "Pour encourager les contractions utérines",
-          "next": 19
+          "next": 22
         },
         {
           "label": "Pour soulager la pression sur la vessie",
-          "next": 20
+          "next": 23
         }
       ],
       "next": null
     },
     {
-      "id": 19,
+      "id": 22,
       "title": "DP8_2 - wrong",
       "type": "video",
       "data": "SG4_DP8_2",
@@ -612,22 +631,22 @@
         "vimeo_url": "https://player.vimeo.com/video/652586257"
       },
       "correct": false,
-      "feedback": "Il n’est pas approprié de commencer un examen cervical au début d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
-      "message": "Quand devez-vous procéder à un examen du col de l’utérus ?",
+      "feedback": "Cette position n’augmente pas nécessairement l’efficacité des contractions utérines. Quelle est l’autre raison pour avoir placé Rachel dans cette position ?",
+      "message": "Pourquoi avoir placé Rachel dans cette position ?",
       "options": [
         {
           "label": "Pour prévenir l’hypotension artérielle",
-          "next": 21
+          "next": 24
         },
         {
           "label": "Pour soulager la pression sur la vessie",
-          "next": 20
+          "next": 23
         }
       ],
       "next": null
     },
     {
-      "id": 20,
+      "id": 23,
       "title": "DP8_3 - wrong",
       "type": "video",
       "data": "SG4_DP8_3",
@@ -635,22 +654,22 @@
         "vimeo_url": "https://player.vimeo.com/video/652586277"
       },
       "correct": false,
-      "feedback": "Il n’est pas approprié de commencer un examen cervical au milieu d’une contraction. Quel serait un meilleur moment pour procéder à l’évaluation vaginale.",
-      "message": "Quand devez-vous procéder à un examen du col de l’utérus ?",
+      "feedback": "Soulager la vessie n’est pas la raison pour laquelle Rachel a été placée dans cette position. Il y a une autre raison.",
+      "message": "Pourquoi avoir placé Rachel dans cette position ?",
       "options": [
         {
           "label": "Pour prévenir l’hypotension artérielle",
-          "next": 21
+          "next": 24
         },
         {
           "label": "Pour encourager les contractions utérines",
-          "next": 19
+          "next": 22
         }
       ],
       "next": null
     },
     {
-      "id": 21,
+      "id": 24,
       "title": "DP9_1",
       "type": "video",
       "data": "SG4_DP9_1",
@@ -663,21 +682,21 @@
       "options": [
         {
           "label": "Installer un cousin chauffant",
-          "next": 22
+          "next": 25
         },
         {
           "label": "Appliquer une pression accrue",
-          "next": 23
+          "next": 26
         },
         {
           "label": "Arrêter de la toucher",
-          "next": 24
+          "next": 27
         }
       ],
       "next": null
     },
     {
-      "id": 22,
+      "id": 25,
       "title": "DP9_2 - wrong",
       "type": "video",
       "data": "SG4_DP9_2",
@@ -690,17 +709,17 @@
       "options": [
         {
           "label": "Appliquer une pression accrue",
-          "next": 23
+          "next": 26
         },
         {
           "label": "Arrêter de la toucher",
-          "next": 24
+          "next": 27
         }
       ],
       "next": null
     },
     {
-      "id": 23,
+      "id": 26,
       "title": "DP9_3 - wrong",
       "type": "video",
       "data": "SG4_DP9_3",
@@ -713,17 +732,17 @@
       "options": [
         {
           "label": "Installer un cousin chauffant",
-          "next": 22
+          "next": 25
         },
         {
           "label": "Arrêter de la toucher",
-          "next": 24
+          "next": 27
         }
       ],
       "next": null
     },
     {
-      "id": 24,
+      "id": 27,
       "title": "DP10_1",
       "type": "video",
       "data": "SG4_DP10_1",
@@ -736,11 +755,11 @@
       "options": [
         {
           "label": "Après l’évaluation APGAR",
-          "next": 25
+          "next": 28
         },
         {
           "label": "Après avoir coupé le cordon ombilical",
-          "next": 26
+          "next": 29
         },
         {
           "label": "Après la naissance",
@@ -750,7 +769,7 @@
       "next": null
     },
     {
-      "id": 25,
+      "id": 28,
       "title": "DP10_2 - wrong",
       "type": "video",
       "data": "SG4_DP10_2",
@@ -763,7 +782,7 @@
       "options": [
         {
           "label": "Après avoir coupé le cordon ombilical",
-          "next": 26
+          "next": 29
         },
         {
           "label": "Après la naissance",
@@ -773,7 +792,7 @@
       "next": null
     },
     {
-      "id": 26,
+      "id": 29,
       "title": "DP10_3 - wrong",
       "type": "video",
       "data": "SG4_DP10_3",
@@ -786,7 +805,7 @@
       "options": [
         {
           "label": "Après l’évaluation APGAR",
-          "next": 25
+          "next": 28
         },
         {
           "label": "Après la naissance",
@@ -809,13 +828,13 @@
       "options": [
         {
           "label": "Continuellement ",
-          "next": 27
+          "next": 30
         }
       ],
       "next": null
     },
     {
-      "id": 27,
+      "id": 30,
       "title": "DP11_1_B",
       "type": "video",
       "data": "SG4_DP11_1",
@@ -828,21 +847,21 @@
       "options": [
         {
           "label": "Un moniteur fœtal externe",
-          "next": 28
+          "next": 31
         },
         {
           "label": "Un moniteur fœtal interne",
-          "next": 29
+          "next": 32
         },
         {
           "label": "Ausculter de façon intermittente",
-          "next": 30
+          "next": 33
         }
       ],
       "next": null
     },
     {
-      "id": 28,
+      "id": 31,
       "title": "DP11_2 - wrong",
       "type": "video",
       "data": "SG4_DP11_2",
@@ -855,17 +874,17 @@
       "options": [
         {
           "label": "Un moniteur fœtal interne",
-          "next": 29
+          "next": 32
         },
         {
           "label": "Ausculter de façon intermittente",
-          "next": 30
+          "next": 33
         }
       ],
       "next": null
     },
     {
-      "id": 29,
+      "id": 32,
       "title": "DP11_3 - wrong",
       "type": "video",
       "data": "SG4_DP11_3",
@@ -878,17 +897,17 @@
       "options": [
         {
           "label": "Un moniteur fœtal externe",
-          "next": 28
+          "next": 31
         },
         {
           "label": "Ausculter de façon intermittente",
-          "next": 30
+          "next": 33
         }
       ],
       "next": null
     },
     {
-      "id": 30,
+      "id": 33,
       "title": "DP12_1",
       "type": "video",
       "data": "SG4_DP12_1",
@@ -901,11 +920,11 @@
       "options": [
         {
           "label": "La technique de geignement expiratoire",
-          "next": 31
+          "next": 34
         },
         {
           "label": "La technique des gémissements",
-          "next": 32
+          "next": 35
         },
         {
           "label": "La respiration haletante",
@@ -915,7 +934,7 @@
       "next": null
     },
     {
-      "id": 31,
+      "id": 34,
       "title": "DP12_2 - wrong",
       "type": "video",
       "data": "SG4_DP12_2",
@@ -928,7 +947,7 @@
       "options": [
         {
           "label": "La technique des gémissements",
-          "next": 32
+          "next": 35
         },
         {
           "label": "La respiration haletante",
@@ -938,7 +957,7 @@
       "next": null
     },
     {
-      "id": 32,
+      "id": 35,
       "title": "DP12_3 - wrong",
       "type": "video",
       "data": "SG4_DP12_3",
@@ -951,7 +970,7 @@
       "options": [
         {
           "label": "La technique de geignement expiratoire",
-          "next": 31
+          "next": 34
         },
         {
           "label": "La respiration haletante",
@@ -974,13 +993,13 @@
       "options": [
         {
           "label": "Continuellement ",
-          "next": 33
+          "next": 36
         }
       ],
       "next": null
     },
     {
-      "id": 33,
+      "id": 36,
       "title": "DP13_1_B",
       "type": "video",
       "data": "SG4_DP13_1",
@@ -993,21 +1012,21 @@
       "options": [
         {
           "label": "Offrir la bassine",
-          "next": 34
+          "next": 37
         },
         {
           "label": "Aider à se diriger vers les toilettes",
-          "next": 35
+          "next": 38
         },
         {
           "label": "Vérifier la dilatation",
-          "next": 36
+          "next": 39
         }
       ],
       "next": null
     },
     {
-      "id": 34,
+      "id": 37,
       "title": "DP13_2 - wrong",
       "type": "video",
       "data": "SG4_DP13_2",
@@ -1020,17 +1039,17 @@
       "options": [
         {
           "label": "Aider à se diriger vers les toilettes",
-          "next": 35
+          "next": 38
         },
         {
           "label": "Vérifier la dilatation",
-          "next": 36
+          "next": 39
         }
       ],
       "next": null
     },
     {
-      "id": 35,
+      "id": 38,
       "title": "DP13_3 - wrong",
       "type": "video",
       "data": "SG4_DP13_3",
@@ -1043,17 +1062,17 @@
       "options": [
         {
           "label": "Offrir la bassine",
-          "next": 34
+          "next": 37
         },
         {
           "label": "Vérifier la dilatation",
-          "next": 36
+          "next": 39
         }
       ],
       "next": null
     },
     {
-      "id": 36,
+      "id": 39,
       "type": "video",
       "data": "SG4_DP14_1",
       "video": {
