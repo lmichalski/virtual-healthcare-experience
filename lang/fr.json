@@ -60,7 +60,7 @@
       "description": "Options Button"
     },
     "Menu.instructions": {
-      "defaultMessage": "How to Play",
+      "defaultMessage": "Comment Jouer",
       "description": "How to Play Button"
     },
     "Menu.materials": {
@@ -80,11 +80,11 @@
       "description": "Principles Button"
     },
     "Menu.resumeGame": {
-      "defaultMessage": "Resume Game",
+      "defaultMessage": "Continuer le Jeu",
       "description": "Resume Game Button"
     },
     "Objectives.title": {
-      "defaultMessage": "Learning Objectives",
+      "defaultMessage": "Objectifs d’apprentissage",
       "description": "Learning Objectives title"
     },
     "Principles.title": {
@@ -122,6 +122,14 @@
     "Options.subtitles_off":{
       "defaultMessage": "désactivés",
       "description": "subtitles off"
+    },
+    "Options.language_en":{
+      "defaultMessage": "Anglais",
+      "description": "english language button"
+    },
+    "Options.language_fr":{
+      "defaultMessage": "Français",
+      "description": "french language button"
     }
   }
   

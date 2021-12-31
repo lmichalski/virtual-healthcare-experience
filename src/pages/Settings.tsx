@@ -131,7 +131,7 @@ const Settings: React.FC<iProps> = ({
             <br />
             <div className="cf">
               <h2>
-              <FormattedMessage
+                <FormattedMessage
                   id="Options.subtitles"
                   defaultMessage="Subtitles"
                   description="subtitles button"
@@ -168,7 +168,7 @@ const Settings: React.FC<iProps> = ({
                     onChange={handleSubtitlesChange}
                   />
                   <label htmlFor="subtitles_en" aria-checked={subtitlesEnabled}>
-                  <FormattedMessage
+                    <FormattedMessage
                       id="Options.subtitles_on"
                       defaultMessage="On"
                       description="subtitles on button"
@@ -194,7 +194,11 @@ const Settings: React.FC<iProps> = ({
                     htmlFor="lang_en"
                     aria-checked={locale.startsWith("en")}
                   >
-                    English
+                    <FormattedMessage
+                      id="Options.language_en"
+                      defaultMessage="Englsih"
+                      description="english language button"
+                    />
                   </label>
                 </div>
                 <div>
@@ -210,7 +214,11 @@ const Settings: React.FC<iProps> = ({
                     htmlFor="lang_fr"
                     aria-checked={locale.startsWith("fr")}
                   >
-                    French
+                    <FormattedMessage
+                      id="Options.language_fr"
+                      defaultMessage="French"
+                      description="french language button"
+                    />
                   </label>
                 </div>
               </div>

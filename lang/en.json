@@ -114,5 +114,13 @@
     "Options.subtitles_off":{
       "defaultMessage": "Off",
       "description": "subtitles off button"
+    },
+    "Options.language_en":{
+      "defaultMessage": "English",
+      "description": "english language button"
+    },
+    "Options.language_fr":{
+      "defaultMessage": "French",
+      "description": "french language button"
     }
 }
