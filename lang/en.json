@@ -52,8 +52,8 @@
     "description": "Exit Game Button"
   },
   "Menu.gameOptions": {
-    "defaultMessage": "Game Options",
-    "description": "Options Button"
+    "defaultMessage": "Settings",
+    "description": "Settings Button"
   },
   "Menu.instructions": {
     "defaultMessage": "How to Play",
@@ -122,5 +122,13 @@
     "Options.language_fr":{
       "defaultMessage": "French",
       "description": "french language button"
+    },
+    "Options.windowed":{
+      "defaultMessage": "Window",
+      "description": "windowed view option"
+    },
+    "Options.language":{
+      "defaultMessage": "Language",
+      "description": "language options title"
     }
 }

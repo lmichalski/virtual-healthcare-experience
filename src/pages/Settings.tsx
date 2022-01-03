@@ -106,7 +106,11 @@ const Settings: React.FC<iProps> = ({
                     onChange={handleFullscreenChange}
                   />
                   <label htmlFor="mode_window" aria-checked={!isFullscreen}>
-                    Window
+                    <FormattedMessage
+                      id="Options.windowed"
+                      defaultMessage="Window"
+                      description="windowed view option"
+                    />
                   </label>
                 </div>
                 <div>
@@ -179,7 +183,13 @@ const Settings: React.FC<iProps> = ({
             </div>
 
             <div className="cf">
-              <h2>Language:</h2>
+              <h2>
+                <FormattedMessage
+                  id="Options.language"
+                  defaultMessage="Language"
+                  description="language options title"
+                />
+              </h2>
               <div className="radio">
                 <div>
                   <input

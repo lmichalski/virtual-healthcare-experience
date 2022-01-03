@@ -77,8 +77,8 @@ const Menu: React.FC<iProps> = ({
                 <Link to={`/games/${game_id}/settings/`}>
                   <FormattedMessage
                     id="Menu.gameOptions"
-                    defaultMessage="Options"
-                    description="Options Button"
+                    defaultMessage="Settings"
+                    description="Settings Button"
                   />
                 </Link>
               </li>
