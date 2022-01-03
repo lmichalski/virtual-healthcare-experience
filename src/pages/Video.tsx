@@ -15,8 +15,8 @@ interface iProps {
   onVideoFinished: () => void;
   videoposition: number;
   setVideoposition: (t: number) => void;
-  subtitlesEnabled: boolean;
-  onSubtitlesToggled: (enabled: boolean) => void;
+  subtitlesLanguage: string | null;
+  onSubtitlesLanguageSet: (lang: string | null) => void;
 }
 
 const Video: React.FC<iProps> = ({
@@ -24,8 +24,8 @@ const Video: React.FC<iProps> = ({
   onVideoFinished,
   videoposition,
   setVideoposition,
-  subtitlesEnabled,
-  onSubtitlesToggled,
+  subtitlesLanguage,
+  onSubtitlesLanguageSet,
 }) => {
   const location = useLocation();
   const history = useHistory();
@@ -209,7 +209,7 @@ const Video: React.FC<iProps> = ({
       });
 
       player.on("texttrackchange", (data: { language: string | null }) => {
-        onSubtitlesToggled(!!data.language);
+        onSubtitlesLanguageSet(data.language);
       });
 
       return () => {
@@ -218,18 +218,32 @@ const Video: React.FC<iProps> = ({
         player.off("texttrackchange");
       };
     }
-  }, [setVideoposition, dp.data, logGameEvent, skipVideo, onSubtitlesToggled]);
+  }, [
+    setVideoposition,
+    dp.data,
+    logGameEvent,
+    skipVideo,
+    onSubtitlesLanguageSet,
+  ]);
 
   useEffect(() => {
-    if (iframeRef.current) {
-      const player = new Player(iframeRef.current);
-      if (subtitlesEnabled) {
-        player.enableTextTrack("en");
+    const togggleTracks = async (iframe: HTMLIFrameElement) => {
+      const player = new Player(iframe);
+      if (subtitlesLanguage) {
+        const tracks = await player.getTextTracks();
+        const track =
+          tracks.find(({ language }) => language === subtitlesLanguage) ??
+          tracks[0];
+        if (track) player.enableTextTrack(track.language, track.kind);
       } else {
-        player.disableTextTrack();
+        return player.disableTextTrack();
       }
+    };
+
+    if (iframeRef.current) {
+      togggleTracks(iframeRef.current);
     }
-  }, [subtitlesEnabled]);
+  }, [subtitlesLanguage]);
 
   return (
     <div className="video">

@@ -42,6 +42,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
   ).length;
 
   const [subtitlesEnabled, setSubtitlesEnabled] = useState<boolean>(true);
+  const handleSubtitlesLanguageSet = useCallback((lang) => setSubtitlesEnabled(!!lang), [])
 
   const lastDecisionPoint =
     gameData.decisionpoints[gameData.decisionpoints.length - 1].id ===
@@ -218,8 +219,8 @@ const App: React.FC<iProps> = ({ gameId }) => {
               onVideoFinished={handleVideoFinished}
               videoposition={gameState.videoposition}
               setVideoposition={gameState.setVideoposition}
-              subtitlesEnabled={subtitlesEnabled}
-              onSubtitlesToggled={setSubtitlesEnabled}
+              subtitlesLanguage={subtitlesEnabled ? locale : null}
+              onSubtitlesLanguageSet={handleSubtitlesLanguageSet}
             />
           </Route>
 
