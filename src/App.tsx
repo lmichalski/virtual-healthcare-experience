@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
-import { Switch, Route, useHistory, useRouteMatch } from "react-router-dom";
+import { Switch, useHistory, useRouteMatch } from "react-router-dom";
+import { SentryRoute as Route } from "./util";
 import { useIntl } from "react-intl";
 
 import Menu from "./pages/Menu";

@@ -1,3 +1,6 @@
+import * as Sentry from "@sentry/react";
+import { Route } from "react-router-dom";
+
 import { useCallback } from "react";
 import { useHistory } from "react-router";
 import { useParams } from "react-router-dom";
@@ -95,3 +98,5 @@ export const shuffleArray= <T>(array: T[]): T[] => {
 }
 // Conctatenate two path strings, stripping excess /'s at the seam
 export const concatenatePaths = (first: string, second: string): string => `${first.replace(/\/*$/,"")}/${second.replace(/^\/*/,"")}`
+
+export const SentryRoute = Sentry.withSentryRouting(Route);
