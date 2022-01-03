@@ -110,7 +110,7 @@ const Menu: React.FC<iProps> = ({
                 </Link>
               </li>
               <li>
-                <Link to={`/games/${game_id}./`}>
+                <Link to={`/games/`}>
                   <FormattedMessage
                     id="Menu.exit"
                     defaultMessage="Exit Game"

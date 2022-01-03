@@ -29,7 +29,7 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="./games/post_partum">
+                <Link to="/games/post_partum">
                   <FormattedMessage
                     id="Home.postPartum_fr"
                     defaultMessage="Post Partum FR"
@@ -38,7 +38,7 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="./games/labor_delivery">
+                <Link to="/games/labor_delivery">
                   <FormattedMessage
                     id="Home.labor_delivery_fr"
                     defaultMessage="Labour and Delivery FR"
@@ -47,7 +47,7 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="./games/prenatal_fr">
+                <Link to="/games/prenatal">
                   <FormattedMessage
                     id="Home.prenatal_fr"
                     defaultMessage="Prenatal Care FR"
