@@ -71,43 +71,76 @@ const Summary: React.FC<iProps> = ({
     message = (
       <>
         <Text>
-          You have completed the game by answering{" "}
+          <FormattedMessage
+            id="Summary.results-one"
+            defaultMessage="You have completed the game by answering"
+            description="summary results part one"
+          />{" "}
           <Text style={{ fontWeight: "bold" }}>
             {" "}
-            {progress.length} questions
+            {progress.length}
+            <FormattedMessage
+              id="Summary.results-two"
+              defaultMessage="questions."
+              description="summary results part two"
+            />
           </Text>
-          .
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
           <Text>
-            You've demonstrated the best possible result! Now play it one more
-            time to make sure it wasn't mere luck :)
+            <FormattedMessage
+              id="Summary.best-result"
+              defaultMessage="You've demonstrated the best possible result! Now play it one more
+                  time to make sure it wasn't mere luck :)"
+              description="best result sentence"
+            />
           </Text>
         ) : (
           <Text>
             {" "}
-            However, if you give only correct answers it should only take
+            <FormattedMessage
+              id="Summary.incorrect-one"
+              defaultMessage="However, if you give only correct answers it should only take"
+              description="not the best result part one"
+            />
             <Text style={{ fontWeight: "bold" }}>
               {" "}
               {decisionPoints.filter(({ correct }) => correct).length - 2}
             </Text>{" "}
-            questions to complete the scenario. See if you can improve your
-            results next time!{" "}
+            <FormattedMessage
+              id="Summary.incorrect-two"
+              defaultMessage="questions to complete the scenario. See if you can improve your
+                  results next time!"
+              description="not the best result part two"
+            />{" "}
           </Text>
         )}
-        <Text>
+        {/* <Text>
           Document this encounter by clicking on the practice documentation
           icon. There you will find a blank documentation form. Once you are
           done, compare your documentation to the sample provided.{" "}
-        </Text>
+        </Text> */}
         <Text>
-          If not attending an organized debrief, make sure you download and
-          complete the{" "}
+          <FormattedMessage
+            id="Summary.debrief-one"
+            defaultMessage="If not attending an organized debrief, make sure you download and
+                  complete the"
+            description="debrief sentence part one"
+          />{" "}
           <Link src={`${window.location.origin}/docs/self-assessment.pdf`}>
-            self-debriefing questions
+            <FormattedMessage
+              id="Summary.debrief-two"
+              defaultMessage="self-debriefing questions"
+              description="debrief sentence part two"
+            />
           </Link>{" "}
-          to optimise your learning experience. Scroll down to view results.
+          <FormattedMessage
+            id="Summary.debrief-three"
+            defaultMessage="to optimise your learning experience. Scroll down to view results."
+            description="debrief sentence part three"
+          />
+          
         </Text>
       </>
     );
@@ -115,8 +148,8 @@ const Summary: React.FC<iProps> = ({
     message = (
       <Text>
         You have answered{" "}
-        <Text style={{ fontWeight: "bold" }}> {progress.length} questions</Text>
-        . To finish the game go to menu and resume the gameplay.
+        <Text style={{ fontWeight: "bold" }}> {progress.length} questions.</Text>
+        To finish the game go to menu and resume the gameplay.
       </Text>
     );
   }
@@ -163,7 +196,7 @@ const Summary: React.FC<iProps> = ({
                 borderBottom: "2px solid #000000",
               }}
             >
-              Emergency Game Report
+              Game Report
             </Text>
             <Text style={{ fontSize: 24 }}>Summary</Text>
             <View>{message}</View>

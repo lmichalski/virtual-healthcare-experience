@@ -130,5 +130,37 @@
     "Options.language":{
       "defaultMessage": "Language",
       "description": "language options title"
+    },
+    "Summary.results-one":{
+      "defaultMessage": "You have completed the game by answering",
+      "description": "summary results part one"
+    },
+    "Summary.results-two":{
+      "defaultMessage": "questions.",
+      "description": "summary results part two"
+    },
+    "Summary.best-result":{
+      "defaultMessage": "You've demonstrated the best possible result! Now play it one more time to make sure it wasn't mere luck :)",
+      "description": "best result sentence"
+    },
+    "Summary.incorrect-one":{
+    "defaultMessage": "However, if you give only correct answers it should only take",
+    "description": "not the best result part one"
+    },
+    "Summary.incorrect-two":{
+    "defaultMessage": "questions to complete the scenario. See if you can improve your results next time!",
+    "description": "not the best result part two"
+    },
+    "Summary.debrief-one":{
+      "defaultMessage": "If not attending an organized debrief, make sure you download and complete the",
+      "description": "debrief sentence part one"
+    },
+    "Summary.debrief-two":{
+      "defaultMessage": "self-debriefing questions",
+      "description": "debrief sentence part two"
+    },
+    "Summary.debrief-three":{
+      "defaultMessage": "to optimise your learning experience. Scroll down to view results.",
+      "description": "debrief sentence part three"
     }
 }

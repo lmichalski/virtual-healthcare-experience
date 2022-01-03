@@ -138,5 +138,38 @@
     "Options.language":{
       "defaultMessage": "Langue",
       "description": "language options title"
-    }  }
+    },
+    "Summary.results-one":{
+      "defaultMessage": "Vous avez fini le jeu en répondant à",
+      "description": "summary results part one"
+    },
+    "Summary.results-two":{
+      "defaultMessage": "questions.",
+      "description": "summary results part two"
+    },
+    "Summary.best-result":{
+      "defaultMessage": "Vous avez démontré le meilleur résultat possible ! Maintenant, jouez-le encore une fois pour vous assurer que ce n'était pas de la chance !",
+      "description": "best result sentence"
+    },
+    "Summary.incorrect-one":{
+    "defaultMessage": "Toutefois, si l’on répond correctement, il ne faudrait que questions pour terminer le scénario.",
+    "description": "not the best result part one"
+    },
+    "Summary.incorrect-two":{
+    "defaultMessage": "questions pour terminer le scénario. Tentez d’améliorer vos résultats en jouant à nouveau.",
+    "description": "not the best result part two"
+    },
+    "Summary.debrief-one":{
+      "defaultMessage": "Si vous ne participez pas à une séance d’évaluation organisée, n’oubliez pas de télécharger ",
+      "description": "debrief sentence part one"
+    },
+    "Summary.debrief-two":{
+      "defaultMessage": "le formulaire d’auto-évaluation",
+      "description": "debrief sentence part two"
+    },
+    "Summary.debrief-three":{
+      "defaultMessage": " afin d’optimiser votre expérience d’apprentissage.",
+      "description": "debrief sentence part three"
+    }
+}
   
