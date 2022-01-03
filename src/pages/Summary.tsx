@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { useGotoMenu } from "../util";
 import "./Summary.scss";
 import {
@@ -15,6 +15,38 @@ import { Font } from "@react-pdf/renderer";
 import { Link as Lonk } from "react-router-dom";
 import useLogGameEvent from "../hooks/useLogGameEvent";
 import { DecisionPoint } from "../hooks/useGameData";
+import { defineMessages } from "@formatjs/intl";
+
+const INTL_MESSAGES = defineMessages({
+  resultsOne: {
+    id: "Summary.results-one",
+    defaultMessage: "You have completed the game by answering",
+    description: "summary results part one",
+  },
+  resultsTwo: {
+    id: "Summary.results-two",
+    defaultMessage: "questions.",
+    description: "summary results part two",
+  },
+  bestResult: {
+    id: "Summary.best-result",
+    defaultMessage:
+      "You've demonstrated the best possible result! Now play it one more time to make sure it wasn't mere luck :)",
+    description: "best result sentence",
+  },
+  incorrectOne: {
+    id: "Summary.incorrect-one",
+    defaultMessage:
+      "However, if you give only correct answers it should only take",
+    description: "not the best result part one",
+  },
+  incorrectTwo: {
+    id: "Summary.incorrect-two",
+    defaultMessage:
+      "questions to complete the scenario. See if you can improve your results next time!",
+    description: "not the best result part two",
+  },
+});
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
 
@@ -36,7 +68,7 @@ const Summary: React.FC<iProps> = ({
   completed,
 }) => {
   const logGameEvent = useLogGameEvent();
-
+  const { formatMessage: getFM } = useIntl();
   // const [progress, setProgress] = useState([])
 
   const goToMenu = useGotoMenu();
@@ -71,49 +103,25 @@ const Summary: React.FC<iProps> = ({
     message = (
       <>
         <Text>
-          <FormattedMessage
-            id="Summary.results-one"
-            defaultMessage="You have completed the game by answering"
-            description="summary results part one"
-          />{" "}
+          {getFM(INTL_MESSAGES.resultsOne)}{" "}
           <Text style={{ fontWeight: "bold" }}>
             {" "}
             {progress.length}
-            <FormattedMessage
-              id="Summary.results-two"
-              defaultMessage="questions."
-              description="summary results part two"
-            />
+            {getFM(INTL_MESSAGES.resultsTwo)}
           </Text>
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
-          <Text>
-            <FormattedMessage
-              id="Summary.best-result"
-              defaultMessage="You've demonstrated the best possible result! Now play it one more
-                  time to make sure it wasn't mere luck :)"
-              description="best result sentence"
-            />
-          </Text>
+          <Text>{getFM(INTL_MESSAGES.bestResult)}</Text>
         ) : (
           <Text>
             {" "}
-            <FormattedMessage
-              id="Summary.incorrect-one"
-              defaultMessage="However, if you give only correct answers it should only take"
-              description="not the best result part one"
-            />
+            {getFM(INTL_MESSAGES.incorrectOne)}
             <Text style={{ fontWeight: "bold" }}>
               {" "}
               {decisionPoints.filter(({ correct }) => correct).length - 2}
             </Text>{" "}
-            <FormattedMessage
-              id="Summary.incorrect-two"
-              defaultMessage="questions to complete the scenario. See if you can improve your
-                  results next time!"
-              description="not the best result part two"
-            />{" "}
+            {getFM(INTL_MESSAGES.incorrectTwo)}{" "}
           </Text>
         )}
         {/* <Text>
@@ -140,7 +148,6 @@ const Summary: React.FC<iProps> = ({
             defaultMessage="to optimise your learning experience. Scroll down to view results."
             description="debrief sentence part three"
           />
-          
         </Text>
       </>
     );
@@ -148,7 +155,10 @@ const Summary: React.FC<iProps> = ({
     message = (
       <Text>
         You have answered{" "}
-        <Text style={{ fontWeight: "bold" }}> {progress.length} questions.</Text>
+        <Text style={{ fontWeight: "bold" }}>
+          {" "}
+          {progress.length} questions.
+        </Text>
         To finish the game go to menu and resume the gameplay.
       </Text>
     );
