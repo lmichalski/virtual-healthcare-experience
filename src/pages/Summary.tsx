@@ -18,15 +18,10 @@ import { DecisionPoint } from "../hooks/useGameData";
 import { defineMessages } from "@formatjs/intl";
 
 const INTL_MESSAGES = defineMessages({
-  resultsOne: {
-    id: "Summary.results-one",
-    defaultMessage: "You have completed the game by answering",
-    description: "summary results part one",
-  },
-  resultsTwo: {
-    id: "Summary.results-two",
-    defaultMessage: "questions.",
-    description: "summary results part two",
+  results: {
+    id: "Summary.results",
+    defaultMessage: "You have completed the game by answering {question_count} questions.",
+    description: "summary results",
   },
   bestResult: {
     id: "Summary.best-result",
@@ -46,6 +41,12 @@ const INTL_MESSAGES = defineMessages({
       "questions to complete the scenario. See if you can improve your results next time!",
     description: "not the best result part two",
   },
+
+  inProgressResults: {
+    id: "Summary.inProgressResults",
+    defaultMessage: "You have answered {question_count} questions. To finish the game go to menu and resume the gameplay.",
+    description: "The message to show players arriving at the summary page while their game isn't finished"
+  }
 });
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
@@ -103,12 +104,8 @@ const Summary: React.FC<iProps> = ({
     message = (
       <>
         <Text>
-          {getFM(INTL_MESSAGES.resultsOne)}{" "}
-          <Text style={{ fontWeight: "bold" }}>
-            {" "}
-            {progress.length}
-            {getFM(INTL_MESSAGES.resultsTwo)}
-          </Text>
+          {getFM(INTL_MESSAGES.results, {question_count: <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>})}{" "}
+          
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
@@ -154,12 +151,7 @@ const Summary: React.FC<iProps> = ({
   } else {
     message = (
       <Text>
-        You have answered{" "}
-        <Text style={{ fontWeight: "bold" }}>
-          {" "}
-          {progress.length} questions.
-        </Text>
-        To finish the game go to menu and resume the gameplay.
+        {getFM(INTL_MESSAGES.inProgressResults, {question_count: <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>})}{" "}
       </Text>
     );
   }
