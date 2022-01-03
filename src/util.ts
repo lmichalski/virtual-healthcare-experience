@@ -93,3 +93,5 @@ export const shuffleArray= <T>(array: T[]): T[] => {
   }
   return result
 }
+// Conctatenate two path strings, stripping excess /'s at the seam
+export const concatenatePaths = (first: string, second: string): string => `${first.replace(/\/*$/,"")}/${second.replace(/^\/*/,"")}`

@@ -21,7 +21,7 @@ import Transition from "./pages/Transition";
 import Materials from "./pages/Materials";
 import Principles from "./pages/Principles";
 import useLogGameEvent from "./hooks/useLogGameEvent";
-import { getBrowser } from "./util";
+import { getBrowser, concatenatePaths } from "./util";
 import useGameState from "./hooks/useGameState";
 
 interface iProps {
@@ -59,7 +59,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
   const handleStartNewGame = useCallback(() => {
     gameState.newGame();
 
-    history.push(`${url}/intro/`);
+    history.push(concatenatePaths(url, `/intro/`));
     logGameEvent("", "start", "game", getBrowser(), "");
   }, [url, history, logGameEvent, gameState]);
 
@@ -67,11 +67,11 @@ const App: React.FC<iProps> = ({ gameId }) => {
     var dp = currentDecisionPoint;
 
     if (dp && lastDecisionPoint) {
-      history.push(`${url}/summary/`);
+      history.push(concatenatePaths(url, `/summary/`));
     } else if (gameState.videoposition > 0.1) {
-      history.push(`${url}/video/`);
+      history.push(concatenatePaths(url, `/video/`));
     } else {
-      history.push(`${url}/decision/`);
+      history.push(concatenatePaths(url, `/decision/`));
     }
 
     logGameEvent("", "resume", "game", "", "");
@@ -100,14 +100,14 @@ const App: React.FC<iProps> = ({ gameId }) => {
 
       switch (next?.type) {
         case "video":
-          history.push(`${url}/video/`);
+          history.push(concatenatePaths(url, `/video/`));
           break;
         case "lo":
           if (next.feedback > "") {
             // If there's feedback, show it then advance
-            history.push(`${url}/feedback/`);
+            history.push(concatenatePaths(url, `/feedback/`));
           } else {
-            history.push(`${url}/lo/`);
+            history.push(concatenatePaths(url, `/lo/`));
           }
           break;
       }
@@ -122,21 +122,21 @@ const App: React.FC<iProps> = ({ gameId }) => {
     gameState.setVideoposition(0);
 
     if (lastDecisionPoint) {
-      history.push(`${url}/summary/`);
+      history.push(concatenatePaths(url, `/summary/`));
     } else if (dp && dp.options.length > 0) {
       if (dp.feedback > "") {
-        history.push(`${url}/feedback/`);
+        history.push(concatenatePaths(url, `/feedback/`));
       } else {
         // No feedback means go directly to the decision
-        history.push(`${url}/decision/`);
+        history.push(concatenatePaths(url, `/decision/`));
       }
     } else {
       gameState.setCurrentStep(gameState.currentStep + 1);
       if (dp?.next) {
         // If there are no options, go to the next decision point
-        history.push(`${url}/lo/`);
+        history.push(concatenatePaths(url, `/lo/`));
       } else {
-        history.push(`${url}/transition/`);
+        history.push(concatenatePaths(url, `/transition/`));
       }
     }
   }, [currentDecisionPoint, history, lastDecisionPoint, gameState, url]);
@@ -153,54 +153,54 @@ const App: React.FC<iProps> = ({ gameId }) => {
     <div className="fullscreen" style={gameData.colors as React.CSSProperties}>
       <div className="view" role="application">
         <Switch>
-          <Route path={`${path}/credits`}>
+          <Route path={concatenatePaths(path, `/credits`)}>
             <Credits strings={gameData.strings.credits} />
           </Route>
 
-          <Route path={`${path}/decision`}>
+          <Route path={concatenatePaths(path, `/decision`)}>
             <Decision
               decisionPoint={currentDecisionPoint}
               onOptionChosen={handleOptionChosen}
             />
           </Route>
 
-          <Route path={`${path}/feedback`}>
+          <Route path={concatenatePaths(path, `/feedback`)}>
             <Feedback decisionPoint={currentDecisionPoint} />
           </Route>
 
-          <Route path={`${path}/instructions`}>
+          <Route path={concatenatePaths(path, `/instructions`)}>
             <Instructions
               minSteps={minSteps}
               strings={gameData.strings.instructions}
             />
           </Route>
 
-          <Route path={`${path}/intro`}>
+          <Route path={concatenatePaths(path, `/intro`)}>
             <Intro strings={gameData.strings.intro} />
           </Route>
 
-          <Route path={`${path}/materials`}>
+          <Route path={concatenatePaths(path, `/materials`)}>
             <Materials />
           </Route>
 
-          <Route path={`${path}/objectives`}>
+          <Route path={concatenatePaths(path, `/objectives`)}>
             <Objectives strings={gameData.strings.objectives} />
           </Route>
 
           {gameData.strings.principles ? (
-            <Route path={`${path}/principles`}>
+            <Route path={concatenatePaths(path, `/principles`)}>
               <Principles strings={gameData.strings.principles} />
             </Route>
           ) : null}
 
-          <Route path={`${path}/settings`}>
+          <Route path={concatenatePaths(path, `/settings`)}>
             <Settings
               subtitlesEnabled={subtitlesEnabled}
               onSubtitlesToggled={setSubtitlesEnabled}
             />
           </Route>
 
-          <Route path={`${path}/summary`}>
+          <Route path={concatenatePaths(path, `/summary`)}>
             <Summary
               decisionPoints={gameData.decisionpoints}
               gameProgress={gameState.progress}
@@ -208,11 +208,11 @@ const App: React.FC<iProps> = ({ gameId }) => {
             />
           </Route>
 
-          <Route path={`${path}/transition`}>
+          <Route path={concatenatePaths(path, `/transition`)}>
             <Transition decisionPoint={currentDecisionPoint} />
           </Route>
 
-          <Route path={`${path}/video`}>
+          <Route path={concatenatePaths(path, `/video`)}>
             <Video
               decisionPoint={currentDecisionPoint}
               onVideoFinished={handleVideoFinished}
@@ -223,9 +223,9 @@ const App: React.FC<iProps> = ({ gameId }) => {
             />
           </Route>
 
-          <Route path={`${path}/lo`}>Somethings going on here, I swear</Route>
+          <Route path={concatenatePaths(path, `/lo`)}>Somethings going on here, I swear</Route>
 
-          <Route path={`${path}/`}>
+          <Route path={concatenatePaths(path, `/`)}>
             <Menu
               strings={gameData.strings.menu}
               startNewGame={handleStartNewGame}
