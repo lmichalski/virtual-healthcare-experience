@@ -152,7 +152,7 @@
       "description": "best result sentence"
     },
     "Summary.incorrect-one":{
-    "defaultMessage": "Toutefois, si l’on répond correctement, il ne faudrait que questions pour terminer le scénario.",
+    "defaultMessage": "Toutefois, si l’on répond correctement, il ne faudrait que ",
     "description": "not the best result part one"
     },
     "Summary.incorrect-two":{
@@ -170,6 +170,18 @@
     "Summary.debrief-three":{
       "defaultMessage": " afin d’optimiser votre expérience d’apprentissage.",
       "description": "debrief sentence part three"
+    },
+    "Summary.game-report": {
+      "defaultMessage": "Reportage",
+      "description": "game report title"
+    },
+    "Summary.summary":{
+      "defaultMessage": "Résumé",
+      "description": "summary header"
+    },
+    "Summary.your-answers":{
+      "defaultMessage": "Vos Réponses",
+      "description": "your answers header title"
     }
 }
   

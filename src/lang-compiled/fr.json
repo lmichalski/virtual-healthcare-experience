@@ -35,11 +35,14 @@
   "Summary.debrief-one": "Si vous ne participez pas à une séance d’évaluation organisée, n’oubliez pas de télécharger ",
   "Summary.debrief-three": " afin d’optimiser votre expérience d’apprentissage.",
   "Summary.debrief-two": "le formulaire d’auto-évaluation",
-  "Summary.incorrect-one": "Toutefois, si l’on répond correctement, il ne faudrait que questions pour terminer le scénario.",
+  "Summary.game-report": "Reportage",
+  "Summary.incorrect-one": "Toutefois, si l’on répond correctement, il ne faudrait que ",
   "Summary.incorrect-two": "questions pour terminer le scénario. Tentez d’améliorer vos résultats en jouant à nouveau.",
   "Summary.results-one": "Vous avez fini le jeu en répondant à",
   "Summary.results-two": "questions.",
+  "Summary.summary": "Résumé",
   "Summary.title": "Congratulations!",
+  "Summary.your-answers": "Vos Réponses",
   "Transition.title": "Game Paused",
   "materials.link": "Practice Materials"
 }

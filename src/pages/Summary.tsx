@@ -25,7 +25,7 @@ const INTL_MESSAGES = defineMessages({
   },
   resultsTwo: {
     id: "Summary.results-two",
-    defaultMessage: "questions.",
+    defaultMessage: " questions.",
     description: "summary results part two",
   },
   bestResult: {
@@ -45,6 +45,38 @@ const INTL_MESSAGES = defineMessages({
     defaultMessage:
       "questions to complete the scenario. See if you can improve your results next time!",
     description: "not the best result part two",
+  },
+  debriefOne: {
+    id: "Summary.debrief-one",
+    defaultMessage:
+      "If not attending an organized debrief, make sure you download and complete the",
+    description: "debrief sentence part one",
+  },
+  debriefTwo: {
+    id: "Summary.debrief-two",
+    defaultMessage: "self-debriefing questions",
+    description: "debrief sentence part two",
+  },
+  debriefThree: {
+    id: "Summary.debrief-three",
+    defaultMessage:
+      "to optimise your learning experience. Scroll down to view results.",
+    description: "debrief sentence part three",
+  },
+  gameReport: {
+    id: "Summary.game-report",
+    defaultMessage: "Game Report",
+    description: "game report title",
+  },
+  summary: {
+    id: "Summary.summary",
+    defaultMessage: "Summary",
+    description: "summary header",
+  },
+  yourAnswers: {
+    id: "Summary.your-answers",
+    defaultMessage: "Your Responses",
+    description: "your answers header title",
   },
 });
 
@@ -104,15 +136,12 @@ const Summary: React.FC<iProps> = ({
       <>
         <Text>
           {getFM(INTL_MESSAGES.resultsOne)}{" "}
-          <Text style={{ fontWeight: "bold" }}>
-            {" "}
-            {progress.length}
-            {getFM(INTL_MESSAGES.resultsTwo)}
-          </Text>
+          <Text style={{ fontWeight: "bold" }}> {progress.length}</Text>{" "}
+          {getFM(INTL_MESSAGES.resultsTwo)}
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
-          <Text>{getFM(INTL_MESSAGES.bestResult)}</Text>
+          <Text> {getFM(INTL_MESSAGES.bestResult)}</Text>
         ) : (
           <Text>
             {" "}
@@ -130,24 +159,11 @@ const Summary: React.FC<iProps> = ({
           done, compare your documentation to the sample provided.{" "}
         </Text> */}
         <Text>
-          <FormattedMessage
-            id="Summary.debrief-one"
-            defaultMessage="If not attending an organized debrief, make sure you download and
-                  complete the"
-            description="debrief sentence part one"
-          />{" "}
+          {getFM(INTL_MESSAGES.debriefOne)}{" "}
           <Link src={`${window.location.origin}/docs/self-assessment.pdf`}>
-            <FormattedMessage
-              id="Summary.debrief-two"
-              defaultMessage="self-debriefing questions"
-              description="debrief sentence part two"
-            />
+            {getFM(INTL_MESSAGES.debriefTwo)}
           </Link>{" "}
-          <FormattedMessage
-            id="Summary.debrief-three"
-            defaultMessage="to optimise your learning experience. Scroll down to view results."
-            description="debrief sentence part three"
-          />
+          {getFM(INTL_MESSAGES.debriefThree)}
         </Text>
       </>
     );
@@ -206,18 +222,20 @@ const Summary: React.FC<iProps> = ({
                 borderBottom: "2px solid #000000",
               }}
             >
-              Game Report
+              {getFM(INTL_MESSAGES.gameReport)}
             </Text>
-            <Text style={{ fontSize: 24 }}>Summary</Text>
+            <Text style={{ fontSize: 24 }}>{getFM(INTL_MESSAGES.summary)}</Text>
             <View>{message}</View>
-            <Text style={{ fontSize: 24 }}>Your Responses</Text>
+            <Text style={{ fontSize: 24 }}>
+              {getFM(INTL_MESSAGES.yourAnswers)}
+            </Text>
             <View>{responses}</View>
           </View>
         </Page>
       </Document>
     );
     return html;
-  }, [message, progress]);
+  }, [message, progress, getFM]);
 
   return (
     <div className="container">
@@ -238,7 +256,7 @@ const Summary: React.FC<iProps> = ({
         <div className="main summary">
           <div className="content">
             <div>{message}</div>
-            <h2 style={{ fontSize: 24 }}>Your Answers:</h2>
+            <h2 style={{ fontSize: 24 }}>{getFM(INTL_MESSAGES.yourAnswers)}:</h2>
             <ol className="responses">
               {progress.map((dp) => (
                 <li>

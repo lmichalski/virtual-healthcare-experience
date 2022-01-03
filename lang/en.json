@@ -162,5 +162,17 @@
     "Summary.debrief-three":{
       "defaultMessage": "to optimise your learning experience. Scroll down to view results.",
       "description": "debrief sentence part three"
+    },
+    "Summary.game-report": {
+      "defaultMessage": "Game Report",
+      "description": "game report title"
+    },
+    "Summary.summary":{
+      "defaultMessage": "Summary",
+      "description": "summary header"
+    },
+    "Summary.your-answers":{
+      "defaultMessage": "Your Responses",
+      "description": "your answers header title"
     }
 }
