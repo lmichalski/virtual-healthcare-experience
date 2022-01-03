@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { useHistory, useParams } from "react-router-dom";
 import { DecisionPoint } from "../hooks/useGameData";
 import useLogGameEvent from "../hooks/useLogGameEvent";
-import { useGotoMenu } from "../util";
+import { shuffleArray, useGotoMenu } from "../util";
 import "./Decision.scss";
 
 interface iProps {
@@ -22,7 +22,7 @@ const Decision: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
 
   logGameEvent("", "show", "question", dp.message, "");
 
-  const [randomizedOptions] = useState(dp.options); // TODO shuffle these
+  const [randomizedOptions] = useState(shuffleArray(dp.options)); // TODO shuffle these
 
   const optionBoxes = useMemo(() => {
     return randomizedOptions.map((opt) => {
