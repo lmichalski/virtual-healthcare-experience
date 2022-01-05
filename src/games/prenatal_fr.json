@@ -100,7 +100,7 @@
       },
       "correct": false,
       "feedback": "Lorsque vous avez félicité Maddie pour sa grossesse, vous avez présumé que cela la rendait heureuse. Essayez de trouver une autre approche qui permettrait à Maddie d’exprimer d’elle-même comment elle se sent par rapport à sa grossesse. ",
-      "message": "Think about best communication practices. How should you proceed with the interview?",
+      "message": "Rappelez-vous les meilleures pratiques de communication. Comment devriez-vous procéder avec l’entrevue ?",
       "options": [
         {
           "label": "Vous lui demandez comment elle se sent",
@@ -122,7 +122,7 @@
       },
       "correct": false,
       "feedback": "Des questions commençant avec «pourquoi» peuvent suggérer un reproche et faire en sorte que la patiente adopte une attitude défensive. Maddie a pris rendez-vous pour une raison précise : elle demande des soins prénataux.",
-      "message": "Think about best communication practices. How should you proceed with the interview?",
+      "message": "Rappelez-vous les meilleures pratiques de communication. Comment devriez-vous procéder avec l’entrevue ?",
       "options": [
         {
           "label": "Vous lui demandez comment elle se sent",
@@ -170,7 +170,7 @@
       },
       "correct": false,
       "feedback": "Cette question sur le mari de Maddie laisse entrevoir de l’hétérosexisme et suppose que toute grossesse arrive dans un contexte de mariage. Essayez de trouver une autre façon de poser des questions sur les gens présents dans la vie de Maddie.",
-      "message": "What question would not reinforce the assumption of heterosexism and expectation of marriage?",
+      "message": "Quelle question poser pour ne pas renforcer les présomptions d’hétérosexisme et d’attente de mariage ?",
       "options": [
         {
           "label": "Vous lui posez des questions sur les personnes dans sa vie",
@@ -192,7 +192,7 @@
       },
       "correct": false,
       "feedback": "Cette question est très limitative et assume l’existence d’un ou d’une partenaire, ou encore qu’il est nécessaire d’être en couple pour avoir un bébé. Essayez de trouver une autre façon de poser des questions sur les gens dans sa vie",
-      "message": "What question would increase the your understanding of the situation?",
+      "message": "Quelle question poser pour mieux comprendre la situation ?",
       "options": [
         {
           "label": "Vous lui posez des questions sur son mari",
@@ -240,7 +240,7 @@
       },
       "correct": false,
       "feedback": "La règle de Naegele consiste à ajouter 7 jours à la date du premier jour des dernières menstruations et à y soustraire 3 mois. Il y a donc eu erreur de calcul, et la date prévue d’accouchement n’est pas le 26 octobre. Quelles autres étapes doivent être observées lors du calcul avec la règle de Naegele pour assurer la précision du calcul de la date prévue d’accouchement de Maddie ? ",
-      "message": "Use Naegele's rule to calculate the expected date of birth.",
+      "message": "Servez-vous de la règle de Naegele pour calculer la date prévue d’accouchement.",
       "options": [
         {
           "label": "Le 9 novembre",
@@ -262,7 +262,7 @@
       },
       "correct": false,
       "feedback": "La règle de Naegele présume un cycle menstruel de 28 jours. Comment pouvez-vous assurer que la règle de Naegele est utilisée à bon escient dans le cas de Maddie ? ",
-      "message": "Use Naegele's rule to calculate the expected date of birth.",
+      "message": "Servez-vous de la règle de Naegele pour calculer la date prévue d’accouchement.",
       "options": [
         {
           "label": "Le 26 octobre",
@@ -309,7 +309,7 @@
         "vimeo_url": "https://player.vimeo.com/video/654676765"
       },
       "correct": false,
-      "feedback": "",
+      "feedback": "Voir la justification de la ligne 14/hypovolémie",
       "message": "Comment expliquez-vous les étourdissements de Maddie ?",
       "options": [
         {
@@ -929,7 +929,7 @@
         "vimeo_url": "https://player.vimeo.com/video/654677821"
       },
       "correct": false,
-      "feedback": "L’activité physique pendant la grossesse procure de nombreux bénéfices. Il faudrait encourager Maddie à être active et à participer à une activité qui lui plait, mais qui ne présente pas de risque ni pour elle ni pour son bébé.",
+      "feedback": "L’activité physique pendant la grossesse procure de nombreux bénéfices. Il faudrait plutôt encourager Maddie à être active tout au long de sa grossesse.",
       "message": "Quelles activités physiques recommandez-vous à Maddie pendant sa grossesse ?",
       "options": [
         {
@@ -951,7 +951,7 @@
         "vimeo_url": "https://player.vimeo.com/video/654677853"
       },
       "correct": false,
-      "feedback": "There are numerous benefits from physical activity during pregnancy. Maddy should be encouraged to be active with an activity that she enjoys but one that is not harmful to her or the fetus. ",
+      "feedback": "L’activité physique pendant la grossesse procure de nombreux bénéfices. Il faudrait encourager Maddie à être active et à participer à une activité qui lui plait, mais qui ne présente pas de risque ni pour elle ni pour son bébé.",
       "message": "Quelles activités physiques recommandez-vous à Maddie pendant sa grossesse ?",
       "options": [
         {
