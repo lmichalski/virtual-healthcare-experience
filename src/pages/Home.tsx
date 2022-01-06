@@ -47,7 +47,7 @@ const Home: React.FC<iProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/games/prenatal">
+                <Link to="/games/prenatal_fr">
                   <FormattedMessage
                     id="Home.prenatal_fr"
                     defaultMessage="Prenatal Care FR"
