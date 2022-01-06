@@ -10,7 +10,7 @@ const games: Record<string, Record<string, GameDataShape>> = {
   labor_delivery: {
     fr: require("../games/labor_delivery_fr.json"),
   },
-  prenatal_fr: {
+  prenatal: {
     fr: require("../games/prenatal_fr.json"),
   },
 };
