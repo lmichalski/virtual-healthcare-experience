@@ -29,7 +29,6 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-
 ReactDOM.render(
   <React.StrictMode>
     <IntlProvider messages={messages} locale={locale} defaultLocale="en">

@@ -43,7 +43,10 @@ const App: React.FC<iProps> = ({ gameId }) => {
   ).length;
 
   const [subtitlesEnabled, setSubtitlesEnabled] = useState<boolean>(true);
-  const handleSubtitlesLanguageSet = useCallback((lang) => setSubtitlesEnabled(!!lang), [])
+  const handleSubtitlesLanguageSet = useCallback(
+    (lang) => setSubtitlesEnabled(!!lang),
+    []
+  );
 
   const lastDecisionPoint =
     gameData.decisionpoints[gameData.decisionpoints.length - 1].id ===
@@ -225,7 +228,9 @@ const App: React.FC<iProps> = ({ gameId }) => {
             />
           </Route>
 
-          <Route path={concatenatePaths(path, `/lo`)}>Somethings going on here, I swear</Route>
+          <Route path={concatenatePaths(path, `/lo`)}>
+            Somethings going on here, I swear
+          </Route>
 
           <Route path={concatenatePaths(path, `/`)}>
             <Menu

@@ -16,7 +16,7 @@
       "description": "pause icon"
     },
     "General.replay": {
-      "defaultMessage": "Replay",
+      "defaultMessage": "Rejouer",
       "description": "Replay Video Button"
     },
     "General.resume": {
@@ -52,7 +52,7 @@
       "description": "Credits Button"
     },
     "Menu.exit": {
-      "defaultMessage": "Exit Game",
+      "defaultMessage": "Quitter le Jeu",
       "description": "Exit Game Button"
     },
     "Menu.gameOptions": {
@@ -92,7 +92,7 @@
       "description": "Principles title"
     },
     "Summary.title": {
-      "defaultMessage": "Congratulations!",
+      "defaultMessage": "Félicitation!",
       "description": "Summary title"
     },
     "Transition.title": {
@@ -116,11 +116,11 @@
       "description": "subtitles button"
     },
     "Options.subtitles_on":{
-      "defaultMessage": "activés",
+      "defaultMessage": "Activés",
       "description": "subtitles on"
     },
     "Options.subtitles_off":{
-      "defaultMessage": "désactivés",
+      "defaultMessage": "Désactivés",
       "description": "subtitles off"
     },
     "Options.language_en":{
@@ -139,13 +139,9 @@
       "defaultMessage": "Langue",
       "description": "language options title"
     },
-    "Summary.results-one":{
-      "defaultMessage": "Vous avez fini le jeu en répondant à",
+    "Summary.results":{
+      "defaultMessage": "Vous avez fini le jeu en répondant à {question_count} questions.",
       "description": "summary results part one"
-    },
-    "Summary.results-two":{
-      "defaultMessage": "questions.",
-      "description": "summary results part two"
     },
     "Summary.best-result":{
       "defaultMessage": "Vous avez démontré le meilleur résultat possible ! Maintenant, jouez-le encore une fois pour vous assurer que ce n'était pas de la chance !",

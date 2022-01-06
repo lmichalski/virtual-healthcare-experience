@@ -86,17 +86,18 @@ export function getBrowser() {
   return browser;
 }
 
-export const shuffleArray= <T>(array: T[]): T[] => {
-  let result = [...array]
+export const shuffleArray = <T>(array: T[]): T[] => {
+  let result = [...array];
   for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = result[i];
     result[i] = result[j];
     result[j] = temp;
   }
-  return result
-}
+  return result;
+};
 // Conctatenate two path strings, stripping excess /'s at the seam
-export const concatenatePaths = (first: string, second: string): string => `${first.replace(/\/*$/,"")}/${second.replace(/^\/*/,"")}`
+export const concatenatePaths = (first: string, second: string): string =>
+  `${first.replace(/\/*$/, "")}/${second.replace(/^\/*/, "")}`;
 
 export const SentryRoute = Sentry.withSentryRouting(Route);

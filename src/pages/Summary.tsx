@@ -18,10 +18,10 @@ import { DecisionPoint } from "../hooks/useGameData";
 import { defineMessages } from "@formatjs/intl";
 
 const INTL_MESSAGES = defineMessages({
-
   results: {
     id: "Summary.results",
-    defaultMessage: "You have completed the game by answering {question_count} questions.",
+    defaultMessage:
+      "You have completed the game by answering {question_count} questions.",
     description: "summary results",
   },
   bestResult: {
@@ -76,9 +76,11 @@ const INTL_MESSAGES = defineMessages({
   },
   inProgressResults: {
     id: "Summary.inProgressResults",
-    defaultMessage: "You have answered {question_count} questions. To finish the game go to menu and resume the gameplay.",
-    description: "The message to show players arriving at the summary page while their game isn't finished"
-  }
+    defaultMessage:
+      "You have answered {question_count} questions. To finish the game go to menu and resume the gameplay.",
+    description:
+      "The message to show players arriving at the summary page while their game isn't finished",
+  },
 });
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
@@ -136,7 +138,11 @@ const Summary: React.FC<iProps> = ({
     message = (
       <>
         <Text>
-          {getFM(INTL_MESSAGES.results, {question_count: <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>})}{" "}
+          {getFM(INTL_MESSAGES.results, {
+            question_count: (
+              <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>
+            ),
+          })}{" "}
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
@@ -169,7 +175,11 @@ const Summary: React.FC<iProps> = ({
   } else {
     message = (
       <Text>
-        {getFM(INTL_MESSAGES.inProgressResults, {question_count: <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>})}{" "}
+        {getFM(INTL_MESSAGES.inProgressResults, {
+          question_count: (
+            <Text style={{ fontWeight: "bold" }}> {progress.length} </Text>
+          ),
+        })}{" "}
       </Text>
     );
   }
@@ -250,7 +260,9 @@ const Summary: React.FC<iProps> = ({
         <div className="main summary">
           <div className="content">
             <div>{message}</div>
-            <h2 style={{ fontSize: 24 }}>{getFM(INTL_MESSAGES.yourAnswers)}:</h2>
+            <h2 style={{ fontSize: 24 }}>
+              {getFM(INTL_MESSAGES.yourAnswers)}:
+            </h2>
             <ol className="responses">
               {progress.map((dp) => (
                 <li>
