@@ -178,6 +178,14 @@
     "Summary.your-answers":{
       "defaultMessage": "Vos Réponses",
       "description": "your answers header title"
+    },
+    "Summary.donwloadProgress":{
+      "defaultMessage": "Télécharger le Rapport",
+      "description": "link to download progress report"
+    },
+    "Summary.materialsLink":{
+    "defaultMessage": "Matériaux",
+    "description": "link to download materials page"
     }
 }
   

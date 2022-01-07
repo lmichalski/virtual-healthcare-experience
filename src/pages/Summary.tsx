@@ -81,6 +81,20 @@ const INTL_MESSAGES = defineMessages({
     description:
       "The message to show players arriving at the summary page while their game isn't finished",
   },
+  downloadProgress: {
+    id: "Summary.downloadProgress",
+    defaultMessage:
+      "Download Progress Report",
+    description:
+      "link to download progress report",
+  },
+  materialsLink: {
+    id: "Summary.materialsLink",
+    defaultMessage:
+      "Practice Materials",
+    description:
+      "link to download materials page",
+  },
 });
 
 const Roboto = require("../fnt/Roboto-Regular.ttf").default as string;
@@ -286,19 +300,15 @@ const Summary: React.FC<iProps> = ({
           <PDFDownloadLink
             className="button"
             document={pdfContent}
-            fileName="emergency-progress.pdf"
+            fileName="progress-report.pdf"
           >
             {({ blob, url, loading, error }) =>
-              loading ? "Loading document..." : "Download Progress Report"
+              loading ? "Loading document..." : {getFM(INTL_MESSAGES.downloadProgress)}
             }
           </PDFDownloadLink>
 
           <Lonk to="../materials/">
-            <FormattedMessage
-              id="materials.link"
-              defaultMessage="Practice Materials"
-              description="Link to Practice Materials"
-            />
+            {getFM(INTL_MESSAGES.materialsLink)}
           </Lonk>
 
           {/* <a href="/module/_/ui/game/tpl/materials.html" className="button">

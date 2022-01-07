@@ -33,14 +33,15 @@
   "Summary.debrief-one": "If not attending an organized debrief, make sure you download and complete the",
   "Summary.debrief-three": "to optimise your learning experience. Scroll down to view results.",
   "Summary.debrief-two": "self-debriefing questions",
+  "Summary.downloadProgress": "Download Progress Report",
   "Summary.game-report": "Game Report",
   "Summary.inProgressResults": "You have answered {question_count} questions. To finish the game go to menu and resume the gameplay.",
   "Summary.incorrect-one": "However, if you give only correct answers it should only take",
   "Summary.incorrect-two": "questions to complete the scenario. See if you can improve your results next time!",
+  "Summary.materialsLink": "Practice Materials",
   "Summary.results": "You have completed the game by answering {question_count} questions.",
   "Summary.summary": "Summary",
   "Summary.title": "Congratulations!",
   "Summary.your-answers": "Your Responses",
-  "Transition.title": "Game Paused",
-  "materials.link": "Practice Materials"
+  "Transition.title": "Game Paused"
 }
