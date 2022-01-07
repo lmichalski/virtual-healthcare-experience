@@ -97,14 +97,14 @@
     },
     {
       "id": 1,
-      "title": "DP0_1 - wrong",
+      "title": "DP1_1 - wrong",
       "type": "video",
       "data": "SG4_DP1_1",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/654619570"
       },
       "correct": false,
-      "feedback": "Consider the impact of responding defensively on the nurse-client therapeutic relationship. Reflect on the client's feelings being new parents. How should you respond to build rapport and trust in the nurse client therapeutic relationship?",
+      "feedback": "Quels effets pourraient découler de ne pas s’informer auprès de la cliente de ses préférences en ce qui a trait aux soins ni de les inclure le cas échéant ? Réfléchissez à l’importance de respecter les choix de la cliente et de promouvoir l’autonomie.",
       "message": "Comment répondre ?",
       "options": [
         {
@@ -136,6 +136,10 @@
         },
         {
           "label": "Obtenir la permission de la cliente",
+          "next": 5
+        },
+        {
+          "label": "Encourager Cameron à rester",
           "next": 4
         }
       ],
@@ -154,18 +158,41 @@
       "message": "Comment procéder avec l’évaluation ?",
       "options": [
         {
-          "label": "Continuer l’évaluation",
-          "next": 3
+          "label": "Encourager Cameron à rester",
+          "next": 4
         },
         {
           "label": "Obtenir la permission de la cliente",
-          "next": 4
+          "next": 5
         }
       ],
       "next": null
     },
     {
       "id": 4,
+      "title": "DP2_3 - wrong",
+      "type": "video",
+      "data": "SG4_DP2_3",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654619601"
+      },
+      "correct": false,
+      "feedback": "Quels peuvent être les effets d’assumer les préférences potentielles de la cliente et de son mari ? Réfléchissez à l’importance de respecter les choix de la cliente et de promouvoir l’autonomie.",
+      "message": "Comment procéder avec l’évaluation ?",
+      "options": [
+        {
+          "label": "Continuer l’évaluation",
+          "next": 3
+        },
+        {
+          "label": "Obtenir la permission de la cliente",
+          "next": 5
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 5,
       "title": "DP3_1",
       "type": "video",
       "data": "SG4_DP3_1",
@@ -174,44 +201,67 @@
       },
       "correct": true,
       "feedback": "",
-      "message": "Quelle réponse respecterait le choix de la cliente ?",
+      "message": "Selon vos résultats, quelle est la prochaine chose que vous devriez évaluer ?",
       "options": [
         {
-          "label": "Encourager Cameron à rester",
-          "next": 5
+          "label": "Évaluer la déchirure du périnée",
+          "next": 6
         },
         {
-          "label": "Demander à la cliente si elle veut que son mari demeure ",
-          "next": 6
+          "label": "Palper le fond utérin",
+          "next": 9
+        },
+        {
+          "label": "Évaluer la douleur",
+          "next": 7
         }
       ],
       "next": null
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "DP3_2 - wrong",
       "type": "video",
-      "data": "SG4_DP2_2",
+      "data": "SG4_DP3_2",
       "video": {
         "vimeo_url": "https://player.vimeo.com/video/654619670"
       },
       "correct": false,
-      "feedback": "Rather than overlooking the client's immediate concern, consider what interventions you perform in the moment to reduce pain for the cleint.",
-      "message": "At this point in your assessment, can you provide any pain relief?",
+      "feedback": "Selon le dossier de la cliente, la déchirure périnéale a été suturée il y a 6 heures et les saignements ont été contrôlés. Tenez compte des signes vitaux de la cliente et de ses symptômes. ",
+      "message": "What is your priority assessment?", 
       "options": [
         {
-          "label": "Provide medication",
-          "next": 8
+          "label": "Palper le fond utérin",
+          "next": 9
         },
         {
-          "label": "Elevate ankle",
-          "next": 9
+          "label": " Reprendre les signes vitaux",
+          "next": 8
         }
       ],
       "next": null
     },
     {
       "id": 8,
+      "title": "DP3_2 - wrong",
+      "type": "video",
+      "data": "SG4_DP3_2",
+      "video": {
+        "vimeo_url": "https://player.vimeo.com/video/654619740"
+      },
+      "correct": false,
+      "feedback": "Tenez compte de la gravité des signes vitaux anormaux de la cliente. Repassez les complications post-partum qui peuvent mener à l’hypotension et à la tachycardie chez les clientes post-partum.",
+      "message": "What is your priority assessment?", 
+      "options": [
+        {
+          "label": "Palper le fond utérin",
+          "next": 9
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": 7,
       "title": "DP3_3 - wrong",
       "type": "video",
       "data": "SG4_DP2_3",
@@ -223,91 +273,18 @@
       "message": "At this point in your assessment, can you provide any pain relief?",
       "options": [
         {
-          "label": "Complete ankle assessment",
-          "next": 7
+          "label": "Palper le fond utérin",
+          "next": 9
         },
         {
-          "label": "Elevate ankle",
-          "next": 9
+          "label": "Évaluer la déchirure du périnée",
+          "next": 6
         }
       ],
       "next": null
     },
     {
       "id": 9,
-      "title": "DP3_1",
-      "type": "video",
-      "data": "SG4_DP3_1",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629017"
-      },
-      "correct": true,
-      "feedback": "",
-      "message": "What is your priority assessment related to Jason's symptoms?",
-      "options": [
-        {
-          "label": "Assess movement",
-          "next": 10
-        },
-        {
-          "label": "Assess kinaesthesia",
-          "next": 11
-        },
-        {
-          "label": "Peripheral Vascular",
-          "next": 12
-        }
-      ],
-      "next": null
-    },
-    {
-      "id": 10,
-      "title": "DP3_2 - wrong",
-      "type": "video",
-      "data": "SG4_DP3_2",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629071"
-      },
-      "correct": false,
-      "feedback": "At this time information about ROM is not the priority and does not help to  formulate a clinical judgement. We can expect movement to cause increased discomfort. Think about what might be causing the client to have numbness and tingling.",
-      "message": "What is your priority assessment related to Jason's symptoms?",
-      "options": [
-        {
-          "label": "Assess kinaesthesia",
-          "next": 11
-        },
-        {
-          "label": "Peripheral Vascular",
-          "next": 12
-        }
-      ],
-      "next": null
-    },
-    {
-      "id": 11,
-      "title": "DP3_3 - wrong",
-      "type": "video",
-      "data": "SG4_DP3_3",
-      "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614629191"
-      },
-      "correct": false,
-      "feedback": "Kinesthesia is used to assess the posterior column tract of the sensory pathways. This assessment will not provide more information about Jason's symptoms of numbness and tingling. Consider another assessment that would provide you with increased understanding of Jason's symptoms.",
-      "message": "What is your priority assessment related to Jason's symptoms?",
-      "options": [
-        {
-          "label": "Assess movement",
-          "next": 10
-        },
-        {
-          "label": "Peripheral Vascular",
-          "next": 12
-        }
-      ],
-      "next": null
-    },
-    {
-      "id": 12,
       "title": "DP4_1",
       "type": "video",
       "data": "SG4_DP4_1",
