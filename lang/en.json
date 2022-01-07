@@ -175,7 +175,7 @@
       "defaultMessage": "Your Responses",
       "description": "your answers header title"
     },
-    "Summary.donwloadProgress":{
+    "Summary.downloadProgress":{
       "defaultMessage": "Download Progress Report",
       "description": "link to download progress report"
     },

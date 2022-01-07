@@ -303,7 +303,7 @@ const Summary: React.FC<iProps> = ({
             fileName="progress-report.pdf"
           >
             {({ blob, url, loading, error }) =>
-              loading ? "Loading document..." : {getFM(INTL_MESSAGES.downloadProgress)}
+              loading ? "Loading document..." : getFM(INTL_MESSAGES.downloadProgress)
             }
           </PDFDownloadLink>
 

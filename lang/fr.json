@@ -179,7 +179,7 @@
       "defaultMessage": "Vos Réponses",
       "description": "your answers header title"
     },
-    "Summary.donwloadProgress":{
+    "Summary.downloadProgress":{
       "defaultMessage": "Télécharger le Rapport",
       "description": "link to download progress report"
     },
