@@ -2,7 +2,15 @@ import { FormattedMessage } from "react-intl";
 import { useGotoMenu } from "../util";
 import "./Materials.scss";
 
-const Materials: React.FC<{}> = () => {
+interface iProps {
+  strings: {
+    template: string;
+    example: string;
+    debrief: string;
+  };
+}
+
+const Materials: React.FC<iProps> = ({ strings }) => {
   const gotoMenu = useGotoMenu();
 
   return (
@@ -29,25 +37,39 @@ const Materials: React.FC<{}> = () => {
 
         <footer>
           <div className="content">
-            <h2>Documentation</h2>
-            <a
-              href="/docs/Integrated_Patient_Record.pdf"
-              className="button"
-              download
-            >
-              Download Template
+            <FormattedMessage
+              id="Materials.documentation"
+              defaultMessage="Documentation"
+              description="documentation title"
+              tagName="h2"
+            />
+            <a href={strings.template} className="button" download>
+              <FormattedMessage
+                id="Materials.downloadTemplate"
+                defaultMessage="Download Template"
+                description="template download link"
+              />
             </a>
-            <a
-              href="/docs/Integrated_Patient_Record_Sample.pdf"
-              className="button"
-              download
-            >
-              Download Sample
+            <a href={strings.example} className="button" download>
+              <FormattedMessage
+                id="Materials.downloadSample"
+                defaultMessage="Download Sample"
+                description="sample download link"
+              />
             </a>
             <br />
-            <h2>Self-Debrief</h2>
-            <a href="/docs/self-assessment.pdf" className="button" download>
-              Download
+            <FormattedMessage
+              id="Materials.debrief"
+              defaultMessage="Self-Debrief"
+              description="self-debrief title"
+              tagName="h2"
+            />
+            <a href={strings.debrief} className="button" download>
+              <FormattedMessage
+                id="Materials.downloadDebrief"
+                defaultMessage="Download"
+                description="debrief download link"
+              />
             </a>
           </div>
         </footer>

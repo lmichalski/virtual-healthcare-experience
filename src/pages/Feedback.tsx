@@ -18,7 +18,7 @@ const Feedback: React.FC<iProps> = ({ decisionPoint: dp }) => {
         history.push(`/games/${game_id}/decision/`);
         break;
       case "lo":
-        history.push(`/games/${game_id}/lo/`);
+        history.push(`/games/${game_id}/clock/`);
         break;
     }
   }, [dp?.type, history, game_id]);

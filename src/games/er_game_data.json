@@ -59,6 +59,11 @@
         { "header": "", "items": [] }
       ],
       "end_paragraphs": []
+    },
+    "materials": {
+      "template": "/docs/Integrated_Patient_Record.pdf",
+      "example": "/docs/Integrated_Patient_Record_Sample.pdf",
+      "debrief": "/docs/self-assessment.pdf"
     }
   },
   "decisionpoints": [

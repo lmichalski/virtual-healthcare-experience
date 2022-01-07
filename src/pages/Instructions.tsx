@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Instructions.scss";
 
@@ -18,7 +19,11 @@ const Instructions: React.FC<iProps> = ({ minSteps, strings }) => {
             <Link to="../" aria-label="Return to menu">
               <span className="icon-arrow-left"></span>
             </Link>{" "}
-            How to Play
+            <FormattedMessage
+              id="Instructions.title"
+              defaultMessage="How to Play"
+              description="how to play title"
+            />{" "}
           </h1>
         </header>
         <div className="main">

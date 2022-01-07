@@ -206,7 +206,7 @@ const Settings: React.FC<iProps> = ({
                   >
                     <FormattedMessage
                       id="Options.language_en"
-                      defaultMessage="Englsih"
+                      defaultMessage="English"
                       description="english language button"
                     />
                   </label>

@@ -83,17 +83,13 @@ const INTL_MESSAGES = defineMessages({
   },
   downloadProgress: {
     id: "Summary.downloadProgress",
-    defaultMessage:
-      "Download Progress Report",
-    description:
-      "link to download progress report",
+    defaultMessage: "Download Progress Report",
+    description: "link to download progress report",
   },
   materialsLink: {
     id: "Summary.materialsLink",
-    defaultMessage:
-      "Practice Materials",
-    description:
-      "link to download materials page",
+    defaultMessage: "Practice Materials",
+    description: "link to download materials page",
   },
 });
 
@@ -303,13 +299,13 @@ const Summary: React.FC<iProps> = ({
             fileName="progress-report.pdf"
           >
             {({ blob, url, loading, error }) =>
-              loading ? "Loading document..." : getFM(INTL_MESSAGES.downloadProgress)
+              loading
+                ? "Loading document..."
+                : getFM(INTL_MESSAGES.downloadProgress)
             }
           </PDFDownloadLink>
 
-          <Lonk to="../materials/">
-            {getFM(INTL_MESSAGES.materialsLink)}
-          </Lonk>
+          <Lonk to="../materials/">{getFM(INTL_MESSAGES.materialsLink)}</Lonk>
 
           {/* <a href="/module/_/ui/game/tpl/materials.html" className="button">
             {" "}

@@ -91,10 +91,6 @@
     "defaultMessage": "Game Paused",
     "description": "game paused transition title"
   },
-  "materials.link": {
-    "defaultMessage": "Practice Materials",
-    "description": "Link to Practice Materials"
-  },
     "Options.display":{
       "defaultMessage": "Display",
       "description": "Display heading"
@@ -182,5 +178,29 @@
     "Summary.materialsLink":{
       "defaultMessage": "Practice Materials",
       "description": "link to download materials page"
+    },
+    "Materials.documentation":{
+      "defaultMessage": "Documentation",
+      "description": "documentation title"
+    },
+    "Materials.downloadTemplate":{
+      "defaultMessage": "Download Template",
+      "description": "template download link"
+    },
+    "Materials.downloadSample":{
+      "defaultMessage": "Download Sample",
+      "description": "sample download link"
+    },
+    "Materials.debrief":{
+      "defaultMessage": "Self-Debrief",
+      "description": "self-debrief title"
+    },
+    "Materials.downloadDebrief":{
+      "defaultMessage": "Download",
+      "description": "debrief download link"
+    },
+    "Instructions.title":{
+      "defaultMessage": "How to Play",
+      "description": "how to play title"
     }
 }

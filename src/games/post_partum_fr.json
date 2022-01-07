@@ -64,6 +64,11 @@
         "Cette ressource a reçu un généreux appui financier du ministère de l’Enseignement supérieur et de la Formation professionnelle.",
         "L’équipe du Digital Education Strategies de la G. Raymond Chang School of Continuing Education à l’Université Ryerson a appuyé la conception et le développement des ressources en fournissant des solutions technologiques innovatrices, de la production multimédia et du testage pour l’utilisation. "
       ]
+    },
+    "materials": {
+      "template": "",
+      "example": "",
+      "debrief": ""
     }
   },
   "decisionpoints": [

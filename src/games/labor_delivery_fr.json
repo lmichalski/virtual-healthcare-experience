@@ -64,6 +64,11 @@
         "Financement pour la traduction en français.",
         "Ce projet est possible grâce à un financement du gouvernement de l’Ontario et de la Stratégie d’apprentissage virtuel. Pour en apprendre davantage sur la Stratégie d’apprentissage virtuel, il suffit de se rendre au : https://vls.ecampusontario.ca/fr/."
       ]
+    },
+    "materials": {
+      "template": "",
+      "example": "",
+      "debrief": ""
     }
   },
   "decisionpoints": [

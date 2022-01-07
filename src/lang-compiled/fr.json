@@ -10,7 +10,13 @@
   "Home.postPartum_fr": "Post Partum FR",
   "Home.prenatal_fr": "Prenatal FR",
   "Home.title": "Virtual Healthcare Experence",
-  "Materials.title": "Materials",
+  "Instructions.title": "Comment Jouer",
+  "Materials.debrief": "Auto-Évaluation",
+  "Materials.documentation": "Documentation",
+  "Materials.downloadDebrief": "Télécharger",
+  "Materials.downloadSample": "Télécharger L'Exemple",
+  "Materials.downloadTemplate": "Télécharger le Modèle",
+  "Materials.title": "Matériaux",
   "Menu.credits": "Crédits",
   "Menu.exit": "Quitter le Jeu",
   "Menu.gameOptions": "Options",
@@ -44,6 +50,5 @@
   "Summary.summary": "Résumé",
   "Summary.title": "Félicitation!",
   "Summary.your-answers": "Vos Réponses",
-  "Transition.title": "Game Paused",
-  "materials.link": "Practice Materials"
+  "Transition.title": "Game Paused"
 }

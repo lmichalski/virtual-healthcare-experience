@@ -44,7 +44,7 @@
       "description": "Title for homepage"
     },
     "Materials.title": {
-      "defaultMessage": "Materials",
+      "defaultMessage": "Matériaux",
       "description": "Materials title"
     },
     "Menu.credits": {
@@ -99,18 +99,14 @@
       "defaultMessage": "Game Paused",
       "description": "game paused transition title"
     },
-    "materials.link": {
-      "defaultMessage": "Practice Materials",
-      "description": "Link to Practice Materials"
-    },
     "Options.display":{
       "defaultMessage": "Affichage",
       "description": "display option"
-  },
+    },
     "Options.full_screen":{
       "defaultMessage": "Plein écran",
       "description": "full screen button"
-  },
+    },
     "Options.subtitles":{
       "defaultMessage": "Sous-titres",
       "description": "subtitles button"
@@ -186,6 +182,30 @@
     "Summary.materialsLink":{
     "defaultMessage": "Matériaux",
     "description": "link to download materials page"
+    },
+    "Materials.documentation":{
+      "defaultMessage": "Documentation",
+      "description": "documentation title"
+    },
+    "Materials.downloadTemplate":{
+      "defaultMessage": "Télécharger le Modèle",
+      "description": "template download link"
+    },
+    "Materials.downloadSample":{
+      "defaultMessage": "Télécharger L'Exemple",
+      "description": "sample download link"
+    },
+    "Materials.debrief":{
+      "defaultMessage": "Auto-Évaluation",
+      "description": "self-debrief title"
+    },
+    "Materials.downloadDebrief":{
+      "defaultMessage": "Télécharger",
+      "description": "debrief download link"
+    },
+    "Instructions.title":{
+      "defaultMessage": "Comment Jouer",
+      "description": "how to play title"
     }
 }
   
