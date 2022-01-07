@@ -133,7 +133,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
       if (dp.feedback > "") {
         history.push(concatenatePaths(url, `/feedback/`));
       } else {
-        if (dp.type == "lo") {
+        if (dp.type === "lo") {
           history.push(concatenatePaths(url, `/clock/`));
         } else {
           // No feedback means go directly to the decision
