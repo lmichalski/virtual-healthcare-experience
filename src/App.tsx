@@ -24,6 +24,7 @@ import Principles from "./pages/Principles";
 import useLogGameEvent from "./hooks/useLogGameEvent";
 import { getBrowser, concatenatePaths } from "./util";
 import useGameState from "./hooks/useGameState";
+import Clock from "./pages/Clock";
 
 interface iProps {
   gameId: string;
@@ -112,7 +113,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
             // If there's feedback, show it then advance
             history.push(concatenatePaths(url, `/feedback/`));
           } else {
-            history.push(concatenatePaths(url, `/lo/`));
+            history.push(concatenatePaths(url, `/clock/`));
           }
           break;
       }
@@ -132,14 +133,18 @@ const App: React.FC<iProps> = ({ gameId }) => {
       if (dp.feedback > "") {
         history.push(concatenatePaths(url, `/feedback/`));
       } else {
-        // No feedback means go directly to the decision
-        history.push(concatenatePaths(url, `/decision/`));
+        if (dp.type == "lo") {
+          history.push(concatenatePaths(url, `/clock/`));
+        } else {
+          // No feedback means go directly to the decision
+          history.push(concatenatePaths(url, `/decision/`));
+        }
       }
     } else {
       gameState.setCurrentStep(gameState.currentStep + 1);
       if (dp?.next) {
         // If there are no options, go to the next decision point
-        history.push(concatenatePaths(url, `/lo/`));
+        history.push(concatenatePaths(url, `/clock/`));
       } else {
         history.push(concatenatePaths(url, `/transition/`));
       }
@@ -185,7 +190,7 @@ const App: React.FC<iProps> = ({ gameId }) => {
           </Route>
 
           <Route path={concatenatePaths(path, `/materials`)}>
-            <Materials />
+            <Materials strings={gameData.strings.materials} />
           </Route>
 
           <Route path={concatenatePaths(path, `/objectives`)}>
@@ -228,8 +233,8 @@ const App: React.FC<iProps> = ({ gameId }) => {
             />
           </Route>
 
-          <Route path={concatenatePaths(path, `/lo`)}>
-            Somethings going on here, I swear
+          <Route path={concatenatePaths(path, `/clock`)}>
+            <Clock />
           </Route>
 
           <Route path={concatenatePaths(path, `/`)}>

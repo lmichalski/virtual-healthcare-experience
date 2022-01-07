@@ -1,59 +1,38 @@
-import { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useHistory, useParams } from "react-router-dom";
-import { DecisionPoint } from "../hooks/useGameData";
-import useLogGameEvent from "../hooks/useLogGameEvent";
-import { shuffleArray, useGotoMenu } from "../util";
-import "./Decision.scss";
+import AnimatedClock from "../clock/AnimatedClock";
+import { useGotoMenu } from "../util";
+import "./Clock.scss";
 
-interface iProps {
-  decisionPoint: DecisionPoint;
-  onOptionChosen: (option: number, label: string) => void;
-}
+interface iProps {}
 
-const Clock: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
+const Clock: React.FC<iProps> = () => {
   const history = useHistory();
   const { game_id } = useParams<{ game_id: string }>();
 
-  const logGameEvent = useLogGameEvent();
   const gotoMenu = useGotoMenu();
-
-  const dp = decisionPoint;
-
-  logGameEvent("", "show", "question", dp.message, "");
-
-  const [randomizedOptions] = useState(shuffleArray(dp.options)); // TODO shuffle these
-
-  const optionBoxes = useMemo(() => {
-    return randomizedOptions.map((opt) => {
-      const chooseOption = () => onOptionChosen(opt.next, opt.label);
-
-      return (
-        <li
-          key={opt.label}
-          className="option"
-          ng-repeat="opt in randomizedOptions"
-        >
-          <button onClick={chooseOption}>{opt.label}</button>
-        </li>
-      );
-    });
-  }, [randomizedOptions, onOptionChosen]);
-
-  const replayVideo = useCallback(() => {
-    /*gtag('event', 'video_replayed', {
-      'event_category': 'video',
-      'event_label': $scope.dp.data,
-      'value': $scope.dp.id
-    });*/
-    logGameEvent("", "replay", "video", dp.data, dp.id);
-    history.push(`/games/${game_id}/video`);
-  }, [dp.data, dp.id, history, logGameEvent, game_id]);
+  const gotoDecision = () => history.push(`/games/${game_id}/decision/`);
 
   return (
-    <div className="container">
+    <div className="container Clock">
+      <div className="panel menu">
+        <div className="main">
+          <h2>Take pulse and press Continue.</h2>
+          <p className="warning">
+            Please note that for technical reasons this learning object can not
+            be made accessible. Contact your instructor if you need help.
+          </p>
+        </div>
+        <footer>
+          <p className="controls">
+            <button onClick={gotoDecision} className="button">
+              Continue
+            </button>
+          </p>
+        </footer>
+      </div>
       <div className="left controls">
-        <button className="button button--menu" onClick={replayVideo}>
+        <button className="button button--menu">
           <FormattedMessage
             id="General.replay"
             defaultMessage="Replay"
@@ -70,12 +49,8 @@ const Clock: React.FC<iProps> = ({ decisionPoint, onOptionChosen }) => {
           />
         </button>
       </div>
-      <div className="question" tabIndex={0}>
-        <div className="vertical_outer">
-          <div className="vertical_inner">{dp?.message}</div>
-        </div>
-      </div>
-      <ul className="option_box cf">{optionBoxes}</ul>
+      <audio autoPlay loop src="/media/heart-beat.mp3"></audio>
+      <AnimatedClock></AnimatedClock>
     </div>
   );
 };

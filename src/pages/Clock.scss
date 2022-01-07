@@ -1,0 +1,53 @@
+.Clock{
+
+.lo {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#watch { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -180px;
+	margin-left: -280px;
+}
+.lo .panel {
+	position: absolute;
+	width: 500px;
+	right: 40px;
+	bottom: 50px;
+}
+.lo .panel .main {
+	min-height: 40px;
+	height: auto;
+	padding-bottom: 30px;
+}
+
+.lo .warning {
+	font-size: .8em;
+	text-transform: none;
+	color: #fff;
+}
+.panel {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 450px;
+    max-width: 95%;
+    max-height: 95%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    position: absolute;
+    width: 500px;
+    right: 40px;
+    bottom: 50px;
+
+    p {
+        font-size: .8em;
+    text-transform: none;
+    color: #fff;
+    }
+}
+}
