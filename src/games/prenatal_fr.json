@@ -89,7 +89,7 @@
           "next": 1
         },
         {
-          "label": "Vous lui demandez comment elle se sent",
+          "label": "Vous demandez la raison de la visite",
           "next": 2
         }
       ],
@@ -111,7 +111,7 @@
           "next": 5
         },
         {
-          "label": "Vous lui demandez comment elle se sent",
+          "label": "Vous demandez la raison de la visite",
           "next": 2
         }
       ],
