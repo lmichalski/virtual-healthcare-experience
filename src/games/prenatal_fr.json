@@ -10,7 +10,7 @@
   },
   "strings": {
     "menu": {
-      "title": "Prenatal Care"
+      "title": "Soins Infirmiers Prénataux"
     },
     "intro": {
       "introCards": [
@@ -284,7 +284,7 @@
       "type": "video",
       "data": "SG4_DP4_1",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/654676569"
+        "vimeo_url": "https://player.vimeo.com/video/664980113"
       },
       "correct": true,
       "feedback": "",

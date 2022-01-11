@@ -228,7 +228,7 @@
       },
       "correct": false,
       "feedback": "Selon le dossier de la cliente, la déchirure périnéale a été suturée il y a 6 heures et les saignements ont été contrôlés. Tenez compte des signes vitaux de la cliente et de ses symptômes. ",
-      "message": "What is your priority assessment?", 
+      "message": "Selon vos résultats, quelle est la prochaine chose que vous devriez évaluer ?",
       "options": [
         {
           "label": "Palper le fond utérin",
@@ -251,7 +251,7 @@
       },
       "correct": false,
       "feedback": "Tenez compte de la gravité des signes vitaux anormaux de la cliente. Repassez les complications post-partum qui peuvent mener à l’hypotension et à la tachycardie chez les clientes post-partum.",
-      "message": "What is your priority assessment?", 
+      "message": "Quelle est votre priorité?",
       "options": [
         {
           "label": "Palper le fond utérin",
@@ -266,11 +266,11 @@
       "type": "video",
       "data": "SG4_DP2_3",
       "video": {
-        "vimeo_url": "https://player.vimeo.com/video/614628993"
+        "vimeo_url": "https://player.vimeo.com/video/654619760"
       },
       "correct": false,
-      "feedback": "Medication administration takes time and requires a full assessment before an order can be obtained. The assessment will inform the pain medication route. Consider what immediate action you can take to enhance comfort and reduce pain for the client.",
-      "message": "At this point in your assessment, can you provide any pain relief?",
+      "feedback": "Tenez compte des signes vitaux de la cliente et de ses symptômes.",
+      "message": "Selon vos résultats, quelle est la prochaine chose que vous devriez évaluer ?",
       "options": [
         {
           "label": "Palper le fond utérin",
