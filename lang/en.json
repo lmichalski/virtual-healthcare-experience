@@ -202,5 +202,18 @@
     "Instructions.title":{
       "defaultMessage": "How to Play",
       "description": "how to play title"
+    },
+    "Clock.header":{
+      "defaultMessage": "Take pulse and press Continue.",
+      "description": "take pulse message"
+    },
+    "Clock.warning":{
+      "defaultMessage": "Please note that for technical reasons this learning object can not be made accessible. Contact your instructor if you need help.",
+      "description": "warning about accesibility"
+    },
+    "Clock.continue":{
+      "defaultMessage": "Continue",
+      "description": "continue button"
     }
 }
+

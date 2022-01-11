@@ -4,7 +4,7 @@
       "description": "credits title"
     },
     "Feedback.title": {
-      "defaultMessage": "Feedback",
+      "defaultMessage": "Rétroaction",
       "description": "feedback title"
     },
     "General.menu": {
@@ -206,6 +206,18 @@
     "Instructions.title":{
       "defaultMessage": "Comment Jouer",
       "description": "how to play title"
+    },
+    "Clock.header":{
+      "defaultMessage": "Prendre le pouls et appuyer sur continuer",
+      "description": "take pulse message"
+    },
+    "Clock.warning":{
+      "defaultMessage": "Veuillez noter que pour des raisons techniques, vous ne pouvez accéder à cet objet d’apprentissage présentement. Communiquez avec l’instructrice pour obtenir de l’aide.",
+      "description": "warning about accesibility"
+    },
+    "Clock.continue":{
+      "defaultMessage": "Continuer",
+      "description": "continue button"
     }
 }
   

@@ -17,16 +17,29 @@ const Clock: React.FC<iProps> = () => {
     <div className="container Clock">
       <div className="panel menu">
         <div className="main">
-          <h2>Take pulse and press Continue.</h2>
+          <FormattedMessage
+            id="Clock.header"
+            defaultMessage="Take pulse and press Continue."
+            description="take pulse message"
+            tagName="h2"
+          />
           <p className="warning">
-            Please note that for technical reasons this learning object can not
-            be made accessible. Contact your instructor if you need help.
+            <FormattedMessage
+              id="Clock.warning"
+              defaultMessage="Please note that for technical reasons this learning object can not
+              be made accessible. Contact your instructor if you need help."
+              description="warning about accesibility"
+            />
           </p>
         </div>
         <footer>
           <p className="controls">
             <button onClick={gotoDecision} className="button">
-              Continue
+            <FormattedMessage
+              id="Clock.continue"
+              defaultMessage="Continue"
+              description="continue button"
+            />
             </button>
           </p>
         </footer>

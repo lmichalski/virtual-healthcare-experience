@@ -150,13 +150,16 @@ const Summary: React.FC<iProps> = ({
         <Text>
           {getFM(INTL_MESSAGES.results, {
             question_count: (
-              <Text style={{ fontWeight: "bold" }}> {progress.length - 2} </Text>
+              <Text style={{ fontWeight: "bold" }}>
+                {" "}
+                {progress.length - 2}{" "}
+              </Text>
             ),
           })}{" "}
         </Text>
         {progress.length ===
         decisionPoints.filter(({ correct }) => correct).length ? (
-          <Text> {getFM(INTL_MESSAGES.bestResult)} {" "}</Text> 
+          <Text> {getFM(INTL_MESSAGES.bestResult)} </Text>
         ) : (
           <Text>
             {" "}
