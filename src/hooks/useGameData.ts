@@ -80,9 +80,10 @@ interface GameDataShape {
       end_paragraphs: string[];
     };
     materials: {
-      template: string;
-      example: string;
-      debrief: string;
+      content: {
+        label: string;
+        item: string;
+      }[];
     };
   };
 }

@@ -52,7 +52,7 @@
             "Margaret Verkuyl, IP-SSP, M. Sc. N.",
             "Jennifer Lapum, IA, Ph. D.",
             "Oona St-Amant, IA, Ph. D.",
-            "Behi Nikaiin. IA, M. Sc. N."
+            "Behi Nikaiin, IA, M. Sc. N."
           ]
         },
         { "header": "", "items": [] }
@@ -63,9 +63,12 @@
       ]
     },
     "materials": {
-      "template": "",
-      "example": "",
-      "debrief": "/docs/auto-évaluation.pdf"
+      "content": [
+        {
+          "label": "AUTO-ÉVALUATION",
+          "item": "/docs/auto-évaluation.pdf"
+        }
+      ]
     }
   },
   "decisionpoints": [

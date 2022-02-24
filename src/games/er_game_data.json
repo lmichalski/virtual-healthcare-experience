@@ -44,28 +44,65 @@
     },
     "credits": {
       "paragraphs": [
-        "Le portail Expériences virtuelles en soins de la santé est le résultat d’une collaboration entre professeurs de l’Université Ryerson, du Collège Centennial et du Collège George Brown. "
+        "The Virtual Healthcare Experience portal was developed as a joint collaboration between professors from Ryerson University, Centennial College, and George Brown College."
       ],
       "credits_sections": [
         {
           "header": "Content Providers",
           "items": [
-            "Margaret Verkuyl, IP-SSP, M. Sc. N.",
-            "Jennifer Lapum, IA, Ph. D.",
-            "Oona St-Amant, IA, Ph. D.",
-            "Behi Nikaiin. IA, M. Sc. N."
+            "Margaret Verkuyl, NP, PHC, MN",
+            "Dr. Jennifer Lapum, RN, PhD",
+            "Dr. Oona St-Amant, RN, PhD",
+            "Behi Nikaiin, RN, MScN",
+            "Michelle Hughes, RN, MEd",
+            "Dr. Paula Mastrilli, RN, PhD",
+            "Dr. Daria Romaniuk, RN, PhD",
+            "Lorraine Betts, RN, MN"
           ]
         },
-        { "header": "", "items": [] }
+        { "header": "Cast", "items": ["Karen Lee", "Sarah Winstanley"] },
+        {
+          "header": "Project Coordination",
+          "items": ["Lars Svekis", "Sushila Parikh"]
+        },
+        {
+          "header": "Game Design & Development",
+          "items": ["Lucas Michalski", "Igor Karasyov", "Ryan Marks"]
+        },
+        {
+          "header": "Video Production",
+          "items": [
+            "Daniil Novikov",
+            "Ilya Emilianov",
+            "Arseniy Semin",
+            "Cassandra Ferworn",
+            "Kelvin Kong"
+          ]
+        }
       ],
-      "end_paragraphs": []
+      "end_paragraphs": [
+        "This resource was generously funded by the Ministry of Advanced Education and Skills Development (MAESD).",
+        "The Digital Education Strategies team at The G. Raymond Chang School of Continuing Education at Ryerson University supported the design and development of the resources by providing innovative technology solutions, multimedia production, and usability testing."
+      ]
     },
     "materials": {
-      "template": "/docs/Integrated_Patient_Record.pdf",
-      "example": "/docs/Integrated_Patient_Record_Sample.pdf",
-      "debrief": "/docs/self-assessment.pdf"
+      "content": [
+        {
+          "label": "Patient Record Template",
+          "item": "/docs/Integrated_Patient_Record.pdf"
+        },
+        {
+          "label": "Patient Record Sample",
+          "item": "/docs/Integrated_Patient_Record_Sample.pdf"
+        },
+        {
+          "label": "Self-Debrief",
+          "item": "/docs/self-assessment.pdf"
+        }
+      ]
     }
   },
+
   "decisionpoints": [
     {
       "id": 0,

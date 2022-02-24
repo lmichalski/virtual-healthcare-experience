@@ -55,7 +55,7 @@
             "Margaret Verkuyl, IP-SSP, M. Sc. N.",
             "Jennifer Lapum, IA, Ph. D.",
             "Oona St-Amant, IA, Ph. D.",
-            "Behi Nikaiin. IA, M. Sc. N."
+            "Behi Nikaiin, IA, M. Sc. N."
           ]
         },
         { "header": "", "items": [] }
@@ -66,9 +66,12 @@
       ]
     },
     "materials": {
-      "template": "",
-      "example": "",
-      "debrief": "/docs/autodébreffage_post-partum.pdf"
+      "content": [
+        {
+          "label": "AUTO-ÉVALUATION",
+          "item": "/docs/autodébreffage_post-partum.pdf"
+        }
+      ]
     }
   },
   "decisionpoints": [

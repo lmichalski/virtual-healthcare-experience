@@ -4,13 +4,14 @@ import "./Materials.scss";
 
 interface iProps {
   strings: {
-    template: string;
-    example: string;
-    debrief: string;
+    content: {
+      label: string;
+      item: string;
+    }[];
   };
 }
 
-const Materials: React.FC<iProps> = ({ strings }) => {
+const Materials: React.FC<iProps> = ({ strings: { content } }) => {
   const gotoMenu = useGotoMenu();
 
   return (
@@ -37,42 +38,18 @@ const Materials: React.FC<iProps> = ({ strings }) => {
 
         <footer>
           <div className="content">
-            <FormattedMessage
-              id="Materials.documentation"
-              defaultMessage="Documentation"
-              description="documentation title"
-              tagName="h2"
-            />
-            <a href={strings.template} className="button" download>
-              <FormattedMessage
-                id="Materials.downloadTemplate"
-                defaultMessage="Download Template"
-                description="template download link"
-              />
-            </a>
-            <a href={strings.example} className="button" download>
-              <FormattedMessage
-                id="Materials.downloadSample"
-                defaultMessage="Download Sample"
-                description="sample download link"
-              />
-            </a>
-            <br />
-            <FormattedMessage
-              id="Materials.debrief"
-              defaultMessage="Self-Debrief"
-              description="self-debrief title"
-              tagName="h2"
-            />
-            <a href={strings.debrief} className="button" download>
-              <FormattedMessage
-                id="Materials.downloadDebrief"
-                defaultMessage="Download"
-                description="debrief download link"
-              />
-            </a>
+            {content.map(({ label, item }) => (
+              <>
+                <ul>
+                  <a href={item} className="button" download>
+                    {label}
+                  </a>
+                </ul>
+              </>
+            ))}
           </div>
         </footer>
+
       </div>
     </body>
   );
