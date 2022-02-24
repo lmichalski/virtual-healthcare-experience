@@ -16,8 +16,6 @@ interface iProps {
 const Credits: React.FC<iProps> = ({
   strings: { paragraphs, credits_sections, end_paragraphs },
 }) => {
-  console.log("CREDITOS");
-  console.log(credits_sections);
   return (
     <div className="container">
       <div className="panel credits">

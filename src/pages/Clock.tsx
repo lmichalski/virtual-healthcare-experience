@@ -35,11 +35,11 @@ const Clock: React.FC<iProps> = () => {
         <footer>
           <p className="controls">
             <button onClick={gotoDecision} className="button">
-            <FormattedMessage
-              id="Clock.continue"
-              defaultMessage="Continue"
-              description="continue button"
-            />
+              <FormattedMessage
+                id="Clock.continue"
+                defaultMessage="Continue"
+                description="continue button"
+              />
             </button>
           </p>
         </footer>
