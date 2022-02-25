@@ -1,4 +1,16 @@
 {
+  "Clock.continue": {
+    "defaultMessage": "Continue",
+    "description": "continue button"
+  },
+  "Clock.header": {
+    "defaultMessage": "Take pulse and press Continue.",
+    "description": "take pulse message"
+  },
+  "Clock.warning": {
+    "defaultMessage": "Please note that for technical reasons this learning object can not be made accessible. Contact your instructor if you need help.",
+    "description": "warning about accesibility"
+  },
   "Credits.title": {
     "defaultMessage": "Credits",
     "description": "credits title"
@@ -39,9 +51,21 @@
     "defaultMessage": "Virtual Healthcare Experence",
     "description": "Title for homepage"
   },
+  "Instructions.title": {
+    "defaultMessage": "How to Play",
+    "description": "how to play title"
+  },
   "Materials.title": {
     "defaultMessage": "Materials",
     "description": "Materials title"
+  },
+  "Menu.copyright": {
+    "defaultMessage": "Unless otherwise noted this resource is available for public use under",
+    "description": "copyright disclaimer"
+  },
+  "Menu.copyright-share": {
+    "defaultMessage": "SHARE: copy and redistribute the material in any medium or format",
+    "description": "copyright share disclaimer"
   },
   "Menu.credits": {
     "defaultMessage": "Credits",
@@ -79,141 +103,104 @@
     "defaultMessage": "Learning Objectives",
     "description": "Learning Objectives title"
   },
+  "Options.display": {
+    "defaultMessage": "Display",
+    "description": "Display Header"
+  },
+  "Options.full_screen": {
+    "defaultMessage": "Full Screen",
+    "description": "full screen button"
+  },
+  "Options.language": {
+    "defaultMessage": "Language",
+    "description": "language options title"
+  },
+  "Options.language_en": {
+    "defaultMessage": "English",
+    "description": "english language button"
+  },
+  "Options.language_fr": {
+    "defaultMessage": "French",
+    "description": "french language button"
+  },
+  "Options.subtitles": {
+    "defaultMessage": "Subtitles",
+    "description": "subtitles button"
+  },
+  "Options.subtitles_off": {
+    "defaultMessage": "Off",
+    "description": "subtitles off button"
+  },
+  "Options.subtitles_on": {
+    "defaultMessage": "On",
+    "description": "subtitles on button"
+  },
+  "Options.windowed": {
+    "defaultMessage": "Window",
+    "description": "windowed view option"
+  },
   "Principles.title": {
     "defaultMessage": "Essential Principles",
     "description": "Principles title"
+  },
+  "Summary.best-result": {
+    "defaultMessage": "You've demonstrated the best possible result! Now play it one more time to make sure it wasn't mere luck :)",
+    "description": "best result sentence"
+  },
+  "Summary.debrief-one": {
+    "defaultMessage": "If not attending an organized debrief, make sure you download and complete the",
+    "description": "debrief sentence part one"
+  },
+  "Summary.debrief-three": {
+    "defaultMessage": "to optimise your learning experience. Scroll down to view results.",
+    "description": "debrief sentence part three"
+  },
+  "Summary.debrief-two": {
+    "defaultMessage": "self-debriefing questions",
+    "description": "debrief sentence part two"
+  },
+  "Summary.downloadProgress": {
+    "defaultMessage": "Download Progress Report",
+    "description": "link to download progress report"
+  },
+  "Summary.game-report": {
+    "defaultMessage": "Game Report",
+    "description": "game report title"
+  },
+  "Summary.inProgressResults": {
+    "defaultMessage": "You have answered {question_count} questions. To finish the game go to menu and resume the gameplay.",
+    "description": "The message to show players arriving at the summary page while their game isn't finished"
+  },
+  "Summary.incorrect-one": {
+    "defaultMessage": "However, if you give only correct answers it should only take",
+    "description": "not the best result part one"
+  },
+  "Summary.incorrect-two": {
+    "defaultMessage": "questions to complete the scenario. See if you can improve your results next time!",
+    "description": "not the best result part two"
+  },
+  "Summary.materialsLink": {
+    "defaultMessage": "Practice Materials",
+    "description": "link to download materials page"
+  },
+  "Summary.results": {
+    "defaultMessage": "You have completed the game by answering {question_count} questions.",
+    "description": "summary results"
+  },
+  "Summary.summary": {
+    "defaultMessage": "Summary",
+    "description": "summary header"
   },
   "Summary.title": {
     "defaultMessage": "Congratulations!",
     "description": "Summary title"
   },
+  "Summary.your-answers": {
+    "defaultMessage": "Your Responses",
+    "description": "your answers header title"
+  },
   "Transition.title": {
     "defaultMessage": "Game Paused",
     "description": "game paused transition title"
-  },
-    "Options.display":{
-      "defaultMessage": "Display",
-      "description": "Display heading"
-  },
-    "Options.full_screen":{
-      "defaultMessage": "Full Screen",
-      "description": "full screen button"
-  },
-    "Options.subtitles":{
-      "defaultMessage": "Subtitles",
-      "description": "subtitles button"
-    },
-    "Options.subtitles_on":{
-      "defaultMessage": "On",
-      "description": "subtitles on button"
-    },
-    "Options.subtitles_off":{
-      "defaultMessage": "Off",
-      "description": "subtitles off button"
-    },
-    "Options.language_en":{
-      "defaultMessage": "English",
-      "description": "english language button"
-    },
-    "Options.language_fr":{
-      "defaultMessage": "French",
-      "description": "french language button"
-    },
-    "Options.windowed":{
-      "defaultMessage": "Window",
-      "description": "windowed view option"
-    },
-    "Options.language":{
-      "defaultMessage": "Language",
-      "description": "language options title"
-    },
-    "Summary.results-one":{
-      "defaultMessage": "You have completed the game by answering",
-      "description": "summary results part one"
-    },
-    "Summary.results-two":{
-      "defaultMessage": "questions.",
-      "description": "summary results part two"
-    },
-    "Summary.best-result":{
-      "defaultMessage": "You've demonstrated the best possible result! Now play it one more time to make sure it wasn't mere luck :)",
-      "description": "best result sentence"
-    },
-    "Summary.incorrect-one":{
-    "defaultMessage": "However, if you give only correct answers it should only take",
-    "description": "not the best result part one"
-    },
-    "Summary.incorrect-two":{
-    "defaultMessage": "questions to complete the scenario. See if you can improve your results next time!",
-    "description": "not the best result part two"
-    },
-    "Summary.debrief-one":{
-      "defaultMessage": "If not attending an organized debrief, make sure you download and complete the",
-      "description": "debrief sentence part one"
-    },
-    "Summary.debrief-two":{
-      "defaultMessage": "self-debriefing questions",
-      "description": "debrief sentence part two"
-    },
-    "Summary.debrief-three":{
-      "defaultMessage": "to optimise your learning experience. Scroll down to view results.",
-      "description": "debrief sentence part three"
-    },
-    "Summary.game-report": {
-      "defaultMessage": "Game Report",
-      "description": "game report title"
-    },
-    "Summary.summary":{
-      "defaultMessage": "Summary",
-      "description": "summary header"
-    },
-    "Summary.your-answers":{
-      "defaultMessage": "Your Responses",
-      "description": "your answers header title"
-    },
-    "Summary.downloadProgress":{
-      "defaultMessage": "Download Progress Report",
-      "description": "link to download progress report"
-    },
-    "Summary.materialsLink":{
-      "defaultMessage": "Practice Materials",
-      "description": "link to download materials page"
-    },
-    "Materials.documentation":{
-      "defaultMessage": "Documentation",
-      "description": "documentation title"
-    },
-    "Materials.downloadTemplate":{
-      "defaultMessage": "Download Template",
-      "description": "template download link"
-    },
-    "Materials.downloadSample":{
-      "defaultMessage": "Download Sample",
-      "description": "sample download link"
-    },
-    "Materials.debrief":{
-      "defaultMessage": "Self-Debrief",
-      "description": "self-debrief title"
-    },
-    "Materials.downloadDebrief":{
-      "defaultMessage": "Download",
-      "description": "debrief download link"
-    },
-    "Instructions.title":{
-      "defaultMessage": "How to Play",
-      "description": "how to play title"
-    },
-    "Clock.header":{
-      "defaultMessage": "Take pulse and press Continue.",
-      "description": "take pulse message"
-    },
-    "Clock.warning":{
-      "defaultMessage": "Please note that for technical reasons this learning object can not be made accessible. Contact your instructor if you need help.",
-      "description": "warning about accesibility"
-    },
-    "Clock.continue":{
-      "defaultMessage": "Continue",
-      "description": "continue button"
-    }
+  }
 }
-

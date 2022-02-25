@@ -49,7 +49,6 @@ const Materials: React.FC<iProps> = ({ strings: { content } }) => {
             ))}
           </div>
         </footer>
-
       </div>
     </body>
   );

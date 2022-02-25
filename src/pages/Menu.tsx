@@ -121,8 +121,47 @@ const Menu: React.FC<iProps> = ({
             </ul>
           </div>
         </div>
-        <footer></footer>
       </div>
+      <footer>
+        <img
+          src="/images/cc_icon_white.png"
+          alt="white cc icon"
+          width="20"
+          height="20"
+        ></img>{" "}
+        <img
+          src="/images/attribution_icon_white.png"
+          alt="white attribution icon"
+          width="20"
+          height="20"
+        ></img>{" "}
+        <img
+          src="/images/nc_icon_white.png"
+          alt="white non-commercial icon"
+          width="20"
+          height="20"
+        ></img>{" "}
+        <p className="cc">
+          <FormattedMessage
+            id="Menu.copyright"
+            defaultMessage="Unless otherwise noted this resource is available for public use under"
+            description="copyright disclaimer"
+          />{" "}
+          <a
+            href="https://creativecommons.org/licenses/by-nc/4.0/"
+            className="cc-link"
+          >
+            Creative Commons Attribution 4.0 International (CC BY-NC 4.0)
+          </a>
+          .
+        </p>
+        <p className="cc">
+          <FormattedMessage
+            id="Menu.copyright-share"
+            defaultMessage="SHARE: copy and redistribute the material in any medium or format"
+            description="copyright share disclaimer"
+          />{" "}</p>
+      </footer>
     </div>
   );
 };

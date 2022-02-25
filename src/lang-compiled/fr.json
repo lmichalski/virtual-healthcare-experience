@@ -1,4 +1,7 @@
 {
+  "Clock.continue": "Continuer",
+  "Clock.header": "Prendre le pouls et appuyer sur continuer",
+  "Clock.warning": "Veuillez noter que pour des raisons techniques, vous ne pouvez accéder à cet objet d’apprentissage présentement. Communiquez avec l’instructrice pour obtenir de l’aide.",
   "Credits.title": "Crédits",
   "Feedback.title": "Rétroaction",
   "General.menu": "Menu",
@@ -17,6 +20,8 @@
   "Materials.downloadSample": "Télécharger L'Exemple",
   "Materials.downloadTemplate": "Télécharger le Modèle",
   "Materials.title": "Matériaux",
+  "Menu.copyright": "Ce manuel est publié sous une licence",
+  "Menu.copyright-share": "PARTAGER: copier, distribuer et communiquer le matériel par tous moyens et sous tous formats",
   "Menu.credits": "Crédits",
   "Menu.exit": "Quitter le Jeu",
   "Menu.gameOptions": "Options",

@@ -218,6 +218,14 @@
     "Clock.continue":{
       "defaultMessage": "Continuer",
       "description": "continue button"
+    },
+    "Menu.copyright": {
+      "defaultMessage": "Ce manuel est publié sous une licence",
+      "description": "copyright disclaimer"
+    },
+    "Menu.copyright-share":{
+      "defaultMessage": "PARTAGER: copier, distribuer et communiquer le matériel par tous moyens et sous tous formats",
+      "description": "copyright share disclaimer"
     }
 }
   
